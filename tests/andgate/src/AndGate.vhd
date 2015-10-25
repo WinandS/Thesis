@@ -1,5 +1,7 @@
 ---------------------------------------------------------
--- Author : http://www.teahlab.com/
+-- Source : http://www.teahlab.com/
+--
+-- Author: Winand Seldeslachts
 --
 -- Circuit: AND Gate
 --
