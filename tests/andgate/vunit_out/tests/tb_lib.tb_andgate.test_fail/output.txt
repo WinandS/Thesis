@@ -1,0 +1,2 @@
+/libexec/gcc/x86_64-linux-gnu/4.9.3/ghdl1: cannot load entity "andgate"
+ghdl: compilation error

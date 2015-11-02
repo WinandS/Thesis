@@ -50,7 +50,7 @@ begin
 			F => outF
 		);
 	
---	checker_initiation: checker_init(error, "", "error.csv", level, off, failure, ',', false);
+	checker_initiation: checker_init(error, "", "error.csv", level, off, failure, ',', false);
 	
 	main : process
 	begin

@@ -1,0 +1,4 @@
+/usr/local/lib/python2.7/dist-packages/vhdl/vhdl/src/lang/lang.vhd:27:7:@0ms:(report failure): 
+./tb_andgate-tb:error: report failed
+./tb_andgate-tb:error: simulation failed
+ERROR: This will fail

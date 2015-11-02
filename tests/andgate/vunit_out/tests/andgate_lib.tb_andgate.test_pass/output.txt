@@ -1,0 +1,2 @@
+/home/winand/Documents/vunit.git/tests/andgate/src/tb_AndGate.vhd:62:32:@0ms:(report note): This will pass
+simulation stopped @0ms with status 0

@@ -10,11 +10,15 @@ from vunit import VUnit
 src_path = join(dirname(__file__), "src")
 
 ui = VUnit.from_argv()
+#~ 
+#~ descr_lib = ui.add_library("descr_lib")
+#~ descr_lib.add_source_files(join(src_path, "*.vhd"))
+#~ descr_lib.add_source_files(join(src_path, "test", "*.vhd"))
 
-descr_lib = ui.add_library("descr_lib")
-descr_lib.add_source_files(join(src_path, "*.vhd"))
+andgate_lib = ui.add_library("andgate_lib")
+andgate_lib.add_source_files(join(src_path, "*.vhd"))
 
-tb_lib = ui.add_library("tb_lib")
-tb_lib.add_source_files(join(src_path, "test", "*.vhd"))
+tb_andgate_lib = ui.add_library("tb_andgate_lib")
+tb_andgate_lib.add_source_files(join(src_path, "test", "*.vhd"))
 
 ui.main()

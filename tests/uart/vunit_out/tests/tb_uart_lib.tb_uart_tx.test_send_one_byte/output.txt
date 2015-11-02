@@ -1,0 +1,2 @@
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@86850ns:(report note): Received 249
+simulation stopped @86850ns with status 0

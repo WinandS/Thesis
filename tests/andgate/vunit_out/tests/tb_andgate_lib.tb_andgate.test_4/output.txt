@@ -1,0 +1,6 @@
+/home/winand/Documents/vunit.git/tests/andgate/src/test/tb_AndGate.vhd:47:8:warning: 'dut' is not bound
+/home/winand/Documents/vunit.git/tests/andgate/src/test/tb_AndGate.vhd:32:14:warning: (in default configuration of tb_andgate(tb))
+/usr/local/lib/python2.7/dist-packages/vhdl/vhdl/src/lang/lang.vhd:27:7:@15ns:(report failure): 
+./tb_andgate-tb:error: report failed
+./tb_andgate-tb:error: simulation failed
+ERROR: Expected outF = '1' at this point

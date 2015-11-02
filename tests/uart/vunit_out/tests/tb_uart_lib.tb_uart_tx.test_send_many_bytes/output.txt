@@ -1,0 +1,9 @@
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@86850ns:(report note): Received 249
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@173670ns:(report note): Received 167
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@260490ns:(report note): Received 216
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@347310ns:(report note): Received 182
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@434130ns:(report note): Received 85
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@520950ns:(report note): Received 202
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@607770ns:(report note): Received 95
+/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@694590ns:(report note): Received 231
+simulation stopped @694590ns with status 0
