@@ -1,3 +1,3 @@
 /testbench_out.vhd
 *.pyc
-/template_TB.vhd
+/template_TB_old.vhd
