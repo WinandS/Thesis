@@ -1,0 +1,12 @@
+/log.vhd
+/log_api.vhd
+/log_base.vhd
+/log_base93.vhd
+/log_base93_mock.vhd
+/log_base_api.vhd
+/log_base_api_mock.vhd
+/log_formatting.vhd
+/log_special_types200x.vhd
+/log_special_types200x_mock.vhd
+/log_special_types93.vhd
+/log_types.vhd
