@@ -25,4 +25,4 @@ vhdl_testbench = generate_testbench.add_signal_declaration(vhdl_testbench, signa
 generate_testbench.write_output(vhdl_testbench)
 
 # - open output file
-# generate_testbench.open_output()
+generate_testbench.open_output()

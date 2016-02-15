@@ -31,14 +31,14 @@ end entity;
 
 architecture tb of testbench is
 	-- Component Declaration for the Unit Under Test (UUT)
-	COMPONENT AndGate
+	COMPONENT uut
 		PORT(
 		--/	A, B : in  std_logic;	/--
 		--/ F    : out std_logic	/--
 		);
 	END COMPONENT;
 
-	--#signals
+	--# Signals
 --/	signal inA, inB : std_logic;	/--
 --/	signal outF : std_logic;
 begin

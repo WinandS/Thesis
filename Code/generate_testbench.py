@@ -22,7 +22,7 @@ def open_output():
 
 
 def clean_testbench_template(template):
-    pattern = re.compile('--/ ')  # a pattern for a number
+    pattern = re.compile('--/')  # a pattern for a number
     print pattern
     # TODO: make this better
     for x in range(0,15):
@@ -42,4 +42,4 @@ def clean_testbench_template(template):
 
 
 def add_signal_declaration(template, signal_decl):
-    return template.replace("--# Inputs","--# Inputs \n" + signal_decl)
+    return template.replace("--# Signals", "--# Signals \n" + signal_decl)
