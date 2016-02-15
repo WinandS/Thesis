@@ -32,17 +32,19 @@ end entity;
 architecture tb of testbench is
 	-- Component Declaration for the Unit Under Test (UUT)
 	COMPONENT uut
-		PORT(
-		--/	A, B : in  std_logic;	/--
-		--/ F    : out std_logic	/--
-		);
+		PORT();
 	END COMPONENT;
+	
+	--# Clock Signal
+	
+	--# Input Signals
+	--/	signal inA, inB : std_logic;	/--
+	
+	--# Output Signals
+	--/	signal outF : std_logic;	/--
 
-	--# Signals
---/	signal inA, inB : std_logic;	/--
---/	signal outF : std_logic;
 begin
-	dut : AndGate PORT MAP(
+	dut : UUT PORT MAP(
 	--/		A => inA,   /--
 	--/		B => inB,	/--
 	--/		F => outF	/--
