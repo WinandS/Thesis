@@ -36,7 +36,7 @@ def clean_testbench_template(template):
             print template[s:e]
             # template[s:e+1].rstrip()
             # template = template.replace(template[s:e],template[s:e+1].rstrip())
-            template = template.replace(template[s:e],"")
+            template = template.replace(template[s:e+1], "")
             break
     return template
 
