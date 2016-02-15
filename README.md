@@ -1,3 +1,5 @@
+# About this project
+
 This project is partialy based on VUnit. It creates VHDL unit tests from timing diagrams that can be automaticaly run using vunit.
 
 # What is VUnit?
