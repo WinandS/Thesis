@@ -5,7 +5,7 @@ This project is partialy based on VUnit. It creates VHDL unit tests from timing 
 # project input files
 
 This project uses [Wavedrom](http://wavedrom.com/) files as the base for its input file. Some fields have been added to the standard JSON output file and should always be included as shown in the example below. The added fields are:
-* name : this should be the exact name of the unit under test
+* name(*) : this should be the exact name of the unit under test
 * test : this is the name for this test
 * description : holds the descrition for this test
 * type : should be specified for every signal; The type specifies the VHDL logic type for this signal
@@ -16,7 +16,6 @@ Next to these extra fields, each signal should be placed under the apropriate la
 
 ```json
 {"name": "andGate", "test" : "test1", "description": "this is an input example", "signal": [
-  {},
   ["CLK",
    {"name": "CLK", "wave": "p..............", "type": "std_logic"}],
   ["IN",
