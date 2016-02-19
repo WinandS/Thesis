@@ -1,0 +1,8 @@
+{"name": "andGate", "test" : "test2", "description": "some description", "signal": [
+  {},
+ ["IN",
+   {"name": "A", "wave": "0", "type": "std_logic"},
+   {"name": "B", "wave": "1", "type": "std_logic"}],
+  ["OUT",
+   {"name": "F", "wave": "0", "type": "std_logic"}]
+]}

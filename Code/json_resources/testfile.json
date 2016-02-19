@@ -1,7 +1,0 @@
-{"signal": [
-  {"name": "clk", "wave": "p........"},
-  {"name": "in", "wave": "0...10...", "data": ["head", "body", "tail", "data"]},
-  {"name": "out", "wave": "0....10.."},
-  {},
-  {"name": "en", "wave": "1........."}
-]}
