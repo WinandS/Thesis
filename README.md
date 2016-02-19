@@ -2,6 +2,10 @@
 
 This project is partialy based on VUnit. It creates VHDL unit tests from timing diagrams that can be automaticaly run using vunit.
 
+# project input files
+
+This project uses [Wavedrom](http://wavedrom.com/) files as the base for its input file. Some fields have been added to the standard JSON output file and should always be included as in this example for an andgate:
+
 # What is VUnit?
 
 VUnit is an open source unit testing framework for VHDL released under the terms of Mozilla Public License, v. 2.0. It features the functionality needed to realize continuous and automated testing of your VHDL code. VUnit doesn't replace but rather complements traditional testing methodologies by supporting a "test early and often" approach through automation.
