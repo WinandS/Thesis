@@ -1,3 +1,4 @@
 /testbench_out.vhd
 *.pyc
 /template_TB_old.vhd
+/vunit_out/
