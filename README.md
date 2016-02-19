@@ -15,17 +15,16 @@ Next to these extra fields, each signal should be placed under the apropriate la
 # example
 
 ```json
-{name: "andGate", test : "test1", description: "some description", signal: [
+{"name": "andGate", "test" : "test1", "description": "some description", "signal": [
   {},
   ["CLK",
-   {name, "CLK", wave: "p..............", type: "std_logic"}],
+   {"name": "CLK", "wave": "p..............", "type": "std_logic"}],
   ["IN",
-   {name: "A", wave: "0..10..10......", type: "std_logic"},
-   {name: "B", wave: "0......10...10.", type: "std_logic"}],
+   {"name": "A", "wave": "0..10..10......", "type": "std_logic"},
+   {"name": "B", "wave": "0......10...10.", "type": "std_logic"}],
   ["OUT", 
-   {name: "C", wave: "0......10......", type: "std_logic"}]
+   {"name": "C", "wave": "0......10......", "type": "std_logic"}]
 ]}
-
 ```
 
 # What is VUnit?
