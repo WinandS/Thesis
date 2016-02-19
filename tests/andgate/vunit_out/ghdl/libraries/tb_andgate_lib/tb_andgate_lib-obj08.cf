@@ -1,4 +1,0 @@
-v 4
-file / "/home/winand/Documents/vunit.git/tests/andgate/src/test/tb_AndGate.vhd" "27245b53f2517b57a897eb8cda77280b94a7961d" "20151102155126.361":
-  entity tb_andgate at 22( 753) + 0 on 11;
-  architecture tb of tb_andgate at 32( 931) + 0 on 12;

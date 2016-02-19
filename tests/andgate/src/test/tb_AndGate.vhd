@@ -25,11 +25,11 @@ use ieee.std_logic_1164.all;
 library vunit_lib;
 context vunit_lib.vunit_context;
 
-entity tb_andgate is
+entity tb_andgate2 is
 	generic(runner_cfg : runner_cfg_t);
 end entity;
 
-architecture tb of tb_andgate is
+architecture tb of tb_andgate2 is
 	-- Component Declaration for the Unit Under Test (UUT)
 	COMPONENT AndGate
 		PORT(

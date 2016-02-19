@@ -1,7 +1,0 @@
-v 4
-file / "/home/winand/Documents/vunit.git/tests/andgate/src/test/AndGate.vhd" "447b7fe668b72ebff01ab304f9903c6dbf30645c" "20151102152103.872":
-  entity andgate at 21( 744) + 0 on 13;
-  architecture func of andgate at 31( 990) + 0 on 14;
-file / "/home/winand/Documents/vunit.git/tests/andgate/src/test/tb_AndGate.vhd" "0afcbde508316ec3951553bb60add95946e7345f" "20151102145029.062":
-  entity tb_andgate at 22( 753) + 0 on 11;
-  architecture tb of tb_andgate at 32( 931) + 0 on 12;

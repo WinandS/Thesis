@@ -1,2 +1,8 @@
-/home/winand/Documents/vunit.git/tests/uart/src/test/tb_uart_tx.vhd:109:5:@86850ns:(report note): Received 249
-simulation stopped @86850ns with status 0
+# End time: 11:23:23 on Feb 19,2016, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -wlf /home/winand/Documents/Google\ Drive/Schoolwerk/Masterproef/vunit/tests/uart/vunit_out/tests/tb_uart_lib.tb_uart_tx.test_send_one_byte/modelsim/vsim.wlf -quiet -t ps -onfinish stop tb_uart_lib.tb_uart_tx(tb) -L uart_lib -L vunit_lib -L tb_uart_lib -L osvvm -g/tb_uart_tx/runner_cfg="enabled_test_cases : test_send_one_byte,output path : /home/winand/Documents/Google Drive/Schoolwerk/Masterproef/vunit/tests/uart/vunit_out/tests/tb_uart_lib.tb_uart_tx.test_send_one_byte/,active python runner : true" 
+# Start time: 11:23:23 on Feb 19,2016
+# ** Note: Received 249
+#    Time: 86850 ns  Iteration: 0  Instance: /tb_uart_tx
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vhdl/run/src/stop_body_2008.vhd line 10
+# Stopped at /usr/local/lib/python2.7/dist-packages/vhdl/run/src/stop_body_2008.vhd line 10
