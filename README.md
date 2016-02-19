@@ -15,7 +15,7 @@ Next to these extra fields, each signal should be placed under the apropriate la
 # example
 
 ```json
-{"name": "andGate", "test" : "test1", "description": "some description", "signal": [
+{"name": "andGate", "test" : "test1", "description": "this is an input example", "signal": [
   {},
   ["CLK",
    {"name": "CLK", "wave": "p..............", "type": "std_logic"}],
