@@ -1,7 +1,0 @@
-/__init__.py
-/codec_datatype_template.py
-/codec_generator.py
-/codec_vhdl_array_type.py
-/codec_vhdl_enumeration_type.py
-/codec_vhdl_package.py
-/codec_vhdl_record_type.py
