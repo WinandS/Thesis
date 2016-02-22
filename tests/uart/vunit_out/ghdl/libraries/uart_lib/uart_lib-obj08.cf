@@ -1,7 +1,0 @@
-v 4
-file / "/home/winand/Documents/vunit.git/tests/uart/src/uart_tx.vhd" "a8ac1b0a3988698aa0dbfb58b5f609016ef13bb1" "20151102153447.259":
-  entity uart_tx at 7( 277) + 0 on 13;
-  architecture a of uart_tx at 43( 1449) + 0 on 14;
-file / "/home/winand/Documents/vunit.git/tests/uart/src/uart_rx.vhd" "54a885efc30677f32580ee74e9c011aca6ed4258" "20151102153445.822":
-  entity uart_rx at 7( 277) + 0 on 11;
-  architecture a of uart_rx at 45( 1480) + 0 on 12;
