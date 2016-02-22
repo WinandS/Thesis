@@ -25,7 +25,7 @@ Next to these extra fields, each signal should be placed under the apropriate la
    {"name": "C", "wave": "0......10......", "type": "std_logic"}]
 ]}
 ```
-# Dependancies
+# Dependencies
 
 This project requires:
  *  Python 2.7 or newer
