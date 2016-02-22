@@ -1,0 +1,87 @@
+\documentclass[12pt]{report}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\graphicspath{ {images/} }
+\usepackage{amsmath}			% Uitgebreide wiskundige mogelijkheden
+\usepackage{amssymb}			% Voor speciale symbolen zoals de verzameling Z, R... 
+
+\title{
+	{Automated vhdl unit test \\ creation and execution}\\
+	{\large University of Ghent}\\ \hfill \\
+	{\includegraphics[width = 0.35\textwidth]{ruglogo.pdf}}
+}
+\author{Seldeslachts Winand}
+\date{\today}
+
+% functions and settings ---------------------------------
+
+% add figure with label, description and reference
+%\MijnFig[H]{width=5cm}{bestandsnaam}{Het bijschrift bij deze figuur}{label}
+\newcommand{\MijnFig}[5][ht]{           	% Het eerste argument is standaar `ht'.
+	\begin{figure}[#1]                      % Beginnen van de figure omgeving
+		\begin{center}                      % Beginnen van de center omgeving
+			\includegraphics[#2,keepaspectratio]{#3}        % Het eigenlijk invoegen van de figuur (2: opties, 3: bestandsnaam)
+			\caption[#4]{#4\label{#5}}      % Het bijschrift (argument 4) en het label (argument 3)
+		\end{center}
+	\end{figure}
+}
+
+% add figure with label and description
+%\MijnFigMetRef[H]{width=5cm}{bestandsnaam}{Het bijschrift bij deze figuur}{label}{Referentie}
+\newcommand{\MijnFigMetRef}[6][ht]{         % Het eerste argument is standaar `ht'.
+	\begin{figure}[#1]                      % Beginnen van de figure omgeving
+		\begin{center}                      % Beginnen van de center omgeving
+			\includegraphics[#2]{#3}        % Het eigenlijk invoegen van de figuur (2: opties, 3: bestandsnaam)
+			\caption[#4]{#4\label{#5} \cite{#6}}          % Het bijschrift (argument 4) en het label (argument 3)
+		\end{center}
+	\end{figure}
+}
+
+%---------------------------------------------------------
+
+
+\begin{document}
+\input{Title_page}
+\clearpage
+\thispagestyle{empty}
+\emph{ }
+\maketitle
+
+% front matter
+\pagestyle{plain}
+
+\input{chapters/Abstract}
+
+\input{chapters/Foreword}
+
+\tableofcontents 
+\clearpage
+% main matter
+\pagestyle{fancy}
+
+\input{chapters/Introduction}
+
+\input{chapters/Problem_description}
+
+\input{chapters/Literature}
+
+\input{chapters/Functional_analysis}
+
+\input{chapters/Technical_analysis}
+
+\input{chapters/Technical_design}
+
+\input{chapters/Conclusion}
+
+% end matter
+\pagestyle{plain}
+\appendix
+
+\input{appendices/Appendix_A}
+
+% bybliography
+\bibliography{bib/References}
+\bibliographystyle{ieeetran}
+\end{document}
