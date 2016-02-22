@@ -29,5 +29,5 @@ Next to these extra fields, each signal should be placed under the apropriate la
 
 This project requires:
  *  Python 2.7 or newer
- *  a working installation of [vunit](https://github.com/vunit/vunit)
+ *  a working installation of [vunit](http://vunit.github.io/installing.html)
 
