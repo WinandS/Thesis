@@ -21,7 +21,8 @@ def read_template():
 
 
 def write_output(data, filename):
-    with open(output_path + filename + ".vhd", 'w') as template_file:
+    complete_filename = output_path + filename + ".vhd"
+    with open(complete_filename, 'w') as template_file:
             template_file.write(data)
     template_file.close()
 
