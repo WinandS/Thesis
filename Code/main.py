@@ -21,20 +21,16 @@ for filename in glob.glob("json_resources/*.json"):
     e = filename.find(".")
     filename = filename[s+1:e]
 
-    port_declaration, port_map, signal_declarations = json_to_vhdl.generate_vhdl(signals)
+    port_declaration, port_map, signal_declarations, signal_values = json_to_vhdl.generate_vhdl(signals)
     vhdl_testbench = generate_testbench.generate_testbench(vhdl_testbench, entity_name, port_declaration,
-                                                           port_map, signal_declarations, filename, test_name)
-
-    # - set up stimulus and checking process
-    vhdl_testbench = generate_testbench.set_up_stimulus_process(vhdl_testbench, test_name, signals[1])
-    vhdl_testbench = generate_testbench.set_up_check_process(vhdl_testbench, test_name, signals[2])
+                                                           port_map, signal_declarations, signal_values, filename,
+                                                           test_name, signals)
 
     # - write changes to vhdl testbench
     generate_testbench.write_output(vhdl_testbench, filename)
 
     # - open output file
     # generate_testbench.open_output(filename)
-
 
 # - run vunit on created file(s)
 run_vunit.run()
