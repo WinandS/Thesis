@@ -1,4 +1,4 @@
-/testbench_out.vhd
-*.pyc
-/template_TB_old.vhd
+.gitignore
+/tests/
 /vunit_out/
+
