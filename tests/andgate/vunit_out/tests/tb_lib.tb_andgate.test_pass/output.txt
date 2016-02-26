@@ -1,6 +1,0 @@
-# vsim -wlf /home/winand/Documents/Google\ Drive/Schoolwerk/Masterproef/Thesis/tests/andgate/vunit_out/tests/tb_lib.tb_andgate.test_pass/modelsim/vsim.wlf -quiet -t ps -onfinish stop tb_lib.tb_andgate(tb) -L vunit_lib -L desc_lib -L tb_lib -g/tb_andgate/runner_cfg="enabled_test_cases : test_pass,output path : /home/winand/Documents/Google Drive/Schoolwerk/Masterproef/Thesis/tests/andgate/vunit_out/tests/tb_lib.tb_andgate.test_pass/,active python runner : true" 
-# Start time: 10:43:39 on Feb 24,2016
-# ** Note: This will pass
-#    Time: 0 ps  Iteration: 4  Instance: /tb_andgate
-# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/run/src/stop_body_2008.vhd line 10
-# Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/run/src/stop_body_2008.vhd line 10
