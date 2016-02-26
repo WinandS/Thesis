@@ -30,7 +30,7 @@ def extract_signals(data):
                 for j in range(1, len(signal)):
                     output_signals.append(signal[j])
 
-    return [clk_signal, input_signals, output_signals]
+    return [[clk_signal], input_signals, output_signals]
 
 
 # extract all relevant info from json file
