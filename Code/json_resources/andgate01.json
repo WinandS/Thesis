@@ -1,4 +1,4 @@
-{"name": "andGate", "test" : "test2", "description": "some description", "signal": [
+{"name": "andGate", "test" : "test", "description": "some description", "signal": [
   {},
  ["IN",
    {"name": "A", "wave": "0", "type": "std_logic"},
