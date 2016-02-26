@@ -14,7 +14,7 @@
 --         is empty.
 --
 --         2] The circuit under verification, here the
---         AND Gate, is imported into the testbench
+--         AND Gate is imported into the testbench
 --         ARCHITECTURE as a component.
 ------------------------------------------------------------
 
@@ -34,7 +34,15 @@ architecture entity_name_generated_testbench of tb_entity_name_gen is
 	COMPONENT uut
 		PORT();
 	END COMPONENT;
+	
+	--# Clock cycles
+	
+	--# Helper types
+	
+	--# Constants
 
+	--# Timing Signals
+		
 	--# Clock Signals
 	
 	--# Input Signals
@@ -44,59 +52,39 @@ architecture entity_name_generated_testbench of tb_entity_name_gen is
 begin
 	dut : UUT PORT MAP();
 
-	checker_initiation : checker_init(error, "", "error.csv", level, off, failure, ',', false);
+	checker_initiation : checker_init(warning, "", "vunit_out/error.csv", level, off, failure, ',', false);
 
 	main : process
+		variable n : integer := 0;
 	begin
 		test_runner_setup(runner, runner_cfg);
-
+		
 		while test_suite loop
-			reset_checker_stat;
+			reset_checker_stat; 
+			n := 0;
+
 			if run("test_name") then
-				--# test stimulus
---/				report "This will pass";	/--
-				
-				wait for 15 ns;
-				--# test checking
---				check(sig_F = '1', "Expected sig_F = '1' at this point");
-				
---/				-- hardcoded for testing purposes:
-				-- --------------------------------------------------------
---			wait for 15 ns;
---				check(sig_F = '1', "Expected sig_F = '1' at this point");
---
---			elsif run("test_fail") then
---				check(false, "This will fail");
---				assert false report "It fails";
---
---			elsif run("test_1") then
---				sig_A <= '0';
---				sig_B <= '0';
---				wait for 15 ns;
---				check(sig_F = '0', "Expected sig_F = '0' at this point");
---
---			elsif run("test_2") then
---				sig_A <= '0';
---				sig_B <= '1';
---				wait for 15 ns;
---				check(sig_F = '0', "Expected sig_F = '0' at this point");
---
---			elsif run("test_3") then
---				sig_A <= '1';
---				sig_B <= '0';
---				wait for 15 ns;
---				check(sig_F = '0', "Expected sig_F = '0' at this point");
---
---			elsif run("test_4") then
---				sig_A <= '1';
---				sig_B <= '1';
---				wait for 15 ns;
---				check(sig_F = '1', "Expected sig_F = '1' at this point"); /--
+				--# Loop start
+	
+	
+					--# Stimulus rising edge
+					
+					
+					--# Stimulus falling edge
+					
+					--# test checking
+	
+					n := n+1;
+				--# Loop end
+				--# set endofsimulation
+			
 			end if;
 		end loop;
 
 		test_runner_cleanup(runner);
 	end process;
+	
+	--# Clock driver
 
 end architecture;
 ---------------------------------------------------------END

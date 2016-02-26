@@ -14,7 +14,7 @@
 --         is empty.
 --
 --         2] The circuit under verification, here the
---         AND Gate, is imported into the testbench
+--         AND Gate is imported into the testbench
 --         ARCHITECTURE as a component.
 ------------------------------------------------------------
 
@@ -39,15 +39,30 @@ B : in std_logic;
 F : out std_logic );
 
 	END COMPONENT;
+	
+	--# Clock cycles
+constant clock_cycles : integer := 2;
+	
+	--# Helper types
+type std_logic_array is array (0 to clock_cycles - 1) of std_logic;
 
+	
+	--# Constants
+constant sig_A_values : std_logic_array := ('1', '0');
+constant sig_B_values : std_logic_array := ('1', '0');
+constant sig_F_values : std_logic_array := ('1', '0');
+
+
+	--# Timing Signals
+		
 	--# Clock Signals
 	
 	--# Input Signals 
-    signal sig_B : std_logic; 
-    signal sig_A : std_logic;
+    signal sig_B : std_logic := '0'; 
+    signal sig_A : std_logic := '0';
 
 	--# Output Signals 
-    signal sig_F : std_logic;
+    signal sig_F : std_logic := '0';
 
 begin
 	dut : andGate PORT MAP(
@@ -56,28 +71,41 @@ B => sig_B,
 F => sig_F );
 
 
-	checker_initiation : checker_init(error, "", "error.csv", level, off, failure, ',', false);
+	checker_initiation : checker_init(warning, "", "vunit_out/error.csv", level, off, failure, ',', false);
 
 	main : process
+		variable n : integer := 0;
 	begin
 		test_runner_setup(runner, runner_cfg);
-
+		
 		while test_suite loop
-			reset_checker_stat;
-			if run("test4") then
-				sig_A <= '1';
-sig_B <= '1';
+			reset_checker_stat; 
+			n := 0;
 
-				
-				wait for 15 ns;
-				check( sig_F = '1', " Expected sig_F = '1' at this point");
---				check(sig_F = '1', "Expected sig_F = '1' at this point");
-				
+			if run("test") then
+				--# Loop start
+	
+	
+					sig_A <= sig_A_values(n);
+sig_B <= sig_B_values(n);
+
+					
+					
+					wait for 10 ns;
+					
+					check( sig_F = sig_F_values(n), "this check failed" );
+	
+					n := n+1;
+				--# Loop end
+				--# set endofsimulation
+			
 			end if;
 		end loop;
 
 		test_runner_cleanup(runner);
 	end process;
+	
+	--# Clock driver
 
 end architecture;
 ---------------------------------------------------------END
