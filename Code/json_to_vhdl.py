@@ -1,79 +1,144 @@
 # Generates VHDL signal declaration for given signal in json format.
+from operator import is_
+
+
 def generate_signal_declaration(json_signal):
     # print json_signal
     signal_name = json_signal["name"]
     signal_type = json_signal["type"]
-    return "    signal sig_" + signal_name + " : " + signal_type + " := '0';"
+
+
+    try:
+        vector_max = str(int(json_signal["vector_size"]) - 1)
+        signal_type = signal_type + "(" + vector_max + " downto 0)"
+    except KeyError:
+        vector_size = 0
+    return "    signal sig_" + signal_name + " : " + signal_type + " := sig_" + signal_name + "_values(0);"
 
 
 # convert given wavedrom character to correct vhdl character
-def convert_special_cases(char, previous_char):
+def convert(char, previous_char, signal_period, data, data_index, is_vector, vector_size, is_clock):
+    if is_vector:
+        return convert_std_logic_vector(char, previous_char, signal_period, data, data_index, vector_size)
+    else:
+        return convert_std_logic(char, previous_char, signal_period, is_clock), 0
+
+
+def convert_std_logic_vector(char, previous_char, signal_period, data, data_index, vector_size):
+
+    chars = []
+    if char == "|":
+        vector_size = -vector_size
+
+    elif char == "=":
+        vector_size = vector_size
+        data_index += 1
+
+    else:
+        return previous_char, data_index
+
+    converted_char = ""
+    for i in range(0, signal_period):
+        converted_char += ", \"" + dec_to_bin(data[data_index], vector_size) + "\""
+
+    return converted_char, data_index
+
+
+def dec_to_bin(decimal_number, vector_size):
+    if vector_size < 0:
+        vector_size = -vector_size
+        binary_number = "-"
+        for i in range(1, vector_size):
+            binary_number += "-"
+    else:
+        format_string = "{0:0" + str(vector_size) + "b}"
+        binary_number = format_string.format(int(decimal_number))
+    return binary_number
+
+
+def convert_std_logic(char, previous_char, signal_period, is_clock):
+    chars = []
     if char == ".":
-        char = previous_char
+        return previous_char
+    if char == "|":
+        if is_clock:
+            chars = ["-", "-"]
+        else:
+            chars = ["-"]
     elif char == "p":
-        char = "1', '0"
+        chars = ['1', '0']
     elif char == "n":
-        char = "0', '1"
-    return char
+        chars = ['0', '1']
+    else:
+        chars = [char]
+
+    converted_char = ""
+    for element in chars:
+        for i in range(0, signal_period):
+            converted_char += ", '" + str(element) + "'"
+    return converted_char
 
 
 # convert given json waveform to string of a vhdl array
-def convert_wave_to_array(json_wave, signal_period):
+def convert_wave_to_array(json_wave, signal_period, data, is_vector, vector_size, is_clock):
     # TODO: fix this cheating
+    # an extra (unused) wave value is added to a wave trace with length 1
+    # to support combinatorial testing
     if len(json_wave) == 1:
         json_wave += "0"
 
+    data_index = -1
+
     # convert first element
     value = json_wave[0]
+    value, data_index = convert(value, "0", signal_period, data, data_index, is_vector, vector_size, is_clock)
 
-    # convert special cases
-    value = convert_special_cases(value, "0")
-
-    array_string = "'" + value + "'"
-    for n in range(1, signal_period):
-        array_string += ", '" + value + "'"
+    # add converted value to final string
+    array_string = value
 
     # hold first element and continue to add rest of waveform
     previous_value = value
     if len(json_wave) > 1:
-        for i in range(1, len(json_wave)):
-            value = json_wave[i]
-
-            value = convert_special_cases(value, previous_value)
-
-            for n in range(0, signal_period):
-                array_string += ", '" + value + "'"
+        for wave_value in json_wave[1:]:
+            value, data_index = convert(wave_value, previous_value, signal_period, data,
+                                        data_index, is_vector, vector_size, is_clock)
+            array_string += value
 
             previous_value = value
-    return array_string
+    return array_string[1:]  # remove first "," from generated array
 
 
 # generate a string containing the vhdl declaration of a constant.
 # this constant holds all relevant info of a signal waveform
 def generate_signal_values_constant(json_signal, is_clock):
-    if "period" in json_signal:
+    try:
         signal_period = int(json_signal["period"])
-    else:
+    except KeyError:
         signal_period = 1
 
     array_type = ""
-    if is_clock > 0:
+    if is_clock:
         array_type += "clk_"
     array_type += json_signal["type"] + "_array"
 
     signal_wave = json_signal["wave"]
 
-    wave_array = convert_wave_to_array(signal_wave, signal_period)
+    is_vector = True
+
+    vector_size = int(0)
+    data = [1, 2]
+    try:
+        data = json_signal["data"]
+        vector_size = int(json_signal["vector_size"])
+    except KeyError:
+        is_vector = False
+
+    wave_array = convert_wave_to_array(signal_wave, signal_period
+                                       , data, is_vector, vector_size, is_clock)
 
     signal_value_statement = "constant sig_" + json_signal["name"] + "_values : " \
                              + array_type + " := (" + wave_array + ");"
     return signal_value_statement
-
-
-# def generate_signal_declaration_set(json_signal_set):
-#     i = 0
-#     signal_types = ["clk", "in", "out"]
-#     TODO: continue this
 
 
 # Generates signal and PORT declaration and port map for given signal set.
@@ -107,7 +172,7 @@ def generate_vhdl(json_signal_set):
                     signal_declarations[i].append(signal_decl)
 
                     # signal values
-                    values_constant = generate_signal_values_constant(signal, 1-i)
+                    values_constant = generate_signal_values_constant(signal, (False, True)[1-i > 0])
                     signal_values.append(values_constant)
 
         i += 1
