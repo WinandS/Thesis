@@ -35,9 +35,13 @@ architecture entity_name_generated_testbench of tb_entity_name_gen is
 		PORT();
 	END COMPONENT;
 	
-	--# Clock cycles
+	--# Clock Cycles
 	
-	--# Helper types
+	--# Wait Times
+	
+	--# Relative Period
+	
+	--# Helper Types
 	
 	--# Constants
 
@@ -56,6 +60,9 @@ begin
 
 	main : process
 		variable n : integer := 0;
+		variable v : integer := 0;
+		--# Wait Variables
+		
 	begin
 		test_runner_setup(runner, runner_cfg);
 		
@@ -64,8 +71,9 @@ begin
 			n := 0;
 
 			if run("test_name") then
+				
 				--# Loop start
-	
+				--# Extra Code For Waiting
 	
 					--# Stimulus rising edge
 					
@@ -75,7 +83,9 @@ begin
 					--# test checking
 	
 					n := n+1;
+					--# Extra End If For waiting
 				--# Loop end
+				
 				--# set endofsimulation
 			
 			end if;
