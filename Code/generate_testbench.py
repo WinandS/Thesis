@@ -213,7 +213,8 @@ def set_up_timing(testbench, signals):
     replace = ""
     for signal in signals[0]:
         if len(signal) > 0:
-            replace += find + "\n" + "constant internal_clock_period : time := " + signal["clock_period"] + ";"
+            replace += find + "\n" + "constant internal_clock_period : time := 20 ns;"
+            # replace += find + "\n" + "constant internal_clock_period : time := " + signal["clock_period"] + ";"
     testbench = testbench.replace(find, replace + "\n")
 
     # - add EndOfSimulation signal
