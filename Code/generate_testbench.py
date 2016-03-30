@@ -35,14 +35,14 @@ def open_output(filename):
 def clean_testbench_template(template):
     pattern = re.compile('--/')
     # TODO: make this better
-    for x in range(0,15):
+    for x in range(0, 15):
         for match in re.finditer(pattern, template):
             s = match.start()
             pattern2 = re.compile('/--')
             for match2 in re.finditer(pattern2, template):
                 e = match2.end()
                 break
-            template = template.replace(template[s:e+1], "")
+            template = template.replace(template[s:e + 1], "")
             break
     return template
 
@@ -58,14 +58,87 @@ def set_up_uut(testbench, entity_name, port_declaration, port_map, filename):
     return testbench
 
 
-def set_clock_cycles_constant(testbench, len_of_first_in_signal_wave):
+# declare clock cycles constant
+def set_clock_cycles_constant(testbench, first_in_signal):
     # TODO: fix this cheating
-    if len_of_first_in_signal_wave == 1:
-        len_of_first_in_signal_wave = 2
+    length = len(first_in_signal["wave"])
 
-    find = "--# Clock cycles"
-    replace = find + "\n" + "constant clock_cycles : integer := " + str(len_of_first_in_signal_wave) + ";"
+    try:
+        period = int(first_in_signal["period"])
+    except KeyError:
+        period = 1
+
+    if length == 1:
+        length = 2
+
+    find = "--# Clock Cycles"
+    replace = find + "\n" + "constant clock_cycles : integer := " + str(length * period) + ";"
+
     return testbench.replace(find, replace)
+
+
+# set up everything related to timing
+def set_up_waiting_necessities(testbench, json_wait_times, relative_period):
+    if len(json_wait_times) > 0:
+        find = "--# Wait Variables"
+        replace = find + "\n" + " variable wait_array_index : integer := 0;" + \
+                  "variable wait_variable : integer := wait_array(wait_array_index);"
+        testbench = testbench.replace(find, replace)
+
+        find = "--# Extra Code For Waiting"
+        replace = "if sig_clk_values(2 * n) = '-' and wait_variable > 0 then " + "\n" + \
+                  "while wait_variable > 0 loop" + "\n" + \
+                  "v := n mod (2*relative_period);" + "\n" + \
+                  "while (v - (n mod (2 * relative_period)) < 2*relative_period) loop" + "\n" + \
+                  "wait until rising_edge(internal_clock);" + "\n" + \
+                  "sig_clk    <= sig_clk_values(2 * v);" + "\n" + \
+                  "sig_tvalid <= sig_tvalid_values(n - 1);" + "\n" + \
+                  "sig_tdata  <= sig_tdata_values(n - 1);" + "\n" + \
+                  "wait until falling_edge(internal_clock);" + "\n" + \
+                  "sig_clk <= sig_clk_values(2 * v + 1);" + "\n" + \
+                  "v := v + 1;" + "\n" + \
+                  "end loop;" + "\n" + \
+                  "wait_variable := wait_variable - 1;" + "\n" + \
+                  "end loop;" + "\n" + \
+                  "while (n < clock_cycles and sig_clk_values(2 * n) = '-' ) loop" + "\n" + \
+                  "n := n + 1 * relative_period;" + "\n" + \
+                  "end loop;" + "\n" + \
+                  "wait_array_index := wait_array_index + 1;" + "\n" + \
+                  "wait_variable    := wait_array(wait_array_index);" + "\n" + \
+                  "else"
+        testbench = testbench.replace(find, replace)
+
+        find = "--# Extra End If For waiting"
+        replace = "end if;"
+        testbench = testbench.replace(find, replace)
+
+        find = "--# Extra Code For Waiting"
+        replace = "if sig_clk_values(2 * n) = '-' and wait_variable > 0 then " + "\n" + \
+                  "while wait_variable > 0 loop" + "\n" + \
+                  "v := n mod (2*relative_period);" + "\n" + \
+                  "while (v - (n mod (2 * relative_period)) < 2*relative_period) loop"
+        testbench = testbench.replace(find, replace)
+
+        find = "--# Wait Times"
+        replace = find + "\n" + "constant amount_of_waits : integer := " + str(len(json_wait_times)) + ";"
+        testbench = testbench.replace(find, replace)
+
+        find = "--# Relative Period"
+        replace = find + "\n" + "constant relative_period : integer :=  " + str(relative_period) + ";"
+        testbench = testbench.replace(find, replace)
+
+        find = "--# Helper Types"
+        replace = find + "\n" + "type wait_integer_array is array (0 to amount_of_waits) of integer;"
+        testbench = testbench.replace(find, replace)
+
+        find = "--# Constants"
+        wait_array = ", 0"
+        for element in json_wait_times:
+            wait_array = ", " + element + wait_array
+        replace = find + "\n" + "constant wait_array : wait_integer_array := (" + wait_array[1:] + ");"
+        return testbench.replace(find, replace)
+    else:
+        return testbench
 
 
 def set_up_signal_value_constants(testbench, signal_values):
@@ -101,7 +174,7 @@ def set_up_stimulus_process(testbench, test_name, input_signals):
     rising_stimulus = ""
     falling_stimulus = ""
     i = 0
-    for signal_type in input_signals:   # clk and in type signals
+    for signal_type in input_signals:  # clk and in type signals
         if len(signal_type) > 0:
             for signal in signal_type:
                 if len(signal) > 0:
@@ -123,12 +196,17 @@ def set_up_stimulus_process(testbench, test_name, input_signals):
 def set_up_check_process(testbench, output_signals):
     checking = ""
     for signal in output_signals:
-        checking += "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), \"this check failed\" );"
+        checking += "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
+                                                                                  "\"this check failed. Expected " + \
+                    signal["name"] + \
+                    " = \" & " + signal["type"] + "'image(sig_" + signal["name"] + "_values(n)) " + \
+                    "& \", got " + signal["name"] + " = \"" + "& " + signal["type"] + "'image(sig_" + signal["name"] + \
+                    ") &" + " \" at n = \" & integer'image(n) & \".\");"
     find = "--# test checking"
     return testbench.replace(find, checking)
 
 
-# - add all timing releated elements to vhdl file
+# - add all timing related elements to vhdl file
 def set_up_timing(testbench, signals):
     # - add clock period
     find = "--# Constants"
@@ -189,33 +267,43 @@ def declare_helper_types(testbench, signals):
         if len(signal_type) > 0:
             for signal in signal_type:
                 if len(signal) > 0:
-                    if signal["type"] not in types[i]:   # here type is vhdl logic type
+                    if signal["type"] not in types[i]:  # here type is vhdl logic type
                         types[i].append(signal["type"])  # clock signals will be handled differently and are kept apart
         if i < 1:  # input and output signals don't need to be separated
             i += 1
 
     # - type declarations
-    find = "--# Helper types"
+    find = "--# Helper Types"
     replace_type = ""
     for logic_type in types[0]:
-        replace_type += "type clk_" + str(logic_type) + "_array is array (0 to 2*clock_cycles - 1) of "\
-                       + str(logic_type) + ";" + "\n"
+        replace_type += "type clk_" + str(logic_type) + "_array is array (0 to 2*clock_cycles - 1) of " \
+                        + str(logic_type) + ";" + "\n"
     for logic_type in types[1]:
-        replace_type += "type " + str(logic_type) + "_array is array (0 to clock_cycles - 1) of "\
-                       + str(logic_type) + ";" + "\n"
+        replace_type += "type " + str(logic_type) + "_array is array (0 to clock_cycles - 1) of " \
+                        + str(logic_type) + ";" + "\n"
 
     return testbench.replace(find, find + "\n" + replace_type)
 
 
 def generate_testbench(testbench, entity_name, port_declaration, port_map, signal_declarations, signal_values,
                        filename, test_name, signals):
-
     # set up everything involving uut
     testbench = set_up_uut(testbench, entity_name, port_declaration, port_map, filename)
 
     # - declare clock cycles constant
-    first_in_signal_wave = signals[1][0]["wave"]
-    testbench = set_clock_cycles_constant(testbench, len(first_in_signal_wave))
+    first_in_signal = signals[1][0]
+    testbench = set_clock_cycles_constant(testbench, first_in_signal)
+
+    # - declare everything involving waits if necessary
+    try:
+        json_wait_times = signals[0][0]["wait_times"]
+    except:
+        json_wait_times = []
+    try:
+        relative_period = signals[0][0]["relative_period"]
+    except:
+        relative_period = 1
+    testbench = set_up_waiting_necessities(testbench, json_wait_times, relative_period)
 
     # - declare sig_values constants
     testbench = declare_helper_types(testbench, signals)
