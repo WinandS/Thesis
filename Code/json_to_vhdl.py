@@ -28,10 +28,18 @@ def convert_std_logic_vector(char, previous_char, signal_period, data, data_inde
 
     chars = []
     if char == "|":
-        vector_size = -vector_size
+            vector_size = -vector_size
+    elif char == "x":
+        binary_number = "Z"
+        for i in range(1, vector_size):
+            binary_number += "Z"
+        converted_char = ""
+        for i in range(0, signal_period):
+            converted_char += ", \"" + binary_number + "\""
+
+        return converted_char, data_index
 
     elif char == "=":
-        vector_size = vector_size
         data_index += 1
 
     else:
@@ -42,7 +50,6 @@ def convert_std_logic_vector(char, previous_char, signal_period, data, data_inde
         converted_char += ", \"" + dec_to_bin(data[data_index], vector_size) + "\""
 
     return converted_char, data_index
-
 
 def dec_to_bin(decimal_number, vector_size):
     if vector_size < 0:
@@ -60,7 +67,12 @@ def convert_std_logic(char, previous_char, signal_period, is_clock):
     chars = []
     if char == ".":
         return previous_char
-    if char == "|":
+    elif char == "x":
+        if is_clock:
+            chars = ["Z", "Z"]
+        else:
+            chars = ["Z"]
+    elif char == "|":
         if is_clock:
             chars = ["-", "-"]
         else:
