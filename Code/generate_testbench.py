@@ -88,21 +88,16 @@ def set_up_waiting_necessities(testbench, json_wait_times, relative_period):
         find = "--# Extra Code For Waiting"
         replace = "if sig_clk_values(2 * n) = '-' and wait_variable > 0 then " + "\n" + \
                   "while wait_variable > 0 loop" + "\n" + \
-                  "v := n mod (2*relative_period);" + "\n" + \
-                  "while (v - (n mod (2 * relative_period)) < 2*relative_period) loop" + "\n" + \
-                  "wait until rising_edge(internal_clock);" + "\n" + \
-                  "sig_clk    <= sig_clk_values(2 * v);" + "\n" + \
-                  "sig_tvalid <= sig_tvalid_values(n - 1);" + "\n" + \
-                  "sig_tdata  <= sig_tdata_values(n - 1);" + "\n" + \
-                  "wait until falling_edge(internal_clock);" + "\n" + \
-                  "sig_clk <= sig_clk_values(2 * v + 1);" + "\n" + \
+                  "v := n mod (relative_period);" + "\n" + \
+                  "while (v - (n mod (relative_period)) < relative_period) loop" + "\n" + \
+                  "--# Loop Stimulus rising edge" + "\n" + \
+                  "--# Loop Stimulus falling edge" + "\n" + \
+                  "--# test checking" + "\n" + \
                   "v := v + 1;" + "\n" + \
                   "end loop;" + "\n" + \
                   "wait_variable := wait_variable - 1;" + "\n" + \
                   "end loop;" + "\n" + \
-                  "while (n < clock_cycles and sig_clk_values(2 * n) = '-' ) loop" + "\n" + \
-                  "n := n + 1 * relative_period;" + "\n" + \
-                  "end loop;" + "\n" + \
+                  "n := n + relative_period;" + "\n" + \
                   "wait_array_index := wait_array_index + 1;" + "\n" + \
                   "wait_variable    := wait_array(wait_array_index);" + "\n" + \
                   "else"
@@ -132,10 +127,11 @@ def set_up_waiting_necessities(testbench, json_wait_times, relative_period):
         testbench = testbench.replace(find, replace)
 
         find = "--# Constants"
-        wait_array = ", 0"
+        wait_array = ""
         for element in json_wait_times:
-            wait_array = ", " + element + wait_array
-        replace = find + "\n" + "constant wait_array : wait_integer_array := (" + wait_array[1:] + ");"
+            wait_array += ", " + element
+        wait_array += ", 0"
+        replace = find + "\n" + "constant wait_array : wait_integer_array := (" + wait_array[2:] + ");"
         return testbench.replace(find, replace)
     else:
         return testbench
@@ -157,7 +153,7 @@ def set_up_signals(testbench, signal_declarations):
         if len(type) > 0:
             for signal_decl in type:
                 find = "--# " + signal_types[i] + " Signals"
-                replace = "--# " + signal_types[i] + " Signals \n" + signal_decl
+                replace = find + "\n" + signal_decl
                 testbench = testbench.replace(find, replace)
         i += 1
     return testbench
@@ -172,7 +168,9 @@ def set_up_stimulus_process(testbench, test_name, input_signals):
                 is_clocked = True
 
     rising_stimulus = ""
+    loop_rising_stimulus = ""
     falling_stimulus = ""
+    loop_falling_stimulus = ""
     i = 0
     for signal_type in input_signals:  # clk and in type signals
         if len(signal_type) > 0:
@@ -180,28 +178,44 @@ def set_up_stimulus_process(testbench, test_name, input_signals):
                 if len(signal) > 0:
                     if is_clocked and i == 0:  # if the signal is a clock signal
                         rising_stimulus += "sig_" + signal["name"] + " <= sig_" + signal["name"] + "_values(2*n);\n"
+                        loop_rising_stimulus += "sig_" + signal["name"] + " <= sig_" + signal["name"] + "_values(2*v);\n"
                         falling_stimulus += "sig_" + signal["name"] + " <= sig_" + signal["name"] + "_values(2*n+1);\n"
+                        loop_falling_stimulus += "sig_" + signal["name"] + " <= sig_" + signal["name"] + "_values(2*v+1);\n"
                     else:
-                        rising_stimulus += "sig_" + signal["name"] + " <= sig_" + signal["name"] + "_values(n);\n"
+                        assignment = "sig_" + signal["name"] + " <= sig_" + signal["name"] + "_values(n);\n"
+                        rising_stimulus += assignment
+                        loop_rising_stimulus += assignment
                     i += 1
     if not is_clocked:
         falling_stimulus += "wait for 10 ns;"
     find_rising = "--# Stimulus rising edge"
+    loop_find_rising = "--# Loop Stimulus rising edge"
     find_falling = "--# Stimulus falling edge"
+    loop_find_falling = "--# Loop Stimulus falling edge"
 
     testbench = testbench.replace(find_rising, rising_stimulus)
-    return testbench.replace(find_falling, falling_stimulus)
+    testbench = testbench.replace(loop_find_rising, loop_rising_stimulus)
+    testbench = testbench.replace(find_falling, falling_stimulus)
+    return testbench.replace(loop_find_falling, loop_falling_stimulus)
 
 
 def set_up_check_process(testbench, output_signals):
     checking = ""
     for signal in output_signals:
-        checking += "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
-                                                                                  "\"this check failed. Expected " + \
-                    signal["name"] + \
-                    " = \" & " + signal["type"] + "'image(sig_" + signal["name"] + "_values(n)) " + \
-                    "& \", got " + signal["name"] + " = \"" + "& " + signal["type"] + "'image(sig_" + signal["name"] + \
-                    ") &" + " \" at n = \" & integer'image(n) & \".\");"
+        try:
+            signal["vector_size"]
+            checking += "\n if sig_" + signal["name"] + "_values(n)(0) /= 'Z' then" + "\n" + \
+                        "check(sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), \"woops\");" + \
+                        "-- Do some check for a vector \n" + "end if;"
+        except KeyError:
+            checking += "\n if sig_" + signal["name"] + "_values(n) /= 'Z' then" + "\n" + \
+                "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
+                "\"this check failed. Expected " + signal["name"] + \
+                " = \" & " + signal["type"] + "'image(sig_" + signal["name"] + "_values(n)) " + \
+                "& \", got " + signal["name"] + " = \"" + "& " + signal["type"] + "'image(sig_" + signal["name"] + \
+                ") &" + " \" at n = \" & integer'image(n) & \".\");" + "\n" + \
+                "end if;"
+
     find = "--# test checking"
     return testbench.replace(find, checking)
 
@@ -221,6 +235,16 @@ def set_up_timing(testbench, signals):
     find = "--# Timing Signals"
     replace = find + "\n" + "signal EndOfSimulation : std_logic := '0';"
     replace += "signal internal_clock : std_logic := '1';"
+    testbench = testbench.replace(find, replace + "\n")
+
+    # - add simulation step signal
+    find = "--# Simulation Signals"
+    replace = find + "\n" + "signal sig_n : integer := 0;"
+    testbench = testbench.replace(find, replace + "\n")
+
+    # - add simulation step signal
+    find = "--# sig_n driver"
+    replace = "sig_n <= n;"
     testbench = testbench.replace(find, replace + "\n")
 
     # - end simulation
@@ -243,11 +267,17 @@ def set_up_timing(testbench, signals):
 
     # - add wait statements for rising and falling edge
     find_rising = "--# Stimulus rising edge"
+    loop_find_rising = "--# Loop Stimulus rising edge"
     find_falling = "--# Stimulus falling edge"
+    loop_find_falling = "--# Loop Stimulus falling edge"
     replace_rising = "wait until rising_edge(internal_clock);" + "\n" + find_rising
+    loop_replace_rising = "wait until rising_edge(internal_clock);" + "\n" + loop_find_rising
     replace_falling = "wait until falling_edge(internal_clock);" + "\n" + find_falling
+    loop_replace_falling = "wait until falling_edge(internal_clock);" + "\n" + loop_find_falling
     testbench = testbench.replace(find_rising, replace_rising + "\n")
+    testbench = testbench.replace(loop_find_rising, loop_replace_rising + "\n")
     testbench = testbench.replace(find_falling, replace_falling + "\n")
+    testbench = testbench.replace(loop_find_falling, loop_replace_falling + "\n")
 
     # - add loop
     find_start = "--# Loop start"
@@ -301,7 +331,7 @@ def generate_testbench(testbench, entity_name, port_declaration, port_map, signa
     except:
         json_wait_times = []
     try:
-        relative_period = signals[0][0]["relative_period"]
+        relative_period = signals[0][0]["period"]
     except:
         relative_period = 1
     testbench = set_up_waiting_necessities(testbench, json_wait_times, relative_period)
