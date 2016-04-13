@@ -52,6 +52,9 @@ architecture entity_name_generated_testbench of tb_entity_name_gen is
 	--# Input Signals
 
 	--# Output Signals
+	
+	--# Simulation Signals
+	
 
 begin
 	dut : UUT PORT MAP();
@@ -73,6 +76,9 @@ begin
 			if run("test_name") then
 				
 				--# Loop start
+				
+				--# sig_n driver
+				
 				--# Extra Code For Waiting
 	
 					--# Stimulus rising edge
