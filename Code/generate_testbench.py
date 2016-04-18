@@ -226,9 +226,21 @@ def set_up_timing(testbench, signals):
     # - add clock period
     find = "--# Constants"
     replace = ""
+    clock_period = 20.0;
     for signal in signals[0]:
         if len(signal) > 0:
-            replace += find + "\n" + "constant internal_clock_period : time := 20 ns;"
+
+            try:
+                relative_period = int(signal["period"])
+            except KeyError:
+                relative_period = 1
+
+            try:
+                clock_period = float(signal["clock_period"]) / relative_period
+            except KeyError:
+                clock_period /= relative_period
+
+            replace += find + "\n" + "constant internal_clock_period : time := " + str(clock_period) + " ns;"
             # replace += find + "\n" + "constant internal_clock_period : time := " + signal["clock_period"] + ";"
     testbench = testbench.replace(find, replace + "\n")
 
