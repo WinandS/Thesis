@@ -205,8 +205,9 @@ def set_up_check_process(testbench, output_signals):
         try:
             signal["vector_size"]
             checking += "\n if sig_" + signal["name"] + "_values(n)(0) /= 'X' then" + "\n" + \
-                        "check(sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), \"woops\");" + \
-                        "-- Do some check for a vector \n" + "end if;"
+                "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
+                "\"Woops\");" + "\n" + \
+                "end if;" + "-- Do some check for a vector \n"
         except KeyError:
             checking += "\n if sig_" + signal["name"] + "_values(n) /= 'X' then" + "\n" + \
                 "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
