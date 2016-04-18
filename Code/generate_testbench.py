@@ -78,8 +78,8 @@ def set_clock_cycles_constant(testbench, first_in_signal):
 
 
 # set up everything related to timing
-def set_up_waiting_necessities(testbench, json_wait_times, relative_period):
-    if len(json_wait_times) > 0:
+def set_up_waiting_necessities(testbench, json_loop_times, relative_period):
+    if len(json_loop_times) > 0:
         find = "--# Wait Variables"
         replace = find + "\n" + " variable wait_array_index : integer := 0;" + \
                   "variable wait_variable : integer := wait_array(wait_array_index);"
@@ -115,7 +115,7 @@ def set_up_waiting_necessities(testbench, json_wait_times, relative_period):
         testbench = testbench.replace(find, replace)
 
         find = "--# Wait Times"
-        replace = find + "\n" + "constant amount_of_waits : integer := " + str(len(json_wait_times)) + ";"
+        replace = find + "\n" + "constant amount_of_waits : integer := " + str(len(json_loop_times)) + ";"
         testbench = testbench.replace(find, replace)
 
         find = "--# Relative Period"
@@ -128,7 +128,7 @@ def set_up_waiting_necessities(testbench, json_wait_times, relative_period):
 
         find = "--# Constants"
         wait_array = ""
-        for element in json_wait_times:
+        for element in json_loop_times:
             wait_array += ", " + element
         wait_array += ", 0"
         replace = find + "\n" + "constant wait_array : wait_integer_array := (" + wait_array[2:] + ");"
@@ -340,14 +340,14 @@ def generate_testbench(testbench, entity_name, port_declaration, port_map, signa
 
     # - declare everything involving waits if necessary
     try:
-        json_wait_times = signals[0][0]["wait_times"]
+        json_loop_times = signals[0][0]["loop_times"]
     except:
-        json_wait_times = []
+        json_loop_times = []
     try:
         relative_period = signals[0][0]["period"]
     except:
         relative_period = 1
-    testbench = set_up_waiting_necessities(testbench, json_wait_times, relative_period)
+    testbench = set_up_waiting_necessities(testbench, json_loop_times, relative_period)
 
     # - declare sig_values constants
     testbench = declare_helper_types(testbench, signals)

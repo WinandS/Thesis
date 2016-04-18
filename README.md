@@ -18,7 +18,7 @@ Next to these extra fields, each signal should be placed under the apropriate la
 
 ## extra feature
 
-It is possible simulate a period where the input never changes. By using the '|' character in a wave trace and the 'wait_times' list specified in the clock signal one can specify the exact moment the period should start and the amount of clock cycles it should last. In this example the no-change period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentialy).
+It is possible simulate a period where the input never changes. By using the '|' character in a wave trace and the 'loop_times' list specified in the clock signal one can specify the exact moment the period should start and the amount of clock cycles it should last. In this example the no-change period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentialy).
 
 For obvious reasons this feature can only be used for timed designs.
 
@@ -29,7 +29,7 @@ For obvious reasons this feature can only be used for timed designs.
 {"name": "uart_tx", "test" : "test", "description": "some description", "signal": [
   {},
   ["CLK",
-   {"name": "clk", "wave": "n......|", "type":"std_logic", "period": "2", "wait_times" : ["10*434"]}],
+   {"name": "clk", "wave": "n......|", "type":"std_logic", "period": "2", "loop_times" : ["10*434"]}],
   ["IN",
    {"name": "tvalid", "wave": "0.1..0........|.", "type": "std_logic"},
    {"name" : "tdata", "wave": "=.=..=........|.", "data": ["0", "249", "0"], "type" : "std_logic_vector", "vector_size" : "8"}
