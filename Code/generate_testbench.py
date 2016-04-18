@@ -204,11 +204,11 @@ def set_up_check_process(testbench, output_signals):
     for signal in output_signals:
         try:
             signal["vector_size"]
-            checking += "\n if sig_" + signal["name"] + "_values(n)(0) /= 'Z' then" + "\n" + \
+            checking += "\n if sig_" + signal["name"] + "_values(n)(0) /= 'X' then" + "\n" + \
                         "check(sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), \"woops\");" + \
                         "-- Do some check for a vector \n" + "end if;"
         except KeyError:
-            checking += "\n if sig_" + signal["name"] + "_values(n) /= 'Z' then" + "\n" + \
+            checking += "\n if sig_" + signal["name"] + "_values(n) /= 'X' then" + "\n" + \
                 "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
                 "\"this check failed. Expected " + signal["name"] + \
                 " = \" & " + signal["type"] + "'image(sig_" + signal["name"] + "_values(n)) " + \
