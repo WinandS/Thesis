@@ -14,15 +14,35 @@ This project uses [Wavedrom](http://wavedrom.com/) files as the base for its inp
 * description : holds the descrition for this test
 * type : should be specified for every signal; The type specifies the VHDL logic type for this signal
 * vector_size : for vectors (like tdata in the example below) the vector size should also be specified. This is the amount of bits that the vector represents
-* data : The data that the vector holds should be specified in this list. 
+* data : The data that the vector holds should be specified in this list
+* clock_period (optional): The designer can specify a clock signal, otherwise the clock period will default to 20 ns
 
 Next to these extra fields, each signal should be placed under the apropriate label. All input signals for example should be under one "IN" label. The clock signal is regarded as a special case input signal and is treated seperately.
 
-## extra feature
+## extra features
+Not all wavedrom characters are currently supported. The supported characters are:
 
-It is possible simulate a period where the input never changes. By using the '|' character in a wave trace and the 'loop_times' list specified in the clock signal one can specify the exact moment the period should start and the amount of clock cycles it should last. In this example the no-change period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentialy).
+In a clock signal:
+```java
+{'n', 'p', '.', '|'}
+```
 
-For obvious reasons this feature can only be used for timed designs.
+In an input signal:
+```java
+{'1', '0', '.', '='}
+```
+
+In an output signal:
+```java
+{'1', '0', '.', '=', 'x'}
+```
+
+
+### time loops ('|')
+It is possible simulate a period where the input never changes. By using the '|' character in the clock signal and the 'loop_times' field the moment this period should start and the amount of clock cycles it should last can be specified. In this example the first loop period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentialy). During this loop the checks at this moment are repeated every clock cycle. For obvious reasons this feature can only be used when a clock signal is present.
+
+### check skipping ('x')
+In some cases the output at a specific point in time is undefined or is of no interest to the designer. in this case the designer can use the 'x' character, which means that the signal should not be checked at this point. This character is only valid for output signals.
 
 ## example
 
@@ -44,10 +64,11 @@ For obvious reasons this feature can only be used for timed designs.
 
 ```
 the generated wave trace file looks like this:
+
 ![Wavedrom example](http://postimg.org/image/z5gt0wmon/full/)
 
 # More examples
-more examples can be found [here](https://github.ugent.be/wseldesl/Thesis/examples). Every example contains 
+more examples can be found [here](https://github.ugent.be/wseldesl/Thesis/tree/master/examples). Every example contains 
  * The design to be tested in the 'src' folder
  * The WaveDrom file from which the test is generated in the 'json resources' folder
  * The generated test in the 'test' folder
@@ -58,7 +79,9 @@ The example can be run by executing the run.py file contained in every folder. F
 
 This project requires:
  *  Python 2.7 or newer
- *  a working installation of [vunit](http://vunit.github.io/installing.html)
+ *  A working installation of [vunit](http://vunit.github.io/installing.html)
+
+A working installation of [WaveDrom](https://github.com/wavedrom/wavedrom.github.io) is recommended
 
 
 
