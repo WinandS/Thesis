@@ -44,7 +44,7 @@ For obvious reasons this feature can only be used for timed designs.
 
 ```
 the generated wave trace file looks like this:
-![Wavedrom example](http://postimg.org/image/z5gt0wmon/)
+![Wavedrom example](http://postimg.org/image/z5gt0wmon/full/)
 
 # More examples
 more examples can be found [here](https://github.ugent.be/wseldesl/Thesis/examples). Every example contains 
