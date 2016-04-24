@@ -7,7 +7,7 @@ import glob
 for filename in glob.glob("json_resources/*.json"):
 
     # - import wavedrom input, extract signals from raw data and print them
-    entity_name, test_name, signals = read_json.extract_info(filename)
+    entity_name, test_name, test_description, signals = read_json.extract_info(filename)
     # read_json.print_signals(signals)
 
     # - read the testbench template
@@ -15,6 +15,14 @@ for filename in glob.glob("json_resources/*.json"):
 
     # - clean the template
     vhdl_testbench = generate_testbench.clean_testbench_template(vhdl_testbench)
+
+    # - add header
+    vhdl_testbench = "-- ---------------------------------------------------" + "\n" + \
+                     "-- Author: " + "\n" + \
+                     "-- Test name: " + test_name + "\n" + \
+                     "-- Test description: " + test_description + "\n" + \
+                     "-- ---------------------------------------------------" + "\n" + \
+                     vhdl_testbench
 
     # - set up uut declaration, port map and signal declaration
     s = filename.find("/")
