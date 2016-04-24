@@ -36,7 +36,7 @@ def extract_signals(data):
 # extract all relevant info from json file
 def extract_info(filename):
     data = open_json_file(filename)
-    return data["name"], data["test"], extract_signals(data)
+    return data["name"], data["test"], data["description"], extract_signals(data)
 
 
 # print extracted wavedrom signals
