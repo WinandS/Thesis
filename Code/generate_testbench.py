@@ -207,15 +207,13 @@ def set_up_check_process(testbench, output_signals):
             checking += "\n if sig_" + signal["name"] + "_values(n)(0) /= 'X' then" + "\n" + \
                 "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
                 "\"Woops\");" + "\n" + \
+                "if sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n) then" + "\n" + \
+                "error_number := error_number + 1;" + "\n" + \
+                "end if;" + "\n" + \
                 "end if;" + "-- Do some check for a vector \n"
         except KeyError:
-            checking += "\n if sig_" + signal["name"] + "_values(n) /= 'X' then" + "\n" + \
-                "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
-                "\"this check failed. Expected " + signal["name"] + \
-                " = \" & " + signal["type"] + "'image(sig_" + signal["name"] + "_values(n)) " + \
-                "& \", got " + signal["name"] + " = \"" + "& " + signal["type"] + "'image(sig_" + signal["name"] + \
-                ") &" + " \" at n = \" & integer'image(n) & \".\");" + "\n" + \
-                "end if;"
+            checking += "check_signal(sig_" + signal["name"] + ", sig_" + signal["name"] +\
+                        "_values(n), n, error_number);"
 
     find = "--# test checking"
     return testbench.replace(find, checking)
