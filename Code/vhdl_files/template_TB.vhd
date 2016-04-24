@@ -1,24 +1,4 @@
-------------------------------------------------------------
--- Based on code from  : http://www.teahlab.com/
---
--- Author: Winand Seldeslachts
---
--- Program : AND Gate Testbench
---
--- Note    : A testbench is a program that defines a set
---         of input signals to verity the operation of
---         a circuit: in this case, the AND Gate.
---	
---         1] The testbench takes no inputs and returns
---         no outputs. As such the ENTITY declaration
---         is empty.
---
---         2] The circuit under verification, here the
---         AND Gate is imported into the testbench
---         ARCHITECTURE as a component.
-------------------------------------------------------------
 
---import std_logic from the IEEE library
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -55,6 +35,16 @@ architecture entity_name_generated_testbench of tb_entity_name_gen is
 	
 	--# Simulation Signals
 	
+	--# Check Procedure
+	procedure check_signal(signal_to_check, expected_value : in std_logic; n: in integer; error_number : inout integer ) is
+	begin
+		if expected_value /= 'X' then
+			check(signal_to_check = expected_value, integer'image(error_number) & ". This check failed. Expected F = " & std_logic'image(expected_value) & ", got F = " & std_logic'image(signal_to_check) & " at n = " & integer'image(n) & ".");
+			if signal_to_check /= expected_value then
+				error_number := error_number + 1;
+			end if;
+		end if;
+	end check_signal;
 
 begin
 	dut : UUT PORT MAP();
@@ -64,6 +54,7 @@ begin
 	main : process
 		variable n : integer := 0;
 		variable v : integer := 0;
+		variable error_number     : integer := 1;
 		--# Wait Variables
 		
 	begin
