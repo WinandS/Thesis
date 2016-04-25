@@ -10,7 +10,8 @@ entity tb_entity_name_gen is
 end entity;
 
 architecture entity_name_generated_testbench of tb_entity_name_gen is
-	-- Component Declaration for the Unit Under Test (UUT)
+	shared variable warning_logger : checker_t;
+	shared variable message_logger : checker_t;
 	COMPONENT uut
 		PORT();
 	END COMPONENT;
@@ -35,21 +36,12 @@ architecture entity_name_generated_testbench of tb_entity_name_gen is
 	
 	--# Simulation Signals
 	
-	--# Check Procedure
-	procedure check_signal(signal_to_check, expected_value : in std_logic; n: in integer; error_number : inout integer ) is
-	begin
-		if expected_value /= 'X' then
-			check(signal_to_check = expected_value, integer'image(error_number) & ". This check failed. Expected F = " & std_logic'image(expected_value) & ", got F = " & std_logic'image(signal_to_check) & " at n = " & integer'image(n) & ".");
-			if signal_to_check /= expected_value then
-				error_number := error_number + 1;
-			end if;
-		end if;
-	end check_signal;
-
 begin
 	dut : UUT PORT MAP();
 
-	checker_initiation : checker_init(warning, "", "vunit_out/error.csv", level, off, failure, ',', false);
+	checker_initiation : checker_init(warning, "", "vunit_out/warning_log/entity_name_messages_old.csv", level, off, failure, ',', false);
+	warning_logger_initiation : checker_init(warning_logger, warning, "", "vunit_out/warning_log/entity_name_result.csv", level, verbose_csv, failure, ',', false);
+	message_logger_initiation : checker_init(message_logger, warning, "", "vunit_out/warning_log/entity_name_messages.csv", level, verbose_csv, failure, ',', false);
 
 	main : process
 		variable n : integer := 0;

@@ -15,7 +15,7 @@ entity tb_andgatefullfailing_gen is
 end entity;
 
 architecture andgatefullfailing_generated_testbench of tb_andgatefullfailing_gen is
-	-- Component Declaration for the Unit Under Test (UUT)
+	shared variable warning_logger : checker_t;
 	COMPONENT andGate_timed
 		PORT(
 			CLK : in  std_logic;
@@ -69,10 +69,12 @@ begin
 			F   => sig_F);
 
 	checker_initiation : checker_init(warning, "", "vunit_out/error.csv", level, off, failure, ',', false);
+	warning_logger_initiation : checker_init(warning_logger, warning, "", "vunit_out/result.csv", level, verbose_csv, failure, ',', false);
 
 	main : process
-		variable n : integer := 0;
-		variable v : integer := 0;
+		variable n            : integer := 0;
+		variable v            : integer := 0;
+		variable error_number : integer := 1;
 	--# Wait Variables
 
 	begin
@@ -97,7 +99,11 @@ begin
 					sig_CLK <= sig_CLK_values(2 * n + 1);
 
 					if sig_F_values(n) /= 'X' then
-						check(sig_F = sig_F_values(n), "this check failed. Expected F = " & std_logic'image(sig_F_values(n)) & ", got F = " & std_logic'image(sig_F) & " at n = " & integer'image(n) & ".");
+						check(warning_logger, sig_F = sig_F_values(n), "F ," & std_logic'image(sig_F_values(n)) & " , " & std_logic'image(sig_F) & " , " & integer'image(error_number), line_num => error_number);
+						check(sig_F = sig_F_values(n), integer'image(error_number) & ". This check failed. Expected sig_F =  " & std_logic'image(sig_F_values(n)) & ", got sig_F =  " & std_logic'image(sig_F) & " at n = " & integer'image(n) & ".");
+						if sig_F = sig_F_values(n) then
+							error_number := error_number + 1;
+						end if;
 					end if;
 
 					n := n + 1;
