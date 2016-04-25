@@ -1,8 +1,10 @@
 import read_json
 import generate_testbench
 import json_to_vhdl
+import compare_wave_traces
 import run_vunit
 import glob
+import os
 
 for filename in glob.glob("json_resources/*.json"):
 
@@ -27,7 +29,7 @@ for filename in glob.glob("json_resources/*.json"):
     # - set up uut declaration, port map and signal declaration
     s = filename.find("/")
     e = filename.find(".")
-    filename = filename[s+1:e]
+    filename = filename[s + 1:e]
 
     port_declaration, port_map, signal_declarations, signal_values = json_to_vhdl.generate_vhdl(signals)
     vhdl_testbench = generate_testbench.generate_testbench(vhdl_testbench, entity_name, port_declaration,
@@ -40,5 +42,28 @@ for filename in glob.glob("json_resources/*.json"):
     # - open output file
     # generate_testbench.open_output(filename)
 
-# - run vunit on created file(s)
-run_vunit.run()
+run = 1
+
+# # - create or clear log output directory
+log_dir = "vunit_out/warning_log"
+if run == 1:
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+    else:
+        for filename in glob.glob(log_dir + "/*"):
+            print filename
+            os.remove(filename)
+    # - run vunit on created file(s)
+    run_vunit.run()
+
+
+# - create/clear result directory
+result_dir = "vunit_out/result"
+if not os.path.exists(result_dir):
+    os.makedirs(result_dir)
+else:
+    for filename in glob.glob(result_dir + "/*"):
+        os.remove(filename)
+
+# - create wave trace comparison files
+compare_wave_traces.create_comparison_files(log_dir, result_dir)
