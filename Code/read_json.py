@@ -5,9 +5,18 @@ import glob
 # get input data from file
 def open_json_file(filename):
     for filename in glob.glob(filename):
-        with open(filename) as data_file:
+        with open(filename, 'r') as data_file:
             data = json.load(data_file)
             return data
+
+
+# write json data to file
+def save_json_file(data, filename, output_directory):
+    full_filename = output_directory + filename
+    with open(full_filename, 'w+') as data_file:
+        # strdata = json.dumps(data, indent=4, )
+        # parsed = json.loads(strdata)
+        json.dump(data, data_file, indent=4, sort_keys=True)
 
 
 # extract signals from input data
