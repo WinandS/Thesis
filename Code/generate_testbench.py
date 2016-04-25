@@ -27,6 +27,7 @@ def write_output(data, filename):
     template_file.close()
 
 
+
 def open_output(filename):
     # os.system("/opt/sigasi/sigasi " + output_path + filename + ".vhd")
     os.system("gedit " + output_path + filename + ".vhd")
@@ -201,19 +202,45 @@ def set_up_stimulus_process(testbench, test_name, input_signals):
 
 def set_up_check_process(testbench, output_signals):
     checking = ""
+
     for signal in output_signals:
+        signal_name = signal["name"].strip()
+        expected_value = "sig_" + signal_name + "_values(n)"
+        signal_to_check = "sig_" + signal_name
+        signal_type = signal["type"]
         try:
             signal["vector_size"]
-            checking += "\n if sig_" + signal["name"] + "_values(n)(0) /= 'X' then" + "\n" + \
-                "check( sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n), " \
+            checking += "\n if " + expected_value + "(0) /= 'X' then" + "\n" + \
+                "check(" + signal_to_check + " = " + expected_value + ", " \
                 "\"Woops\");" + "\n" + \
-                "if sig_" + signal["name"] + " = sig_" + signal["name"] + "_values(n) then" + "\n" + \
+                "if " + signal_to_check + " = " + expected_value + " then" + "\n" + \
                 "error_number := error_number + 1;" + "\n" + \
                 "end if;" + "\n" + \
                 "end if;" + "-- Do some check for a vector \n"
         except KeyError:
-            checking += "check_signal(sig_" + signal["name"] + ", sig_" + signal["name"] +\
-                        "_values(n), n, error_number);"
+            # checking += "check_signal(sig_" + signal_name + "," + signal_to_check +\
+            #             "_values(n), n, error_number);"
+            checking += "\n if " + expected_value + " /= 'X' then" + "\n" + \
+                        "check(warning_logger,  " + signal_to_check + " = " + expected_value + \
+                        ", integer'image(error_number) & \"," + \
+                        signal_name + ",\" & " + signal_type + "'image(" + expected_value + ") & " \
+                        "\",\" &  " + signal_type + "'image(" + signal_to_check + \
+                        ") & \",\" & integer'image(n) " \
+                        ", line_num => error_number);" + "\n" + \
+                        "check(" + signal_to_check + " = " + expected_value + ", " + \
+                        "integer'image(error_number) & \". This check failed. Expected " + signal_to_check + " = " + \
+                        " \" & " + signal_type + "'image(" + expected_value + ") & \", got " + signal_to_check + " = " + \
+                        " \" & " + signal_type + "'image(" + signal_to_check + \
+                        ") & \" at n = \" & integer'image(n) & \".\" );" + "\n" + \
+                        "check(message_logger," + signal_to_check + " = " + expected_value + ", " + \
+                        "integer'image(error_number) & \". This check failed. Expected " + signal_to_check + " = " + \
+                        " \" & " + signal_type + "'image(" + expected_value + ") & \", got " + signal_to_check + " = " + \
+                        " \" & " + signal_type + "'image(" + signal_to_check + \
+                        ") & \" at n = \" & integer'image(n) & \".\" );" + "\n" + \
+                        "if " + signal_to_check + " /= " + expected_value + " then" + "\n" + \
+                        "error_number := error_number + 1;" + "\n" + \
+                        "end if;" + "\n" + \
+                        "end if;" + "\n"
 
     find = "--# test checking"
     return testbench.replace(find, checking)
