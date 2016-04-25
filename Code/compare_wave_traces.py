@@ -187,8 +187,6 @@ def get_logs_and_messages(original_log_list, original_message_list):
     final_log_list = []
     final_message_list = []
 
-    print len(original_log_list), len(original_message_list)
-
     for i in range(0, len(original_log_list)):
         temporary_log_list.append([])
         temporary_message_list.append([])
