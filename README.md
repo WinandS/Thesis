@@ -42,7 +42,7 @@ In an output signal:
 It is possible simulate a period where the input never changes. By using the '|' character in the clock signal and the 'loop_times' field the moment this period should start and the amount of clock cycles it should last can be specified. In this example the first loop period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentialy). During this loop the checks at this moment are repeated every clock cycle. For obvious reasons this feature can only be used when a clock signal is present.
 
 ### check skipping ('x')
-In some cases the output at a specific point in time is undefined or is of no interest to the designer. in this case the designer can use the 'x' character, which means that the signal should not be checked at this point. This character is only valid for output signals.
+In some cases the output at a specific point in time is undefined or is of no interest to the designer. In this case the designer can use the 'x' character, which means that the signal should not be checked at this point. This character is only valid for output signals.
 
 ## example
 
