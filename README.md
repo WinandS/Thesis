@@ -28,7 +28,9 @@ It is possible simulate a period where the input never changes. By using the '|'
 ### check skipping ('x')
 In some cases the output at a specific point in time is undefined or is of no interest to the designer. In this case the designer can use the 'x' character, which means that the signal should not be checked at this point. This character is only valid for output signals.
 
+
 ## example
+Here is an example input file testing the design of the "uart_tx" entity. Two consecutive bytes are sent over the serial output port. Input signals as well as expected output signals are defined.
 
 ```json
 
