@@ -72,7 +72,7 @@ some things to look out for.
 ### unicode keys
 Although WaveDrom supports non unicode keys 
 e.g.:
-``` json
+``` java
 {period : 2}
 ```
 The python JSON package used does not. Because of this all keys must be unicode strings
