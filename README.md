@@ -67,6 +67,20 @@ the generated wave trace file looks like this:
 
 ![Wavedrom example](http://postimg.org/image/z5gt0wmon/full/)
 
+## Making your own WaveDrom input files
+some things to look out for.
+### unicode keys
+Although WaveDrom supports non unicode keys 
+e.g.:
+``` json
+{period : 2}
+```
+The python JSON package used does not. Because of this all keys must be unicode strings
+e.g.:
+``` json
+{"period" : 2}
+```
+
 # More examples
 more examples can be found [here](https://github.ugent.be/wseldesl/Thesis/tree/master/examples). Every example contains 
  * The design to be tested in the 'src' folder
