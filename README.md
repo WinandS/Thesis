@@ -20,22 +20,6 @@ This project uses [Wavedrom](http://wavedrom.com/) files as the base for its inp
 Next to these extra fields, each signal should be placed under the apropriate label. All input signals for example should be under one "IN" label. The clock signal is regarded as a special case input signal and is treated seperately.
 
 ## extra features
-Not all wavedrom characters are currently supported. The supported characters are:
-
-In a clock signal:
-```java
-{'n', 'p', '.', '|'}
-```
-
-In an input signal:
-```java
-{'1', '0', '.', '='}
-```
-
-In an output signal:
-```java
-{'1', '0', '.', '=', 'x'}
-```
 
 
 ### time loops ('|')
@@ -80,6 +64,26 @@ e.g.:
 ``` json
 {"period" : 2}
 ```
+
+### Supported characters
+Not all wavedrom characters are currently supported. The supported characters are:
+
+In a clock signal:
+```java
+{'n', 'p', '.', '|'}
+```
+
+In an input signal:
+```java
+{'1', '0', '.', '='}
+```
+
+In an output signal:
+```java
+{'1', '0', '.', '=', 'x'}
+```
+
+Normal operation is not guaranteed when these guidelines are not respected.
 
 # More examples
 more examples can be found [here](https://github.ugent.be/wseldesl/Thesis/tree/master/examples). Every example contains 
