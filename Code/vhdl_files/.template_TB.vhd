@@ -11,7 +11,6 @@ end entity;
 
 architecture entity_name_generated_testbench of tb_entity_name_gen is
 	shared variable warning_logger : checker_t;
-	shared variable message_logger : checker_t;
 	COMPONENT uut
 		PORT();
 	END COMPONENT;
@@ -39,9 +38,8 @@ architecture entity_name_generated_testbench of tb_entity_name_gen is
 begin
 	dut : UUT PORT MAP();
 
-	checker_initiation : checker_init(warning, "", "vunit_out/warning_log/entity_name_messages_old.csv", level, off, failure, ',', false);
-	warning_logger_initiation : checker_init(warning_logger, warning, "", "vunit_out/warning_log/entity_name_result.csv", level, verbose_csv, failure, ',', false);
-	message_logger_initiation : checker_init(message_logger, warning, "", "vunit_out/warning_log/entity_name_messages.csv", level, verbose_csv, failure, ',', false);
+	checker_initiation : checker_init(warning, "", "vunit_out/.warning_log/entity_name__test_name_messages.csv", level, verbose_csv, failure, ',', false);
+	warning_logger_initiation : checker_init(warning_logger, warning, "", "vunit_out/.warning_log/entity_name__test_name_result.csv", level, verbose_csv, failure, ',', false);
 
 	main : process
 		variable n : integer := 0;
