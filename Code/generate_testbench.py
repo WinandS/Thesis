@@ -1,9 +1,9 @@
 import os
 import re
 
-testbench_template = 'vhdl_files/template_TB.vhd'
-# file_to_test = 'vhdl_files/src/file_to_test.vhd'
+testbench_template = 'vhdl_files/.template_TB.vhd'
 output_path = 'vhdl_files/test/tb_'
+log_dir = ""    # set this in main
 
 
 def read_template():
@@ -22,10 +22,9 @@ def read_template():
 
 def write_output(data, filename):
     complete_filename = output_path + filename + ".vhd"
-    with open(complete_filename, 'w') as template_file:
-        template_file.write(data)
-    template_file.close()
-
+    with open(complete_filename, 'w') as test_file:
+        test_file.write(data)
+    test_file.close()
 
 
 def open_output(filename):
@@ -80,62 +79,59 @@ def set_clock_cycles_constant(testbench, first_in_signal):
 
 # set up everything related to timing
 def set_up_waiting_necessities(testbench, json_loop_times, relative_period):
-    if len(json_loop_times) > 0:
-        find = "--# Wait Variables"
-        replace = find + "\n" + " variable wait_array_index : integer := 0;" + \
-                  "variable wait_variable : integer := wait_array(wait_array_index);"
-        testbench = testbench.replace(find, replace)
+    find = "--# Wait Variables"
+    replace = find + "\n" + " variable wait_array_index : integer := 0;" + \
+              "variable wait_variable : integer := wait_array(wait_array_index);"
+    testbench = testbench.replace(find, replace)
 
-        find = "--# Extra Code For Waiting"
-        replace = "if sig_clk_values(2 * n) = '-' and wait_variable > 0 then " + "\n" + \
-                  "while wait_variable > 0 loop" + "\n" + \
-                  "v := n mod (relative_period);" + "\n" + \
-                  "while (v - (n mod (relative_period)) < relative_period) loop" + "\n" + \
-                  "--# Loop Stimulus rising edge" + "\n" + \
-                  "--# Loop Stimulus falling edge" + "\n" + \
-                  "--# test checking" + "\n" + \
-                  "v := v + 1;" + "\n" + \
-                  "end loop;" + "\n" + \
-                  "wait_variable := wait_variable - 1;" + "\n" + \
-                  "end loop;" + "\n" + \
-                  "n := n + relative_period;" + "\n" + \
-                  "wait_array_index := wait_array_index + 1;" + "\n" + \
-                  "wait_variable    := wait_array(wait_array_index);" + "\n" + \
-                  "else"
-        testbench = testbench.replace(find, replace)
+    find = "--# Extra Code For Waiting"
+    replace = "if sig_clk_values(2 * n) = '-' and wait_variable > 0 then " + "\n" + \
+              "while wait_variable > 0 loop" + "\n" + \
+              "v := n mod (relative_period);" + "\n" + \
+              "while (v - (n mod (relative_period)) < relative_period) loop" + "\n" + \
+              "--# Loop Stimulus rising edge" + "\n" + \
+              "--# Loop Stimulus falling edge" + "\n" + \
+              "--# test checking" + "\n" + \
+              "v := v + 1;" + "\n" + \
+              "end loop;" + "\n" + \
+              "wait_variable := wait_variable - 1;" + "\n" + \
+              "end loop;" + "\n" + \
+              "n := n + relative_period;" + "\n" + \
+              "wait_array_index := wait_array_index + 1;" + "\n" + \
+              "wait_variable    := wait_array(wait_array_index);" + "\n" + \
+              "else"
+    testbench = testbench.replace(find, replace)
 
-        find = "--# Extra End If For waiting"
-        replace = "end if;"
-        testbench = testbench.replace(find, replace)
+    find = "--# Extra End If For waiting"
+    replace = "end if;"
+    testbench = testbench.replace(find, replace)
 
-        find = "--# Extra Code For Waiting"
-        replace = "if sig_clk_values(2 * n) = '-' and wait_variable > 0 then " + "\n" + \
-                  "while wait_variable > 0 loop" + "\n" + \
-                  "v := n mod (2*relative_period);" + "\n" + \
-                  "while (v - (n mod (2 * relative_period)) < 2*relative_period) loop"
-        testbench = testbench.replace(find, replace)
+    find = "--# Extra Code For Waiting"
+    replace = "if sig_clk_values(2 * n) = '-' and wait_variable > 0 then " + "\n" + \
+              "while wait_variable > 0 loop" + "\n" + \
+              "v := n mod (2*relative_period);" + "\n" + \
+              "while (v - (n mod (2 * relative_period)) < 2*relative_period) loop"
+    testbench = testbench.replace(find, replace)
 
-        find = "--# Wait Times"
-        replace = find + "\n" + "constant amount_of_waits : integer := " + str(len(json_loop_times)) + ";"
-        testbench = testbench.replace(find, replace)
+    find = "--# Wait Times"
+    replace = find + "\n" + "constant amount_of_waits : integer := " + str(len(json_loop_times)) + ";"
+    testbench = testbench.replace(find, replace)
 
-        find = "--# Relative Period"
-        replace = find + "\n" + "constant relative_period : integer :=  " + str(relative_period) + ";"
-        testbench = testbench.replace(find, replace)
+    find = "--# Relative Period"
+    replace = find + "\n" + "constant relative_period : integer :=  " + str(relative_period) + ";"
+    testbench = testbench.replace(find, replace)
 
-        find = "--# Helper Types"
-        replace = find + "\n" + "type wait_integer_array is array (0 to amount_of_waits) of integer;"
-        testbench = testbench.replace(find, replace)
+    find = "--# Helper Types"
+    replace = find + "\n" + "type wait_integer_array is array (0 to amount_of_waits) of integer;"
+    testbench = testbench.replace(find, replace)
 
-        find = "--# Constants"
-        wait_array = ""
-        for element in json_loop_times:
-            wait_array += ", " + element
-        wait_array += ", 0"
-        replace = find + "\n" + "constant wait_array : wait_integer_array := (" + wait_array[2:] + ");"
-        return testbench.replace(find, replace)
-    else:
-        return testbench
+    find = "--# Constants"
+    wait_array = ""
+    for element in json_loop_times:
+        wait_array += ", " + element
+    wait_array += ", 0"
+    replace = find + "\n" + "constant wait_array : wait_integer_array := (" + wait_array[2:] + ");"
+    return testbench.replace(find, replace)
 
 
 def set_up_signal_value_constants(testbench, signal_values):
@@ -158,6 +154,17 @@ def set_up_signals(testbench, signal_declarations):
                 testbench = testbench.replace(find, replace)
         i += 1
     return testbench
+
+
+# def create_stimulus(input_signals):
+#     stimulus = ""
+#     i = 0
+#     for signal in input_signals:
+#         if len(signal) > 0:
+#             value = signal["wave"]
+#             stimulus += "sig_" + signal["name"] + " <= '" + value + "';\n"
+#             i += 1
+#     return stimulus
 
 
 def set_up_stimulus_process(testbench, test_name, input_signals):
@@ -232,11 +239,6 @@ def set_up_check_process(testbench, output_signals):
                         " \" & " + signal_type + "'image(" + expected_value + ") & \", got " + signal_to_check + " = " + \
                         " \" & " + signal_type + "'image(" + signal_to_check + \
                         ") & \" at n = \" & integer'image(n) & \".\" );" + "\n" + \
-                        "check(message_logger," + signal_to_check + " = " + expected_value + ", " + \
-                        "integer'image(error_number) & \". This check failed. Expected " + signal_to_check + " = " + \
-                        " \" & " + signal_type + "'image(" + expected_value + ") & \", got " + signal_to_check + " = " + \
-                        " \" & " + signal_type + "'image(" + signal_to_check + \
-                        ") & \" at n = \" & integer'image(n) & \".\" );" + "\n" + \
                         "if " + signal_to_check + " /= " + expected_value + " then" + "\n" + \
                         "error_number := error_number + 1;" + "\n" + \
                         "end if;" + "\n" + \
@@ -251,7 +253,7 @@ def set_up_timing(testbench, signals):
     # - add clock period
     find = "--# Constants"
     replace = ""
-    clock_period = 20.0;
+    clock_period = 20.0
     for signal in signals[0]:
         if len(signal) > 0:
 
@@ -372,7 +374,9 @@ def generate_testbench(testbench, entity_name, port_declaration, port_map, signa
         relative_period = signals[0][0]["period"]
     except:
         relative_period = 1
-    testbench = set_up_waiting_necessities(testbench, json_loop_times, relative_period)
+
+    if len(json_loop_times) > 0:
+        testbench = set_up_waiting_necessities(testbench, json_loop_times, relative_period)
 
     # - declare sig_values constants
     testbench = declare_helper_types(testbench, signals)
