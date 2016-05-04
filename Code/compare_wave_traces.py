@@ -10,8 +10,9 @@ def create_comparison_files(log_dir, result_dir):
     for filename in glob.glob(log_dir + "/*result.csv"):
 
         result_filename, warning_messages, warning_logs, json_data = get_info(filename)
-
+        # print result_filename
         if not len(warning_logs):       # test succeeded
+            # print result_filename
             json_data["head"] = {"text": ['tspan', {"class":'success h3'}, 'Simulation success '], "tick": 0}
             read_json.save_json_file(json_data, result_filename, result_dir)
         else:
@@ -168,12 +169,9 @@ def get_info(filename):
         previous_s = s
         s = filename.rfind('/', s)
 
-    e = filename.find("_")
-    previous_e = e + 1
-    while e != previous_e:
-        previous_e = e
-        e = filename.rfind('_', e)
+    e = filename.find("__")
     json_filename = json_resource_path + filename[s:e] + ".json"        # full json filename from original filename
+    # print json_filename
     json_data = read_json.open_json_file(json_filename)
 
     result_filename = filename[s:e] + "_result.json" # name for newly generated file
@@ -208,10 +206,9 @@ def get_logs_and_messages(original_log_list, original_message_list):
     return final_log_list, final_message_list
 
 
-# - check for equality between two csv list element
+# - check whether list element is in list
 def is_in(list, list_el):
-    bool = False
     for element in list:
         if list_el[1:] == element[1:]:
-            bool = True
-    return bool
+            return True
+    return False
