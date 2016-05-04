@@ -51,6 +51,7 @@ def convert_std_logic_vector(char, previous_char, signal_period, data, data_inde
 
     return converted_char, data_index
 
+
 def dec_to_bin(decimal_number, vector_size):
     if vector_size < 0:
         vector_size = -vector_size
@@ -151,6 +152,23 @@ def generate_signal_values_constant(json_signal, is_clock):
     signal_value_statement = "constant sig_" + json_signal["name"] + "_values : " \
                              + array_type + " := (" + wave_array + ");"
     return signal_value_statement
+
+
+# def generate_port_map(json_signal_set):
+#     port_map = "PORT MAP(\n"
+#     first = True
+#     for signal_type in json_signal_set:     # IN and OUT.
+#         if len(signal_type) > 0:            # JSON allows empty elements
+#             for signal in signal_type:
+#                 if len(signal) > 0:         # JSON allows empty elements
+#                     if first:
+#                         new_map = signal["name"] + " => sig_" + signal["name"]
+#                         first = False
+#                     else:
+#                         new_map = ",\n" + signal["name"] + " => sig_" + signal["name"]
+#                     port_map += new_map
+#     port_map += " );"
+#     return port_map
 
 
 # Generates signal and PORT declaration and port map for given signal set.
