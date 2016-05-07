@@ -98,6 +98,7 @@ The example can be run by executing the run.py file contained in every folder. F
 # Dependencies
 
 This project requires:
+ *  A linux based operating system (tested on Ubuntu 14.04 LTS)
  *  Python 2.7 or newer
  *  A working installation of [vunit](http://vunit.github.io/installing.html)
 
