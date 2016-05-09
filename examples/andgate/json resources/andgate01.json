@@ -1,8 +1,0 @@
-{"name": "andGate", "test" : "andgate01", "description": "input A = '0' & B = '1' should produce a low output", "signal": [
-  {},
- ["IN",
-   {"name": "A", "wave": "0", "type": "std_logic"},
-   {"name": "B", "wave": "1", "type": "std_logic"}],
-  ["OUT",
-   {"name": "F", "wave": "0", "type": "std_logic"}]
-]}
