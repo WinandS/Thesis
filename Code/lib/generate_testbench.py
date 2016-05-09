@@ -358,6 +358,11 @@ def declare_helper_types(testbench, signals):
 
 def generate_testbench(testbench, entity_name, port_declaration, port_map, signal_declarations, signal_values,
                        filename, test_name, signals):
+    # set output directory
+    find = "output_directory"
+    replace = log_dir
+    testbench = testbench.replace(find, replace)
+
     # set up everything involving uut
     testbench = set_up_uut(testbench, entity_name, port_declaration, port_map, filename)
 
