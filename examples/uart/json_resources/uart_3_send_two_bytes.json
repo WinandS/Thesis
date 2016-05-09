@@ -1,0 +1,13 @@
+{"name": "uart_tx", "test" : "uart_send_2_bytes", "description": "A test for sending two consecutive bytes with an parallel to serial uart", "signal": [
+  {},
+  ["CLK",
+   {"name": "clk", "wave": "n......|n......|", "type":"std_logic", "period": "2", "clock_period": "10", "loop_times" : ["10*434", "10*434"]}],
+  ["IN",
+   {"name": "tvalid", "wave": "0.1..0............1..0..........", "type": "std_logic"},
+   {"name" : "tdata", "wave": "=.=..=........x.==..=.........x.", "data": ["0", "249", "0", "0", "127", "0"], "type" : "std_logic_vector", "vector_size" : "8"}
+   ],
+  ["OUT",
+   {"name": "tx", "wave": "1....0........x.1....0........x.", "type": "std_logic"},
+   {"name": "tready", "wave": "01.0..........x.1..0..........x.", "type": "std_logic"}
+  ]
+]}

@@ -1,0 +1,89 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI
+Etb_spi_gen
+Z1 w1460384729
+Z2 D^#x9 vunit_lib 13 vunit_context 0 22 LP?JaW4H=R7BJB=fb;[?E1
+Z3 DPx9 vunit_lib 7 run_pkg 0 22 ]IIaPPXF0>TJYXbT5UeC=2
+Z4 DPx9 vunit_lib 12 run_base_pkg 0 22 g_8Ilo;Z>PImD>V>OKf;E3
+Z5 DPx9 vunit_lib 21 run_special_types_pkg 0 22 Y^fNa[3@YdiXW1J=Q8K<f1
+Z6 DPx9 vunit_lib 13 run_types_pkg 0 22 zFJJI3Vg6^iabjUXGD]0D1
+Z7 DPx9 vunit_lib 4 path 0 22 ]hdHAE:SCWcRkm6oh8:QJ1
+Z8 DPx9 vunit_lib 14 check_base_pkg 0 22 :R>nG`c;O[o6T_mTVS5881
+Z9 DPx9 vunit_lib 23 check_special_types_pkg 0 22 E]5N>OKE^D8UI6U8cR>i41
+Z10 DPx9 vunit_lib 12 log_base_pkg 0 22 `C>b?kY<Y:o7`8Aj?n;C<0
+Z11 DPx9 vunit_lib 7 log_pkg 0 22 KU8HBOg1[e1h9H5lad99U3
+Z12 DPx9 vunit_lib 18 log_formatting_pkg 0 22 ?eFVEAKdV7Fa4;_7mc1Mg2
+Z13 DPx9 vunit_lib 21 log_special_types_pkg 0 22 odl7@_<M@eMJf7kZ4WW^51
+Z14 DPx9 vunit_lib 15 check_types_pkg 0 22 3Yii;<84iRI4miG5XzoR01
+Z15 DPx9 vunit_lib 9 check_pkg 0 22 ;dZ9DHC<4AFEP0PXIiz060
+Z16 DPx9 vunit_lib 13 log_types_pkg 0 22 d>_GjkCAXW=T=ETSYUd_R3
+Z17 DPx9 vunit_lib 10 dictionary 0 22 eSfRT_gR<B>noh2TC1Mlg3
+Z18 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z19 DPx9 vunit_lib 10 string_ops 0 22 liND5YFG5V:JU<]DmZ7fd3
+Z20 DPx9 vunit_lib 6 textio 0 22 K>gZk2JmfbSU1DHWPIBH?1
+Z21 DPx9 vunit_lib 4 lang 0 22 NV91HR;CJGOP2Q1HI7ii91
+Z22 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z23 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z24 8/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/src/test/tb_spi.vhd
+Z25 F/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/src/test/tb_spi.vhd
+l0
+L28
+V>nUDSn:hV@k8oCn54S?^91
+!s100 6[J0?L]PHW^5]BRz==^Bg3
+Z26 OV;C;10.4b;61
+33
+Z27 !s110 1460385037
+!i10b 1
+Z28 !s108 1460385037.000000
+Z29 !s90 -quiet|-modelsimini|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/vunit_out/modelsim/modelsim.ini|-2008|-work|tb_spi_lib|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/src/test/tb_spi.vhd|
+Z30 !s107 /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/src/test/tb_spi.vhd|
+!i113 1
+Z31 o-quiet -2008 -work tb_spi_lib
+Z32 tExplicit 1
+Aspi_generated_testbench
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+R23
+Z33 DEx4 work 10 tb_spi_gen 0 22 >nUDSn:hV@k8oCn54S?^91
+l104
+L32
+VTfzDzGfb[V]F[2Z_;Z`Za1
+!s100 N>9FQUe:GeP<2i<Sk?2`c3
+R26
+33
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R31
+R32

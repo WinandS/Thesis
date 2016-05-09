@@ -1,0 +1,7 @@
+# End time: 09:23:36 on Apr 20,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/tb_uart_lib.tb_uart_2_send_one_byte_gen.uart_send_1_byte/modelsim/vsim.wlf -quiet -t ps -onfinish stop tb_uart_lib.tb_uart_2_send_one_byte_gen(uart_2_send_one_byte_generated_testbench) -L uart_lib -L vunit_lib -L tb_uart_lib -L osvvm -g/tb_uart_2_send_one_byte_gen/runner_cfg="enabled_test_cases : uart_send_1_byte,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/tb_uart_lib.tb_uart_2_send_one_byte_gen.uart_send_1_byte/,active python runner : true" 
+# Start time: 09:23:36 on Apr 20,2016
+# Sending 249
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+# Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10

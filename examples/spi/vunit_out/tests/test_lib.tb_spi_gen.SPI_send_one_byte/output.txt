@@ -1,0 +1,6 @@
+# End time: 19:40:20 on May 04,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 604
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vunit_out/tests/test_lib.tb_spi_gen.SPI_send_one_byte/modelsim/vsim.wlf -quiet -t ps -onfinish stop test_lib.tb_spi_gen(spi_generated_testbench) -L test_lib -L vunit_lib -L osvvm -L src_lib -g/tb_spi_gen/runner_cfg="enabled_test_cases : SPI_send_one_byte,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vunit_out/tests/test_lib.tb_spi_gen.SPI_send_one_byte/,active python runner : true" 
+# Start time: 19:40:20 on May 04,2016
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+# Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10

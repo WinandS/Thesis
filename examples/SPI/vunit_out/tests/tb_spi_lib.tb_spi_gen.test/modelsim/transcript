@@ -1,0 +1,23 @@
+# Reading pref.tcl
+# do /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/vunit_out/tests/tb_spi_lib.tb_spi_gen.test/modelsim/gui_load.do
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/vunit_out/tests/tb_spi_lib.tb_spi_gen.test/modelsim/vsim.wlf -quiet -t ps -onfinish stop tb_spi_lib.tb_spi_gen(spi_generated_testbench) -L vunit_lib -L spi_lib -L tb_spi_lib -g/tb_spi_gen/runner_cfg="enabled_test_cases : test,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/vunit_out/tests/tb_spi_lib.tb_spi_gen.test/,active python runner : true" 
+# Start time: 16:30:40 on Apr 11,2016
+# List of VUnit modelsim commands:
+# vunit_help
+#   - Prints this help
+# vunit_load [vsim_extra_args]
+#   - Load design with correct generics for the test
+#   - Optional first argument are passed as extra flags to vsim
+# vunit_run
+#   - Run test, must do vunit_load first
+vunit_load
+# End time: 16:30:47 on Apr 11,2016, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/vunit_out/tests/tb_spi_lib.tb_spi_gen.test/modelsim/vsim.wlf -quiet -t ps -onfinish stop tb_spi_lib.tb_spi_gen(spi_generated_testbench) -L vunit_lib -L spi_lib -L tb_spi_lib -g/tb_spi_gen/runner_cfg="enabled_test_cases : test,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/SPI/vunit_out/tests/tb_spi_lib.tb_spi_gen.test/,active python runner : true" 
+# Start time: 16:30:47 on Apr 11,2016
+# 0
+add wave *
+vunit_run
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/run/src/stop_body_2008.vhd line 10
+# 0
+# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.

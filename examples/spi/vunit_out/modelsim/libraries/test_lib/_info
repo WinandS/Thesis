@@ -1,0 +1,164 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi
+Etb_spi_failing_gen
+Z1 w1462383613
+Z2 D^#x9 vunit_lib 13 vunit_context 0 22 [B=;L3d4=ND<c8<kKD:T63
+Z3 DPx9 vunit_lib 7 run_pkg 0 22 SE3=QNAmfFZBAMYfU5nZT0
+Z4 DPx9 vunit_lib 12 run_base_pkg 0 22 cNF_U3;WQTg[M=_PbYZ2S2
+Z5 DPx9 vunit_lib 21 run_special_types_pkg 0 22 3[HXCl1Vj8Bk]n2mdHU1E1
+Z6 DPx9 vunit_lib 13 run_types_pkg 0 22 cV2fiomCLIOe^AB25=ITC0
+Z7 DPx9 vunit_lib 4 path 0 22 ]hdHAE:SCWcRkm6oh8:QJ1
+Z8 DPx9 vunit_lib 14 check_base_pkg 0 22 :R>nG`c;O[o6T_mTVS5881
+Z9 DPx9 vunit_lib 23 check_special_types_pkg 0 22 E]5N>OKE^D8UI6U8cR>i41
+Z10 DPx9 vunit_lib 12 log_base_pkg 0 22 QTIZ7eW<3MmUN0j=9f^Rb1
+Z11 DPx9 vunit_lib 7 log_pkg 0 22 KU8HBOg1[e1h9H5lad99U3
+Z12 DPx9 vunit_lib 18 log_formatting_pkg 0 22 ?eFVEAKdV7Fa4;_7mc1Mg2
+Z13 DPx9 vunit_lib 21 log_special_types_pkg 0 22 9:0<zg3RT?e04bXHf5?ZX0
+Z14 DPx9 vunit_lib 15 check_types_pkg 0 22 3Yii;<84iRI4miG5XzoR01
+Z15 DPx9 vunit_lib 9 check_pkg 0 22 ;dZ9DHC<4AFEP0PXIiz060
+Z16 DPx9 vunit_lib 13 log_types_pkg 0 22 67E=ZPOb5jJjb[QTehEYY0
+Z17 DPx9 vunit_lib 10 dictionary 0 22 eSfRT_gR<B>noh2TC1Mlg3
+Z18 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z19 DPx9 vunit_lib 10 string_ops 0 22 liND5YFG5V:JU<]DmZ7fd3
+Z20 DPx9 vunit_lib 4 lang 0 22 NV91HR;CJGOP2Q1HI7ii91
+Z21 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z22 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z23 8/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vhdl_files/test/tb_spi_failing.vhd
+Z24 F/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vhdl_files/test/tb_spi_failing.vhd
+l0
+L13
+Vz593mOa^kYnRLZccHZ;en3
+!s100 I1R6T^A:f0ZKKFU1bho0k2
+Z25 OV;C;10.4b;61
+33
+Z26 !s110 1462383618
+!i10b 1
+Z27 !s108 1462383618.000000
+Z28 !s90 -quiet|-modelsimini|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vunit_out/modelsim/modelsim.ini|-2008|-work|test_lib|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vhdl_files/test/tb_spi_failing.vhd|
+Z29 !s107 /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vhdl_files/test/tb_spi_failing.vhd|
+!i113 1
+Z30 o-quiet -2008 -work test_lib
+Z31 tExplicit 1
+Aspi_failing_generated_testbench
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+DEx4 work 18 tb_spi_failing_gen 0 22 z593mOa^kYnRLZccHZ;en3
+l88
+L17
+V9edcIz3V;L;:4W`K8KI;83
+!s100 m36^2`[DmOic]nWRc2;e>2
+R25
+33
+R26
+!i10b 1
+R27
+R28
+R29
+!i113 1
+R30
+R31
+Etb_spi_gen
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+R0
+Z32 8/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vhdl_files/test/tb_spi.vhd
+Z33 F/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vhdl_files/test/tb_spi.vhd
+l0
+L13
+VDNG9]=0Wia6kBVHkogH1D2
+!s100 zK>gLNDbSDNkNiWl3A[G:3
+R25
+33
+R26
+!i10b 1
+R27
+Z34 !s90 -quiet|-modelsimini|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vunit_out/modelsim/modelsim.ini|-2008|-work|test_lib|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vhdl_files/test/tb_spi.vhd|
+Z35 !s107 /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vhdl_files/test/tb_spi.vhd|
+!i113 1
+R30
+R31
+Aspi_generated_testbench
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+R15
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+DEx4 work 10 tb_spi_gen 0 22 DNG9]=0Wia6kBVHkogH1D2
+l88
+L17
+V=Z;U?CD@2VaH>5DgeUL[X3
+!s100 :3P@A8XT67Bo0`X7j8lY41
+R25
+33
+R26
+!i10b 1
+R27
+R34
+R35
+!i113 1
+R30
+R31

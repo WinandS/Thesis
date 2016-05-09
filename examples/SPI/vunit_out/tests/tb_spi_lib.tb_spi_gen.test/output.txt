@@ -1,0 +1,3 @@
+** Fatal: vsimk is exiting with code 4.
+Exit codes are defined in the "Error and Warning Messages"
+appendix of the ModelSim User's Manual.

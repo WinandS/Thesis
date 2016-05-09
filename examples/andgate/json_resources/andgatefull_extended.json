@@ -1,0 +1,10 @@
+{"name": "andGate_timed", "test" : "andgate_full", "description": "test all possible inputs for an AND-gate", "signal": [
+  {},
+  ["CLK",
+   {"name": "CLK", "wave": "p...|..", "loop_times" : ["10"],"type":"std_logic", "period":"4", "clock_period": "20"}],
+  ["IN",
+   {"name": "A", "wave": "01010..", "type": "std_logic", "period":"4"},
+   {"name": "B", "wave": "0.....1.0.1.0.", "type": "std_logic", "period":"2"}],
+  ["OUT",
+   {"name": "F", "wave": "0.....1.0.....", "type": "std_logic", "period":"2"}]
+]}

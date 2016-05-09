@@ -1,0 +1,12 @@
+0,0 ps,debug,,,Test Runner,Entering test runner setup phase.
+1,0 ps,debug,,,Test Runner,Passed test runner setup phase entry gate.
+2,0 ps,debug,,,Test Runner,Passed test runner setup phase exit gate.
+3,0 ps,debug,,,Test Runner,Entering test suite setup phase.
+4,0 ps,debug,,,Test Runner,Passed test suite setup phase entry gate.
+5,0 ps,debug,,,Test Runner,Entering test case setup phase.
+6,0 ps,info,,,Test Runner,Test case: test
+7,410000 ps,debug,,,Test Runner,Entering test suite cleanup phase.
+8,410000 ps,debug,,,Test Runner,Entering test runner cleanup phase.
+9,410000 ps,debug,,,Test Runner,Passed test runner cleanup phase entry gate.
+10,410000 ps,debug,,,Test Runner,Passed test runner cleanup phase exit gate.
+11,410000 ps,debug,,,Test Runner,Entering test runner exit phase.

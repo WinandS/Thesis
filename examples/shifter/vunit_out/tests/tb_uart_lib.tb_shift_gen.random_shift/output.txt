@@ -1,0 +1,4 @@
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/shifter/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/shifter/vunit_out/tests/tb_uart_lib.tb_shift_gen.random_shift/modelsim/vsim.wlf -quiet -t ps -onfinish stop tb_uart_lib.tb_shift_gen(shift_generated_testbench) -L uart_lib -L vunit_lib -L tb_uart_lib -L osvvm -g/tb_shift_gen/runner_cfg="enabled_test_cases : random_shift,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/shifter/vunit_out/tests/tb_uart_lib.tb_shift_gen.random_shift/,active python runner : true" 
+# Start time: 09:23:12 on Apr 20,2016
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+# Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
