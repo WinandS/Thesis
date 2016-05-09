@@ -1,7 +1,7 @@
-import read_json
-import generate_testbench
-import json_to_vhdl
-import compare_wave_traces
+import lib.read_json as read_json
+import lib.generate_testbench as generate_testbench
+import lib.json_to_vhdl as json_to_vhdl
+import lib.compare_wave_traces as compare_wave_traces
 import run_vunit
 import glob
 import os
@@ -9,7 +9,7 @@ from Tkinter import *
 
 # relative directory for saving simulation logs.
 # Not for users to see.
-generate_testbench.log_dir = "vunit_out/.warning_log"
+log_dir = generate_testbench.log_dir = ".warning_log"
 testbench_dir = "vhdl_files/test"
 
 # relative directory for result files. This is the user output
@@ -66,6 +66,10 @@ def run_all():
 
 
 def create_and_simulate_tests():
+    # if os.path.exists(log_dir):
+    #     for filename in glob.glob(log_dir + "/*"):
+    #         os.remove(log_dir)
+    #     os.removedirs(log_dir)
     if not os.path.exists(testbench_dir):
         os.makedirs(testbench_dir)
     else:
