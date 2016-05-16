@@ -5,6 +5,7 @@ import lib.compare_wave_traces as compare_wave_traces
 import run_vunit
 import glob
 import os
+import subprocess
 from Tkinter import *
 
 # relative directory for saving simulation logs.
@@ -28,7 +29,7 @@ class Window(Frame):
     def init_window(self):
 
         # changing the title of our master widget
-        self.master.title("Click to run this shit")
+        self.master.title("What do you want to do?")
 
         # allowing the widget to take the full space of the root window
         self.pack(fill=BOTH, expand=1)
@@ -36,22 +37,52 @@ class Window(Frame):
         # creating a button instance
         # textfield = Label(self, text="Click something")
         # testbenchButton = Button(self, text="Create testbenches and run simulation")
-        # processButton = Button(self, text="Process result")
-
+        inputButton = Button(self, text="Open input folder", command=open_input)
+        outputButton = Button(self, text="Open output folder", command=open_output)
+        srcButton = Button(self, text="Open src folder", command=open_src)
         runButton = Button(self, text="Run this shit", command=run_all)
         # processButton = Button(self, text="Process result", command=process_simulation_result)
 
         # placing the button on my window
         # textfield.place(x=75, y=50)
-        runButton.place(x=120, y=30)
+        inputButton.place(x=10, y=20)
+        srcButton.place(x=180, y=20)
+        outputButton.place(x=350, y=20)
+        runButton.place(x=200, y=80)
         # processButton.place(x=75, y=200)
 
 
 def init():
     root = Tk()
-    root.geometry("400x80")
+    root.geometry("500x120")
     app = Window(root)
     root.mainloop()
+
+
+def open_input():
+    output = os.path.join(os.path.dirname(__file__), "json_resources")
+    openFolder(output)
+
+
+def open_src():
+    output = os.path.join(os.path.dirname(__file__), "vhdl_files")
+    output = os.path.join(output, "src")
+    openFolder(output)
+
+
+def open_output():
+    output = os.path.join(os.path.dirname(__file__), "result")
+    openFolder(output)
+
+if sys.platform == 'darwin':
+    def openFolder(path):
+        subprocess.check_call(['open', '--', path])
+elif sys.platform == 'linux2':
+    def openFolder(path):
+        subprocess.check_call(['nautilus', '--', path])
+elif sys.platform == 'win32':
+    def openFolder(path):
+        subprocess.check_call(['explorer', path])
 
 
 def run_all():
