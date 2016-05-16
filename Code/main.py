@@ -48,7 +48,7 @@ class Window(Frame):
         inputButton.place(x=10, y=20)
         srcButton.place(x=180, y=20)
         outputButton.place(x=350, y=20)
-        runButton.place(x=200, y=80)
+        runButton.place(x=180, y=80)
         # processButton.place(x=75, y=200)
 
 
