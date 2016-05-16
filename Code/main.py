@@ -40,7 +40,7 @@ class Window(Frame):
         inputButton = Button(self, text="Open input folder", command=open_input)
         outputButton = Button(self, text="Open output folder", command=open_output)
         srcButton = Button(self, text="Open src folder", command=open_src)
-        runButton = Button(self, text="Run this shit", command=run_all)
+        runButton = Button(self, text="Run simulation", command=run_all)
         # processButton = Button(self, text="Process result", command=process_simulation_result)
 
         # placing the button on my window
