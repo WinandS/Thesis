@@ -1,0 +1,75 @@
+{
+    "description": "A test for shifting a random sequence through a shift register", 
+    "edge": [
+        "a-b W1", 
+        "c-d W2", 
+        "e-f W3", 
+        "g-h W4"
+    ], 
+    "head": {
+        "text": [
+            "tspan", 
+            {
+                "class": "error h3"
+            }, 
+            "Simulation failure "
+        ], 
+        "tick": 0
+    }, 
+    "name": "shift_reg", 
+    "signal": [
+        {}, 
+        [
+            "CLK", 
+            {
+                "name": "clock", 
+                "period": 2, 
+                "type": "std_logic", 
+                "wave": "n........."
+            }
+        ], 
+        [
+            "IN", 
+            {
+                "name": "I", 
+                "period": "2", 
+                "type": "std_logic", 
+                "wave": "0..1.01..."
+            }, 
+            {
+                "name": "shift", 
+                "period": 2, 
+                "type": "std_logic", 
+                "wave": "01........"
+            }
+        ], 
+        [
+            "OUT", 
+            {
+                "name": [
+                    "tspan", 
+                    {
+                        "class": "error h4"
+                    }, 
+                    "Q"
+                ], 
+                "node": "...aceg", 
+                "type": "std_logic", 
+                "wave": "1..0.......1...0.1.."
+            }, 
+            {
+                "name": [
+                    "tspan", 
+                    {
+                        "class": "error h4"
+                    }, 
+                    "Q_sim"
+                ], 
+                "node": "...bdfh", 
+                "type": "std_logic", 
+                "wave": "1..11110...1...0.1.."
+            }
+        ]
+    ], 
+    "test": "random_shift_failing"
+}
