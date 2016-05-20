@@ -1,0 +1,7 @@
+{head:{"text": ['tspan', {class:'h4'}, 'Error example'], tick:0},
+ "signal": [
+   {"name": "clock", "wave": "p.....", "type":"std_logic", "period":"2", "clock_period": "20"},
+   {"name": "Expected signal", "wave": "01010.", "period":"2", node:"..a"},
+   {},
+   {"name": "Simulated signal", "wave": "01..0.", "period":"2", node:"..b"}
+ ], edge:["a-b error1"]}

@@ -10,3 +10,39 @@
 
 
 \chapter{Technical analysis} \label{TA}
+This chapter will analyse each part of the system separately based on the system overview in figure \ref{fig:overview_color}.
+\MijnFig{width=\textwidth}{images/overview_color}{Color coded overview of the program operation}{fig:overview_color}
+\section{Testbench creation}
+Creating testbenches requires several steps. First the specifications for the testbench have to be determined, then the way they will be created has to be determined and finally the source material (i.e. what the testbench will be created from) has to be chosen. This part corresponds to the purple part.
+\subsection{Testbench specifications}
+Before the way testbenches should be constructed can be defined, the specifications for the testbenches have to be determined. This depends on which framework is used in the simulation step (blue part). Several testbench frameworks are available that improve on the standard VHDL testbenches. They offer features such as unit testing, (conditional) logging packages and many more. Some even offer the possibility to write testbenches in different programming languages.
+\npar
+Some of the most known frameworks, their supported languages and their most important features are listed below. These frameworks are all open source.
+\subparagraph{VUnit}: VHDL, (System)Verilog
+\begin{itemize}
+	\item Unit testing
+	\item Python test runner
+	\item Advanced logging libraries
+	\item Multi simulator support
+\end{itemize}
+\subparagraph{CoCoTB}: VHDL, (System)Verilog
+\begin{itemize}
+	\item Python testbenches
+	\item Python test runner
+	\item Multi simulator support	
+\end{itemize}
+\subparagraph{SVUnit}\cite{svunit}: (System)Verilog
+\begin{itemize}
+	\item Unit testing
+\end{itemize}
+\subparagraph{OSVVM}\cite{osvvm}: VHDL
+\begin{itemize}
+	\item Maximum test coverage support
+	\item Randomised testing
+\end{itemize}
+\subparagraph{UVVM}\cite{uvvm}: VHDL
+\begin{itemize}
+	\item AANVULLEN
+\end{itemize}
+
+

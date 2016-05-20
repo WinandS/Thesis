@@ -1,10 +1,17 @@
 \select@language {english}
 \contentsline {chapter}{\numberline {1}Introduction}{4}
-\contentsline {chapter}{\numberline {2}Problem analysis}{5}
-\contentsline {chapter}{\numberline {3}Functional analysis}{6}
-\contentsline {chapter}{\numberline {4}Technical analysis}{7}
-\contentsline {chapter}{\numberline {5}Technical design}{8}
-\contentsline {section}{\numberline {5.1}test}{8}
-\contentsline {section}{\numberline {5.2}test2}{9}
-\contentsline {chapter}{\numberline {6}Conclusion}{10}
-\contentsline {chapter}{\numberline {A}example}{11}
+\contentsline {chapter}{\numberline {2}Problem analysis}{9}
+\contentsline {chapter}{\numberline {3}Functional analysis}{12}
+\contentsline {chapter}{\numberline {4}Technical analysis}{17}
+\contentsline {section}{\numberline {4.1}Testbench creation}{18}
+\contentsline {subsection}{\numberline {4.1.1}Testbench specifications}{18}
+\contentsline {subparagraph}{VUnit}{18}
+\contentsline {subparagraph}{CoCoTB}{18}
+\contentsline {subparagraph}{SVUnit}{19}
+\contentsline {subparagraph}{OSVVM}{19}
+\contentsline {subparagraph}{UVVM}{19}
+\contentsline {chapter}{\numberline {5}Technical design}{20}
+\contentsline {section}{\numberline {5.1}test}{20}
+\contentsline {section}{\numberline {5.2}test2}{21}
+\contentsline {chapter}{\numberline {6}Conclusion}{22}
+\contentsline {chapter}{\numberline {A}example}{23}

@@ -12,3 +12,40 @@
 %data-analyse => leveranciers
 
 \chapter{Functional analysis} \label{FA}
+The goal of this project is to create a tool that can streamline the testbench creation and the wave trace analysis processes to help developers validate their design, while at the same time generating wave trace images to aid in documenting a design. The original validation process flow can be seen in §[REF PA]. To improve on this process the information provided in a source file is used. Figure \ref{fig:ver_new} shows the improved information flow of the validation process. Where the original system required (more) user input at both the documentation side and the validation side, this system bundles most user input into one file, reducing the total amount of user input and saving a considerable amount of time. An overview of how it works is shown in the figure below.\nline
+\MijnFig{width=\textwidth}{images/overview}{Operation overview of the new system}{fig:overview2}\nline
+The tool will complete a full cycle of the validation process. It starts from the user input files: the source file and the design file. And then continues in three steps:
+\npar
+First, the tool can create testbenches automatically and generate documentation information using a source file. This source file is a waveJSON file based on standard WaveDrom \cite{wavedrom} files. It can create a testbench for every source file provided in mere seconds, faster than a developer could create just one testbench manually. These testbenches are designed according to the specifications of a VUnit \cite{vunit} testbench.\newpage
+\npar
+Then, the framework provided by VUnit is used to run the created testbenches through an external simulator. This can be any simulator supported by the VUnit framework.
+\npar
+Finally, instead of the manual comparison of two wave traces, it offers a way to quickly find non corresponding wave traces in a visual way. It returns a waveJSON file similar to the source file, which can be visualised using WaveDrom. The WaveDrom generated figure \ref{fig:sim_fail_example} illustrates this concept. This visual representation will be accompanied by an error message specifying the error as seen in log message \ref{log:example}.\nline
+\MijnFig{width=\textwidth}{images/sim_fail_example}{Simulation failure example}{fig:sim_fail_example}\newpage
+\begin{customenv}
+	\caption{Example logged error messages}\label{log:example}
+	\begin{itemize}
+		\item [W1:] Expected sig\_F =  '0',  got sig\_F =  '1' at n = 2.
+		\item [W2:] Expected sig\_F =  '0',  got sig\_F =  '1' at n = 3.
+		\item [W3:] Expected sig\_F =  '1',  got sig\_F =  '0' at n = 6.
+		\item [W4:] Expected sig\_F =  '1',  got sig\_F =  '0' at n = 7.
+	\end{itemize}
+\end{customenv}\newpage\nline
+The two features are bundled together in one tool controlled by a simple GUI.\nline
+\MijnFig{width=.9\textwidth}{images/gui}{Look of the user interface}{fig:gui}\nline
+The gui allows the user to open the input folder where WaveDrom input files should be added, the src folder where the design to be tested should be added and the output folder, where the resulting files will be stored. The run verification button creates a testbench for every json file in the source folder, simulates the result, verifies it and stores the result in the output folder.
+\npar
+To summarise the tool will convert
+\begin{itemize}
+	\item Source files for every feature to test
+	\item The design under test VHDL description
+\end{itemize}
+into
+\begin{itemize}
+	\item A VHDL test for every source file
+	\item Wave trace analysis files for every test
+\end{itemize}
+There are many benefits to this system. The user can be sure the test that has been generated does not hold any mistakes (at least if we assume no mistake has been made in creating the source file) as it is directly derived from the specifications of the device. Also, validating a device becomes easier way of compared to what it used to be - (create testbench,) simulate, compare simulation wave traces manually. One click offers an immediate validation. The test will either pass or fail. In the latter case extra information is immediately available.
+\npar
+It is however not a full validation system on itself. It requires the use of existing frameworks to function. It offers an easy to use and approachable way to use these frameworks while at the same time adding functionality to them. In this case the VUnit framework was chosen, but it could also be adapted to run on other frameworks such as CoCoTB \cite{cocotb}. It is a useful extension of these frameworks for all those who want to validate a design and document its functionality. 
+
