@@ -1,17 +1,22 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{4}
-\contentsline {chapter}{\numberline {2}Problem analysis}{9}
-\contentsline {chapter}{\numberline {3}Functional analysis}{12}
-\contentsline {chapter}{\numberline {4}Technical analysis}{17}
-\contentsline {section}{\numberline {4.1}Testbench creation}{18}
-\contentsline {subsection}{\numberline {4.1.1}Testbench specifications}{18}
-\contentsline {subparagraph}{VUnit}{18}
-\contentsline {subparagraph}{CoCoTB}{18}
-\contentsline {subparagraph}{SVUnit}{19}
-\contentsline {subparagraph}{OSVVM}{19}
-\contentsline {subparagraph}{UVVM}{19}
-\contentsline {chapter}{\numberline {5}Technical design}{20}
-\contentsline {section}{\numberline {5.1}test}{20}
-\contentsline {section}{\numberline {5.2}test2}{21}
-\contentsline {chapter}{\numberline {6}Conclusion}{22}
-\contentsline {chapter}{\numberline {A}example}{23}
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}Problem analysis}{9}{chapter.2}
+\contentsline {chapter}{\numberline {3}Functional analysis}{12}{chapter.3}
+\contentsline {chapter}{\numberline {4}Technical analysis}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Testbench creation}{18}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Testbench specifications}{18}{subsection.4.1.1}
+\contentsline {subparagraph}{VUnit}{18}{section*.14}
+\contentsline {subparagraph}{CoCoTB}{18}{section*.15}
+\contentsline {subparagraph}{SVUnit}{19}{section*.16}
+\contentsline {subparagraph}{OSVVM}{19}{section*.17}
+\contentsline {subparagraph}{UVVM}{19}{section*.18}
+\contentsline {subsection}{\numberline {4.1.2}Conversion script}{20}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Source file}{20}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Wave trace analysis}{21}{section.4.2}
+\contentsline {chapter}{\numberline {5}Technical design}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Testbench creation}{22}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Simple example}{22}{subsection.5.1.1}
+\contentsline {subsubsection}{The WaveDrom file}{22}{section*.19}
+\contentsline {subsubsection}{Creating VHDL code from the WaveDrom file}{24}{section*.21}
+\contentsline {chapter}{\numberline {6}Conclusion}{27}{chapter.6}
+\contentsline {chapter}{\numberline {A}example}{28}{appendix.A}

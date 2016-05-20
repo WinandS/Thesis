@@ -145,26 +145,13 @@ def set_up_signal_value_constants(testbench, signal_values):
 
 def set_up_signals(testbench, signal_declarations):
     signal_types = ["Clock", "Input", "Output"]
-    i = 0
     for type in signal_declarations:
         if len(type) > 0:
             for signal_decl in type:
                 find = "--# " + signal_types[i] + " Signals"
                 replace = find + "\n" + signal_decl
                 testbench = testbench.replace(find, replace)
-        i += 1
     return testbench
-
-
-# def create_stimulus(input_signals):
-#     stimulus = ""
-#     i = 0
-#     for signal in input_signals:
-#         if len(signal) > 0:
-#             value = signal["wave"]
-#             stimulus += "sig_" + signal["name"] + " <= '" + value + "';\n"
-#             i += 1
-#     return stimulus
 
 
 def set_up_stimulus_process(testbench, test_name, input_signals):

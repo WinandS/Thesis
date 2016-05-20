@@ -12,7 +12,108 @@
 %De technische beschrijving moet er vooral voor zorgen dat iemand die verder werkt aan dit project zo weinig mogelijk moeilijkheden ondervindt om dit te doen. De technische beschrijving moet vooral volledig zijn en gedetailleerd.
 
 \chapter{Technical design} \label{TD}
-\section{test}
-\newpage
-\section{test2}
-\newpage
+\section{Testbench creation}
+This chapter holds a step by description of the development of the software. Every new element is introduced at the hand of an increasingly complicated example input file.
+\subsection{Simple example}
+\subsubsection{The WaveDrom file}
+Although the primary goal of this product is to create testbenches for timed designs, a basic first draft of the program conversion script can be created based on a simple combinatorial design.
+\npar
+The example this draft was based on was an AND gate. The AND-gate design can be found in \ref{appendix:andgate_design}.
+\npar
+A WaveDrom file for describing the wave traces of a purely combinatorial AND gate is shown in code \ref{json:simple_example}.
+\begin{lstlisting}[style=json, caption={Standard WaveDrom description for a combinatorial AND-gate}, label={json:simple_example}]
+{"signal": [
+	{"name":"A", "wave":"0"},
+	{"name":"B", "wave":"0"},
+	{"name":"F", "wave":"0"}]  
+}
+\end{lstlisting}\nline
+Where A and B are considered input signals and F is the output signal. This yields the following wave trace image which shows that F should be low when both inputs are also low.
+\MijnFig{width=.2\textwidth}{images/comb_and0}{Wave traces corresponding to description in code \ref{json:simple_example}}{fig:combin_and0}\nline
+This is neither very clear, nor does it hold enough information on its own to create a testbench.
+To be able to create a testbench several more fields containing extra information should be added.
+\npar
+The necessities for creating a testbench are:
+\begin{itemize}
+	\item The exact name of the unit under test
+	\item The vhdl signal type for every signal
+	\item The direction of the signal (input or output)
+\end{itemize}\nline
+These fields have been added to the WaveDrom file together with a name and description for this test. The new WaveDrom file is shown in code \ref{json:andgate_example_extended}:\newpage
+\begin{lstlisting}[style=json, caption={Extended WaveDrom description for a combinatorial AND-gate}, label={json:andgate_example_extended}]
+{"name": "andGate", "test" : "andgate00", 
+"description": "Input A = '0' & B = '0' should produce a low output", 
+"signal": [
+	["IN",
+		{"name": "A", "wave": "0", "type": "std_logic"},
+		{"name": "B", "wave": "0", "type": "std_logic"}],
+	["OUT",
+		{"name": "F", "wave": "0", "type": "std_logic"}]
+]}
+\end{lstlisting}\nline
+Where the name should be the exact name of the unit under test and the port names have to be exactly the same as in the uut design. Each port should be defined under their corresponding label of direction. All input files must be defined under the “IN” label and all output signals under the “OUT” label. Now all information needed to create a testbench is available.
+\subsubsection{Creating VHDL code from the WaveDrom file}
+The information in this file has to be translated to VHDL code. More specifically the information in the WaveDrom file should be converted into:
+\begin{itemize}
+	\item Signal declarations for every signal
+	\item DUT declaration
+	\item DUT port map
+	\item Input signal stimulus
+	\item Output signal checking
+\end{itemize}\nline
+These are the elementary parts of a VHDL testbench. The python JSON package enables an easy conversion of information by reading all of the the waveJSON information and placing it in a python JSON container. This way data in the python code has the same structure as the data in the WaveDrom file. Because all the information is now available in the python program all that has to be done is manipulate standard strings to fit the current design.
+\npar
+For example the string manipulation code for signal declarations is given below. 
+\begin{lstlisting}[style=python, caption={Generating signal declarations in Python}, label={python:signal_declaration}]
+def generate_signal_declaration(json_signal):
+	signal_name = json_signal["name"]
+	signal_type = json_signal["type"]
+	
+	#example: "signal sig_example : std_logic :='0';
+	return "signal sig_" + signal_name + " : " + \
+					signal_type + " := 0;"
+\end{lstlisting}\nline
+This method reads the information regarding a JSON signal and produces a VHDL signal declaration string which initialises the signal to '0'.
+\npar
+In the same way signal stimuli and the UUT port map can be generated.
+\begin{lstlisting}[style=python, caption={Generating signal stimuli in Python}, label={python:signal_stimuli}]
+def create_stimulus(input_signals):
+	stimulus = ""
+	for signal in input_signals:
+		if len(signal) > 0:
+			value = signal["wave"]
+			
+			#example: "sig_example <= '1';"
+			stimulus += "sig_" + signal["name"] + " <= '" + value + "';\n"
+	return stimulus
+\end{lstlisting}\nline
+This method needs a list of all input signals in JSON format. It creates a VHDL assignment assigning them the value contained in the “wave” field and returns that string. The result can be directly added to the testbench.\newpage
+\begin{lstlisting}[style=python, caption={Generating a port map in Python}, label={python:port_map}]
+def generate_port_map(json_signal_set):
+	port_map = "PORT MAP(\n"
+	first = True
+	for signal_type in json_signal_set:     # IN and OUT.
+		if len(signal_type) > 0:            # JSON allows empty elements
+			for signal in signal_type:
+				if len(signal) > 0:         # JSON allows empty elements
+					if first:
+						#example: "example => sig_example"
+						new_map = signal["name"] + " => sig_" + signal["name"]
+						first = False
+					else:
+						new_map = ",\n" + signal["name"] + " => sig_" + signal["name"]
+						port_map += new_map
+	port_map += " );"
+	return port_map
+\end{lstlisting}\nline
+The port map is generated from a list of all signals. As in the input WaveDrom file this list is composed of two sublists: the signals defined under “IN” and those under “OUT”. These lists are iterated through and for each element that is not empty a new port map is added to the list. The final list is returned and is ready to be added to the testbench file.
+\subsubsection{Converting the WaveDrom file to a VHDL testbench}
+Every testbench is structurally the same at its base. The main elements are the signal declarations, the device under test (DUT) declaration, the port mapping of the DUT, the clock driving process and the stimulus process. As the previous paragraph explains, these elements can all be generated from the WaveDrom file. All that is left to do is organise these elements in the proper structure. To do this a template is used. This template defines the structure of the testbench by placing keywords that will be recognised by the program and replaced with design specific code. In this template the vunit checking capabilities are integrated, allowing for conditional logging. The final version of the template can be found in appendix \ref{appendix:template}
+\npar
+The space for input and output signals is marked by the keywords ‘--# Input Signals’ and ‘--# Output Signals’ respectively. Every declaration is created and placed below the corresponding keyword. 
+\npar
+Using this method the first fully functional testbench was created that can be run using VUnit. The creation is however limited to combinatorial designs.
+\subsection{Clocked designs}
+The next step is to move on to timed designs, which will be the main focus of this project. The design used to test this step does not differ from the previous AND-gate design except that the gate will be triggered by a clock signal. This allows us to create more extensive tests. The AND-gate VHDL design can be found in appendix \ref{appendix:andgate} or at \cite{examples}.
+\npar
+The WaveDrom code for testing all possible inputs and checking all corresponding outputs for an AND-gate is shown in code [ADD REF]. The generated wave traces are shown below.

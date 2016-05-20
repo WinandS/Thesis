@@ -43,6 +43,38 @@ Some of the most known frameworks, their supported languages and their most impo
 \subparagraph{UVVM}\cite{uvvm}: VHDL
 \begin{itemize}
 	\item AANVULLEN
-\end{itemize}
-
-
+\end{itemize}\nline
+The frameworks with the most advanced features and support for both (System)Verilog and VHDL are VUnit and CoCoTB. The framework suggested by the promoters of this project is VUnit. It will be the framework supporting this system.
+\npar
+The VUnit framework aims to bring the best software testing practises to HDL languages. A big part of that is supporting unit testing, hence the name V(HDL)Unit. The VUnit documentation can be found in the vunit documentation \cite{vunit_doc}. VUnit testbenches do not differ a lot from regular testbenches. The only difference is that all test have to be written inside the same process as seen in the example below.
+\begin{lstlisting}[style=vhdl, caption={Main test loop for a VUnit testbench}]
+main : process
+begin
+test_runner_setup(runner, runner_cfg);
+while test_suite loop
+	if run("test_pass") then
+		report "This will pass";
+	elsif run("test_fail") then
+		assert false report "It fails";
+	end if;
+end loop;
+\end{lstlisting}\nline
+Multiple tests can be implemented using the if-elsif mechanism. All tests are run by the python test runner, which can be configured according to the user's wishes. This means that a test can be started by a python command. These test can be run separately thanks to the VUnit framework. The framework offers the possibility to set the simulator backend that will simulate all the tests. How to set up the VUnit framework and run test can be found in the VUnit documentation.
+\subsection{Conversion script}
+With the form of the testbenches defined, a general construction method can be implemented. This is done using the popular programming language Python, because of its clarity, flexibility and ease of use. On top of this it is the language used to build the VUnit framework, which makes it easier to integrate VUnit into the software.
+\npar
+The conversion script will read the wave trace file, convert it to a VUnit compatible testbench and run it using the VUnit framework.
+\npar
+A lot of relevant information could be extracted from the device description, such as the name, type and direction of all ports. For now however the conversion script expects all information to be available in the wave trace files. An optimisation can be made at a later time.
+\subsection{Source file}
+The source file is the source for creating the testbench, it contains all the information necessary to create a testbench, while still being understandable. Information should be easily extractable and processable. These constraints are all met by WaveDrom Files.
+\npar
+WaveDrom is an open source timing diagram rendering engine that converts waveJSON input files into the corresponding timing diagram. These waveJSON files are considered the source file, but will also be referred to as WaveDrom files in this report.
+\npar
+WaveJSON \cite{wavejson} is an application of the JSON format. The purpose of it is to provide a compact exchange format for digital timing diagrams.
+\npar
+Standard WaveDrom files do not hold enough information to create a testbench. However, it is possible to add new JSON fields to these WaveDrom files without compromising the generated wave traces. This way any information needed can be integrated in these files.
+\section{Wave trace analysis}
+This part corresponds to the green part of image \ref{fig:overview_color}. After simulation a test will either pass or fail. This functionality is integrated in VUnit. During simulation the output is compared to the expected output and whenever they are not equal, the test will automatically fail and an error message will be generated. This error message is logged to a CSV file using the conditional logging functionality of the VUnit check library.
+\npar
+The logged errors can then be processed by a script to create files in which the errors are clearly marked. This script will be written in Python and will create WaveDrom files based on the original input WaveDrom file.

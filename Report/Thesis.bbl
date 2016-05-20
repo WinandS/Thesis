@@ -34,7 +34,7 @@
 
 \bibitem{vunit}
 \BIBentryALTinterwordspacing
-``Vunit documenation.'' [Online]. Available: \url{vunit.github.io}
+``Vunit home page.'' [Online]. Available: \url{vunit.github.io}
 \BIBentrySTDinterwordspacing
 
 \bibitem{cocotb}
@@ -57,6 +57,11 @@
 \BIBentryALTinterwordspacing
 ``Uvvm home page.'' [Online]. Available:
   \url{http://bitvis.no/products/uvvm-utility-library/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{vunit_doc}
+\BIBentryALTinterwordspacing
+``Vunit home page.'' [Online]. Available: \url{vunit.github.io/documentation}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

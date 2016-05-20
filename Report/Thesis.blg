@@ -1,8 +1,13 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Thesis.aux
 The style file: ieeetran.bst
 Database file #1: bib/References.bib
+Repeated entry---line 41 of file bib/References.bib
+ : @misc{uvvm
+ :           ,
+I'm skipping whatever remains of this entry
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
+(There was 1 error message)
