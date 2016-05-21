@@ -3,10 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{listings}
 \graphicspath{ {images/} }
 \usepackage{amsmath}			% Uitgebreide wiskundige mogelijkheden
 \usepackage{amssymb}			% Voor speciale symbolen zoals de verzameling Z, R... 
 \usepackage{pdfpages}
+\usepackage{float}
+\usepackage{caption}
 
 \title{
 	{Automated testbench generation from \\ digital timing diagrams}\\
@@ -40,6 +43,24 @@
 	\end{figure}
 }
 
+\newcommand{\npar}{
+	\hfill \break
+	\hfill \break
+}
+
+\newcommand{\nline}{
+	\hfill \break
+}
+
+%custom float environment
+%\begin{customenv}
+%	content
+%\end{customenv}
+\newcounter{customcnt}
+\newfloat{customenv}{ht}{}
+\floatname{customenv}{Log message}
+
+
 %---------------------------------------------------------
 
 
@@ -65,8 +86,6 @@
 \input{chapters/Introduction}
 
 \input{chapters/Problem_description}
-
-\input{chapters/Literature}
 
 \input{chapters/Functional_analysis}
 
