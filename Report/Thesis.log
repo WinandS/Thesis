@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.10)  20 MAY 2016 09:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.10)  20 MAY 2016 16:30
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -669,7 +669,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-<title_page.pdf, id=59, 597.23125pt x 845.1575pt>
+<title_page.pdf, id=95, 597.23125pt x 845.1575pt>
 File: title_page.pdf Graphic file (type pdf)
  <use title_page.pdf>
 Package pdftex.def Info: title_page.pdf used on input line 54.
@@ -679,7 +679,7 @@ File: title_page.pdf Graphic file (type pdf)
 <use title_page.pdf>
 Package pdftex.def Info: title_page.pdf used on input line 54.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <title_page.pdf, id=62, page=1, 597.23125pt x 845.1575pt>
+ <title_page.pdf, id=98, page=1, 597.23125pt x 845.1575pt>
 File: title_page.pdf Graphic file (type pdf)
 
 <use title_page.pdf, page 1>
@@ -713,7 +713,7 @@ Package pdftex.def Info: title_page.pdf, page1 used on input line 54.
 .map}>] [2
 
 ]
-<images/ruglogo.pdf, id=77, 191.71625pt x 167.62625pt>
+<images/ruglogo.pdf, id=113, 191.71625pt x 167.62625pt>
 File: images/ruglogo.pdf Graphic file (type pdf)
 
 <use images/ruglogo.pdf>
@@ -754,7 +754,7 @@ l.67 \tableofcontents
 
  [3
 
-] (chapters/Introduction.tex
+] [4] (chapters/Introduction.tex
 Chapter 1.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 5.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
@@ -763,21 +763,21 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5.
 
-<images/overview.png, id=114, 659.46375pt x 343.2825pt>
+<images/overview.png, id=164, 659.46375pt x 343.2825pt>
 File: images/overview.png Graphic file (type png)
 
 <use images/overview.png>
 Package pdftex.def Info: images/overview.png used on input line 15.
 (pdftex.def)             Requested size: 390.0pt x 203.01682pt.
 
-<images/andgate_example.png, id=115, 662.475pt x 166.6225pt>
+<images/andgate_example.png, id=165, 662.475pt x 166.6225pt>
 File: images/andgate_example.png Graphic file (type png)
 
 <use images/andgate_example.png>
 Package pdftex.def Info: images/andgate_example.png used on input line 19.
 (pdftex.def)             Requested size: 350.99762pt x 88.28152pt.
 
-<images/simulation.png, id=118, 504.08325pt x 180.675pt>
+<images/simulation.png, id=168, 504.08325pt x 180.675pt>
 File: images/simulation.png Graphic file (type png)
 
 <use images/simulation.png>
@@ -803,7 +803,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--22
 
  []
 
-[4
+[5
 
 
 ]
@@ -813,29 +813,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./images/overview.png>]
+[6 <./images/overview.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./images/andgate_example.png> <./images/simulation.png>]
-<images/modelsim.png, id=141, 325.96782pt x 185.19188pt>
+[7 <./images/andgate_example.png> <./images/simulation.png>]
+<images/modelsim.png, id=190, 325.96782pt x 185.19188pt>
 File: images/modelsim.png Graphic file (type png)
 
 <use images/modelsim.png>
 Package pdftex.def Info: images/modelsim.png used on input line 23.
 (pdftex.def)             Requested size: 350.99762pt x 199.42776pt.
 
-<images/validation_old.png, id=143, 414.64912pt x 218.61674pt>
+<images/validation_old.png, id=192, 414.64912pt x 218.61674pt>
 File: images/validation_old.png Graphic file (type png)
 
 <use images/validation_old.png>
 Package pdftex.def Info: images/validation_old.png used on input line 27.
 (pdftex.def)             Requested size: 390.0pt x 205.62985pt.
 
-<images/validation_new.png, id=145, 486.91913pt x 252.945pt>
+<images/validation_new.png, id=194, 486.91913pt x 252.945pt>
 File: images/validation_new.png Graphic file (type png)
 
 <use images/validation_new.png>
@@ -858,14 +858,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./images/modelsim.png>]
+[8 <./images/modelsim.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./images/validation_old.png> <./images/validation_new.png>]
+[9 <./images/validation_old.png> <./images/validation_new.png>]
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--21
@@ -907,7 +907,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--21
 
  []
 
-[9
+[10
 
 ]
 
@@ -916,14 +916,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10]) (chapters/Functional_analysis.tex
+[11]) (chapters/Functional_analysis.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]
+[12]
 Chapter 3.
 File: images/overview.png Graphic file (type png)
 <use images/overview.png>
@@ -934,13 +934,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--19
 
  []
 
-[12
+[13
 
-] <images/sim_fail_example.png, id=185, 682.55pt x 216.81pt>
-File: images/sim_fail_example.png Graphic file (type png)
+] <images/andgate_failing.png, id=234, 682.55pt x 216.81pt>
+File: images/andgate_failing.png Graphic file (type png)
 
-<use images/sim_fail_example.png>
-Package pdftex.def Info: images/sim_fail_example.png used on input line 24.
+<use images/andgate_failing.png>
+Package pdftex.def Info: images/andgate_failing.png used on input line 24.
 (pdftex.def)             Requested size: 390.0pt x 123.88402pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--24
@@ -958,7 +958,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
+[14]
 Package hyperref Info: bookmark level for unknown customenv defaults to 0 on in
 put line 26.
 
@@ -968,8 +968,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14 <./images/sim_fail_example.png>]
-<images/gui.png, id=198, 327.47343pt x 106.89937pt>
+[15 <./images/andgate_failing.png>]
+<images/gui.png, id=247, 327.47343pt x 106.89937pt>
 File: images/gui.png Graphic file (type png)
  <use images/gui.png>
 Package pdftex.def Info: images/gui.png used on input line 35.
@@ -990,22 +990,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15 <./images/gui.png>]) (chapters/Technical_analysis.tex
+[16 <./images/gui.png>]) (chapters/Technical_analysis.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16]
+[17]
 Chapter 4.
-<images/overview_color.png, id=213, 659.46375pt x 379.4175pt>
+<images/overview_color.png, id=262, 659.46375pt x 379.4175pt>
 File: images/overview_color.png Graphic file (type png)
 
 <use images/overview_color.png>
 Package pdftex.def Info: images/overview_color.png used on input line 14.
 (pdftex.def)             Requested size: 390.0pt x 224.38701pt.
- [17
+ [18
 
  <./images/overview_color.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
@@ -1018,7 +1018,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[18] (C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+[19] (C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Underfull \hbox (badness 10000) in paragraph at lines 46--50
@@ -1035,7 +1035,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 64--69
 
  []
@@ -1046,7 +1046,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--69
  []
 
 
-LaTeX Warning: Citation `wavejson' on page 20 undefined on input line 74.
+LaTeX Warning: Citation `wavejson' on page 21 undefined on input line 74.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 70--77
@@ -1069,7 +1069,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20])
+[21])
 Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
@@ -1081,10 +1081,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21]
+[22]
 Chapter 5.
 
-LaTeX Warning: Reference `appendix:andgate_design' on page 22 undefined on inpu
+LaTeX Warning: Reference `appendix:andgate_design' on page 23 undefined on inpu
 t line 21.
 
 
@@ -1105,9 +1105,9 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbraceleft' on input line 25.
 
-[22
+[23
 
-] <images/comb_and0.png, id=277, 100.375pt x 90.3375pt>
+] <images/comb_and0.png, id=326, 100.375pt x 90.3375pt>
 File: images/comb_and0.png Graphic file (type png)
 
 <use images/comb_and0.png>
@@ -1124,7 +1124,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23 <./images/comb_and0.png>]
+[24 <./images/comb_and0.png>]
 (C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1138,7 +1138,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 75--79
 
  []
@@ -1149,29 +1149,530 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+[26]
+
+LaTeX Warning: Reference `appendix:template' on page 27 undefined on input line
+ 112.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--117
 
  []
 
-) (chapters/Conclusion.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--117
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26]
+[27]
+
+LaTeX Warning: Reference `appendix:andgate' on page 28 undefined on input line 
+118.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
+
+ []
+
+<images/andgate_full.png, id=397, 662.475pt x 150.5625pt>
+File: images/andgate_full.png Graphic file (type png)
+
+<use images/andgate_full.png>
+Package pdftex.def Info: images/andgate_full.png used on input line 134.
+(pdftex.def)             Requested size: 350.99762pt x 79.77246pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--140
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 141--144
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29 <./images/andgate_full.png>]
+
+LaTeX Warning: Reference `vhdl:sig_example' on page 30 undefined on input line 
+147.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--156
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--174
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 183--187
+
+ []
+
+
+LaTeX Warning: Reference `appendix:uart' on page 32 undefined on input line 188
+.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+
+LaTeX Warning: Reference `appendix:uart' on page 33 undefined on input line 204
+.
+
+
+LaTeX Warning: Reference `appendix:uart' on page 33 undefined on input line 204
+.
+
+<images/uart_no_wait.png, id=469, 762.85pt x 180.675pt>
+File: images/uart_no_wait.png Graphic file (type png)
+
+<use images/uart_no_wait.png>
+Package pdftex.def Info: images/uart_no_wait.png used on input line 205.
+(pdftex.def)             Requested size: 350.99762pt x 83.1308pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33 <./images/uart_no_wait.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 205--209
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+
+LaTeX Warning: Reference `appendix:uart' on page 35 undefined on input line 225
+.
+
+
+LaTeX Warning: Reference `appendix:uart' on page 35 undefined on input line 225
+.
+
+<images/uart_wait.png, id=496, 762.85pt x 180.675pt>
+File: images/uart_wait.png Graphic file (type png)
+
+<use images/uart_wait.png>
+Package pdftex.def Info: images/uart_wait.png used on input line 226.
+(pdftex.def)             Requested size: 350.99762pt x 83.1308pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35 <./images/uart_wait.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 230--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
+
+LaTeX Warning: Reference `appendix:uart' on page 38 undefined on input line 254
+.
+
+
+LaTeX Warning: Reference `appendix:uart' on page 38 undefined on input line 254
+.
+
+<images/uart_2_bytes.png, id=530, 1405.25pt x 180.675pt>
+File: images/uart_2_bytes.png Graphic file (type png)
+
+<use images/uart_2_bytes.png>
+Package pdftex.def Info: images/uart_2_bytes.png used on input line 255.
+(pdftex.def)             Requested size: 350.99762pt x 45.12727pt.
+
+
+LaTeX Warning: Reference `appendix:uart:wave_traces' on page 38 undefined on in
+put line 256.
+
+<images/tb_code_overview.png, id=535, 406.51875pt x 545.18681pt>
+File: images/tb_code_overview.png Graphic file (type png)
+
+<use images/tb_code_overview.png>
+Package pdftex.def Info: images/tb_code_overview.png used on input line 259.
+(pdftex.def)             Requested size: 288.60214pt x 387.0604pt.
+
+
+LaTeX Warning: Reference `user_guide' on page 38 undefined on input line 260.
+
+
+LaTeX Warning: Reference `TD:vhdl_creation' on page 38 undefined on input line 
+262.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--269
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38 <./images/uart_2_bytes.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39 <./images/tb_code_overview.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 270--273
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40] <images/error_example.png, id=566, 642.4pt x 186.6975pt>
+File: images/error_example.png Graphic file (type png)
+
+<use images/error_example.png>
+Package pdftex.def Info: images/error_example.png used on input line 275.
+(pdftex.def)             Requested size: 390.0pt x 113.34688pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41 <./images/error_example.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 285--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--295
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--295
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
+
+Package caption Warning: \label without proper reference on input line 277.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `log' on page 43 undefined on input line 304.
+
+
+LaTeX Warning: Reference `examples:andgate_failing' on page 43 undefined on inp
+ut line 317.
+
+File: images/andgate_failing.png Graphic file (type png)
+<use images/andgate_failing.png>
+Package pdftex.def Info: images/andgate_failing.png used on input line 318.
+(pdftex.def)             Requested size: 390.0pt x 123.88402pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--323
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44]
+
+LaTeX Warning: Reference `json:andgate' on page 45 undefined on input line 325.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--354
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--381
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 382--404
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--404
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48]
+
+LaTeX Warning: Reference `REF CORRECT PARAGRAPH' on page 49 undefined on input 
+line 406.
+
+<images/wave_trace_analysis_overview.png, id=656, 374.90062pt x 388.45125pt>
+File: images/wave_trace_analysis_overview.png Graphic file (type png)
+
+<use images/wave_trace_analysis_overview.png>
+Package pdftex.def Info: images/wave_trace_analysis_overview.png used on input 
+line 407.
+(pdftex.def)             Requested size: 370.49881pt x 383.90999pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49 <./images/wave_trace_analysis_overview.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 407--413
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--413
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--413
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--438
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 441--445
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--453
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--453
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51] <images/andgate_failing_part.png, id=690, 682.55pt x 216.81pt>
+File: images/andgate_failing_part.png Graphic file (type png)
+
+<use images/andgate_failing_part.png>
+Package pdftex.def Info: images/andgate_failing_part.png used on input line 469
+.
+(pdftex.def)             Requested size: 390.0pt x 123.88402pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--473
+
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52 <./images/andgate_failing_part.png>]
+File: images/andgate_failing.png Graphic file (type png)
+ <use images/andgate_failing.png>
+Package pdftex.def Info: images/andgate_failing.png used on input line 490.
+(pdftex.def)             Requested size: 390.0pt x 123.88402pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53] (chapters/Conclusion.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[54]
 Chapter 6.
-) (appendices/Appendix_A.tex [27
+) (appendices/Appendix_A.tex [55
 
 ]
 Appendix A.
-) (Thesis.bbl [28
+) (Thesis.bbl [56
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
- [29
+ [57
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
@@ -1179,7 +1680,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DF29F3FCC685E70DC6F0D7507A8BAA0E;834.
+(rerunfilecheck)             Checksum: 5FFA42E4D27FDADB69F349A26EBC908E;1451.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1190,25 +1691,26 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
  ) 
 Here is how much of TeX's memory you used:
- 10701 strings out of 493634
- 153905 string characters out of 3141314
- 330050 words of memory out of 3000000
- 13761 multiletter control sequences out of 15000+200000
+ 11116 strings out of 493634
+ 160456 string characters out of 3141314
+ 365945 words of memory out of 3000000
+ 13946 multiletter control sequences out of 15000+200000
  14213 words of font info for 55 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,18n,49p,1520b,1955s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,18n,49p,1520b,1958s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Thesis.pdf (32 pages, 407116 bytes).
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Thesis.pdf (60 pages, 638385 bytes).
 PDF statistics:
- 430 PDF objects out of 1000 (max. 8388607)
- 137 named destinations out of 1000 (max. 500000)
- 188 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 878 PDF objects out of 1000 (max. 8388607)
+ 359 named destinations out of 1000 (max. 500000)
+ 300 words of extra memory for PDF output out of 10000 (max. 10000000)
 

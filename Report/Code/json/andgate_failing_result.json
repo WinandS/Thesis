@@ -1,0 +1,15 @@
+{"name": "andGate_timed", "test" : "andgate_failing",
+ "description": "a full AND-gate test designed to fail",
+  "signal": [
+  ["CLK",
+   {"name": "CLK", "wave": "p......", "type":"std_logic", "period":"2", "clock_period": "20"}],
+  ["IN",
+   {"name": "A", "wave": "01010..", "type": "std_logic", "period":"2"},
+   {"name": "B", "wave": "0.....1.0.1.0.", "type": "std_logic"}],
+  ["OUT",
+   {"name": "F",     "wave": "0.....1.0.....", "type": "std_logic", "node": "..ac..eg"},
+   {"name": "F_sim", "wave": "0.110.000.....", "type": "std_logic", "node": "..bd..fh"}]
+], "head": {"text": ["tspan", {"class": "error h3"}, "Simulation failure "],
+          "tick": 0
+    }, "edge": ["a-b W1", "c-d W2", "e-f W3", "g-h W4"]
+}
