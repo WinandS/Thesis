@@ -39,7 +39,7 @@ class Window(Frame):
         # testbenchButton = Button(self, text="Create testbenches and run simulation")
         inputButton = Button(self, text="Open input folder", command=open_input)
         outputButton = Button(self, text="Open output folder", command=open_output)
-        srcButton = Button(self, text="Open src folder", command=open_src)
+        srcButton = Button(self, text="Open design folder", command=open_src)
         runButton = Button(self, text="Run verification", command=run_all)
         # processButton = Button(self, text="Process result", command=process_simulation_result)
 
