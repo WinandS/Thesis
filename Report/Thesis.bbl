@@ -64,6 +64,12 @@
 ``Vunit home page.'' [Online]. Available: \url{vunit.github.io/documentation}
 \BIBentrySTDinterwordspacing
 
+\bibitem{wavejson}
+\BIBentryALTinterwordspacing
+``wavejson data interchange format.'' [Online]. Available:
+  \url{\\https://github.com/drom/wavedrom/wiki/WaveJSON}
+\BIBentrySTDinterwordspacing
+
 \bibitem{examples}
 \BIBentryALTinterwordspacing
 ``Online examples for this project.'' [Online]. Available:

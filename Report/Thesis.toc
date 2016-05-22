@@ -10,9 +10,9 @@
 \contentsline {subparagraph}{SVUnit}{20}{section*.16}
 \contentsline {subparagraph}{OSVVM}{21}{section*.17}
 \contentsline {subparagraph}{UVVM}{21}{section*.18}
-\contentsline {subsection}{\numberline {4.1.2}Conversion script}{22}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Conversion script}{21}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Source file}{22}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Wave trace analysis}{23}{section.4.2}
+\contentsline {section}{\numberline {4.2}Wave trace analysis}{22}{section.4.2}
 \contentsline {chapter}{\numberline {5}Technical design}{24}{chapter.5}
 \contentsline {section}{\numberline {5.1}Testbench creation}{24}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Simple example}{24}{subsection.5.1.1}
@@ -22,40 +22,40 @@
 \contentsline {subsection}{\numberline {5.1.2}Clocked designs}{29}{subsection.5.1.2}
 \contentsline {subsubsection}{Driving and checking the signals}{30}{section*.24}
 \contentsline {subsubsection}{Clock driving}{31}{section*.25}
-\contentsline {section}{\numberline {5.2}Vectors and repetitions}{33}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Vectors}{33}{subsection.5.2.1}
+\contentsline {section}{\numberline {5.2}Vectors and repetitions}{34}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Vectors}{34}{subsection.5.2.1}
 \contentsline {subsubsection}{Time loops}{36}{section*.27}
 \contentsline {subparagraph}{The 'x' character}{37}{section*.29}
 \contentsline {subparagraph}{The '\textbar ' character}{37}{section*.30}
 \contentsline {subsection}{\numberline {5.2.2}Application example}{38}{subsection.5.2.2}
 \contentsline {section}{\numberline {5.3}Overview}{39}{section.5.3}
-\contentsline {section}{\numberline {5.4}Wave trace comparison}{40}{section.5.4}
-\contentsline {subsubsection}{ideal solution}{40}{section*.33}
-\contentsline {subsection}{\numberline {5.4.1}Practical approach}{41}{subsection.5.4.1}
-\contentsline {subsubsection}{Look and feel}{42}{section*.35}
-\contentsline {subsection}{\numberline {5.4.2}Preparations}{44}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}WaveDrom result file}{47}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Some examples}{52}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Successful tests}{53}{subsection.5.5.1}
-\contentsline {subsubsection}{AND-gate}{53}{section*.40}
-\contentsline {subsubsection}{Shift register}{53}{section*.42}
-\contentsline {subsubsection}{UART \& SPI}{54}{section*.44}
-\contentsline {subsection}{\numberline {5.5.2}Failing tests}{54}{subsection.5.5.2}
-\contentsline {subsubsection}{AND-gate}{54}{section*.45}
-\contentsline {subsubsection}{Shift register}{61}{section*.48}
-\contentsline {subsubsection}{UART \& SPI}{62}{section*.51}
-\contentsline {section}{\numberline {5.6}Limitations \& expansions}{63}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Difficult to install}{63}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}Generic input values}{63}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Simulator compatibility}{63}{subsection.5.6.3}
-\contentsline {subsection}{\numberline {5.6.4}Redundant data}{64}{subsection.5.6.4}
-\contentsline {subsection}{\numberline {5.6.5}Result readability}{64}{subsection.5.6.5}
-\contentsline {subsection}{\numberline {5.6.6}CoCoTB vs VUnit}{64}{subsection.5.6.6}
-\contentsline {chapter}{\numberline {6}Conclusion}{66}{chapter.6}
-\contentsline {section}{\numberline {6.1}Can we design a system that can create self checking testbenches and documentation wave traces from the same source?}{67}{section.6.1}
-\contentsline {section}{\numberline {6.2}Can we optimise wave trace analysis based on this system?}{67}{section.6.2}
-\contentsline {section}{\numberline {6.3}Can we design a system that will streamline the process of design validation?}{68}{section.6.3}
-\contentsline {section}{\numberline {6.4}Does this system provide any benefits over existing verification frameworks?}{69}{section.6.4}
+\contentsline {section}{\numberline {5.4}Wave trace comparison}{41}{section.5.4}
+\contentsline {subsubsection}{ideal solution}{41}{section*.33}
+\contentsline {subsection}{\numberline {5.4.1}Practical approach}{42}{subsection.5.4.1}
+\contentsline {subsubsection}{Look and feel}{44}{section*.35}
+\contentsline {subsection}{\numberline {5.4.2}Preparations}{45}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}WaveDrom result file}{48}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}Some examples}{53}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Successful tests}{54}{subsection.5.5.1}
+\contentsline {subsubsection}{AND-gate}{54}{section*.40}
+\contentsline {subsubsection}{Shift register}{55}{section*.42}
+\contentsline {subsubsection}{UART \& SPI}{56}{section*.44}
+\contentsline {subsection}{\numberline {5.5.2}Failing tests}{56}{subsection.5.5.2}
+\contentsline {subsubsection}{AND-gate}{56}{section*.45}
+\contentsline {subsubsection}{Shift register}{58}{section*.48}
+\contentsline {subsubsection}{UART \& SPI}{59}{section*.51}
+\contentsline {section}{\numberline {5.6}Limitations \& expansions}{60}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Difficult to install}{60}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Generic input values}{60}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Simulator compatibility}{60}{subsection.5.6.3}
+\contentsline {subsection}{\numberline {5.6.4}Redundant data}{61}{subsection.5.6.4}
+\contentsline {subsection}{\numberline {5.6.5}Result readability}{61}{subsection.5.6.5}
+\contentsline {subsection}{\numberline {5.6.6}CoCoTB vs VUnit}{62}{subsection.5.6.6}
+\contentsline {chapter}{\numberline {6}Conclusion}{63}{chapter.6}
+\contentsline {section}{\numberline {6.1}Can we design a system that can create self checking testbenches and documentation wave traces from the same source?}{64}{section.6.1}
+\contentsline {section}{\numberline {6.2}Can we optimise wave trace analysis based on this system?}{64}{section.6.2}
+\contentsline {section}{\numberline {6.3}Can we design a system that will streamline the process of design validation?}{65}{section.6.3}
+\contentsline {section}{\numberline {6.4}Does this system provide any benefits over existing verification frameworks?}{1}{section.6.4}
 \contentsline {section}{\numberline {6.5}Fields of application}{1}{section.6.5}
 \contentsline {chapter}{\numberline {A}User guide}{2}{appendix.A}
 \contentsline {section}{\numberline {A.1}Dependencies}{2}{section.A.1}
@@ -83,3 +83,4 @@
 \contentsline {section}{\numberline {C.2}Shift register}{3}{section.C.2}
 \contentsline {section}{\numberline {C.3}Uart tx line}{4}{section.C.3}
 \contentsline {section}{\numberline {C.4}SPI master}{6}{section.C.4}
+\contentsline {chapter}{\numberline {D}Testbench template}{1}{appendix.D}

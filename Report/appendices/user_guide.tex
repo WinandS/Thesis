@@ -56,7 +56,6 @@ In some cases the output at a specific point in time is undefined or is of no in
 \section{Example}
 Here is an example input file testing the design of the "uart\_tx" entity. Two consecutive bytes are sent over the serial output port. Input signals as well as expected output signals are defined.
 \begin{lstlisting}[style=json, caption={}, label={}]
-
 {"name": "uart_tx", "test" : "uart_send_2_bytes", "description": "A test for sending two consecutive bytes with an parallel to serial uart", "signal": [
 	["CLK",
 		{"name": "clk", "wave": "n......|n......|", "type":"std_logic", "period": "2", "clock_period": "10", "loop_times" : ["10*434", "10*434"]}],
@@ -68,7 +67,7 @@ Here is an example input file testing the design of the "uart\_tx" entity. Two c
 		{"name": "tready", "wave": "01.0..........x.1..0..........x.", "type": "std_logic"}]
 ]}
 \end{lstlisting}
-The generated wave trace file can be found in appendix \ref{appendix:more_examples:uart:result_wave_traces}.\newpage
+The generated wave trace file can be found in appendix \ref{appendix:more_examples:uart}.\newpage
 \newpage
 \section{Starting the tool}
 \begin{enumerate}

@@ -2,8 +2,8 @@
 This chapter lists some examples of tests processed by the software. These tests can also be found online \cite{examples}.  Each test will be preceded by a short description, followed by the WaveDrom input code and its corresponding generated wave traces image. If the test fails, the result wave traces and corresponding wave traces will also be shown, but for successful tests the generated documentation wave traces will not be shown as they are the same as the resulting output wave traces.\newpage
 \subsection{Successful tests}
 \subsubsection{AND-gate}
-This is one of the first designs used to test the software. It is the clocked version of the well known combinatorial AND-gate. The  design to be tested can be found in appendix \ref{appendix:andgate}.
-\begin{lstlisting}[style=json, caption={Full functionality test for the timed AND-gate design in appendix \ref{appendix:andgate}}, label={json:andgatefull_result}]
+This is one of the first designs used to test the software. It is the clocked version of the well known combinatorial AND-gate. The  design to be tested can be found in appendix \ref{appendix:andgate:sequential}.
+\begin{lstlisting}[style=json, caption={Full functionality test for the timed AND-gate design in appendix \ref{appendix:andgate:sequential}}, label={json:andgatefull_result}]
 {"name": "andGate_timed", "test" : "andgate_full", 
 "description": "test all possible inputs for an AND-gate", 
 "signal": [
@@ -37,9 +37,9 @@ This example shows a test for a simple shift register which holds 2 bits. The sh
 Because tests are becoming more and more complex, the input and output WaveDrom files and the generated wave traces are becoming too extensive to be clearly shown here. These examples will be continued in \ref{appendix:more_examples}.
 \subsection{Failing tests}
 To show the correct function of the system, this section will show some tests that are designed to fail and that will be accordingly flagged as failing by the software.
-\subsubsection{AND-gate}
+\subsubsection{AND-gate}\label{some_examples:andgate_failing}
 This test checks the full operation of a clocked AND-gate, but the expected output is incorrect. The test will fail because an AND-gate does not comply to these specifications. It is also the file used to develop the error displaying system.
-\begin{lstlisting}[style=json, caption={Failing functionality test for the timed AND-gate design in appendix \ref{appendix:andgate}}, label={json:andgatefull_failing}]
+\begin{lstlisting}[style=json, caption={Failing functionality test for the timed AND-gate design in appendix \ref{appendix:andgate:sequential}}, label={json:andgatefull_failing}]
 {"name": "andGate_timed", "test" : "andgate_failing", 
 "description": "a full AND-gate test designed to fail", 
 "signal": [

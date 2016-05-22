@@ -20,6 +20,7 @@ Before the way testbenches should be constructed can be defined, the specificati
 Some of the most known frameworks, their supported languages and their most important features are listed below. These frameworks are all open source.
 \subparagraph{VUnit}: VHDL, (System)Verilog
 \begin{itemize}
+	\setlength\itemsep{.1em}
 	\item Unit testing
 	\item Python test runner
 	\item Advanced logging libraries
@@ -27,21 +28,25 @@ Some of the most known frameworks, their supported languages and their most impo
 \end{itemize}
 \subparagraph{CoCoTB}: VHDL, (System)Verilog
 \begin{itemize}
+	\setlength\itemsep{.1em}
 	\item Python testbenches
 	\item Python test runner
 	\item Multi simulator support	
 \end{itemize}
 \subparagraph{SVUnit}\cite{svunit}: (System)Verilog
 \begin{itemize}
+	\setlength\itemsep{.1em}
 	\item Unit testing
 \end{itemize}
 \subparagraph{OSVVM}\cite{osvvm}: VHDL
 \begin{itemize}
+	\setlength\itemsep{.1em}
 	\item Maximum test coverage support
 	\item Randomised testing
 \end{itemize}
 \subparagraph{UVVM}\cite{uvvm}: VHDL
 \begin{itemize}
+	\setlength\itemsep{.1em}
 	\item AANVULLEN
 \end{itemize}\noindent
 The frameworks with the most advanced features and support for both (System)Verilog and VHDL are VUnit and CoCoTB. The framework suggested by the promoters of this project is VUnit. It will be the framework supporting this system.
@@ -71,7 +76,8 @@ The source file is the source for creating the testbench, it contains all the in
 \npar
 WaveDrom is an open source timing diagram rendering engine that converts waveJSON input files into the corresponding timing diagram. These waveJSON files are considered the source file, but will also be referred to as WaveDrom files in this report.
 \npar
-WaveJSON \cite{wavejson} is an application of the JSON format. The purpose of it is to provide a compact exchange format for digital timing diagrams.
+WaveJSON \cite{wavejson}
+ is an application of the JSON format. The purpose of it is to provide a compact exchange format for digital timing diagrams.
 \npar
 Standard WaveDrom files do not hold enough information to create a testbench. However, it is possible to add new JSON fields to these WaveDrom files without compromising the generated wave traces. This way any information needed can be integrated in these files.
 \section{Wave trace analysis}
