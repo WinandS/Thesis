@@ -1,0 +1,95 @@
+\section{Some examples}\label{some_examples}
+This chapter lists some examples of tests processed by the software. These tests can also be found online \cite{examples}.  Each test will be preceded by a short description, followed by the WaveDrom input code and its corresponding generated wave traces image. If the test fails, the result wave traces and corresponding wave traces will also be shown, but for successful tests the generated documentation wave traces will not be shown as they are the same as the resulting output wave traces.\newpage
+\subsection{Successful tests}
+\subsubsection{AND-gate}
+This is one of the first designs used to test the software. It is the clocked version of the well known combinatorial AND-gate. The  design to be tested can be found in appendix \ref{appendix:andgate}.
+\begin{lstlisting}[style=json, caption={Full functionality test for the timed AND-gate design in appendix \ref{appendix:andgate}}, label={json:andgatefull_result}]
+{"name": "andGate_timed", "test" : "andgate_full", 
+"description": "test all possible inputs for an AND-gate", 
+"signal": [
+	["CLK",
+		{"name": "CLK", "wave": "p......", "type":"std_logic", "period":"2", "clock_period": "20"}],
+	["IN",
+		{"name": "A", "wave": "01010..", "type": "std_logic", "period":"2"},
+		{"name": "B", "wave": "0.....1.0.1.0.", "type": "std_logic"}],
+	["OUT",
+		{"name": "F", "wave": "0.....1.0.....", "type": "std_logic"}]
+	]}
+\end{lstlisting}
+\MijnFig{width=\textwidth}{images/andgatefull_result}{Simulation result for the test described in code \ref{json:andgatefull_result}}{fig:andgatefull}
+\subsubsection{Shift register}\label{example:shift}
+This example shows a test for a simple shift register which holds 2 bits. The shifter is initialized with "11" and every clock period every bit is shifted to a more significant position, the least significant bit being replaced by the incoming bit (I) and the previously most significant bit being output (Q). The test shows ten clock periods during which the sequence "0001101111" is applied to I, the leftmost bit being the first and the rightmost bit being the last to be applied.
+\begin{lstlisting}[style=json, caption={Functionality test for the shifter design in appendix \ref{appendix:shifter}}, label={json:shifter_result}]
+{"name": "shift_reg", "test" : "random_shift", 
+"description": "A test for shifting a random sequence through a shift register", 
+"signal": [
+	["CLK",
+		{"name": "clock", "wave": "n.........", "period" : 2, "type":"std_logic"}],
+	["IN",
+		{"name": "I", "wave": "0..1.01...", "type": "std_logic", "period" : "2"},
+		{"name": "shift", "wave": "01........", "period" : 2, "type": "std_logic"}],
+	["OUT",
+		{"name": "Q", "wave": "1......0...1...0.1..", "type": "std_logic"}]
+]}
+\end{lstlisting}
+\MijnFig{width=\textwidth}{images/shift_result}{Simulation result for the test described in code \ref{json:shifter_result}}{fig:andgatefull}
+\subsubsection{UART \& SPI}
+Because tests are becoming more and more complex, the input and output WaveDrom files and the generated wave traces are becoming too extensive to be clearly shown here. These examples will be continued in \ref{appendix:more_examples}.
+\subsection{Failing tests}
+To show the correct function of the system, this section will show some tests that are designed to fail and that will be accordingly flagged as failing by the software.
+\subsubsection{AND-gate}
+This test checks the full operation of a clocked AND-gate, but the expected output is incorrect. The test will fail because an AND-gate does not comply to these specifications. It is also the file used to develop the error displaying system.
+\begin{lstlisting}[style=json, caption={Failing functionality test for the timed AND-gate design in appendix \ref{appendix:andgate}}, label={json:andgatefull_failing}]
+{"name": "andGate_timed", "test" : "andgate_failing", 
+"description": "a full AND-gate test designed to fail", 
+"signal": [
+	["CLK",
+		{"name": "CLK", "wave": "p......", "type":"std_logic", "period":"2"}],
+	["IN",
+		{"name": "A", "wave": "0.1.0.1.0.....", "type": "std_logic"},
+		{"name": "B", "wave": "0.1.0.....1.0.", "type": "std_logic"}],
+	["OUT",
+		{"name": "F", "wave": "0.....1.0.....", "type": "std_logic"}]
+]}
+\end{lstlisting}
+\MijnFig{width=\textwidth}{images/andgatefull_failing}{WaveDrom generated documentation wave traces based on code \ref{json:andgatefull_failing}}{fig:andgatefull_failing}
+\MijnFig{width=\textwidth}{images/andgatefull_failing_result}{Simulation result for the test described in code \ref{json:andgatefull_failing}}{fig:andgatefull_failing_result}
+\begin{customenv}
+	\caption{Log messages for the test in code \ref{json:andgate_failing}}
+	\begin{itemize}
+		\item [W1:] Expected sig\_F =  '0',  got sig\_F =  '1' at n = 2.
+		\item [W2:] Expected sig\_F =  '0',  got sig\_F =  '1' at n = 3.
+		\item [W3:] Expected sig\_F =  '1',  got sig\_F =  '0' at n = 6.
+		\item [W4:] Expected sig\_F =  '1',  got sig\_F =  '0' at n = 7.
+	\end{itemize}
+\end{customenv}\clearpage\noindent
+\subsubsection{Shift register}
+This is a test for the same shift register as shown above, with the same input values, only this time the register is expected to be initialized with "00".
+\begin{lstlisting}[style=json, caption={Failing functionality test for the shifter design in appendix \ref{appendix:shifter}}, label={json:shifter_failing}]
+{"name": "shift_reg", "test" : "random_shift_failing", 
+"description": "A test for shifting a random sequence through a shift register", 
+"signal": [
+	["CLK",
+		{"name": "clock", "wave": "n.........", "period" : 2, "type":"std_logic"}],
+	["IN",
+		{"name": "I", "wave": "0..1.01...", "type": "std_logic", "period" : "2"},
+		{"name": "shift", "wave": "01........", "period" : 2, "type": "std_logic"}],
+	["OUT",
+		{"name": "Q", "wave": "1..0.......1...0.1..", "type": "std_logic"}]
+]}
+\end{lstlisting}
+\MijnFig{width=\textwidth}{images/shift_failing}{WaveDrom generated documentation wave traces based on code \ref{json:shifter_failing}}{fig:andgatefull}
+\MijnFig{width=\textwidth}{images/shift_failing_result}{Simulation result for the test described in code \ref{json:shifter_failing}}{fig:shifter_failing_result}
+\begin{customenv}
+	\caption{Log messages for the test in code \ref{json:shifter_failing}}
+	\begin{itemize}
+		\item [W1:] Expected sig\_Q =  '0',  got sig\_Q =  '1' at n = 3.
+		\item [W2:] Expected sig\_Q =  '0',  got sig\_Q =  '1' at n = 4.
+		\item [W3:] Expected sig\_Q =  '0',  got sig\_Q =  '1' at n = 5.
+		\item [W4:] Expected sig\_Q =  '0',  got sig\_Q =  '1' at n = 6.
+		
+	\end{itemize}
+\end{customenv}
+\newpage
+\subsubsection{UART \& SPI}
+These examples will also be continued in appendix \ref{appendix:more_examples}.

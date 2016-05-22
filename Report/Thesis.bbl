@@ -76,4 +76,32 @@
   \url{github.ugent.be/wseldesl/Thesis}
 \BIBentrySTDinterwordspacing
 
+\bibitem{user_guide}
+\BIBentryALTinterwordspacing
+``Project user guide.'' [Online]. Available:
+  \url{\\github.ugent.be/wseldesl/Thesis/blob/master/README.md}
+\BIBentrySTDinterwordspacing
+
+\bibitem{python}
+\BIBentryALTinterwordspacing
+``Python home page.'' [Online]. Available: \url{www.python.org}
+\BIBentrySTDinterwordspacing
+
+\bibitem{teahlab}
+\BIBentryALTinterwordspacing
+``Teahlab website.'' [Online]. Available: \url{www.teahlab.com}
+\BIBentrySTDinterwordspacing
+
+\bibitem{esd}
+\BIBentryALTinterwordspacing
+``Esd website.'' [Online]. Available:
+  \url{http://esd.cs.ucr.edu/labs/tutorial/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{spi}
+\BIBentryALTinterwordspacing
+``Spi master vhdl project.'' [Online]. Available:
+  \url{\\www.lothar-miller.de/s9y/categories/45-SPI-Master}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

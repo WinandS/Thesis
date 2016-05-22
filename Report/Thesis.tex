@@ -4,7 +4,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{listings}
+\usepackage{listingsutf8}
 \graphicspath{ {images/} }
 \usepackage{amsmath}			% Uitgebreide wiskundige mogelijkheden
 \usepackage{amssymb}			% Voor speciale symbolen zoals de verzameling Z, R... 
@@ -12,6 +12,8 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage{color}
+\usepackage{pdflscape}
+\usepackage{geometry}
 
 
 \title{
@@ -25,7 +27,7 @@
 % functions and settings ---------------------------------
 
 %Custom figure environments 
-\include{fig_env}
+\include{settings/fig_env}
 
 \newcommand{\npar}{
 	\hfill \break
@@ -33,7 +35,7 @@
 }
 
 \newcommand{\nline}{
-	\hfill \break
+\newline \noindent
 }
 
 %custom float environment
@@ -45,14 +47,28 @@
 \floatname{customenv}{Log message}
 
 %all settings for listings included in this file:
-\include{listings_settings}
+\include{settings/listings_settings}
+
+\fancypagestyle{mylandscape}{%
+	\fancyhf{}% Clear header/footer
+	\fancyfoot{% Footer
+		\makebox[\textwidth][r]{% Right
+			\rlap{\hspace{\footskip}% Push out of margin by \footskip
+				\smash{% Remove vertical height
+					\raisebox{\dimexpr.5\baselineskip+\footskip+.5\textheight}{% Raise vertically
+						\rotatebox{90}{\thepage}}}}}}% Rotate counter-clockwise
+	\renewcommand{\headrulewidth}{0pt}% No header rule
+	\renewcommand{\footrulewidth}{0pt}% No footer rule
+}
 
 %---------------------------------------------------------
 
 
 \begin{document}
+	
 \includepdf{title_page.pdf}
 \clearpage
+\fancyhead{}
 \thispagestyle{empty}
 \emph{ }
 \maketitle
@@ -67,6 +83,9 @@
 \tableofcontents 
 \clearpage
 % main matter
+\fancyhead[LO,RE]{\slshape \leftmark}
+\fancyfoot[C]{\thepage}
+
 \pagestyle{fancy}
 
 \input{chapters/Introduction}
@@ -78,6 +97,8 @@
 \input{chapters/Technical_analysis}
 
 \input{chapters/Technical_design}
+\input{chapters/Examples}
+\input{chapters/LimitationsAndExpansions}
 
 \input{chapters/Conclusion}
 
@@ -85,7 +106,7 @@
 \pagestyle{plain}
 \appendix
 
-\input{appendices/Appendix_A}
+\input{chapters/apendices}
 
 % bybliography
 \bibliography{bib/References}

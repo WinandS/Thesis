@@ -43,7 +43,7 @@ Some of the most known frameworks, their supported languages and their most impo
 \subparagraph{UVVM}\cite{uvvm}: VHDL
 \begin{itemize}
 	\item AANVULLEN
-\end{itemize}\nline
+\end{itemize}\noindent
 The frameworks with the most advanced features and support for both (System)Verilog and VHDL are VUnit and CoCoTB. The framework suggested by the promoters of this project is VUnit. It will be the framework supporting this system.
 \npar
 The VUnit framework aims to bring the best software testing practises to HDL languages. A big part of that is supporting unit testing, hence the name V(HDL)Unit. The VUnit documentation can be found in the vunit documentation \cite{vunit_doc}. VUnit testbenches do not differ a lot from regular testbenches. The only difference is that all test have to be written inside the same process as seen in the example below.
@@ -58,7 +58,7 @@ while test_suite loop
 		assert false report "It fails";
 	end if;
 end loop;
-\end{lstlisting}\nline
+\end{lstlisting}\noindent
 Multiple tests can be implemented using the if-elsif mechanism. All tests are run by the python test runner, which can be configured according to the user's wishes. This means that a test can be started by a python command. These test can be run separately thanks to the VUnit framework. The framework offers the possibility to set the simulator backend that will simulate all the tests. How to set up the VUnit framework and run test can be found in the VUnit documentation.
 \subsection{Conversion script}
 With the form of the testbenches defined, a general construction method can be implemented. This is done using the popular programming language Python, because of its clarity, flexibility and ease of use. On top of this it is the language used to build the VUnit framework, which makes it easier to integrate VUnit into the software.

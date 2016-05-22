@@ -1,0 +1,88 @@
+\chapter{User guide}\label{user_guide}
+This appendix contains the information needed to use the software. The user guide can also be found at \cite{user_guide}
+
+\section{Dependencies}
+The final product of this project is a software tool written in python that can run on any computer that complies to these conditions:
+\begin{itemize}
+	\item It runs a linux distribution (developed on Ubuntu 14.04 LTS)
+	\item It has at least Python \cite{python} 2.7 installed
+	\item It has VUnit \cite{vunit_doc} installed
+	\item It has WaveDrom \cite{wavedrom} installed
+\end{itemize}\newpage
+\section{project input files}
+\subsection{Making your own WaveDrom input files}
+These guidelines will help users to create WaveDrom files compatible with the system. Normal operation is not guaranteed when these guidelines are not respected.
+\subsection{Standard input file}
+This project uses WaveDrom files as the base for its input file. Some fields have been added to the standard JSON file and should always be included as shown in the example below. Each WaveDrom file used with this software should contain these elements:
+\begin{itemize}
+	\item [name(*):] this should be the exact name of the unit under test
+	\item [test:] this is the name for this test
+	\item [description:] holds the descrition for this test
+	\item [type:] should be specified for every signal; The type specifies the VHDL logic type for this signal
+	\item [vector\_size:] for vectors (like tdata in the example below) the vector size should also be specified. This is the amount of bits that the vector represents
+	\item [data:] The data that the vector holds should be specified in this list
+	\item [clock\_period:] (optional) The designer can specify a clock signal, otherwise the clock period will default to 20 ns for each internal clock period
+\end{itemize}
+Next to these extra fields, each signal should be placed under the apropriate label. All input signals for example should be under one "IN" label. The clock signal is regarded as a special case input signal and is treated seperately.\newpage
+\subsection{Unicode keys}
+Although WaveDrom supports non unicode keys. e.g.:
+\begin{lstlisting}[style=json]
+{period : 2}
+\end{lstlisting}
+The python JSON package used does not. Because of this all keys must be unicode strings. e.g.:
+\begin{lstlisting}[style=json]
+{"period" : 2}
+\end{lstlisting}
+\subsection{Supported characters}
+Not all wavedrom characters are currently supported. The supported characters are:
+\npar
+In a clock signal: 
+\begin{lstlisting}[style=json]
+{'n', 'p', '.', '|'}
+\end{lstlisting}
+In an input signal: 
+\begin{lstlisting}[style=json]
+{'1', '0', '.', '='}
+\end{lstlisting}
+In an output signal: 
+\begin{lstlisting}[style=json]
+{'1', '0', '.', '=', 'x'}
+\end{lstlisting}\newpage
+\section{Extra features}
+\subsection{time loops ('\textbar')}
+It is possible simulate a period where the input never changes. By using the '\textbar' character in the clock signal and the 'loop\_times' field the moment this period should start and the amount of clock cycles it should last can be specified. In the example above the first loop period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentially). During this loop the checks at this moment are repeated every clock cycle. For obvious reasons this feature can only be used when a clock signal is present.
+\subsection{check skipping ('x')}
+In some cases the output at a specific point in time is undefined or is of no interest to the designer. In this case the designer can use the 'x' character, which means that the signal should not be checked at this point. This character is only valid for output signals.\newpage
+\section{Example}
+Here is an example input file testing the design of the "uart\_tx" entity. Two consecutive bytes are sent over the serial output port. Input signals as well as expected output signals are defined.
+\begin{lstlisting}[style=json, caption={}, label={}]
+
+{"name": "uart_tx", "test" : "uart_send_2_bytes", "description": "A test for sending two consecutive bytes with an parallel to serial uart", "signal": [
+	["CLK",
+		{"name": "clk", "wave": "n......|n......|", "type":"std_logic", "period": "2", "clock_period": "10", "loop_times" : ["10*434", "10*434"]}],
+	["IN",
+		{"name": "tvalid", "wave": "0.1..0............1..0..........", "type": "std_logic"},
+		{"name" : "tdata", "wave": "=.=..=........x.==..=.........x.", "data": ["0", "249", "0", "0", "127", "0"], "type" : "std_logic_vector", "vector_size" : "8"}],
+	["OUT",
+		{"name": "tx", "wave": "1....0........x.1....0........x.", "type": "std_logic"},
+		{"name": "tready", "wave": "01.0..........x.1..0..........x.", "type": "std_logic"}]
+]}
+\end{lstlisting}
+The generated wave trace file can be found in appendix \ref{appendix:more_examples:uart:result_wave_traces}.\newpage
+\newpage
+\section{Starting the tool}
+\begin{enumerate}
+	\item 	Make sure you have met all requirements [REF] for running the program 
+	\item Download the software [https://github.ugent.be/wseldesl/Thesis] as a zip file
+	\item Extract the zip file
+	\item Go to the Code folder
+	\item Run main.py
+	\item Click 'open input folder' and add input files
+	\item Click 'open design folder' and add design file to test
+	\item Click start button
+	\item Click 'open output folder'
+	\item Open result waveJSON files in WaveDrom and corresponding text file for error messages
+\end{enumerate}
+
+	
+
