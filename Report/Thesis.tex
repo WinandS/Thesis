@@ -14,7 +14,7 @@
 \usepackage{color}
 \usepackage{pdflscape}
 \usepackage{geometry}
-\usepackage{cleveref}
+
 
 \title{
 	{Automated testbench generation from \\ digital timing diagrams}\\
@@ -45,18 +45,6 @@
 \newcounter{customcnt}
 \newfloat{customenv}{ht}{}
 \floatname{customenv}{Log message}
-
-\newcommand*{\ORGcustomenv}{}
-\let\ORGcustomenv\customenv
-\def\customenv{%
-	\let\ORIGINALcaption\caption
-	\def\caption{%
-		\addtocounter{customcnt}{-1}%
-		\ORIGINALcaption
-	}%
-	\ORGcustomenv
-}
-
 
 %all settings for listings included in this file:
 \include{settings/listings_settings}
