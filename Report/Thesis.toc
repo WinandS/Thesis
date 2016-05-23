@@ -55,20 +55,20 @@
 \contentsline {section}{\numberline {6.1}Can we design a system that can create self checking testbenches and documentation wave traces from the same source?}{64}{section.6.1}
 \contentsline {section}{\numberline {6.2}Can we optimise wave trace analysis based on this system?}{64}{section.6.2}
 \contentsline {section}{\numberline {6.3}Can we design a system that will streamline the process of design validation?}{65}{section.6.3}
-\contentsline {section}{\numberline {6.4}Does this system provide any benefits over existing verification frameworks?}{1}{section.6.4}
-\contentsline {section}{\numberline {6.5}Fields of application}{1}{section.6.5}
-\contentsline {chapter}{\numberline {A}User guide}{2}{appendix.A}
-\contentsline {section}{\numberline {A.1}Dependencies}{2}{section.A.1}
-\contentsline {section}{\numberline {A.2}project input files}{3}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Making your own WaveDrom input files}{3}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Standard input file}{3}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Unicode keys}{4}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Supported characters}{4}{subsection.A.2.4}
-\contentsline {section}{\numberline {A.3}Extra features}{5}{section.A.3}
-\contentsline {subsection}{\numberline {A.3.1}time loops ('\textbar ')}{5}{subsection.A.3.1}
-\contentsline {subsection}{\numberline {A.3.2}check skipping ('x')}{5}{subsection.A.3.2}
-\contentsline {section}{\numberline {A.4}Example}{6}{section.A.4}
-\contentsline {section}{\numberline {A.5}Starting the tool}{7}{section.A.5}
+\contentsline {section}{\numberline {6.4}Does this system provide any benefits over existing verification frameworks?}{67}{section.6.4}
+\contentsline {section}{\numberline {6.5}Fields of application}{67}{section.6.5}
+\contentsline {chapter}{\numberline {A}User guide}{1}{appendix.A}
+\contentsline {section}{\numberline {A.1}Dependencies}{1}{section.A.1}
+\contentsline {section}{\numberline {A.2}project input files}{2}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Making your own WaveDrom input files}{2}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Standard input file}{2}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Unicode keys}{3}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Supported characters}{3}{subsection.A.2.4}
+\contentsline {section}{\numberline {A.3}Extra features}{4}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}time loops ('\textbar ')}{4}{subsection.A.3.1}
+\contentsline {subsection}{\numberline {A.3.2}check skipping ('x')}{4}{subsection.A.3.2}
+\contentsline {section}{\numberline {A.4}Example}{5}{section.A.4}
+\contentsline {section}{\numberline {A.5}Starting the tool}{6}{section.A.5}
 \contentsline {chapter}{\numberline {B}More examples}{}{appendix.B}
 \contentsline {section}{\numberline {B.1}Successful tests}{1}{section.B.1}
 \contentsline {subsection}{\numberline {B.1.1}UART}{1}{subsection.B.1.1}

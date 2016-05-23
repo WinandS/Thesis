@@ -12,19 +12,21 @@
 %data-analyse => leveranciers
 
 \chapter{Functional analysis} \label{FA}
-The goal of this project is to create a tool that can streamline the testbench creation and the wave trace analysis processes to help developers validate their design, while at the same time generating wave trace images to aid in documenting a design. The original validation process flow can be seen in §[REF PA]. To improve on this process the information provided in a source file is used. Figure \ref{fig:ver_new} shows the improved information flow of the validation process. Where the original system required (more) user input at both the documentation side and the validation side, this system bundles most user input into one file, reducing the total amount of user input and saving a considerable amount of time. An overview of how it works is shown in the figure below.\nline
-\MijnFig{width=\textwidth}{images/overview}{Operation overview of the new system}{fig:overview2}\nline
+The goal of this project is to create a tool that can streamline the testbench creation and the wave trace analysis processes to help developers validate their design, while at the same time generating wave trace images to aid in documenting a design. The original validation process flow can be seen in §[REF PA]. To improve on this process a new source file is introduced. Figure \ref{fig:ver_new} shows the improved information flow of the validation process. Where the original system required (more) user input at both the documentation side and the validation side, this system bundles most user input into one file, reducing the total amount of user input and saving a considerable amount of time. An overview of how it works is shown in the figure below.%
+\newpage
+\MijnFig{width=\textwidth}{images/overview}{Operation overview of the new system}{fig:overview2}\noindent
 The tool will complete a full cycle of the validation process. It starts from the user input files: the source file and the design file. And then continues in three steps:
 \npar
-First, the tool can create testbenches automatically and generate documentation information using a source file. This source file is a waveJSON file based on standard WaveDrom \cite{wavedrom} files. It can create a testbench for every source file provided in mere seconds, faster than a developer could create just one testbench manually. These testbenches are designed according to the specifications of a VUnit \cite{vunit} testbench.\newpage
+First, the tool can create testbenches automatically and generate documentation information using a source file. This source file is a waveJSON \cite{wavejson} file based on standard WaveDrom \cite{wavedrom} files. WaveDrom is an open source engine for generating wave traces from waveJSON files. The tool can create a testbench for every source file provided in mere seconds, faster than a developer could create just one testbench manually. These testbenches are designed according to the specifications of a VUnit \cite{vunit} testbench. VUnit is a framework that extends the VHDL language.\newpage
 \npar
-Then, the framework provided by VUnit is used to run the created testbenches through an external simulator. This can be any simulator supported by the VUnit framework.
+Then, using VUnit provided functionality, the created testbenches are by an external simulator. This can be any simulator supported by the VUnit framework.
 \npar
-Finally, instead of the manual comparison of two wave traces, it offers a way to quickly find non corresponding wave traces in a visual way. It returns a waveJSON file similar to the source file, which can be visualised using WaveDrom. The WaveDrom generated figure \ref{fig:sim_fail_example} illustrates this concept. This visual representation will be accompanied by an error message specifying the error.\nline
-\MijnFig{width=\textwidth}{images/andgate_failing}{Simulation failure example}{fig:sim_fail_example}\newpage
+Finally, instead of the manual comparison of two wave traces, it offers a way to quickly find non corresponding wave traces in a visual way. It returns a waveJSON file similar to the source file, which can be visualised using WaveDrom. The WaveDrom generated figure \ref{fig:sim_fail_example} illustrates this concept. This visual representation will be accompanied by an error message specifying the error.%
+\MijnFig{width=\textwidth}{images/andgate_failing}{Simulation failure example}{fig:sim_fail_example}
 \begin{customenv}
 	\caption{Example logged error messages}\label{log:example}
 	\begin{itemize}
+		\centering
 		\item [W1:] Expected sig\_F =  '0',  got sig\_F =  '1' at n = 2.
 		\item [W2:] Expected sig\_F =  '0',  got sig\_F =  '1' at n = 3.
 		\item [W3:] Expected sig\_F =  '1',  got sig\_F =  '0' at n = 6.

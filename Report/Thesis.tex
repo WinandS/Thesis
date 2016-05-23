@@ -14,6 +14,7 @@
 \usepackage{color}
 \usepackage{pdflscape}
 \usepackage{geometry}
+\usepackage{paralist}
 
 
 \title{
@@ -102,13 +103,12 @@
 
 \input{chapters/Conclusion}
 
-% end matter
-\pagestyle{plain}
-\appendix
-
-\input{chapters/apendices}
-
 % bybliography
-\bibliography{bib/References}
+\pagestyle{plain}
 \bibliographystyle{ieeetran}
+\bibliography{bib/References}
+
+% end matter
+\appendix
+\input{chapters/apendices}
 \end{document}
