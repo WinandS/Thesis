@@ -13,14 +13,14 @@
 
 \chapter{Technical design} \label{TD}
 \section{Testbench creation}
-This chapter holds a step by description of the development of the software. Every new element is introduced at the hand of an increasingly complicated example input file.
+This chapter holds a step by step description of the development of the software. Every new element is introduced at the hand of an increasingly complicated example source file.
 \subsection{Simple example}
 \subsubsection{The WaveDrom file}
-Although the primary goal of this product is to create testbenches for timed designs, a basic first draft of the program conversion script can be created based on a simple combinatorial design.
+Although the primary goal of this product is to create testbenches for timed designs, a basic first draft of the tool's conversion script can be created based on a simple combinatorial design.
 \npar
-The example this draft was based on was an AND gate. The AND-gate design can be found in \ref{appendix:andgate:combinatorial}.
+The example this draft was based on was an AND-gate design. The AND-gate design can be found in \ref{appendix:andgate:combinatorial}. All designs used in this project can be found online \cite{examples} in each example's respective design directory (vhdl\_files/src).
 \npar
-A WaveDrom file for describing the wave traces of a purely combinatorial AND gate is shown in code \ref{json:simple_example}.
+A WaveDrom file for describing the wave traces of a purely combinatorial AND-gate is shown in code \ref{json:simple_example}.
 \begin{lstlisting}[style=json, caption={Standard WaveDrom description for a combinatorial AND-gate}, label={json:simple_example}]
 {"signal": [
 	{"name":"A", "wave":"0"},
@@ -28,8 +28,8 @@ A WaveDrom file for describing the wave traces of a purely combinatorial AND gat
 	{"name":"F", "wave":"0"}]  
 }
 \end{lstlisting}\noindent
-Where A and B are considered input signals and F is the output signal. This yields the following wave trace image which shows that F should be low when both inputs are also low.
-\MijnFig{width=.2\textwidth}{images/comb_and0}{Wave traces corresponding to description in code \ref{json:simple_example}}{fig:combin_and0}\nline
+Where A and B are considered input signals and F is the output signal. This yields the following wave trace image, which shows that F should be low when both inputs are also low.%
+\MijnFig{width=.2\textwidth}{images/comb_and0}{Wave traces corresponding to description in code \ref{json:simple_example}}
 This is neither very clear, nor does it hold enough information on its own to create a testbench.
 To be able to create a testbench several more fields containing extra information should be added.
 \npar
@@ -51,7 +51,7 @@ These fields have been added to the WaveDrom file together with a name and descr
 		{"name": "F", "wave": "0", "type": "std_logic"}]
 ]}
 \end{lstlisting}\noindent
-Where the name should be the exact name of the unit under test and the port names have to be exactly the same as in the uut design. Each port should be defined under their corresponding label of direction. All input files must be defined under the “IN” label and all output signals under the “OUT” label. Now all information needed to create a testbench is available.
+Where "name" should be the exact name of the unit under test and the signal names have to be exactly the same as the port names in the uut design. Each port should be defined below their corresponding label of direction. All input files must be defined below the “IN” label and all output signals under the “OUT” label. Now all information needed to create a testbench is available in the source file.
 \subsubsection{Creating VHDL code from the WaveDrom file}\label{TD:vhdl_creation}
 The information in this file has to be translated to VHDL code. More specifically the information in the WaveDrom file should be converted into:
 \begin{itemize}
@@ -61,8 +61,8 @@ The information in this file has to be translated to VHDL code. More specificall
 	\item Input signal stimulus
 	\item Output signal checking
 \end{itemize}\noindent
-These are the elementary parts of a VHDL testbench. The python JSON package enables an easy conversion of information by reading all of the the waveJSON information and placing it in a python JSON container. This way data in the python code has the same structure as the data in the WaveDrom file. Because all the information is now available in the python program all that has to be done is manipulate standard strings to fit the current design.
-\npar
+These are the elementary parts of a VHDL testbench. The python JSON package enables an easy conversion of information by reading all of the the waveJSON information and placing it in a Python JSON container. This way data in the Python code has the same structure as the data in the WaveDrom file. Because all the information is now available in the Python program all that has to be done is manipulate standard strings to fit the current design.
+\newpage
 For example the string manipulation code for signal declarations is given below. 
 \begin{lstlisting}[style=python, caption={Generating signal declarations in Python}, label={python:signal_declaration}]
 def generate_signal_declaration(json_signal):
@@ -73,7 +73,7 @@ def generate_signal_declaration(json_signal):
 	return "signal sig_" + signal_name + " : " + \
 					signal_type + " := 0;"
 \end{lstlisting}\noindent
-This method reads the information regarding a JSON signal and produces a VHDL signal declaration string which initialises the signal to '0'.
+This method reads the information regarding a single JSON signal and produces a VHDL signal declaration string which initialises the signal to '0'.
 \npar
 In the same way signal stimuli and the UUT port map can be generated.
 \begin{lstlisting}[style=python, caption={Generating signal stimuli in Python}, label={python:signal_stimuli}]
@@ -109,15 +109,15 @@ def generate_port_map(json_signal_set):
 \end{lstlisting}\noindent
 The port map is generated from a list of all signals. As in the input WaveDrom file this list is composed of two sublists: the signals defined under “IN” and those under “OUT”. These lists are iterated through and for each element that is not empty a new port map is added to the list. The final list is returned and is ready to be added to the testbench file.
 \subsubsection{Converting the WaveDrom file to a VHDL testbench}
-Every testbench is structurally the same at its base. The main elements are the signal declarations, the device under test (DUT) declaration, the port mapping of the DUT, the clock driving process and the stimulus process. As the previous paragraph explains, these elements can all be generated from the WaveDrom file. All that is left to do is organise these elements in the proper structure. To do this a template is used. This template defines the structure of the testbench by placing keywords that will be recognised by the program and replaced with design specific code. In this template the vunit checking capabilities are integrated, allowing for conditional logging. The final version of the template can be found in appendix \ref{appendix:template}.
-\npar
-The space for input and output signals is marked by the keywords '--\# Input Signals' and '--\# Output Signals' respectively. Every declaration is created and placed below the corresponding keyword. 
+Every testbench is structurally the same at its base. The main elements are the signal declarations, the device under test (DUT) declaration, the port mapping of the DUT, the clock driving process and the stimulus process. As the previous paragraph explains, these elements can all be generated from the WaveDrom file. All that is left to do is organize these elements in the proper structure. To do this a template is used. This template defines the structure of the testbench by placing keywords that will be recognized by the program. when creating a test, the tool will replace these keywords with design specific code. In this template the VUnit checking capabilities are integrated, allowing for conditional logging. The final version of the template can be found in appendix \ref{appendix:template}.
+\newpage\noindent
+The space for input and output signals is marked by the keywords '--\# Input Signals' and '--\# Output Signals' respectively. Every signal declaration is created and placed below the corresponding keyword. 
 \npar
 Using this method the first fully functional testbench was created that can be run using VUnit. The creation is however limited to combinatorial designs.
 \subsection{Clocked designs}
-The next step is to move on to timed designs, which will be the main focus of this project. The design used to test this step does not differ from the previous AND-gate design except that the gate will be triggered by a clock signal. This allows us to create more extensive tests. The AND-gate VHDL design can be found in appendix \ref{appendix:andgate:sequential} or at \cite{examples}.
+The next step is to move on to timed designs, which will be the main focus of this project. The design used to test this step does not differ from the previous AND-gate design except that the gate will be triggered by a clock signal. This allows the creation of more extensive tests. The AND-gate VHDL design can be found in appendix \ref{appendix:andgate:sequential}.
 \npar
-The WaveDrom source file for testing all possible inputs and checking all corresponding outputs for an AND-gate is shown in code [ADD REF]. The generated wave traces are shown below.
+The WaveDrom source file for testing all possible inputs of an AND-gate is shown in code \ref{json:andgate_full}. The generated wave traces are shown in fig \ref{fig:andgate_full}.
 \begin{lstlisting}[style=json, caption={JSON source file for a full AND-gate test}, label={json:andgate_full}]
 {"name": "andGate_timed", "test" : "andgate_full", 
 "description": "test all possible inputs for an AND-gate", 
@@ -140,17 +140,21 @@ Secondly, the new clock signal introduces the need to implement a clock driving 
 \subsubsection{Driving and checking the signals}
 The value of every input signal can change every clock cycle. This means that a new value should be loaded every clock cycle. To be able to do this inside a VHDL testbench two things are needed. First, all future values have to be known on simulation start and secondly, the current clock cycle has to be known at all times. For every signal an array will be defined that holds all values that will ever be assigned to it. The index of every element in that array corresponds to the time step at which it will be assigned, which is why the current clock cycle must always be known.
 \npar
-Creating these arrays requires two things. A conversion of the JSON signal value representation to a VHDL representation and knowing the logic type of the signal concerned. Converting the JSON signal value is for the most part simply expanding the "value" string and converting the separate characters (e.g. the JSON wave equal to "0.1." will be converted into ('0', '0', '1', '1')). As mentioned in the beginning of this paragraph the signal type must also be known, this is because an array type can only be defined if the type contained in it and its length is known. For example the array type for an array of length clock\_cycles containing std\_logic elements is defined as seen in code \ref{vhdl:array_type_declaration}.
+Creating these arrays requires three things. A conversion of the JSON signal value representation to a VHDL representation, knowing the logic type of the signal concerned and knowing the length of the array.
+\npar
+Converting the JSON signal value boils down to expanding the "value" string and converting the separate characters (e.g. the "wave" field of a waveJSON signal of "0.1." will be converted into ('0', '0', '1', '1')). A '.' represents the repetition of a previous value.
+\npar
+To create an array the logic type it holds must also be known, this is because an array type can only be defined if the type contained in it is known. For example the array type for an array of length clock\_cycles containing std\_logic elements is defined as seen in code \ref{vhdl:array_type_declaration}.
 \begin{lstlisting}[style=vhdl, caption={Declaration of an std\_logic array type of lenght clock\_cycles}, label={vhdl:array_type_declaration}]
 type std_logic_array is array (0 to clock_cycles - 1) of std_logic;
 \end{lstlisting}\noindent
-This array type must be defined before an instance of it can be created. Consider the JSON input signal “sig\_example” of which the signal wave is defined as “01” that has logic type “std\_logic”. If no type exists that can hold std\_logic elements this array type is first defined. After this the actual array can be declared. The array holding the values will be named "sig\_example\_values" and its definition will look like in code \ref{vhdl:sig_example}:
+This array type must be defined before an instance of it can be created. Consider the JSON input signal “sig\_example” of which the signal wave is defined as “01” that has logic type “std\_logic”. If no type exists that can hold std\_logic elements this array type is first defined as in code \ref{vhdl:array_type_declaration}. After this the actual array can be declared. The array holding the values will be named "sig\_example\_values" and its definition will look like in code \ref{vhdl:sig_example}:
 \begin{lstlisting}[style=vhdl, caption={Definition of a std\_logic array}, label={vhdl:sig_example}]
 constant sig_example_values : std_logic_array := ('0', '1');
 \end{lstlisting}\noindent
-We can assume the test will be defined for two clock cycles and the clock\_cycle constant is equal to 2. 
+We assume that the test is defined for two clock cycles and the clock\_cycle constant is equal to 2. This constant is derived from the amount of values in the "wave" field of a waveJSON signal and should be the same for every signal.
 \npar
-These arrays are not only used to store the future values for all input signals, but are also used to store expected values for output signals. Every time the input changes, the output can change too. Because the current clock cycle is known the simulated output be compared to what is expected at this point in the simulation. This comparison is what is called a signal check and the result of the test will depend on whether the two values are equal or not.
+These arrays are not only used to store the future values for all input signals, but are also used to store expected values for output signals. Every time the input changes, the output can change too. Because the current clock cycle is known the simulated output can be compared to what is expected at this point in the simulation. This comparison is what is called a signal check and the result of the test will depend on whether the two values are equal or not.
 \npar
 Now all that is left is to assign the next value and compare the output signals each new clock cycle. This is illustrated in code \ref{vhdl:driving_signals} in the next paragraph.
 \subsubsection{Clock driving}
@@ -169,21 +173,25 @@ begin
 	end if;
 end process;
 \end{lstlisting}\noindent
-The clock driving process is not design dependant and is simply added to the testbench whenever a clock signal is detected in the WaveDrom file. The clock period can be specified (in ns) in the WaveDrom file as seen in code \ref{json:andgate_full}, but will default to 20 ns if that is not the case.
+The clock driving process is not design dependent and is simply added to the testbench whenever a clock signal is detected in the WaveDrom file. The clock period can be specified (in ns) in the WaveDrom file as seen in code \ref{json:andgate_full}, but will default to 20 ns if that is not the case.
 \npar
-Because it is unknown whether the actual clock signal will be high-to-low or low-to-high an internal clock signal is introduced which will trigger the driving process. Every input signal will be driven on the rising edge of the internal clock and every output signal will be checked on the falling edge of the internal signal. The clock changes twice every internal clock period and has to be driven on the falling edge as well as the rising edge. For the timed AND-gate example the driving and checking process of the signals is shown in code \ref{vhdl:andgate_full}.\newpage
+Because it is unknown whether the actual clock signal will be high-to-low or low-to-high, an internal clock signal is introduced which will trigger the driving process. Every input signal, including the actual clock, will be driven on the rising edge of the internal clock and every output signal will be checked on the falling edge. The internal clock is always the same, but the actual clock can be different for every design. Figure \ref{fig:clocks} shows how the internal clock relates to some possible internal clocks.%
+\MijnFig{width=.82\textwidth}{images/clocks}{Examples of actual clock signals compared to the internal clock}{fig:clocks}\nline
+Actual clock signals can change twice every internal clock period (e.g. negative clock and looping clock) and have to be driven on the falling edge as well as the rising edge of the internal clock. For the timed AND-gate example the driving and checking process of the signals is shown in code \ref{vhdl:andgate_full}.
 \begin{lstlisting}[style=vhdl, caption={Signal driving in the AND-gate test derived from the source file in code \ref{json:andgate_full}}, label={vhdl:andgate_full}]
 while (n <= clock_cycles -1) loop
 	wait until rising_edge(internal_clock);
-	-- CLK has twice as many values as other signals
 	sig_CLK <= sig_CLK_values(2*n);		
-	
 	sig_A <= sig_A_values(n);
 	sig_B <= sig_B_values(n);
+	
+	wait until falling_edge(internal_clock);
+	-- CLK has twice as many values as other signals
+	sig_CLK <= sig_CLK_values(2*n_1);	
 \end{lstlisting}\noindent
 This means that the amount of clock cycles should be known within the testbench. The conversion software calculates the amount of clock cycles in the WaveDrom file and adds a clock\_cycles constant to the testbench using another keyword.
 \npar
-This internal clock has another advantage. WaveDrom allows for signals to have a relative period. The relative period can be set for every signal separately using the "period" field. A relative period of 2 means that a signal will keep every value denoted in the "wave" field for 2 time steps. For example the actual clock can run twice as slow as the internal clock by setting the "period" field to 2. This allows output signals to change on the falling edge of a high-to-low clock signal, which was not possible when all signals were driven on the rising edge of the actual clock signal. The internal clock period will define the length of one time step and will rise and fall within one time step. This way each signal is driven and checked every time step regardless their relative period.\newpage
+This internal clock has another advantage. WaveDrom allows for signals to have a relative period. The relative period can be set for every signal separately using the "period" field. A relative period of 2 means that a signal will keep every value denoted in the "wave" field for 2 time steps. This way, for example, the actual clock can run twice as slow as the internal clock. This is illustrated in figure \ref{fig:clocks} by "double clock". This allows output signals to change on the falling edge of a high-to-low clock signal (e.g. "example signal" in relevance to "double clock"), which would not be possible if all signals were driven on the first edge of the actual clock signal. The internal clock period will define the length of a time step and will rise and fall within one time step. This way each signal is driven or checked every time step regardless of their relative period.\newpage
 \section{Vectors and repetitions}
 At this point it is possible to create testbenches for timed designs. To test the robustness a more complicated design is tested: the UART design example available in the VUnit documentation \cite{vunit_doc}. The UART design can be found in appendix \ref{appendix:uart}.
 \subsection{Vectors}
@@ -203,9 +211,9 @@ In a first test the UART will be required to send the content of the parallel in
 ]}
 \end{lstlisting}\noindent
 \MijnFig{width=.9\textwidth}{images/uart_no_wait}{Wave traces generated by WaveDrom from code \ref{json:uart_no_wait}}{fig:uart_no_wait}\newpage\noindent
-The image above illustrates the benefit of the relative period set in the clk signal. Where each clock cycle would take only one internal clock cycle to complete, it will now take two. This allows the tvalid signal to be transit from high to low halfway through a clock cycle. The "clock\_period" field will make sure every actual clock cycle will still only take 20 ns, in stead of the standard 20 ns per internal clock cycle, which would total to 40 ns per actual clock cycle. 
+The image above also illustrates the benefit of the relative period set in the "clk" signal. Where each clock cycle would take only one internal clock cycle to complete, it will now take two. This allows the "tvalid" signal to transit from high to low halfway through a clock cycle. The "clock\_period" field will make sure every actual clock cycle will still only take 20 ns, instead of the standard 20 ns per internal clock cycle, which would total to 40 ns per actual clock cycle. 
 \npar
-This new design poses a new challenge however. This is the first design that uses vectors as a port type. Wavedrom supports the use of vectors with the help of the '=' character and the 'data' field. The approach to converting the wavedrom vector information to VHDL vector information is not very different from the approach regarding single bit ports. The only difference lies in the newly added "data" and "vector\_size" fields. The information contained in the "data" field has to be linked to the correct '=' character before converting the signal to VHDL code. This last step requires some extra information however. In VHDL it is necessary to know the size of a vector before it can be declared. This information has to be added to the wavedrom file. The field ‘vector\_size’ holds this information.
+This new design poses a new challenge however. This is the first design that uses vectors as a port type. WaveDrom supports the use of vectors with the help of the '=' character and the 'data' field. The approach to converting the WaveDrom vector information to VHDL vector information is not very different from the approach regarding single bit ports. The only difference lies in the newly added "data" and "vector\_size" fields. The information contained in the "data" field has to be linked to the correct '=' character before converting the signal to VHDL code. This last step requires some extra information however. In VHDL it is necessary to know the size of a vector before it can be declared. This information has to be added to the wavedrom file. The field ‘vector\_size’ holds this information.
 \newpage
 \subsubsection{Time loops}
 The second test for the UART design is an extension of the first. This time the design will be allowed to send the data over its 'tx' output.
@@ -254,20 +262,21 @@ The following test shows the use of these features. In this example a designer w
 \MijnFig{width=.9\textwidth}{images/uart_2_bytes}{Wave traces generated by WaveDrom from code \ref{json:uart_2_bytes}}{fig:uart_2_bytes}\nline
 This relatively small file forms the base of a testbench that will run for over 8000 clock periods. The wave traces are also shown in appendix \ref{appendix:more_examples:uart} in more detail.
 \section{Overview}
-The full code can be found online \cite{github}. An overview of the code functionality is given in image \ref{fig:tb_creation_overview}.\MijnFig{width=.76\textwidth}{images/tb_code_overview}{Overview of the testbench creation code}{fig:tb_creation_overview}\clearpage\noindent
+The full code can be found online \cite{github}. An overview of the code functionality is given in image \ref{fig:tb_creation_overview}. This overview corresponds to the purple collored section of figure \ref{fig:overview_color}%
+\MijnFig{width=.76\textwidth}{images/tb_code_overview}{Overview of the testbench creation code}{fig:tb_creation_overview}\clearpage\noindent
 The code is run for every WaveDrom file in the resource folder (see appendix \ref{user_guide}: user guide). The method used in this program can be compared to building a prefabricated house. First the walls, cellar, floors and roof are fabricated in the factory. These are elements a basic house needs (combinatorial testbenches). Some houses require special additions like a swimming pool or solar panels however (timed testbenches, looping testbenches). These will be fabricated only if necessary. Afterwards all elements will be put together in accordance with the blueprint (template).
 \npar
-From the WaveDrom file all info is extracted and all elementary testbench building blocks are generated. These are the elements every testbench. They include signal declarations, uut declaration and uut port map. A full list can be found in §\ref{TD:vhdl_creation}. The testbench header is also created. This holds the test name and description and will be added to the testbench later as a comment.
+From the WaveDrom file all info is extracted and all elementary testbench building blocks are generated. These are the elements every testbench needs. They include signal declarations, uut declaration and uut port map. A full list can be found in §\ref{TD:vhdl_creation}. The testbench header is also created. This holds the test name and description and will be added to the testbench later as a comment.
 \npar
 At this point all the building blocks to create a combinatorial testbench (a basic house) are available, but timed testbenches require some additions like a clock driving process and edge triggering. To check for a timed test it suffices to check if there is a signal labeled "CLK". If there is no "CLK" label, the test will be combinatorial and the testbench can be assembled. Otherwise the additional building blocks must be generated before the testbench can be assembled. 
 \npar
-The building blocks available now are enough to build a timed testbench, but not testbenches that have time loops. If the "loop\_times" field is defined in the clock signal, it means that there are time loops in this test and that building block should be generated too.
+The building blocks available now are enough to build a timed testbench, but not testbenches that have time loops. If the "loop\_times" field is defined in the clock signal, it means that there are time loops in this test and the corresponding building block should be generated too.
 \npar
 When all building block are generated they are added to the template using keywords. These keywords can be considered the blueprint of the house. They assign a place to every building block. When every building block is placed at the right keyword the testbench has been completed and the file can be saved.\newpage
 \section{Wave trace comparison}
-Currently the focus has been primarily on creating testbenches from WaveDrom input files, however this is only part of the solution. In a design validation process the simulation result (wave traces) has to be compared to the description in the designs documentation.
+Until now the focus has been primarily on creating testbenches from WaveDrom input files, however this is only part of the solution. In a design validation process the simulation result (wave traces) has to be compared to the description in the designs documentation.
 \npar
-Because the testbenches are directly derived from the same files that generate the documentation wave traces it is safe to assume that full specification compatibility can be checked inside the testbench. In other words: if a test passes the simulation it can be regarded as compliant to that aspect of its specification. In the same way it is certain that the current design does not comply if the test fails. If that is the case it is important to clearly determine where the simulation fails in order to understand what caused the defect and eventually correct it.
+Because the testbenches are directly derived from the same files that generate the documentation wave traces it is safe to assume that full specification compatibility can be checked inside the testbench. In other words: if a test passes the simulation it can be regarded as compliant to that aspect of its specification. In the same way it is certain that the current design does not comply if the test fails. Testbenches that meet these requirements are considered self checking. If that is the case it is important to clearly determine where the simulation fails in order to understand what caused the defect and eventually correct it.
 \subsubsection{ideal solution}\label{TD:ideal_solution}
 As it is not desirable to stop a simulation when an error is encountered, errors should be logged during simulation and processed afterwards. As the simulation result and the documentation both consist of wave traces of the same signals a simple and clear way to compare them would be to place each signal and their corresponding simulated signal side by side and place a marker to show every error that was logged during simulation. This principle is illustrated by the image below.
 \MijnFig{width=\textwidth}{images/error_example}{Ideal error marking}{fig:error_example}\newpage\noindent
@@ -279,11 +288,11 @@ Every marker will be accompanied by a log message.
 		\item [error1:] unexpected output at clock tick 3, expected '1', got '0'.
 	\end{itemize}
 \end{customenv}\nline
-At this point testbenches can be automatically generated by the software. In these testbenches every time step is now numbered. This means that in the VHDL testbench there is an internal signal called 'n' that is incremented every internal clock cycle. Because the actual clock signal is driven on the rising and falling edge of the internal clock there is a direct correspondence between 'n' and the x-th clock cycle in the wave trace file, where
+At this point testbenches can be automatically generated by the software. In these testbenches every time step is numbered. This means that in the VHDL testbench there is an internal signal called 'n' that is incremented every internal clock cycle. Because the actual clock signal is driven on the rising and falling edge of the internal clock there is a direct correspondence between 'n' and the x-th clock cycle in the wave trace file, where
 \begin{equation}
-	x = n/clock\_period
+	x = n/period
 \end{equation}
-and clock\_period is the relative clock period set by the "period" field in the WaveDrom file. In other words, n times the relative clock period gives a user the clock cycle on which an error occurred. The step number n is always displayed in a simulation result.
+and period is the relative clock period set by the "period" field in the WaveDrom file. In other words, n times the relative clock period gives a user the clock cycle on which an error occurred. The step number n is always displayed at the top in a simulation result.
 \npar
 To keep this correlation between wave trace file and simulation file we need to add one exception to the rule: n can only be incremented once during a time loop, because while a time loop can be hundreds of internal clock periods long, it is denoted as only one clock period in a wavedrom file.
 \subsection{Practical approach}\label{TD:practical_approach}\label{log:error_message}
@@ -291,7 +300,7 @@ Comparing WaveDrom generated wave traces and simulation generated wave traces re
 \npar
 The ideal system proposed in \ref{TD:ideal_solution} could facilitate this process enormously. It would bundle the documentation wave traces and the simulation wave traces in one easy to comprehend wave trace file.
 \npar
-Because there is already a way to link the WaveDrom generated wave trace file to the one generated by the simulation all that is left is to add the error messages logged during simulation. The VUnit log package can log all error messages to a file. This log package is integrated into the VUnit check package that offers conditional log messages, which is ideal for this application. The code below is an example check for the signal sig\_example. Because no specific checker is specified the universal checker is automatically used.
+Because the documentation wave traces and the simulation wave traces are indirectly linked via the source file, it is possible to use the source file as a base for the result files and add the error messages logged during simulation to it. The VUnit Log package can log all error messages to a file. This log package is integrated into the VUnit Check package that offers conditional log messages, which is ideal for this application. The code below is an example check for the signal sig\_example. Because no specific checker is specified the universal checker is automatically used.
 \begin{lstlisting}[style=vhdl, caption={Signal checking in VHDL}, label={vhdl:checking}]
 if sig_example_values(n) /= 'X' then
 	check(sig_example = sig_example_values(n),  
@@ -305,8 +314,8 @@ If a signal is to be checked (the expected value is not 'X') the current value i
 \begin{lstlisting}[style=vhdl, caption={}, label={vhdl:checker_init}]
 checker_init(warning, "", ".warning_log/test_name_messages.csv", level, verbose_csv, failure, ',', false);
 \end{lstlisting}\noindent
-The initialisation process defines an output file for the log message to be added to. This way the log message from the check in code \ref{vhdl:checking} is added to a .csv file in a subfolder named ".warning\_log/" and contains the entity name of the testbench it is derived from.
-The message logged to the file ".warning\_log/example\_messages.csv" by the example above is:
+The initialisation process defines an output file for the log message to be added to. This way the log message from the check in code \ref{vhdl:checking} is added to a .csv file in a hidden subfolder named ".warning\_log/" and contains the entity name of the testbench it is derived from.
+An example message that could be logged to the file ".warning\_log/example\_messages.csv" by the example above is:
 \begin{customenv}
 	\label{log:error_message}
 	\begin{itemize}
@@ -316,7 +325,7 @@ The message logged to the file ".warning\_log/example\_messages.csv" by the exam
 		got example = '1' at n = 4."
 	\end{itemize}
 \end{customenv}\nline
-Which directly links the actual error to a specific point in time. From the current system it should be possible to derive the system proposed as the ideal solution in §\ref{TD:ideal_solution}.\newpage
+Which directly links the actual error to a specific point in time. From the current system it is possible to derive the system proposed as the ideal solution in §\ref{TD:ideal_solution}.\newpage
 \subsubsection{Look and feel}
 The image below is a proposal for the layout of the comparison file based on a failing AND-gate test. More detail on this test can be found in §\ref{some_examples:andgate_failing}.
 \MijnFig{width=\textwidth}{images/andgate_failing}{Layout proposal for result files}{fig:andgate_failing_result}\nline
@@ -343,10 +352,9 @@ The image in the previous section was generated by the following WaveDrom file, 
 "edge": ["a-b W1", "c-d W2", "e-f W3", "g-h W4"]
 }
 \end{lstlisting}\noindent
-The original code serves as the base for the final comparison file. Additional information can be added based on the log messages.
-\npar
-The failing AND-gate test will output the following messages:
-\begin{customenv}\label{somelabel}
+The failing AND-gate test will output the following messages:%
+\begin{customenv}
+	\caption{Failing andgate log messages}
 	\begin{itemize}
 		\centering
 		\item [WARNING:] This check failed. Expected F = '0', got F = '1' at n = 2.
@@ -354,7 +362,10 @@ The failing AND-gate test will output the following messages:
 		\item [WARNING:] This check failed. Expected F = '1', got F = '0' at n = 6.
 		\item [WARNING:] This check failed. Expected F = '1', got F = '0' at n = 7.
 	\end{itemize}
-\end{customenv}\newpage\noindent
+\end{customenv}
+\newpage\noindent
+The original code serves as the base for the final comparison file. Additional information can be added based on the log messages above.
+\npar
 In a coding environment this is not an information format that is easy to work with, so another log file is created, which will hold the same information in a more processable format. To write to this new file a new checker is added to every testbench. This is done by adding a new variable of type checker\_t to the template file (which will cause it to be added to every generated testbench) and initializing it similarly to the universal checker (see code \ref{vhdl:checker_init}).
 \begin{lstlisting}[style=vhdl, caption={Custom checker declaration}, label={vhdl:new_checker_declaration}]
 shared variable warning_logger : checker_t;
@@ -375,15 +386,15 @@ if sig_example_values(n) /= 'X' then
 end if;
 \end{lstlisting}\noindent
 Where the universal checker is used to conditionally log the original message and the new warning\_logger checker is used to log the new message to another file. To link the original messages to the new logs an error number is added to both logs, which is incremented every time an error occurs.
-\npar
-The new warning logs are made following this pattern:
+\newpage\noindent
+The new warning logs are made following this pattern:%
 \begin{customenv}
 %	\caption{}
 	\begin{itemize}
 		\centering
 		\item [] [“warning no”, “signal involved”,”expected value”, “actual value”, “n”] 
 	\end{itemize}
-\end{customenv}\newpage\noindent
+\end{customenv}\nline
 The full output after running the failing AND-gate example will now be:
 \begin{customenv}
 	\caption{Log messages in the "andgate\_failing\_message.csv" file}
@@ -396,7 +407,7 @@ The full output after running the failing AND-gate example will now be:
 	\end{itemize}
 \end{customenv}
 \begin{customenv}
-	\caption{Log messages in the "andgate\_failing\_result.csv" file}
+	\caption{Log messages in the "andgate\_failing\_log.csv" file}
 	\begin{itemize}
 		\centering
 		\item [] ["1", "F", "0", "1", "2"]
@@ -405,14 +416,11 @@ The full output after running the failing AND-gate example will now be:
 		\item [] ["4", "F", "1", "0", "7"]
 	\end{itemize}
 \end{customenv}\nline
-Now all information can be imported and processed. The software can read both the WaveDrom JSON file and the logged information, modify the JSON content and write it to an output file.
-\npar
-If the log file is empty and the test has succeeded, all that has to be done is add a header with an internal clock counter and a title indicating success. If the test failed and the log file is not empty the title should indicate failure and the errors should be shown as in figure \ref{fig:andgate_failing_result}.\newpage
+Now all information can be easily imported and processed. The software can read both the WaveDrom JSON file and the logged information, modify the JSON content and write it to an output file.
+\newpage\noindent
 \subsection{WaveDrom result file}
-As stated in §\ref{TD:practical_approach} the result file can be generated from the original input file and the warning logs (the "test\_name.json" and the "test\_name\_result.csv" in the relative directory “/result”). The flow diagram below shows the function of the software that generates the compare files. \MijnFig{width=.88\textwidth}{images/wave_trace_analysis_overview}{Overview of the wave trace analysis code}{fig:wavetrace_analysis_overview}\newpage\noindent
-After reading the input files, the software checks whether or not there are messages logged. If there are no logged messages, the simulation succeeded. In this case there is nothing else to be done then add a header and create the output file. In case there are messages logged however, the simulation failed and the process becomes more complicated.
-\npar
-In case of failure a corresponding header is added containing a title and the time steps. Then all messages are read one by one and further processed.
+As stated in §\ref{TD:practical_approach} the result file can be generated from the original input file and the warning logs (the "test\_name.json" and the "test\_name\_result.csv" in the relative directory “/result”). The flow diagram below shows the function of the software that generates the compare files. This image corresponds to the green part of figure \ref{fig:overview_color}. \MijnFig{width=.88\textwidth}{images/wave_trace_analysis_overview}{Overview of the wave trace analysis code}{fig:wavetrace_analysis_overview}\newpage\noindent
+After reading the input files, the software checks whether or not there are messages logged. If there are no logged messages, the simulation succeeded. In this case there is nothing else to be done then add a header and create the output file. In case there are messages logged however, the simulation failed and the process becomes more complicated.A corresponding header is added containing a title and the time step counter. Then all messages are read one by one and further processed.
 \npar
 Consider the WaveDrom input file and the output messages from the failing AND-gate example:
 \begin{lstlisting}[style=json, caption={Source file for a failing AND-gate example}, label={json:andgate_failing}]
@@ -445,9 +453,9 @@ Then, for both the 'F' and 'F\_sim' signal, the "node" field is added. This fiel
 	"node": "..a"
 	"node": "..b"
 \end{lstlisting}\noindent
-respectively. This way for both signals the third time step (time steps are numbered starting from 0) has a name. A time step is also called a node.
+respectively. This way for both signals the third time step (time steps are numbered starting from 0) has a name. A named time step is also called a node.
 \npar
-Finally a line, called an edge, is added to connect both nodes. This is done by appending an edge field to the wavedrom file.
+Finally a line, called an edge, is added to connect both nodes. This is done by appending an edge field to the WaveDrom file.
 \begin{lstlisting}[style=json]
 "edge":["a-b W1"]
 \end{lstlisting}\noindent

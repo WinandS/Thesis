@@ -2,7 +2,7 @@
 This appendix contains the information needed to use the software. The user guide can also be found at \cite{user_guide}
 
 \section{Dependencies}
-The final product of this project is a software tool written in python that can run on any computer that complies to these conditions:
+The final product of this project is a software tool written in Python that can run on any computer that complies to these conditions:
 \begin{itemize}
 	\item It runs a linux distribution (developed on Ubuntu 14.04 LTS)
 	\item It has at least Python \cite{python} 2.7 installed
@@ -23,7 +23,7 @@ This project uses WaveDrom files as the base for its input file. Some fields hav
 	\item [data:] The data that the vector holds should be specified in this list
 	\item [clock\_period:] (optional) The designer can specify a clock signal, otherwise the clock period will default to 20 ns for each internal clock period
 \end{itemize}
-Next to these extra fields, each signal should be placed under the apropriate label. All input signals for example should be under one "IN" label. The clock signal is regarded as a special case input signal and is treated seperately.\newpage
+Next to these extra fields, each signal should be placed under the apropriate label. All input signals should be under one "IN" label, all output signals under one "OUT" label and the clock signal under the "CLK" label. The clock signal is regarded as a special case input signal and is treated seperately.\newpage
 \subsection{Unicode keys}
 Although WaveDrom supports non unicode keys. e.g.:
 \begin{lstlisting}[style=json]
@@ -50,11 +50,11 @@ In an output signal:
 \end{lstlisting}\newpage
 \section{Extra features}
 \subsection{time loops ('\textbar')}
-It is possible simulate a period where the input never changes. By using the '\textbar' character in the clock signal and the 'loop\_times' field the moment this period should start and the amount of clock cycles it should last can be specified. In the example above the first loop period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentially). During this loop the checks at this moment are repeated every clock cycle. For obvious reasons this feature can only be used when a clock signal is present.
+It is possible to simulate a period where the input never changes. By using the '\textbar' character in the clock signal and the 'loop\_times' field a loop is defined. They specify the moment this period should start and the amount of clock cycles it should last. In the example above the first loop period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentially). During this loop the checks at this moment are repeated every clock cycle. For obvious reasons this feature can only be used when a clock signal is present.
 \subsection{check skipping ('x')}
 In some cases the output at a specific point in time is undefined or is of no interest to the designer. In this case the designer can use the 'x' character, which means that the signal should not be checked at this point. This character is only valid for output signals.\newpage
 \section{Example}
-Here is an example input file testing the design of the "uart\_tx" entity. Two consecutive bytes are sent over the serial output port. Input signals as well as expected output signals are defined.
+Here is an example input file testing the design of an UART transmitter design "uart\_tx" available in appendix \ref{appendix:uart}. Two consecutive bytes are sent over the serial output port. Input signals as well as expected output signals are defined.
 \begin{lstlisting}[style=json, caption={}, label={}]
 {"name": "uart_tx", "test" : "uart_send_2_bytes", "description": "A test for sending two consecutive bytes with an parallel to serial uart", "signal": [
 	["CLK",

@@ -53,9 +53,9 @@
 \newlabel{fig:sim_fail_example}{{3.2}{16}{Simulation failure example}{figure.caption.11}{}}
 \@writefile{}{\contentsline {customenv}{\numberline {1}{\ignorespaces Example logged error messages\relax }}{16}{customenv.1}}
 \newlabel{log:example}{{1}{16}{Example logged error messages\relax }{customenv.1}{}}
-\citation{cocotb}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Look of the user interface}}{17}{figure.caption.12}}
 \newlabel{fig:gui}{{3.3}{17}{Look of the user interface}{figure.caption.12}{}}
+\citation{cocotb}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Technical analysis}{19}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -74,10 +74,11 @@
 \@writefile{toc}{\contentsline {subparagraph}{OSVVM}{21}{section*.17}}
 \@writefile{toc}{\contentsline {subparagraph}{UVVM}{21}{section*.18}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {4.1}Main test loop for a VUnit testbench}{21}{lstlisting.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Conversion script}{21}{subsection.4.1.2}}
 \citation{wavejson}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Conversion script}{22}{subsection.4.1.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Source file}{22}{subsection.4.1.3}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Wave trace analysis}{22}{section.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Wave trace analysis}{23}{section.4.2}}
+\citation{examples}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Technical design}{24}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -88,7 +89,7 @@
 \newlabel{json:simple_example}{{5.1}{24}{Standard WaveDrom description for a combinatorial AND-gate}{lstlisting.5.1}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.1}Standard WaveDrom description for a combinatorial AND-gate}{24}{lstlisting.5.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Wave traces corresponding to description in code \ref  {json:simple_example}}}{25}{figure.caption.20}}
-\newlabel{fig:combin_and0}{{5.1}{25}{Wave traces corresponding to description in code \ref {json:simple_example}}{figure.caption.20}{}}
+\newlabel{T}{{5.1}{25}{Wave traces corresponding to description in code \ref {json:simple_example}}{figure.caption.20}{}}
 \newlabel{json:andgate_example_extended}{{5.2}{26}{Extended WaveDrom description for a combinatorial AND-gate}{lstlisting.5.2}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.2}Extended WaveDrom description for a combinatorial AND-gate}{26}{lstlisting.5.2}}
 \@writefile{toc}{\contentsline {subsubsection}{Creating VHDL code from the WaveDrom file}{26}{section*.21}}
@@ -100,7 +101,6 @@
 \newlabel{python:port_map}{{5.5}{28}{Generating a port map in Python}{lstlisting.5.5}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.5}Generating a port map in Python}{28}{lstlisting.5.5}}
 \@writefile{toc}{\contentsline {subsubsection}{Converting the WaveDrom file to a VHDL testbench}{28}{section*.22}}
-\citation{examples}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Clocked designs}{29}{subsection.5.1.2}}
 \newlabel{json:andgate_full}{{5.6}{29}{JSON source file for a full AND-gate test}{lstlisting.5.6}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.6}JSON source file for a full AND-gate test}{29}{lstlisting.5.6}}
@@ -112,10 +112,12 @@
 \newlabel{vhdl:sig_example}{{5.8}{31}{Definition of a std\_logic array}{lstlisting.5.8}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.8}Definition of a std\_logic array}{31}{lstlisting.5.8}}
 \@writefile{toc}{\contentsline {subsubsection}{Clock driving}{31}{section*.25}}
-\newlabel{vhdl:clock_period}{{5.9}{31}{Definition of a std\_logic array}{lstlisting.5.9}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.9}Definition of a std\_logic array}{31}{lstlisting.5.9}}
+\newlabel{vhdl:clock_period}{{5.9}{32}{Definition of a std\_logic array}{lstlisting.5.9}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.9}Definition of a std\_logic array}{32}{lstlisting.5.9}}
 \newlabel{vhdl:driving_signals}{{5.10}{32}{Signal driving in clocked designs}{lstlisting.5.10}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.10}Signal driving in clocked designs}{32}{lstlisting.5.10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Examples of actual clock signals compared to the internal clock}}{32}{figure.caption.26}}
+\newlabel{fig:clocks}{{5.3}{32}{Examples of actual clock signals compared to the internal clock}{figure.caption.26}{}}
 \newlabel{vhdl:andgate_full}{{5.11}{33}{Signal driving in the AND-gate test derived from the source file in code \ref {json:andgate_full}}{lstlisting.5.11}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.11}Signal driving in the AND-gate test derived from the source file in code \ref  {json:andgate_full}}{33}{lstlisting.5.11}}
 \citation{vunit_doc}
@@ -123,125 +125,126 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Vectors}{34}{subsection.5.2.1}}
 \newlabel{json:uart_no_wait}{{5.12}{34}{Source file for creating the first transmission test for the UART design in \ref {appendix:uart}}{lstlisting.5.12}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.12}Source file for creating the first transmission test for the UART design in \ref  {appendix:uart}}{34}{lstlisting.5.12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:uart_no_wait}}}{35}{figure.caption.26}}
-\newlabel{fig:uart_no_wait}{{5.3}{35}{Wave traces generated by WaveDrom from code \ref {json:uart_no_wait}}{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Time loops}{36}{section*.27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:uart_no_wait}}}{35}{figure.caption.27}}
+\newlabel{fig:uart_no_wait}{{5.4}{35}{Wave traces generated by WaveDrom from code \ref {json:uart_no_wait}}{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Time loops}{36}{section*.28}}
 \newlabel{json:uart_wait}{{5.13}{36}{Source file for creating a second transmission test for the UART design in \ref {appendix:uart}}{lstlisting.5.13}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.13}Source file for creating a second transmission test for the UART design in \ref  {appendix:uart}}{36}{lstlisting.5.13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:uart_wait}}}{36}{figure.caption.28}}
-\newlabel{fig:uart_wait}{{5.4}{36}{Wave traces generated by WaveDrom from code \ref {json:uart_wait}}{figure.caption.28}{}}
-\@writefile{toc}{\contentsline {subparagraph}{The 'x' character}{37}{section*.29}}
-\@writefile{toc}{\contentsline {subparagraph}{The '\textbar ' character}{37}{section*.30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:uart_wait}}}{36}{figure.caption.29}}
+\newlabel{fig:uart_wait}{{5.5}{36}{Wave traces generated by WaveDrom from code \ref {json:uart_wait}}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subparagraph}{The 'x' character}{37}{section*.30}}
+\@writefile{toc}{\contentsline {subparagraph}{The '\textbar ' character}{37}{section*.31}}
 \citation{github}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Application example}{38}{subsection.5.2.2}}
 \newlabel{json:uart_2_bytes}{{5.14}{38}{Source file for creating third transmission test for the UART design in \ref {appendix:uart}}{lstlisting.5.14}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.14}Source file for creating third transmission test for the UART design in \ref  {appendix:uart}}{38}{lstlisting.5.14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:uart_2_bytes}}}{38}{figure.caption.31}}
-\newlabel{fig:uart_2_bytes}{{5.5}{38}{Wave traces generated by WaveDrom from code \ref {json:uart_2_bytes}}{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:uart_2_bytes}}}{38}{figure.caption.32}}
+\newlabel{fig:uart_2_bytes}{{5.6}{38}{Wave traces generated by WaveDrom from code \ref {json:uart_2_bytes}}{figure.caption.32}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Overview}{39}{section.5.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Overview of the testbench creation code}}{39}{figure.caption.32}}
-\newlabel{fig:tb_creation_overview}{{5.6}{39}{Overview of the testbench creation code}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Overview of the testbench creation code}}{39}{figure.caption.33}}
+\newlabel{fig:tb_creation_overview}{{5.7}{39}{Overview of the testbench creation code}{figure.caption.33}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.4}Wave trace comparison}{41}{section.5.4}}
-\@writefile{toc}{\contentsline {subsubsection}{ideal solution}{41}{section*.33}}
-\newlabel{TD:ideal_solution}{{5.4}{41}{ideal solution}{section*.33}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Ideal error marking}}{41}{figure.caption.34}}
-\newlabel{fig:error_example}{{5.7}{41}{Ideal error marking}{figure.caption.34}{}}
-\newlabel{log:example}{{\caption@xref {log:example}{ on input line 276}}{42}{ideal solution}{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{ideal solution}{41}{section*.34}}
+\newlabel{TD:ideal_solution}{{5.4}{41}{ideal solution}{section*.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Ideal error marking}}{41}{figure.caption.35}}
+\newlabel{fig:error_example}{{5.8}{41}{Ideal error marking}{figure.caption.35}{}}
+\newlabel{log:example}{{\caption@xref {log:example}{ on input line 285}}{42}{ideal solution}{figure.caption.35}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Practical approach}{42}{subsection.5.4.1}}
 \newlabel{TD:practical_approach}{{5.4.1}{42}{Practical approach}{subsection.5.4.1}{}}
 \newlabel{log:error_message}{{5.4.1}{42}{Practical approach}{subsection.5.4.1}{}}
 \newlabel{vhdl:checking}{{5.15}{43}{Signal checking in VHDL}{lstlisting.5.15}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.15}Signal checking in VHDL}{43}{lstlisting.5.15}}
 \newlabel{vhdl:checker_init}{{5.4.1}{43}{}{lstlisting.5.-1}{}}
-\newlabel{log:error_message}{{\caption@xref {log:error_message}{ on input line 311}}{43}{Practical approach}{lstnumber.-1.1}{}}
+\newlabel{log:error_message}{{\caption@xref {log:error_message}{ on input line 320}}{43}{Practical approach}{lstnumber.-1.1}{}}
 \@writefile{}{\contentsline {customenv}{\numberline {2}{\ignorespaces Example error message\relax }}{43}{customenv.2}}
-\@writefile{toc}{\contentsline {subsubsection}{Look and feel}{44}{section*.35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Layout proposal for result files}}{44}{figure.caption.36}}
-\newlabel{fig:andgate_failing_result}{{5.8}{44}{Layout proposal for result files}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Look and feel}{44}{section*.36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Layout proposal for result files}}{44}{figure.caption.37}}
+\newlabel{fig:andgate_failing_result}{{5.9}{44}{Layout proposal for result files}{figure.caption.37}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Preparations}{45}{subsection.5.4.2}}
 \newlabel{json:andgate_failing_example}{{5.16}{45}{Source file for the proposed layout in fig \ref {fig:andgate_failing_result}}{lstlisting.5.16}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.16}Source file for the proposed layout in fig \ref  {fig:andgate_failing_result}}{45}{lstlisting.5.16}}
-\newlabel{somelabel}{{\caption@xref {somelabel}{ on input line 349}}{45}{Preparations}{lstnumber.5.16.14}{}}
+\@writefile{}{\contentsline {customenv}{\numberline {3}{\ignorespaces Failing andgate log messages\relax }}{45}{customenv.3}}
 \newlabel{vhdl:new_checker_declaration}{{5.17}{46}{Custom checker declaration}{lstlisting.5.17}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.17}Custom checker declaration}{46}{lstlisting.5.17}}
 \newlabel{vhdl:new_checker_init}{{5.18}{46}{Custom checker initialisation}{lstlisting.5.18}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.18}Custom checker initialisation}{46}{lstlisting.5.18}}
 \newlabel{vhdl:improved_check}{{5.19}{46}{Improved signal checking}{lstlisting.5.19}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.19}Improved signal checking}{46}{lstlisting.5.19}}
-\@writefile{}{\contentsline {customenv}{\numberline {3}{\ignorespaces Log messages in the "andgate\_failing\_message.csv" file\relax }}{47}{customenv.3}}
-\@writefile{}{\contentsline {customenv}{\numberline {4}{\ignorespaces Log messages in the "andgate\_failing\_result.csv" file\relax }}{47}{customenv.4}}
+\@writefile{}{\contentsline {customenv}{\numberline {4}{\ignorespaces Log messages in the "andgate\_failing\_message.csv" file\relax }}{47}{customenv.4}}
+\@writefile{}{\contentsline {customenv}{\numberline {5}{\ignorespaces Log messages in the "andgate\_failing\_log.csv" file\relax }}{47}{customenv.5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}WaveDrom result file}{48}{subsection.5.4.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Overview of the wave trace analysis code}}{48}{figure.caption.37}}
-\newlabel{fig:wavetrace_analysis_overview}{{5.9}{48}{Overview of the wave trace analysis code}{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Overview of the wave trace analysis code}}{48}{figure.caption.38}}
+\newlabel{fig:wavetrace_analysis_overview}{{5.10}{48}{Overview of the wave trace analysis code}{figure.caption.38}{}}
 \newlabel{json:andgate_failing}{{5.20}{49}{Source file for a failing AND-gate example}{lstlisting.5.20}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.20}Source file for a failing AND-gate example}{49}{lstlisting.5.20}}
-\@writefile{}{\contentsline {customenv}{\numberline {5}{\ignorespaces Log messages in the "andgate\_failing\_result.csv" file\relax }}{49}{customenv.5}}
+\@writefile{}{\contentsline {customenv}{\numberline {6}{\ignorespaces Log messages in the "andgate\_failing\_result.csv" file\relax }}{49}{customenv.6}}
 \newlabel{json:andgate_failing_part}{{5.21}{51}{Temporary content of the result file of a failing AND-gate example}{lstlisting.5.21}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.21}Temporary content of the result file of a failing AND-gate example}{51}{lstlisting.5.21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:andgate_failing_part}}}{51}{figure.caption.38}}
-\newlabel{fig:andgate_failing_part}{{5.10}{51}{Wave traces generated by WaveDrom from code \ref {json:andgate_failing_part}}{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:andgate_failing_part}}}{51}{figure.caption.39}}
+\newlabel{fig:andgate_failing_part}{{5.11}{51}{Wave traces generated by WaveDrom from code \ref {json:andgate_failing_part}}{figure.caption.39}{}}
 \newlabel{json:andgate_failing_result}{{5.22}{52}{Final content of the result file of a failing AND-gate example}{lstlisting.5.22}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {5.22}Final content of the result file of a failing AND-gate example}{52}{lstlisting.5.22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:andgate_failing_result}}}{52}{figure.caption.39}}
-\newlabel{fig:andgate_failing_result2}{{5.11}{52}{Wave traces generated by WaveDrom from code \ref {json:andgate_failing_result}}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Wave traces generated by WaveDrom from code \ref  {json:andgate_failing_result}}}{52}{figure.caption.40}}
+\newlabel{fig:andgate_failing_result2}{{5.12}{52}{Wave traces generated by WaveDrom from code \ref {json:andgate_failing_result}}{figure.caption.40}{}}
 \citation{examples}
 \@writefile{toc}{\contentsline {section}{\numberline {5.5}Some examples}{53}{section.5.5}}
 \newlabel{some_examples}{{5.5}{53}{Some examples}{section.5.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Successful tests}{54}{subsection.5.5.1}}
-\@writefile{toc}{\contentsline {subsubsection}{AND-gate}{54}{section*.40}}
-\newlabel{json:andgatefull_result}{{5.23}{54}{Full functionality test for the timed AND-gate design in appendix \ref {appendix:andgate:sequential}}{lstlisting.5.23}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.23}Full functionality test for the timed AND-gate design in appendix \ref  {appendix:andgate:sequential}}{54}{lstlisting.5.23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Simulation result for the test described in code \ref  {json:andgatefull_result}}}{54}{figure.caption.41}}
-\newlabel{fig:andgatefull}{{5.12}{54}{Simulation result for the test described in code \ref {json:andgatefull_result}}{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Shift register}{55}{section*.42}}
-\newlabel{example:shift}{{5.5.1}{55}{Shift register}{section*.42}{}}
-\newlabel{json:shifter_result}{{5.24}{55}{Functionality test for the shifter design in appendix \ref {appendix:shifter}}{lstlisting.5.24}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.24}Functionality test for the shifter design in appendix \ref  {appendix:shifter}}{55}{lstlisting.5.24}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Simulation result for the test described in code \ref  {json:shifter_result}}}{55}{figure.caption.43}}
-\newlabel{fig:andgatefull}{{5.13}{55}{Simulation result for the test described in code \ref {json:shifter_result}}{figure.caption.43}{}}
-\@writefile{toc}{\contentsline {subsubsection}{UART \& SPI}{56}{section*.44}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Failing tests}{56}{subsection.5.5.2}}
-\@writefile{toc}{\contentsline {subsubsection}{AND-gate}{56}{section*.45}}
-\newlabel{some_examples:andgate_failing}{{5.5.2}{56}{AND-gate}{section*.45}{}}
-\newlabel{json:andgatefull_failing}{{5.25}{56}{Failing functionality test for the timed AND-gate design in appendix \ref {appendix:andgate:sequential}}{lstlisting.5.25}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.25}Failing functionality test for the timed AND-gate design in appendix \ref  {appendix:andgate:sequential}}{56}{lstlisting.5.25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces WaveDrom generated documentation wave traces based on code \ref  {json:andgatefull_failing}}}{57}{figure.caption.46}}
-\newlabel{fig:andgatefull_failing}{{5.14}{57}{WaveDrom generated documentation wave traces based on code \ref {json:andgatefull_failing}}{figure.caption.46}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces Simulation result for the test described in code \ref  {json:andgatefull_failing}}}{57}{figure.caption.47}}
-\newlabel{fig:andgatefull_failing_result}{{5.15}{57}{Simulation result for the test described in code \ref {json:andgatefull_failing}}{figure.caption.47}{}}
-\@writefile{}{\contentsline {customenv}{\numberline {6}{\ignorespaces Log messages for the test in code \ref  {json:andgate_failing}\relax }}{57}{customenv.6}}
-\@writefile{toc}{\contentsline {subsubsection}{Shift register}{58}{section*.48}}
-\newlabel{json:shifter_failing}{{5.26}{58}{Failing functionality test for the shifter design in appendix \ref {appendix:shifter}}{lstlisting.5.26}{}}
-\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.26}Failing functionality test for the shifter design in appendix \ref  {appendix:shifter}}{58}{lstlisting.5.26}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces WaveDrom generated documentation wave traces based on code \ref  {json:shifter_failing}}}{58}{figure.caption.49}}
-\newlabel{fig:andgatefull}{{5.16}{58}{WaveDrom generated documentation wave traces based on code \ref {json:shifter_failing}}{figure.caption.49}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces Simulation result for the test described in code \ref  {json:shifter_failing}}}{59}{figure.caption.50}}
-\newlabel{fig:shifter_failing_result}{{5.17}{59}{Simulation result for the test described in code \ref {json:shifter_failing}}{figure.caption.50}{}}
-\@writefile{}{\contentsline {customenv}{\numberline {7}{\ignorespaces Log messages for the test in code \ref  {json:shifter_failing}\relax }}{59}{customenv.7}}
-\@writefile{toc}{\contentsline {subsubsection}{UART \& SPI}{59}{section*.51}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Limitations \& expansions}{60}{section.5.6}}
-\newlabel{LE}{{5.6}{60}{Limitations \& expansions}{section.5.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}Difficult to install}{60}{subsection.5.6.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}Generic input values}{60}{subsection.5.6.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.3}Simulator compatibility}{60}{subsection.5.6.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.4}Redundant data}{61}{subsection.5.6.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.5}Result readability}{61}{subsection.5.6.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Successful tests}{53}{subsection.5.5.1}}
+\@writefile{toc}{\contentsline {subsubsection}{AND-gate}{53}{section*.41}}
+\newlabel{json:andgatefull_result}{{5.23}{53}{Full functionality test for the timed AND-gate design in appendix \ref {appendix:andgate:sequential}}{lstlisting.5.23}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.23}Full functionality test for the timed AND-gate design in appendix \ref  {appendix:andgate:sequential}}{53}{lstlisting.5.23}}
+\@writefile{toc}{\contentsline {subsubsection}{Shift register}{53}{section*.43}}
+\newlabel{example:shift}{{5.5.1}{53}{Shift register}{section*.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces Simulation result for the test described in code \ref  {json:andgatefull_result}}}{54}{figure.caption.42}}
+\newlabel{fig:andgatefull}{{5.13}{54}{Simulation result for the test described in code \ref {json:andgatefull_result}}{figure.caption.42}{}}
+\newlabel{json:shifter_result}{{5.24}{54}{Functionality test for the shifter design in appendix \ref {appendix:shifter}}{lstlisting.5.24}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.24}Functionality test for the shifter design in appendix \ref  {appendix:shifter}}{54}{lstlisting.5.24}}
+\@writefile{toc}{\contentsline {subsubsection}{UART \& SPI}{54}{section*.45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Simulation result for the test described in code \ref  {json:shifter_result}}}{55}{figure.caption.44}}
+\newlabel{fig:andgatefull}{{5.14}{55}{Simulation result for the test described in code \ref {json:shifter_result}}{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Failing tests}{55}{subsection.5.5.2}}
+\@writefile{toc}{\contentsline {subsubsection}{AND-gate}{55}{section*.46}}
+\newlabel{some_examples:andgate_failing}{{5.5.2}{55}{AND-gate}{section*.46}{}}
+\newlabel{json:andgatefull_failing}{{5.25}{55}{Failing functionality test for the timed AND-gate design in appendix \ref {appendix:andgate:sequential}}{lstlisting.5.25}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.25}Failing functionality test for the timed AND-gate design in appendix \ref  {appendix:andgate:sequential}}{55}{lstlisting.5.25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces WaveDrom generated documentation wave traces based on code \ref  {json:andgatefull_failing}}}{56}{figure.caption.47}}
+\newlabel{fig:andgatefull_failing}{{5.15}{56}{WaveDrom generated documentation wave traces based on code \ref {json:andgatefull_failing}}{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Simulation result for the test described in code \ref  {json:andgatefull_failing}}}{56}{figure.caption.48}}
+\newlabel{fig:andgatefull_failing_result}{{5.16}{56}{Simulation result for the test described in code \ref {json:andgatefull_failing}}{figure.caption.48}{}}
+\@writefile{}{\contentsline {customenv}{\numberline {7}{\ignorespaces Log messages for the test in code \ref  {json:andgate_failing}\relax }}{56}{customenv.7}}
+\@writefile{toc}{\contentsline {subsubsection}{Shift register}{57}{section*.49}}
+\newlabel{json:shifter_failing}{{5.26}{57}{Failing functionality test for the shifter design in appendix \ref {appendix:shifter}}{lstlisting.5.26}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {5.26}Failing functionality test for the shifter design in appendix \ref  {appendix:shifter}}{57}{lstlisting.5.26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces WaveDrom generated documentation wave traces based on code \ref  {json:shifter_failing}}}{57}{figure.caption.50}}
+\newlabel{fig:andgatefull}{{5.17}{57}{WaveDrom generated documentation wave traces based on code \ref {json:shifter_failing}}{figure.caption.50}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Simulation result for the test described in code \ref  {json:shifter_failing}}}{58}{figure.caption.51}}
+\newlabel{fig:shifter_failing_result}{{5.18}{58}{Simulation result for the test described in code \ref {json:shifter_failing}}{figure.caption.51}{}}
+\@writefile{}{\contentsline {customenv}{\numberline {8}{\ignorespaces Log messages for the test in code \ref  {json:shifter_failing}\relax }}{58}{customenv.8}}
+\@writefile{toc}{\contentsline {subsubsection}{UART \& SPI}{58}{section*.52}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Limitations \& expansions}{59}{section.5.6}}
+\newlabel{LE}{{5.6}{59}{Limitations \& expansions}{section.5.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}Difficult to install}{59}{subsection.5.6.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.2}Generic input values}{59}{subsection.5.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.3}Simulator compatibility}{59}{subsection.5.6.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.4}Redundant data}{60}{subsection.5.6.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.5}Result readability}{60}{subsection.5.6.5}}
 \citation{cocotb}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.6}CoCoTB vs VUnit}{62}{subsection.5.6.6}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{63}{chapter.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.6}CoCoTB vs VUnit}{61}{subsection.5.6.6}}
+\citation{intro:wiki}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{62}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Can we design a system that can create self checking testbenches and documentation wave traces from the same source?}{64}{section.6.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Can we optimise wave trace analysis based on this system?}{64}{section.6.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Can we design a system that will streamline the process of design validation?}{65}{section.6.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Traditional verification cycle}}{66}{figure.caption.52}}
-\newlabel{fig:ver_old2}{{6.1}{66}{Traditional verification cycle}{figure.caption.52}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Improved verification cycle}}{66}{figure.caption.53}}
-\newlabel{fig:ver_new2}{{6.2}{66}{Improved verification cycle}{figure.caption.53}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Creating self checking testbenches}{62}{section.6.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Optimizing wave trace analysis}{63}{section.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Streamlining the process of validation}{64}{section.6.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Traditional verification cycle}}{65}{figure.caption.53}}
+\newlabel{fig:ver_old2}{{6.1}{65}{Traditional verification cycle}{figure.caption.53}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Improved verification cycle}}{65}{figure.caption.54}}
+\newlabel{fig:ver_new2}{{6.2}{65}{Improved verification cycle}{figure.caption.54}{}}
 \bibstyle{ieeetran}
 \bibdata{bib/References}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Does this system provide any benefits over existing verification frameworks?}{67}{section.6.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.5}Fields of application}{67}{section.6.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Benefits over existing verification frameworks}{66}{section.6.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Fields of application}{66}{section.6.5}}
 \bibcite{intro:wiki}{1}
 \bibcite{wavedrom}{2}
 \bibcite{vunit}{3}
@@ -286,31 +289,31 @@
 \newlabel{appendix:more_examples:uart}{{B.1.1}{1}{UART}{subsection.B.1.1}{}}
 \newlabel{json:uart}{{B.1}{1}{Functionality test for the UART design in appendix \ref {appendix:uart}}{lstlisting.B.1}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {B.1}Functionality test for the UART design in appendix \ref  {appendix:uart}}{1}{lstlisting.B.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Simulation result for the test described in code \ref  {json:uart}}}{2}{figure.caption.55}}
-\newlabel{fig:uart_result}{{B.1}{2}{Simulation result for the test described in code \ref {json:uart}}{figure.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.1}{\ignorespaces Simulation result for the test described in code \ref  {json:uart}}}{2}{figure.caption.56}}
+\newlabel{fig:uart_result}{{B.1}{2}{Simulation result for the test described in code \ref {json:uart}}{figure.caption.56}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B.1.2}SPI}{3}{subsection.B.1.2}}
 \newlabel{appendix:more_examples:spi}{{B.1.2}{3}{SPI}{subsection.B.1.2}{}}
 \newlabel{json:spi}{{B.2}{3}{Functionality test for the SPI design in appendix \ref {appendix:spi}}{lstlisting.B.2}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {B.2}Functionality test for the SPI design in appendix \ref  {appendix:spi}}{3}{lstlisting.B.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Simulation result for the test described in code \ref  {json:spi}}}{4}{figure.caption.56}}
-\newlabel{fig:spi_result}{{B.2}{4}{Simulation result for the test described in code \ref {json:spi}}{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.2}{\ignorespaces Simulation result for the test described in code \ref  {json:spi}}}{4}{figure.caption.57}}
+\newlabel{fig:spi_result}{{B.2}{4}{Simulation result for the test described in code \ref {json:spi}}{figure.caption.57}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {B.2}Failing tests}{5}{section.B.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B.2.1}UART}{5}{subsection.B.2.1}}
 \newlabel{json:uart_failing}{{B.3}{5}{Failing functionality test for the UART design in appendix \ref {appendix:uart}}{lstlisting.B.3}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {B.3}Failing functionality test for the UART design in appendix \ref  {appendix:uart}}{5}{lstlisting.B.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces WaveDrom generated documentation wave traces based on code \ref  {json:uart_failing}}}{5}{figure.caption.57}}
-\newlabel{fig:uart_failing}{{B.3}{5}{WaveDrom generated documentation wave traces based on code \ref {json:uart_failing}}{figure.caption.57}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.4}{\ignorespaces Simulation result for the test described in code \ref  {json:uart_failing}}}{6}{figure.caption.58}}
-\newlabel{fig:uart_failing_result}{{B.4}{6}{Simulation result for the test described in code \ref {json:uart_failing}}{figure.caption.58}{}}
-\@writefile{}{\contentsline {customenv}{\numberline {8}{\ignorespaces Log messages for the test in code \ref  {json:uart_failing}\relax }}{6}{customenv.8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.3}{\ignorespaces WaveDrom generated documentation wave traces based on code \ref  {json:uart_failing}}}{5}{figure.caption.58}}
+\newlabel{fig:uart_failing}{{B.3}{5}{WaveDrom generated documentation wave traces based on code \ref {json:uart_failing}}{figure.caption.58}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.4}{\ignorespaces Simulation result for the test described in code \ref  {json:uart_failing}}}{6}{figure.caption.59}}
+\newlabel{fig:uart_failing_result}{{B.4}{6}{Simulation result for the test described in code \ref {json:uart_failing}}{figure.caption.59}{}}
+\@writefile{}{\contentsline {customenv}{\numberline {9}{\ignorespaces Log messages for the test in code \ref  {json:uart_failing}\relax }}{6}{customenv.9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B.2.2}SPI}{7}{subsection.B.2.2}}
 \newlabel{json:spi_failing}{{B.4}{7}{Failing functionality test for the SPI design in appendix \ref {appendix:spi}}{lstlisting.B.4}{}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {B.4}Failing functionality test for the SPI design in appendix \ref  {appendix:spi}}{7}{lstlisting.B.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.5}{\ignorespaces WaveDrom generated documentation wave traces based on code \ref  {json:spi_failing}}}{8}{figure.caption.59}}
-\newlabel{fig:spi_failing}{{B.5}{8}{WaveDrom generated documentation wave traces based on code \ref {json:spi_failing}}{figure.caption.59}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {B.6}{\ignorespaces Simulation result for the test described in code \ref  {json:spi_failing}}}{8}{figure.caption.60}}
-\newlabel{fig:spi_failing_result}{{B.6}{8}{Simulation result for the test described in code \ref {json:spi_failing}}{figure.caption.60}{}}
-\@writefile{}{\contentsline {customenv}{\numberline {9}{\ignorespaces Log messages for the test in code \ref  {json:spi_failing}\relax }}{8}{customenv.9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.5}{\ignorespaces WaveDrom generated documentation wave traces based on code \ref  {json:spi_failing}}}{8}{figure.caption.60}}
+\newlabel{fig:spi_failing}{{B.5}{8}{WaveDrom generated documentation wave traces based on code \ref {json:spi_failing}}{figure.caption.60}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {B.6}{\ignorespaces Simulation result for the test described in code \ref  {json:spi_failing}}}{8}{figure.caption.61}}
+\newlabel{fig:spi_failing_result}{{B.6}{8}{Simulation result for the test described in code \ref {json:spi_failing}}{figure.caption.61}{}}
+\@writefile{}{\contentsline {customenv}{\numberline {10}{\ignorespaces Log messages for the test in code \ref  {json:spi_failing}\relax }}{8}{customenv.10}}
 \citation{teahlab}
 \citation{teahlab}
 \@writefile{toc}{\contentsline {chapter}{\numberline {C}Designs}{1}{appendix.C}}

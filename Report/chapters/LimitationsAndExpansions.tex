@@ -1,6 +1,6 @@
 \clearpage
 \section{Limitations \& expansions}\label{LE}
-This chapter lists the main limitations of the current design and proposes some improvements that could improve performance and usability.
+This chapter lists the main limitations of the current design and proposes some improvements that could benefit performance and usability.
 \subsection{Difficult to install}
 Although the system is quite simple to use when it is installed, it is not easy to install. Because of the dependencies of the system and their respective dependencies it requires some skill to set up the system. All the more because it was developed on a Linux system and is not directly compatible with Windows computers. Compatibility with OS X computers has not been tested.
 \subsection{Generic input values}
@@ -10,15 +10,15 @@ Suppose another designer is building a memory unit and would like to build a tes
 \npar
 An answer to this problem could lie in the possibility to dynamically generate JSON signal declarations as shown in the official WaveDrom tutorial under "step 9. Some code".
 \subsection{Simulator compatibility}
-During development of the system the Vsim simulator from Modelsim was used. On the same system the GHDL open source simulator was also tested, but this resulted in unresolved errors. This means that not all simulator backends supported by VUnit are compatible with this software.
+During development of the system the Vsim simulator from Modelsim was used. On the same system the GHDL open source simulator was also tested, but this resulted in unresolved simulation errors. This means that not all simulator backends supported by VUnit are compatible with this software.
 \subsection{Redundant data}
 In the beginning of this report the assumption was made that all information necessary to create testbenches was included in the WaveDrom file. Because of this some major extensions have been added to that file. Almost all of this information, such as signal direction, logic type and vector width, is however already available in the original design file and is actually redundant. Accessing this data in the design file is more difficult and requires the use of a VHDL parser, which is why this approach was not used in this project.
 \npar
 It would however be a considerable improvement to change the way the relevant data is acquired. The greatest benefit being that a lot of data could be removed from the WaveDrom files to make them more readable and easier to create.
 \subsection{Result readability}
-Looking at the examples in \ref{some_examples} we see an increasing complexity of the UUT design. This means that more and more information to be added to the WaveDrom files. Correspondingly, the wave traces that are generated become increasingly complex to the point where they can not be properly displayed on one page. This limits the readability of the resulting wave traces. 
+Looking at the examples in \ref{some_examples} we see an increasing complexity of the UUT design. This means that more and more information has to be added to the WaveDrom files. Correspondingly, the wave traces that are generated become increasingly complex to the point where they can not be properly displayed on one page. This limits the readability of the resulting wave traces. 
 \npar
-Larger designs mean more signals to drive and a more complex way of functioning, which might also means longer wave traces. This is especially true if the output signals change often and independently from each other.
+Larger designs mean more signals to drive and a more complex way of functioning, which might also means larger WaveDrom input files. This is especially true if the output signals change often and independently from each other. Larger WaveDrom files mean longer wave traces.
 \npar
 If a test's wave traces can not be displayed on a single page, they might not be fit to be used as documentation as they might be too unclear to understand. This problem is illustrated by example \ref{appendix:more_examples:spi}.\newpage
 \subsection{CoCoTB vs VUnit}

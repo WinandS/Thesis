@@ -35,7 +35,7 @@ Finally, instead of the manual comparison of two wave traces, it offers a way to
 \end{customenv}\newpage\noindent
 The two features are bundled together in one tool controlled by a simple GUI.\nline
 \MijnFig{width=.9\textwidth}{images/gui}{Look of the user interface}{fig:gui}\nline
-The gui allows the user to open the input folder where WaveDrom input files should be added, the src folder where the design to be tested should be added and the output folder, where the resulting files will be stored. The run verification button creates a testbench for every json file in the source folder, simulates the result, verifies it and stores the result in the output folder.
+The gui allows the user to open the input folder where WaveDrom source files should be added, the design folder where the design to be tested should be added and the output folder, where the resulting files will be stored. The "run verification" button creates a testbench for every source file in the input folder, simulates the tests, verifies them and stores the results in the output folder.
 \npar
 To summarise the tool will convert
 \begin{itemize}
@@ -45,9 +45,9 @@ To summarise the tool will convert
 into
 \begin{itemize}
 	\item A VHDL test for every source file
-	\item Wave trace analysis files for every test
-\end{itemize}
-There are many benefits to this system. The user can be sure the test that has been generated does not hold any mistakes (at least if we assume no mistake has been made in creating the source file) as it is directly derived from the specifications of the device. Also, validating a device becomes easier way of compared to what it used to be - (create testbench,) simulate, compare simulation wave traces manually. One click offers an immediate validation. The test will either pass or fail. In the latter case extra information is immediately available.
+	\item waveJSON wave trace analysis files for every test
+\end{itemize}\newpage\noindent
+There are many benefits to this system. The user can be sure the test that has been generated does not hold any mistakes (at least if we assume no mistake has been made in creating the source file) as it is directly derived from the specifications of the device. Also, validating a device becomes easier compared to what it used to be - (create testbench,) simulate, analyse wave traces, improve design, repeat. One click offers an immediate validation. The test will either pass or fail. In the latter case extra information is immediately available.
 \npar
-It is however not a full validation system on itself. It requires the use of existing frameworks to function. It offers an easy to use and approachable way to use these frameworks while at the same time adding functionality to them. In this case the VUnit framework was chosen, but it could also be adapted to run on other frameworks such as CoCoTB \cite{cocotb}. It is a useful extension of these frameworks for all those who want to validate a design and document its functionality. 
+It is however not a full validation system on itself. It requires the use of existing frameworks to function. It offers an easy to use and approachable way to use these frameworks while at the same time adding functionality to them. In this case the VUnit framework was chosen, but it could also be adapted to run on another framework like CoCoTB \cite{cocotb}. It is a useful extension of these frameworks for all those who want to validate a design and document its functionality. 
 
