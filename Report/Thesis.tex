@@ -15,10 +15,11 @@
 \usepackage{pdflscape}
 \usepackage{geometry}
 \usepackage{paralist}
+\usepackage{pdfpages}
 
 
 \title{
-	{Automated testbench generation from \\ digital timing diagrams}\\
+	{Automated testbench generation from \\ digital timing information}\\
 	{\large University of Ghent}\\ \hfill \\
 	{\includegraphics[width = 0.35\textwidth]{ruglogo.pdf}}
 }
@@ -73,13 +74,18 @@
 \thispagestyle{empty}
 \emph{ }
 \maketitle
+\thispagestyle{empty}
+\emph{ }
 
 % front matter
 \pagestyle{plain}
-
-\input{chapters/Abstract}
+\input{chapters/permission}
 
 \input{chapters/Foreword}
+
+\includepdf[pages=-]{extended_abstract/extended_abstract.pdf}
+
+
 
 \tableofcontents 
 \clearpage

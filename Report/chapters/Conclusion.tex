@@ -2,22 +2,15 @@
 %Er worden geen nieuwe elementen beschreven.
 
 \chapter{Conclusion}
-In software and hardware development, verification and validation is the process of checking that a system meets specifications and that it fulfills its intended purpose. It may also be referred to as quality control. It is normally the responsibility of testers as part of the development lifecycle \cite{intro:wiki}.\nline
-In other words, the questions
-\begin{itemize}
-	\item Are we building the product right? (Verification)
-	\item Are we building the right product? (Validation)
-\end{itemize}
-are becoming more and more important to designers as consumers become increasingly demanding.
-\npar
-In light of this, this report introduces a way to improve VHDL design verification at the hand of the following questions:
+In light of improving hardware design verification this report has tried to answer the following questions:
 \begin{itemize}
 	\item Can we design a system that will streamline the process of design validation?
 	\subitem Can we design a system that can create self checking testbenches and documentation wave traces from the same source?
 	\subitem Can we optimise wave trace analysis based on this system?
 	\item Does this system provide any benefits over existing verification frameworks?	
 \end{itemize}
-\section{Creating self checking testbenches}
+The sections below will recapitulate the solution provided in this report and answer these questions.
+\section{Self checking testbenches and documentation wave traces}
 Everything in this project is built on the fact that it should be possible to create both documentation wave traces and testbenches from the same file, so finding the correct format for this file was imperative. The solution proposed by the promoters of this project seemed ideal. WaveDrom can draw a timing diagram (or wave traces) from a simple description. This description is provided in a JSON format. This way half of the desired functionality was obtained. The second half, creating self checking testbenches, was made possible by adding some extra required information to the original WaveDrom file. The adapted WaveDrom file is now considered a complete source file and holds all data needed to create a testbench for a specific design. It is a compact and simple way to hold all of the required information.
 \npar
 WaveDrom can handle documentation wave trace creation from this source file, but there was no tool that could create test benches from the source file yet. Based on some increasingly complex design examples, Python based software was developed that can translate the info in the source file into a fully fledged testbench. This testbench satisfies the conditions set by the VUnit framework.
