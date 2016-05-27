@@ -12,16 +12,16 @@
 %data-analyse => leveranciers
 
 \chapter{Functional analysis} \label{FA}
-The goal of this project is to create a tool that can streamline the testbench creation and the wave trace analysis processes to help developers validate their design, while at the same time generating wave trace images to aid in documenting a design. The original validation process flow can be seen in figure \ref{fig:ver_old}. To improve on this process a new source file is introduced. Figure \ref{fig:ver_new} shows the improved information flow of the validation process. Where the original system required (more) user input at both the documentation side and the validation side, this system bundles most user input into one file, reducing the total amount of user input and saving a considerable amount of time. An overview of how it works is shown in the figure below.%
+The goal of this project is to create a tool that can streamline the testbench creation and the wave trace analysis processes to help developers validate their design, while at the same time generating wave trace images to aid in documenting a design. The original validation process flow can be seen in figure \ref{fig:ver_old}. To improve this process a new source file is introduced. Figure \ref{fig:ver_new} shows the improved information flow of the validation process. Where the original system required (more) user input at both the documentation side and the validation side, this system bundles most user input into one file, reducing the total amount of user input and saving a considerable amount of time. An overview of how it works is shown in the figure below.%
 \newpage
 \MijnFig{width=\textwidth}{images/overview}{Operation overview of the new system}{fig:overview2}\noindent
 The tool will complete a full cycle of the validation process. It starts from the user input files: the source file and the design file. And then continues in three steps:
 \npar
 First, the tool can create testbenches automatically and generate documentation information using a source file. This source file is a waveJSON \cite{wavejson} file based on standard WaveDrom \cite{wavedrom} files. WaveDrom is an open source engine for generating wave traces from waveJSON files. The tool can create a testbench for every source file provided in mere seconds, faster than a developer could create just one testbench manually. These testbenches are designed according to the specifications of a VUnit \cite{vunit} testbench. VUnit is a framework that extends the VHDL language.\newpage
 \npar
-Then, using VUnit provided functionality, the created testbenches are by an external simulator. This can be any simulator supported by the VUnit framework.
+Then, using VUnit provided functionality, the created testbenches are simulated by an external simulator. This can be any simulator supported by the VUnit framework.
 \npar
-Finally, instead of the manual comparison of two wave traces, it offers a way to quickly find non corresponding wave traces in a visual way. It returns a waveJSON file similar to the source file, which can be visualised using WaveDrom. The WaveDrom generated figure \ref{fig:sim_fail_example} illustrates this concept. This visual representation will be accompanied by an error message specifying the error.%
+Finally, instead of the manual comparison of two wave traces, it offers a way to quickly find non corresponding wave traces in a visual way. It returns a waveJSON file similar to the source file, which can be visualised using WaveDrom. Figure \ref{fig:sim_fail_example} illustrates this concept. This visual representation will be accompanied by an error message specifying the error.%
 \MijnFig{width=\textwidth}{images/andgate_failing}{Simulation failure example}{fig:sim_fail_example}
 \begin{customenv}
 	\caption{Example logged error messages}\label{log:example}
@@ -35,9 +35,9 @@ Finally, instead of the manual comparison of two wave traces, it offers a way to
 \end{customenv}\newpage\noindent
 The two features are bundled together in one tool controlled by a simple GUI.\nline
 \MijnFig{width=.9\textwidth}{images/gui}{Look of the user interface}{fig:gui}\nline
-The gui allows the user to open the input folder where WaveDrom source files should be added, the design folder where the design to be tested should be added and the output folder, where the resulting files will be stored. The "run verification" button creates a testbench for every source file in the input folder, simulates the tests, verifies them and stores the results in the output folder.
+The GUI allows the user to open the input folder where WaveDrom source files should be added, the design folder where the design to be tested should be added and the output folder, where the resulting files will be stored. The "run verification" button creates a testbench for every source file in the input folder, simulates the tests, verifies them and stores the results in the output folder.
 \npar
-To summarise the tool will convert
+To summarise, the tool will convert
 \begin{itemize}
 	\item Source files for every feature to test
 	\item The design under test VHDL description

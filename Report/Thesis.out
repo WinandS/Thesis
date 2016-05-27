@@ -16,49 +16,50 @@
 \BOOKMARK [2][-]{subsection.5.2.2}{Application example}{section.5.2}% 16
 \BOOKMARK [1][-]{section.5.3}{Overview}{chapter.5}% 17
 \BOOKMARK [1][-]{section.5.4}{Wave trace comparison}{chapter.5}% 18
-\BOOKMARK [2][-]{subsection.5.4.1}{Practical approach}{section.5.4}% 19
-\BOOKMARK [2][-]{subsection.5.4.2}{Preparations}{section.5.4}% 20
-\BOOKMARK [2][-]{subsection.5.4.3}{WaveDrom result file}{section.5.4}% 21
-\BOOKMARK [1][-]{section.5.5}{Some examples}{chapter.5}% 22
-\BOOKMARK [2][-]{subsection.5.5.1}{Successful tests}{section.5.5}% 23
-\BOOKMARK [2][-]{subsection.5.5.2}{Failing tests}{section.5.5}% 24
-\BOOKMARK [1][-]{section.5.6}{Limitations \046 expansions}{chapter.5}% 25
-\BOOKMARK [2][-]{subsection.5.6.1}{Difficult to install}{section.5.6}% 26
-\BOOKMARK [2][-]{subsection.5.6.2}{Generic input values}{section.5.6}% 27
-\BOOKMARK [2][-]{subsection.5.6.3}{Simulator compatibility}{section.5.6}% 28
-\BOOKMARK [2][-]{subsection.5.6.4}{Redundant data}{section.5.6}% 29
-\BOOKMARK [2][-]{subsection.5.6.5}{Result readability}{section.5.6}% 30
-\BOOKMARK [2][-]{subsection.5.6.6}{CoCoTB vs VUnit}{section.5.6}% 31
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 32
-\BOOKMARK [1][-]{section.6.1}{Self checking testbenches and documentation wave traces}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.2}{Optimizing wave trace analysis}{chapter.6}% 34
-\BOOKMARK [1][-]{section.6.3}{Streamlining the process of validation}{chapter.6}% 35
-\BOOKMARK [1][-]{section.6.4}{Benefits over existing verification frameworks}{chapter.6}% 36
-\BOOKMARK [1][-]{section.6.5}{Fields of application}{chapter.6}% 37
-\BOOKMARK [0][-]{appendix.A}{User guide}{}% 38
-\BOOKMARK [1][-]{section.A.1}{Dependencies}{appendix.A}% 39
-\BOOKMARK [1][-]{section.A.2}{project input files}{appendix.A}% 40
-\BOOKMARK [2][-]{subsection.A.2.1}{Making your own WaveDrom input files}{section.A.2}% 41
-\BOOKMARK [2][-]{subsection.A.2.2}{Standard input file}{section.A.2}% 42
-\BOOKMARK [2][-]{subsection.A.2.3}{Unicode keys}{section.A.2}% 43
-\BOOKMARK [2][-]{subsection.A.2.4}{Supported characters}{section.A.2}% 44
-\BOOKMARK [1][-]{section.A.3}{Extra features}{appendix.A}% 45
-\BOOKMARK [2][-]{subsection.A.3.1}{time loops \('|'\)}{section.A.3}% 46
-\BOOKMARK [2][-]{subsection.A.3.2}{check skipping \('x'\)}{section.A.3}% 47
-\BOOKMARK [1][-]{section.A.4}{Example}{appendix.A}% 48
-\BOOKMARK [1][-]{section.A.5}{Starting the tool}{appendix.A}% 49
-\BOOKMARK [0][-]{appendix.B}{More examples}{}% 50
-\BOOKMARK [1][-]{section.B.1}{Successful tests}{appendix.B}% 51
-\BOOKMARK [2][-]{subsection.B.1.1}{UART}{section.B.1}% 52
-\BOOKMARK [2][-]{subsection.B.1.2}{SPI}{section.B.1}% 53
-\BOOKMARK [1][-]{section.B.2}{Failing tests}{appendix.B}% 54
-\BOOKMARK [2][-]{subsection.B.2.1}{UART}{section.B.2}% 55
-\BOOKMARK [2][-]{subsection.B.2.2}{SPI}{section.B.2}% 56
-\BOOKMARK [0][-]{appendix.C}{Designs}{}% 57
-\BOOKMARK [1][-]{section.C.1}{AND-gate}{appendix.C}% 58
-\BOOKMARK [2][-]{subsection.C.1.1}{Combinatorial}{section.C.1}% 59
-\BOOKMARK [2][-]{subsection.C.1.2}{Timed or sequential}{section.C.1}% 60
-\BOOKMARK [1][-]{section.C.2}{Shift register}{appendix.C}% 61
-\BOOKMARK [1][-]{section.C.3}{Uart tx line}{appendix.C}% 62
-\BOOKMARK [1][-]{section.C.4}{SPI master}{appendix.C}% 63
-\BOOKMARK [0][-]{appendix.D}{Testbench template}{}% 64
+\BOOKMARK [2][-]{subsection.5.4.1}{Ideal solution}{section.5.4}% 19
+\BOOKMARK [2][-]{subsection.5.4.2}{Practical approach}{section.5.4}% 20
+\BOOKMARK [2][-]{subsection.5.4.3}{Preparations}{section.5.4}% 21
+\BOOKMARK [2][-]{subsection.5.4.4}{WaveDrom result file}{section.5.4}% 22
+\BOOKMARK [1][-]{section.5.5}{Some examples}{chapter.5}% 23
+\BOOKMARK [2][-]{subsection.5.5.1}{Successful tests}{section.5.5}% 24
+\BOOKMARK [2][-]{subsection.5.5.2}{Failing tests}{section.5.5}% 25
+\BOOKMARK [1][-]{section.5.6}{Limitations \046 expansions}{chapter.5}% 26
+\BOOKMARK [2][-]{subsection.5.6.1}{Difficult to install}{section.5.6}% 27
+\BOOKMARK [2][-]{subsection.5.6.2}{Generic input values}{section.5.6}% 28
+\BOOKMARK [2][-]{subsection.5.6.3}{Simulator compatibility}{section.5.6}% 29
+\BOOKMARK [2][-]{subsection.5.6.4}{Redundant data}{section.5.6}% 30
+\BOOKMARK [2][-]{subsection.5.6.5}{Result readability}{section.5.6}% 31
+\BOOKMARK [2][-]{subsection.5.6.6}{CoCoTB vs VUnit}{section.5.6}% 32
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 33
+\BOOKMARK [1][-]{section.6.1}{Self checking testbenches and documentation wave traces}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.2}{Optimizing wave trace analysis}{chapter.6}% 35
+\BOOKMARK [1][-]{section.6.3}{Streamlining the process of validation}{chapter.6}% 36
+\BOOKMARK [1][-]{section.6.4}{Benefits over existing verification frameworks}{chapter.6}% 37
+\BOOKMARK [1][-]{section.6.5}{Fields of application}{chapter.6}% 38
+\BOOKMARK [0][-]{appendix.A}{User guide}{}% 39
+\BOOKMARK [1][-]{section.A.1}{Dependencies}{appendix.A}% 40
+\BOOKMARK [1][-]{section.A.2}{project input files}{appendix.A}% 41
+\BOOKMARK [2][-]{subsection.A.2.1}{Making your own WaveDrom input files}{section.A.2}% 42
+\BOOKMARK [2][-]{subsection.A.2.2}{Standard input file}{section.A.2}% 43
+\BOOKMARK [2][-]{subsection.A.2.3}{Unicode keys}{section.A.2}% 44
+\BOOKMARK [2][-]{subsection.A.2.4}{Supported characters}{section.A.2}% 45
+\BOOKMARK [1][-]{section.A.3}{Extra features}{appendix.A}% 46
+\BOOKMARK [2][-]{subsection.A.3.1}{time loops \('|'\)}{section.A.3}% 47
+\BOOKMARK [2][-]{subsection.A.3.2}{check skipping \('x'\)}{section.A.3}% 48
+\BOOKMARK [1][-]{section.A.4}{Example}{appendix.A}% 49
+\BOOKMARK [1][-]{section.A.5}{Starting the tool}{appendix.A}% 50
+\BOOKMARK [0][-]{appendix.B}{More examples}{}% 51
+\BOOKMARK [1][-]{section.B.1}{Successful tests}{appendix.B}% 52
+\BOOKMARK [2][-]{subsection.B.1.1}{UART}{section.B.1}% 53
+\BOOKMARK [2][-]{subsection.B.1.2}{SPI}{section.B.1}% 54
+\BOOKMARK [1][-]{section.B.2}{Failing tests}{appendix.B}% 55
+\BOOKMARK [2][-]{subsection.B.2.1}{UART}{section.B.2}% 56
+\BOOKMARK [2][-]{subsection.B.2.2}{SPI}{section.B.2}% 57
+\BOOKMARK [0][-]{appendix.C}{Designs}{}% 58
+\BOOKMARK [1][-]{section.C.1}{AND-gate}{appendix.C}% 59
+\BOOKMARK [2][-]{subsection.C.1.1}{Combinatorial}{section.C.1}% 60
+\BOOKMARK [2][-]{subsection.C.1.2}{Timed or sequential}{section.C.1}% 61
+\BOOKMARK [1][-]{section.C.2}{Shift register}{appendix.C}% 62
+\BOOKMARK [1][-]{section.C.3}{Uart tx line}{appendix.C}% 63
+\BOOKMARK [1][-]{section.C.4}{SPI master}{appendix.C}% 64
+\BOOKMARK [0][-]{appendix.D}{Testbench template}{}% 65

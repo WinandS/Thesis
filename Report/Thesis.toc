@@ -1,62 +1,62 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{11}{chapter.1}
-\contentsline {chapter}{\numberline {2}Problem analysis}{16}{chapter.2}
-\contentsline {chapter}{\numberline {3}Functional analysis}{19}{chapter.3}
-\contentsline {chapter}{\numberline {4}Technical analysis}{24}{chapter.4}
-\contentsline {section}{\numberline {4.1}Testbench creation}{25}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Testbench specifications}{25}{subsection.4.1.1}
-\contentsline {subparagraph}{VUnit}{25}{section*.14}
-\contentsline {subparagraph}{CoCoTB}{25}{section*.15}
-\contentsline {subparagraph}{SVUnit}{25}{section*.16}
-\contentsline {subparagraph}{OSVVM}{26}{section*.17}
-\contentsline {subparagraph}{UVVM}{26}{section*.18}
-\contentsline {subsection}{\numberline {4.1.2}Conversion script}{27}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Source file}{27}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Wave trace analysis}{28}{section.4.2}
-\contentsline {chapter}{\numberline {5}Technical design}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Testbench creation}{29}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Simple example}{29}{subsection.5.1.1}
-\contentsline {subsubsection}{The WaveDrom file}{29}{section*.19}
-\contentsline {subsubsection}{Creating VHDL code from the WaveDrom file}{31}{section*.21}
-\contentsline {subsubsection}{Converting the WaveDrom file to a VHDL testbench}{33}{section*.22}
-\contentsline {subsection}{\numberline {5.1.2}Clocked designs}{34}{subsection.5.1.2}
-\contentsline {subsubsection}{Driving and checking the signals}{35}{section*.24}
-\contentsline {subsubsection}{Clock driving}{36}{section*.25}
-\contentsline {section}{\numberline {5.2}Vectors and repetitions}{39}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Vectors}{39}{subsection.5.2.1}
-\contentsline {subsubsection}{Time loops}{41}{section*.28}
-\contentsline {subparagraph}{The 'x' character}{42}{section*.30}
-\contentsline {subparagraph}{The '\textbar ' character}{42}{section*.31}
-\contentsline {subsection}{\numberline {5.2.2}Application example}{43}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Overview}{44}{section.5.3}
-\contentsline {section}{\numberline {5.4}Wave trace comparison}{46}{section.5.4}
-\contentsline {subsubsection}{ideal solution}{46}{section*.34}
-\contentsline {subsection}{\numberline {5.4.1}Practical approach}{47}{subsection.5.4.1}
-\contentsline {subsubsection}{Look and feel}{49}{section*.36}
-\contentsline {subsection}{\numberline {5.4.2}Preparations}{50}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}WaveDrom result file}{53}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Some examples}{58}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Successful tests}{58}{subsection.5.5.1}
-\contentsline {subsubsection}{AND-gate}{58}{section*.41}
-\contentsline {subsubsection}{Shift register}{58}{section*.43}
-\contentsline {subsubsection}{UART \& SPI}{59}{section*.45}
-\contentsline {subsection}{\numberline {5.5.2}Failing tests}{60}{subsection.5.5.2}
-\contentsline {subsubsection}{AND-gate}{60}{section*.46}
-\contentsline {subsubsection}{Shift register}{62}{section*.49}
-\contentsline {subsubsection}{UART \& SPI}{63}{section*.52}
-\contentsline {section}{\numberline {5.6}Limitations \& expansions}{64}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Difficult to install}{64}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}Generic input values}{64}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Simulator compatibility}{64}{subsection.5.6.3}
-\contentsline {subsection}{\numberline {5.6.4}Redundant data}{65}{subsection.5.6.4}
-\contentsline {subsection}{\numberline {5.6.5}Result readability}{65}{subsection.5.6.5}
-\contentsline {subsection}{\numberline {5.6.6}CoCoTB vs VUnit}{66}{subsection.5.6.6}
-\contentsline {chapter}{\numberline {6}Conclusion}{67}{chapter.6}
-\contentsline {section}{\numberline {6.1}Self checking testbenches and documentation wave traces}{67}{section.6.1}
-\contentsline {section}{\numberline {6.2}Optimizing wave trace analysis}{68}{section.6.2}
-\contentsline {section}{\numberline {6.3}Streamlining the process of validation}{69}{section.6.3}
-\contentsline {section}{\numberline {6.4}Benefits over existing verification frameworks}{71}{section.6.4}
-\contentsline {section}{\numberline {6.5}Fields of application}{71}{section.6.5}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Problem analysis}{6}{chapter.2}
+\contentsline {chapter}{\numberline {3}Functional analysis}{9}{chapter.3}
+\contentsline {chapter}{\numberline {4}Technical analysis}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Testbench creation}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Testbench specifications}{15}{subsection.4.1.1}
+\contentsline {subparagraph}{VUnit}{15}{section*.14}
+\contentsline {subparagraph}{CoCoTB}{15}{section*.15}
+\contentsline {subparagraph}{SVUnit}{15}{section*.16}
+\contentsline {subparagraph}{OSVVM}{16}{section*.17}
+\contentsline {subparagraph}{UVVM}{16}{section*.18}
+\contentsline {subsection}{\numberline {4.1.2}Conversion script}{17}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Source file}{17}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Wave trace analysis}{18}{section.4.2}
+\contentsline {chapter}{\numberline {5}Technical design}{19}{chapter.5}
+\contentsline {section}{\numberline {5.1}Testbench creation}{19}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Simple example}{19}{subsection.5.1.1}
+\contentsline {subsubsection}{The WaveDrom file}{19}{section*.19}
+\contentsline {subsubsection}{Creating VHDL code from the WaveDrom file}{21}{section*.21}
+\contentsline {subsubsection}{Converting the WaveDrom file to a VHDL testbench}{23}{section*.22}
+\contentsline {subsection}{\numberline {5.1.2}Clocked designs}{24}{subsection.5.1.2}
+\contentsline {subsubsection}{Driving and checking the signals}{25}{section*.24}
+\contentsline {subsubsection}{Clock driving}{26}{section*.25}
+\contentsline {section}{\numberline {5.2}Vectors and repetitions}{29}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Vectors}{29}{subsection.5.2.1}
+\contentsline {subsubsection}{Time loops}{31}{section*.28}
+\contentsline {subparagraph}{The 'x' character}{32}{section*.30}
+\contentsline {subparagraph}{The '\textbar ' character}{32}{section*.31}
+\contentsline {subsection}{\numberline {5.2.2}Application example}{33}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Overview}{34}{section.5.3}
+\contentsline {section}{\numberline {5.4}Wave trace comparison}{36}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Ideal solution}{36}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Practical approach}{37}{subsection.5.4.2}
+\contentsline {subsubsection}{Look and feel}{39}{section*.35}
+\contentsline {subsection}{\numberline {5.4.3}Preparations}{40}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}WaveDrom result file}{43}{subsection.5.4.4}
+\contentsline {section}{\numberline {5.5}Some examples}{48}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Successful tests}{48}{subsection.5.5.1}
+\contentsline {subsubsection}{AND-gate}{48}{section*.40}
+\contentsline {subsubsection}{Shift register}{48}{section*.42}
+\contentsline {subsubsection}{UART \& SPI}{49}{section*.44}
+\contentsline {subsection}{\numberline {5.5.2}Failing tests}{50}{subsection.5.5.2}
+\contentsline {subsubsection}{AND-gate}{50}{section*.45}
+\contentsline {subsubsection}{Shift register}{52}{section*.48}
+\contentsline {subsubsection}{UART \& SPI}{53}{section*.51}
+\contentsline {section}{\numberline {5.6}Limitations \& expansions}{54}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Difficult to install}{54}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Generic input values}{54}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Simulator compatibility}{54}{subsection.5.6.3}
+\contentsline {subsection}{\numberline {5.6.4}Redundant data}{55}{subsection.5.6.4}
+\contentsline {subsection}{\numberline {5.6.5}Result readability}{55}{subsection.5.6.5}
+\contentsline {subsection}{\numberline {5.6.6}CoCoTB vs VUnit}{56}{subsection.5.6.6}
+\contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}Self checking testbenches and documentation wave traces}{57}{section.6.1}
+\contentsline {section}{\numberline {6.2}Optimizing wave trace analysis}{58}{section.6.2}
+\contentsline {section}{\numberline {6.3}Streamlining the process of validation}{59}{section.6.3}
+\contentsline {section}{\numberline {6.4}Benefits over existing verification frameworks}{60}{section.6.4}
+\contentsline {section}{\numberline {6.5}Fields of application}{61}{section.6.5}
 \contentsline {chapter}{\numberline {A}User guide}{1}{appendix.A}
 \contentsline {section}{\numberline {A.1}Dependencies}{1}{section.A.1}
 \contentsline {section}{\numberline {A.2}project input files}{2}{section.A.2}

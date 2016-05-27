@@ -79,17 +79,20 @@
 
 % front matter
 \pagestyle{plain}
-\input{chapters/permission}
 
+\input{chapters/permission}
+\pagenumbering{roman}
 \input{chapters/Foreword}
 
-\includepdf[pages=-]{extended_abstract/extended_abstract.pdf}
+\newgeometry{bottom=2.5cm}
+\includepdf[pages=-, pagecommand={\thispagestyle{plain}}]{extended_abstract/extended_abstract.pdf}
 
-
+\restoregeometry
 
 \tableofcontents 
 \clearpage
 % main matter
+\pagenumbering{arabic}
 \fancyhead[LO,RE]{\slshape \leftmark}
 \fancyfoot[C]{\thepage}
 
@@ -115,6 +118,7 @@
 \bibliography{bib/References}
 
 % end matter
+\nocite{*}
 \appendix
 \input{chapters/apendices}
 \end{document}

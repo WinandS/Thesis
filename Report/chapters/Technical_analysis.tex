@@ -13,9 +13,9 @@
 This chapter will analyse each part of the system separately based on the system overview in figure \ref{fig:overview_color}.
 \MijnFig{width=\textwidth}{images/overview_color}{Color coded overview of the program operation}{fig:overview_color}
 \section{Testbench creation}
-Creating testbenches requires several steps. First the specifications for the testbench have to be determined, then the way they will be created has to be determined and finally the source material (i.e. what the testbench will be created from) has to be chosen. Creating testbenches corresponds to the purple part in image \ref{fig:overview_color}.
+Creating testbenches requires several steps. First the specifications for the testbench have to be determined, then, the way they will be created has to be determined and finally the source material (i.e. what the testbench will be created from) has to be chosen. Creating testbenches corresponds to the purple part in image \ref{fig:overview_color}.
 \subsection{Testbench specifications}
-It is important to define the way testbenches should be constructed. Before it is possible to do this, however, the specifications for the testbenches have to be determined. This depends on which framework is used in the simulation step (blue part). Several testbench frameworks are available that improve on the standard VHDL testbenches. They offer features such as unit testing, (conditional) logging packages and many more. Some even offer the possibility to write testbenches in languages other than VHDL.
+It is important to define the way testbenches should be constructed. Before it is possible to do this, however, the specifications for the testbenches have to be determined. This depends on the framework used in the simulation step (blue part). Several testbench frameworks are available that improve on the standard VHDL testbenches. They offer features such as unit testing, (conditional) logging packages and many more. Some even offer the possibility to write testbenches in languages other than VHDL.
 \npar
 Some of the most known frameworks are listed below. The language they extend and their most important features are mentioned. These frameworks are all open source.
 \subparagraph{VUnit}: VHDL, (System)Verilog
@@ -65,13 +65,13 @@ while test_suite loop
 	end if;
 end loop;
 \end{lstlisting}\noindent
-Multiple unit tests can be implemented using the if-elsif mechanism. All tests are run by the Python test runner, which can be configured according to the user's wishes. This means that a unit test can be simulated by a Python command. These test can be run separately thanks to the VUnit framework. The framework offers the possibility to set the simulator backend that will simulate all the tests. How to set up the VUnit framework and run tests can be found in the VUnit documentation.
+Multiple unit tests can be implemented using the if-elsif mechanism. All tests are run by the Python test runner, which can be configured according to the user's wishes. This means that a unit test can be simulated by a Python command. These tests can be run separately thanks to the VUnit framework. The framework offers the possibility to set the simulator backend that will simulate all the tests. How to set up the VUnit framework and run tests can be found in the VUnit documentation.
 \subsection{Conversion script}
 With the form of the testbenches defined, a general construction method can be implemented. This is done using the popular programming language Python, because of its clarity, flexibility and ease of use. On top of this it is the language used to build the VUnit framework, which makes it easier to integrate VUnit into the software.
 \npar
 The conversion script will read the wave trace file, convert it to a VUnit compatible testbench and run it using the VUnit framework.
 \npar
-A lot of information relevant to creating testbenches could be extracted from the device description, such as the name, type and direction of all ports. For now however the conversion script expects all information to be available in the wave trace files. An optimisation can be made at a later time.
+A lot of information relevant to creating testbenches could be extracted from the device description, such as the name, type, and direction of all ports. For now, however, the conversion script expects all information to be available in the wave trace files. An optimization can be made at a later time.
 \subsection{Source file}
 The source file is the source for creating the testbench, it contains all the information necessary to create a testbench, while still being readable and understandable. Information should be easily extractable and processable. These constraints are all met by WaveDrom Files.
 \npar
@@ -80,7 +80,7 @@ WaveDrom is an open source timing diagram rendering engine that converts waveJSO
 WaveJSON \cite{wavejson}
  is an application of the JSON format. The purpose of it is to provide a compact exchange format for digital timing diagrams.
 \npar
-Standard WaveDrom files do not hold enough information to create a testbench. However, it is possible to add new JSON fields to these WaveDrom files without compromising the generated wave traces. This way any information needed can be integrated in these files.
+Standard WaveDrom files do not hold enough information to create a testbench. However, it is possible to add new JSON fields to these WaveDrom files without compromising the generated wave traces. This way any information needed can be integrated into these files.
 \section{Wave trace analysis}
 This part corresponds to the green part of image \ref{fig:overview_color}. After simulation a test will either pass or fail. This functionality is integrated in VUnit. During simulation the output is compared to the expected output and whenever they are not equal, the test will automatically fail and an error message will be generated. This error message is logged to a CSV file using the conditional logging functionality of the VUnit Check library.
 \npar

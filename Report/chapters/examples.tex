@@ -34,7 +34,7 @@ This example shows a test for a simple shift register which holds 2 bits. The sh
 \end{lstlisting}
 \MijnFig{width=\textwidth}{images/shift_result}{Simulation result for the test described in code \ref{json:shifter_result}}{fig:andgatefull}
 \subsubsection{UART \& SPI}
-Because tests are becoming more and more complex, the input and output WaveDrom files and the generated wave traces are becoming too extensive to be clearly shown here. These examples will be continued in \ref{appendix:more_examples}.
+Because tests are becoming more and more complex, the input and output WaveDrom files and the generated wave traces are becoming too extensive to be clearly shown here. These examples are continued in appendix \ref{appendix:more_examples}.
 \subsection{Failing tests}
 To show the correct function of the system, this section will show some tests that are designed to fail and that will be accordingly flagged as failing by the software.
 \subsubsection{AND-gate}\label{some_examples:andgate_failing}
@@ -57,6 +57,7 @@ This test checks the full operation of a clocked AND-gate, but the expected outp
 \begin{customenv}
 	\caption{Log messages for the test in code \ref{json:andgate_failing}}
 	\begin{itemize}
+		\centering
 		\item [W1:] Expected sig\_F =  '0',  got sig\_F =  '1' at n = 2.
 		\item [W2:] Expected sig\_F =  '0',  got sig\_F =  '1' at n = 3.
 		\item [W3:] Expected sig\_F =  '1',  got sig\_F =  '0' at n = 6.
@@ -83,6 +84,7 @@ This is a test for the same shift register as shown above, with the same input v
 \begin{customenv}
 	\caption{Log messages for the test in code \ref{json:shifter_failing}}
 	\begin{itemize}
+		\centering
 		\item [W1:] Expected sig\_Q =  '0',  got sig\_Q =  '1' at n = 3.
 		\item [W2:] Expected sig\_Q =  '0',  got sig\_Q =  '1' at n = 4.
 		\item [W3:] Expected sig\_Q =  '0',  got sig\_Q =  '1' at n = 5.
@@ -92,4 +94,4 @@ This is a test for the same shift register as shown above, with the same input v
 \end{customenv}
 \newpage
 \subsubsection{UART \& SPI}
-These examples will also be continued in appendix \ref{appendix:more_examples}.
+These examples are also be continued in appendix \ref{appendix:more_examples}.

@@ -9,18 +9,19 @@ The first element of focus is the creation of testbenches. Designers either have
 \npar
 In short, the system should be able to automatically build a self checking testbench as well as the corresponding wave traces based on the same information.
 \npar
-The second element of focus is comparing the expected output in the documentation to the simulated output of the testbenches, or simply wave trace analysis. In other words, making sure the design functions according to the documentation. Self checking testbenches perform an analysis during simulation and show errors to the user by logging them to a file or terminal, but testbenches that are not self checking leave all wave trace analysis to the user. Comparing wave traces visually is not ideal, because the complexity of some tests and their corresponding wave traces is considerable. This often results in a staring contest between designer and simulation result. Because of this, the proposed solution will not only build self checking testbenches, but will process the analysis result and show it in a user friendly and easy to understand format. 
+The second element of focus is comparing the expected output in the documentation to the simulated output of the testbenches, or simply wave trace analysis. In other words, making sure the design functions according to the documentation. Self checking testbenches perform an analysis during simulation and show errors to the user by logging them to a file or terminal, but testbenches that are not self checking leave all wave trace analysis to the user. Comparing wave traces visually is not ideal, because the complexity of some tests and their corresponding wave traces is considerable. This often results in a staring contest between designer and simulation result. Because of this, the proposed solution will not only build self checking testbenches, but will process the analysis result and show it in a user friendly and easily understandable format. 
 \npar
 In short, the system should be able to take the error reports logged by the self checking testbench and show them in an easily understandable way to a user.
 \npar
-The resulting software package should be easy to use, that is why a simple gui will be added where the user can input the source file and the VHDL design to be tested. From this information the testbench can be created and simulated by pressing a button. Finally the simulated wave traces are automatically compared to the documentations and the result is shown.
+The resulting software package should be easy to use, that is why a simple GUI will be added where the user can input the source file and the VHDL design to be tested. From this information the testbench can be created and simulated by simply pressing a button. Finally the simulated wave traces are automatically compared to the documentations and the result is shown.
 \npar
 Lastly a short analysis will be made regarding the use of this software and the benefits it provides over existing frameworks.
 \newpage
-To summarise this report will try to answer the following questions:
+To summarise, this report will try to answer the following questions:
 \begin{itemize}
 	\item Can we design a system that will streamline the process of design validation?
-	\subitem Can we design a system that can create self checking testbenches and documentation wave traces from the same source?
+	\subitem Can we design a system that can create self checking testbenches and
+	\subsubitem documentation wave traces from the same source?
 	\subitem Can we optimise wave trace analysis based on this system?
 	\item Does this system provide any benefits over existing verification frameworks?	
 \end{itemize}
