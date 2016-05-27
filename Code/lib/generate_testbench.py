@@ -5,8 +5,6 @@ testbench_template = 'vhdl_files/.template_TB.vhd'
 output_path = 'vhdl_files/test/tb_'
 log_dir = ""    # set this in main
 
-#<editor-fold desc="Description">
-#</editor-fold>
 
 #<editor-fold desc="Read tesbench template and write result testbench">
 def read_template():
@@ -23,10 +21,10 @@ def write_output(data, filename):
     test_file.close()
 #</editor-fold>
 
-#<editor-fold desc="open output in gedit (debugging)">
+#<editor-fold desc="open testbench in sigasi studio (debugging)">
 def open_output(filename):
-    # os.system("/opt/sigasi/sigasi " + output_path + filename + ".vhd")
-    os.system("gedit " + output_path + filename + ".vhd")
+    os.system("/opt/sigasi/sigasi " + output_path + filename + ".vhd")
+    # os.system("gedit " + output_path + filename + ".vhd")
 #</editor-fold>
 
 
@@ -152,7 +150,7 @@ def set_up_signal_value_constants(testbench, signal_values):
 
 
 def set_up_signals(testbench, signal_declarations):
-    # <editor-fold desc="Add description">
+    # <editor-fold desc="Declare all signals">
     signal_types = ["Clock", "Input", "Output"]
     i = 0
     for type in signal_declarations:
@@ -165,7 +163,9 @@ def set_up_signals(testbench, signal_declarations):
     return testbench
     # </editor-fold>
 
+
 def set_up_stimulus_process(testbench, test_name, input_signals):
+    #<editor-fold desc="Create signal driving code">
     testbench = testbench.replace("test_name", test_name)  # set test name
     is_clocked = False
     if len(input_signals[0]) > 0:
@@ -203,9 +203,11 @@ def set_up_stimulus_process(testbench, test_name, input_signals):
     testbench = testbench.replace(loop_find_rising, loop_rising_stimulus)
     testbench = testbench.replace(find_falling, falling_stimulus)
     return testbench.replace(loop_find_falling, loop_falling_stimulus)
+    #</editor-fold>
 
 
 def set_up_check_process(testbench, output_signals):
+    #<editor-fold desc="Create signal checking code">
     checking = ""
 
     for signal in output_signals:
@@ -244,10 +246,11 @@ def set_up_check_process(testbench, output_signals):
 
     find = "--# test checking"
     return testbench.replace(find, checking)
+    #</editor-fold>
 
 
-# - add all timing related elements to vhdl file
 def set_up_timing(testbench, signals):
+    #<editor-fold desc="Add all timing related elements to vhdl file">
     # - add clock period
     find = "--# Constants"
     replace = ""
@@ -326,10 +329,11 @@ def set_up_timing(testbench, signals):
     testbench = testbench.replace(find_end, replace_end + "\n")
 
     return testbench
+    #</editor-fold>
 
 
-# - declare new types to be used in value constants declaration
 def declare_helper_types(testbench, signals):
+    #<editor-fold desc="Generate helper types">
     types = [[], []]
     i = 0
     for signal_type in signals:  # here type is clock, input or output
@@ -352,10 +356,13 @@ def declare_helper_types(testbench, signals):
                         + str(logic_type) + ";" + "\n"
 
     return testbench.replace(find, find + "\n" + replace_type)
+    #</editor-fold>
 
 
 def generate_testbench(testbench, entity_name, port_declaration, port_map, signal_declarations, signal_values,
                        filename, test_name, signals):
+    #<editor-fold desc="Place all testbench building blocks in testbench template and save result">
+
     # set output directory
     find = "output_directory"
     replace = log_dir
@@ -400,3 +407,4 @@ def generate_testbench(testbench, entity_name, port_declaration, port_map, signa
     testbench = set_up_stimulus_process(testbench, test_name, signals[0:2])
     testbench = set_up_check_process(testbench, signals[2])
     return testbench
+    #</editor-fold>
