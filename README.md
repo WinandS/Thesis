@@ -61,7 +61,7 @@ In some cases the output at a specific point in time is undefined or is of no in
 
 
 ## example
-ere is an example input file testing the design of an UART transmitter design "uart_tx" available [here](https://github.ugent.be/wseldesl/Thesis/tree/master/examples/uart/vhdl_files/src). Two consecutive bytes are sent over the serial output port. Input signals as well as expected output signals are defined.
+Here is an example input file testing the design of an UART transmitter design "uart_tx" available [here](https://github.ugent.be/wseldesl/Thesis/tree/master/examples/uart/vhdl_files/src). Two consecutive bytes are sent over the serial output port. Input signals as well as expected output signals are defined.
 
 ```json
 {"name": "uart_tx", "test" : "uart_send_2_bytes", "description": "A test for sending two consecutive bytes with an parallel to serial uart", "signal": [
