@@ -110,6 +110,7 @@ def create_and_simulate_tests():
 
     for filename in glob.glob("json_resources/*.json"):
 
+
         # - import wavedrom input, extract signals from raw data
         entity_name, test_name, test_description, signals = read_json.extract_info(filename)
 

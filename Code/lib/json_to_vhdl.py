@@ -4,8 +4,6 @@ def generate_signal_declaration(json_signal):
     signal_name = json_signal["name"]
     signal_type = json_signal["type"]
 
-    return "    signal sig_" + signal_name + " : " + signal_type + " := 0;"
-
     try:
         vector_max = str(int(json_signal["vector_size"]) - 1)
         signal_type = signal_type + "(" + vector_max + " downto 0)"
