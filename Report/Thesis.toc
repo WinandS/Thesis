@@ -52,9 +52,9 @@
 \contentsline {section}{\numberline {A.1}Dependencies}{1}{section.A.1}
 \contentsline {section}{\numberline {A.2}project input files}{2}{section.A.2}
 \contentsline {subsection}{\numberline {A.2.1}Making your own WaveDrom input files}{2}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Standard input file}{2}{subsection.A.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Unicode keys}{3}{subsection.A.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Supported characters}{3}{subsection.A.2.4}
+\contentsline {subsubsection}{Standard input file}{2}{section*.43}
+\contentsline {subsubsection}{Unicode keys}{3}{section*.44}
+\contentsline {subsubsection}{Supported characters}{3}{section*.45}
 \contentsline {section}{\numberline {A.3}Extra features}{4}{section.A.3}
 \contentsline {subsection}{\numberline {A.3.1}time loops ('\textbar ')}{4}{subsection.A.3.1}
 \contentsline {subsection}{\numberline {A.3.2}check skipping ('x')}{4}{subsection.A.3.2}

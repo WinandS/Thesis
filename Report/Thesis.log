@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.10)  27 MAY 2016 11:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.10)  27 MAY 2016 11:20
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -2036,7 +2036,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-<images/uart_2_bytes_result.png, id=1193, 1405.25pt x 246.9225pt>
+<images/uart_2_bytes_result.png, id=1196, 1405.25pt x 246.9225pt>
 File: images/uart_2_bytes_result.png Graphic file (type png)
 
 <use images/uart_2_bytes_result.png>
@@ -2058,7 +2058,7 @@ l.23 \clearpage
                    \relax 
 l.23 \clearpage
                 [2 <./images/uart_2_bytes_result.png>]
-<images/SPI_success.png, id=1218, 2549.525pt x 367.3725pt>
+<images/SPI_success.png, id=1221, 2549.525pt x 367.3725pt>
 File: images/SPI_success.png Graphic file (type png)
 
 <use images/SPI_success.png>
@@ -2082,7 +2082,7 @@ l.46 ... \ref{json:spi}}{fig:spi_result}\clearpage
                    \relax 
 l.46 ... \ref{json:spi}}{fig:spi_result}\clearpage
                                                    [4 <./images/SPI_success.png
->] <images/uart_failing.png, id=1250, 1405.25pt x 180.675pt>
+>] <images/uart_failing.png, id=1253, 1405.25pt x 180.675pt>
 File: images/uart_failing.png Graphic file (type png)
 
 <use images/uart_failing.png>
@@ -2093,7 +2093,7 @@ Overfull \hbox (16.5662pt too wide) in paragraph at lines 62--62
  [] 
  []
 
-<images/uart_failing_result.png, id=1253, 1465.475pt x 307.1475pt>
+<images/uart_failing_result.png, id=1256, 1465.475pt x 307.1475pt>
 File: images/uart_failing_result.png Graphic file (type png)
 
 <use images/uart_failing_result.png>
@@ -2117,7 +2117,7 @@ dentifier (name{page.6}) has been already used, duplicate ignored
                    \relax 
 l.73 \end{customenv}\clearpage
                               \noindent [6 <./images/uart_failing_result.png>]
-<images/SPI_failing.png, id=1282, 2549.525pt x 301.125pt>
+<images/SPI_failing.png, id=1285, 2549.525pt x 301.125pt>
 File: images/SPI_failing.png Graphic file (type png)
 
 <use images/SPI_failing.png>
@@ -2128,7 +2128,7 @@ Overfull \hbox (16.5662pt too wide) in paragraph at lines 94--94
  [] 
  []
 
-<images/SPI_failing_result.png, id=1285, 2609.75pt x 457.71pt>
+<images/SPI_failing_result.png, id=1288, 2609.75pt x 457.71pt>
 File: images/SPI_failing_result.png Graphic file (type png)
 
 <use images/SPI_failing_result.png>
@@ -2297,9 +2297,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
  (Thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 61F65E9512A986DBA1B7F9E740A2CA2B;4134.
 
+
+Package rerunfilecheck Warning: File `Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis.out':
+(rerunfilecheck)             Before: 61F65E9512A986DBA1B7F9E740A2CA2B;4134
+(rerunfilecheck)             After:  AAA4D6697B298D4FF0F378F7E97D13B0;3918.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2312,27 +2318,36 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 12561 strings out of 493634
- 183215 string characters out of 3141314
+ 12564 strings out of 493634
+ 183248 string characters out of 3141314
  474148 words of memory out of 3000000
  14858 multiletter control sequences out of 15000+200000
  14723 words of font info for 57 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  39i,18n,49p,1527b,1915s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Thesis.pdf (96 pages, 1262695 bytes).
+pdfTeX warning (dest): name{subsection.A.2.4} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.A.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.A.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Thesis.pdf (96 pages, 1266096 bytes).
 PDF statistics:
- 1868 PDF objects out of 2073 (max. 8388607)
- 828 named destinations out of 1000 (max. 500000)
+ 1873 PDF objects out of 2073 (max. 8388607)
+ 831 named destinations out of 1000 (max. 500000)
  682 words of extra memory for PDF output out of 10000 (max. 10000000)
 

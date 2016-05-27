@@ -12,7 +12,7 @@ The final product of this project is a software tool written in Python that can 
 \section{project input files}
 \subsection{Making your own WaveDrom input files}
 These guidelines will help users to create WaveDrom files compatible with the system. Normal operation is not guaranteed when these guidelines are not respected.
-\subsection{Standard input file}
+\subsubsection{Standard input file}
 This project uses WaveDrom files as the base for its input file. Some fields have been added to the standard JSON file and should always be included as shown in the example below. Each WaveDrom file used with this software should contain these elements:
 \begin{itemize}
 	\item [name(*):] this should be the exact name of the unit under test
@@ -24,7 +24,7 @@ This project uses WaveDrom files as the base for its input file. Some fields hav
 	\item [clock\_period:] (optional) The designer can specify a clock signal, otherwise the clock period will default to 20 ns for each internal clock period
 \end{itemize}
 Next to these extra fields, each signal should be placed under the apropriate label. All input signals should be under one "IN" label, all output signals under one "OUT" label and the clock signal under the "CLK" label. The clock signal is regarded as a special case input signal and is treated seperately.\newpage
-\subsection{Unicode keys}
+\subsubsection{Unicode keys}
 Although WaveDrom supports non unicode keys. e.g.:
 \begin{lstlisting}[style=json]
 {period : 2}
@@ -33,7 +33,7 @@ The python JSON package used does not. Because of this all keys must be unicode 
 \begin{lstlisting}[style=json]
 {"period" : 2}
 \end{lstlisting}
-\subsection{Supported characters}
+\subsubsection{Supported characters}
 Not all wavedrom characters are currently supported. The supported characters are:
 \npar
 In a clock signal: 
