@@ -4,6 +4,8 @@ The goal of this project is to create a VHDL verification tool where user input 
 
 The testbenches being created are based on VUnit. They hold unit tests that can are automatically run using an external simulator.
 
+For a detailed analysis of this project, please read the [report](https://github.ugent.be/wseldesl/Thesis/blob/master/Report/Thesis.pdf)
+
 # Dependencies
 The final product of this project is a software tool written in Python that can run on any computer that complies to these conditions:
  * It runs a linux distribution (developed on Ubuntu 14.04 LTS)
@@ -75,7 +77,7 @@ ere is an example input file testing the design of an UART transmitter design "u
 ```
 the generated wave trace file looks like this:
 
-![Wavedrom example](http://postimg.org/image/z5gt0wmon/full/)
+![Wavedrom example](https://github.ugent.be/wseldesl/Thesis/blob/master/Report/images/uart_2_bytes_failing.png)
 
 # Starting the tool
  * Make sure you have met all requirements for running the program 
