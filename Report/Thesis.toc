@@ -35,28 +35,19 @@
 \contentsline {subsubsection}{Look and feel}{39}{section*.35}
 \contentsline {subsection}{\numberline {5.4.3}Preparations}{40}{subsection.5.4.3}
 \contentsline {subsection}{\numberline {5.4.4}WaveDrom result file}{43}{subsection.5.4.4}
-\contentsline {section}{\numberline {5.5}Some examples}{48}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Successful tests}{48}{subsection.5.5.1}
-\contentsline {subsubsection}{AND-gate}{48}{section*.40}
-\contentsline {subsubsection}{Shift register}{48}{section*.42}
-\contentsline {subsubsection}{UART \& SPI}{49}{section*.44}
-\contentsline {subsection}{\numberline {5.5.2}Failing tests}{50}{subsection.5.5.2}
-\contentsline {subsubsection}{AND-gate}{50}{section*.45}
-\contentsline {subsubsection}{Shift register}{52}{section*.48}
-\contentsline {subsubsection}{UART \& SPI}{53}{section*.51}
-\contentsline {section}{\numberline {5.6}Limitations \& expansions}{54}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Difficult to install}{54}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}Generic input values}{54}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Simulator compatibility}{54}{subsection.5.6.3}
-\contentsline {subsection}{\numberline {5.6.4}Redundant data}{55}{subsection.5.6.4}
-\contentsline {subsection}{\numberline {5.6.5}Result readability}{55}{subsection.5.6.5}
-\contentsline {subsection}{\numberline {5.6.6}CoCoTB vs VUnit}{56}{subsection.5.6.6}
-\contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Self checking testbenches and documentation wave traces}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}Optimizing wave trace analysis}{58}{section.6.2}
-\contentsline {section}{\numberline {6.3}Streamlining the process of validation}{59}{section.6.3}
-\contentsline {section}{\numberline {6.4}Benefits over existing verification frameworks}{60}{section.6.4}
-\contentsline {section}{\numberline {6.5}Fields of application}{61}{section.6.5}
+\contentsline {section}{\numberline {5.5}Limitations \& expansions}{48}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Difficult to install}{48}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Generic input values}{48}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Simulator compatibility}{48}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}Redundant data}{49}{subsection.5.5.4}
+\contentsline {subsection}{\numberline {5.5.5}Result readability}{49}{subsection.5.5.5}
+\contentsline {subsection}{\numberline {5.5.6}CoCoTB vs VUnit}{50}{subsection.5.5.6}
+\contentsline {chapter}{\numberline {6}Conclusion}{51}{chapter.6}
+\contentsline {section}{\numberline {6.1}Self checking testbenches and documentation wave traces}{51}{section.6.1}
+\contentsline {section}{\numberline {6.2}Optimizing wave trace analysis}{52}{section.6.2}
+\contentsline {section}{\numberline {6.3}Streamlining the process of validation}{53}{section.6.3}
+\contentsline {section}{\numberline {6.4}Benefits over existing verification frameworks}{54}{section.6.4}
+\contentsline {section}{\numberline {6.5}Fields of application}{55}{section.6.5}
 \contentsline {chapter}{\numberline {A}User guide}{1}{appendix.A}
 \contentsline {section}{\numberline {A.1}Dependencies}{1}{section.A.1}
 \contentsline {section}{\numberline {A.2}project input files}{2}{section.A.2}
