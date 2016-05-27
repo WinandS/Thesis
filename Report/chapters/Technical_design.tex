@@ -72,7 +72,7 @@ def generate_signal_declaration(json_signal):
 	
 	#example: "signal sig_example : std_logic :='0';
 	return "signal sig_" + signal_name + " : " + \
-					signal_type + " := 0;"
+					signal_type + " := '0';"
 \end{lstlisting}\noindent
 This method reads the information regarding a single JSON signal and produces a VHDL signal declaration string which initializes the signal to '0'.
 \npar
