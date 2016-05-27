@@ -5,7 +5,10 @@ testbench_template = 'vhdl_files/.template_TB.vhd'
 output_path = 'vhdl_files/test/tb_'
 log_dir = ""    # set this in main
 
+#<editor-fold desc="Description">
+#</editor-fold>
 
+#<editor-fold desc="Read tesbench template and write result testbench">
 def read_template():
     with open(testbench_template, 'r') as template_file:
         template = template_file.read()
@@ -13,26 +16,22 @@ def read_template():
     return template
 
 
-# def read_file_to_test():
-#     with open(file_to_test, 'r') as template_file:
-#             template = template_file.read()
-#     template_file.close()
-#     return template
-
-
 def write_output(data, filename):
     complete_filename = output_path + filename + ".vhd"
     with open(complete_filename, 'w') as test_file:
         test_file.write(data)
     test_file.close()
+#</editor-fold>
 
-
+#<editor-fold desc="open output in gedit (debugging)">
 def open_output(filename):
     # os.system("/opt/sigasi/sigasi " + output_path + filename + ".vhd")
     os.system("gedit " + output_path + filename + ".vhd")
+#</editor-fold>
 
 
 def clean_testbench_template(template):
+    # <editor-fold desc="Clean comments from template">
     pattern = re.compile('--/')
     # TODO: make this better
     for x in range(0, 15):
@@ -45,9 +44,11 @@ def clean_testbench_template(template):
             template = template.replace(template[s:e + 1], "")
             break
     return template
+    # </editor-fold>
 
 
 def set_up_uut(testbench, entity_name, port_declaration, port_map, filename):
+    # <editor-fold desc="Add UUT related building blocks to the template">
     testbench = testbench.replace("entity_name", filename)
     testbench = testbench.replace("COMPONENT uut", "COMPONENT " + entity_name + '\n')
     testbench = testbench.replace("UUT PORT MAP", entity_name + " PORT MAP")
@@ -56,11 +57,14 @@ def set_up_uut(testbench, entity_name, port_declaration, port_map, filename):
     testbench = testbench.replace("PORT MAP();", port_map + "\n")
 
     return testbench
+    #</editor-fold>
 
 
-# declare clock cycles constant
 def set_clock_cycles_constant(testbench, first_in_signal):
-    # TODO: fix this cheating
+    # <editor-fold desc="Declare clock cycles constant">
+    # clock cycle constant is derived from first input signal. It is equal to its length.
+    # TODO: fix this cheating. If the design is combinatorical, clcok_cycles should be 1, but it is changed to 2,
+    # TODO: because there can be no array of length 1.
     length = len(first_in_signal["wave"])
 
     try:
@@ -75,10 +79,11 @@ def set_clock_cycles_constant(testbench, first_in_signal):
     replace = find + "\n" + "constant clock_cycles : integer := " + str(length * period) + ";"
 
     return testbench.replace(find, replace)
-
+    #</editor-fold>
 
 # set up everything related to timing
 def set_up_waiting_necessities(testbench, json_loop_times, relative_period):
+    # <editor-fold desc="If the design has loops, add the necessary building blocks">
     find = "--# Wait Variables"
     replace = find + "\n" + " variable wait_array_index : integer := 0;" + \
               "variable wait_variable : integer := wait_array(wait_array_index);"
@@ -132,27 +137,33 @@ def set_up_waiting_necessities(testbench, json_loop_times, relative_period):
     wait_array += ", 0"
     replace = find + "\n" + "constant wait_array : wait_integer_array := (" + wait_array[2:] + ");"
     return testbench.replace(find, replace)
+    # </editor-fold>
 
 
 def set_up_signal_value_constants(testbench, signal_values):
+    # <editor-fold desc="Declare all value arrays">
     constants_declaration = ""
     for signal_value in signal_values:
         constants_declaration += signal_value + "\n"
     find = "--# Constants"
     constants_declaration = find + "\n" + constants_declaration
     return testbench.replace(find, constants_declaration)
+    #</editor-fold>
 
 
 def set_up_signals(testbench, signal_declarations):
+    # <editor-fold desc="Add description">
     signal_types = ["Clock", "Input", "Output"]
+    i = 0
     for type in signal_declarations:
         if len(type) > 0:
             for signal_decl in type:
                 find = "--# " + signal_types[i] + " Signals"
                 replace = find + "\n" + signal_decl
                 testbench = testbench.replace(find, replace)
+        i += 1
     return testbench
-
+    # </editor-fold>
 
 def set_up_stimulus_process(testbench, test_name, input_signals):
     testbench = testbench.replace("test_name", test_name)  # set test name

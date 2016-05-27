@@ -13,12 +13,12 @@ from Tkinter import *
 log_dir = generate_testbench.log_dir = ".warning_log"
 testbench_dir = "vhdl_files/test"
 
-# relative directory for result files. This is the user output
+# relative directory for result files. This is the user output folder.
 result_dir = "result"
 
 # print generate_testbench.log_dir
 
-
+#<editor-fold desc="Code fold containing gui related functions">
 class Window(Frame):
 
     def __init__(self, master=None):
@@ -83,8 +83,9 @@ elif sys.platform == 'linux2':
 elif sys.platform == 'win32':
     def openFolder(path):
         subprocess.check_call(['explorer', path])
+#</editor-fold>
 
-
+#<editor-fold desc="Code fold containing tool related function">
 def run_all():
     # create_and_simulate_tests()
     try:
@@ -164,7 +165,7 @@ def process_simulation_result():
 
     # - create wave trace comparison files
     compare_wave_traces.create_comparison_files(generate_testbench.log_dir, result_dir)
-
+#</editor-fold>
 
 # - run gui
 init()
