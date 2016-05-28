@@ -52,7 +52,7 @@ In an output signal:
 \end{lstlisting}\newpage
 \section{Extra features}
 \subsection{time loops ('\textbar')}
-It is possible to simulate a period where the input never changes. By using the '\textbar' character in the clock signal and the 'loop\_times' field a loop is defined. They specify the moment this period should start and the amount of clock cycles it should last. In the example above the first loop period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentially). During this loop the checks at this moment are repeated every clock cycle. For obvious reasons this feature can only be used when a clock signal is present.
+It is possible to simulate a period where the input never changes. By using the '\textbar' character in the clock signal and the 'loop\_times' field a loop is defined. They specify the moment this period should start and the amount of clock cycles it should last. In the example bolow, the first loop period starts at the eighth clock period and lasts for 10*434 clock periods. This is the time required for the design to send 10 bits over tx (one start and one stop bit, and the data from tdata sent sequentially). During this loop the checks at this moment are repeated every clock cycle. For obvious reasons this feature can only be used when a clock signal is present.
 \subsection{check skipping ('x')}
 In some cases the output at a specific point in time is undefined or is of no interest to the designer. In this case the designer can use the 'x' character, which means that the signal should not be checked at this point. This character is only valid for output signals.\newpage
 \section{Example}
@@ -73,7 +73,7 @@ The generated wave trace file can be found in appendix \ref{appendix:more_exampl
 \newpage
 \section{Starting the tool}
 \begin{enumerate}
-	\item go to https://github.ugent.be/wseldesl/Thesis
+	\item Go to https://github.ugent.be/wseldesl/Thesis
 	\item Make sure you have met all requirements for running the program 
 	\item Download the software as a zip file
 	\item Extract the zip file
