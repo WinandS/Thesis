@@ -21,7 +21,7 @@ These guidelines will help users to create WaveDrom files compatible with the sy
 This project uses WaveDrom files as the base for its input file. Some fields have been added to the standard JSON file and should always be included as shown in the example below. The added fields are:
 * name(*) : this should be the exact name of the unit under test
 * test : this is the name for this test
-* description : holds the descrition for this test
+* description : holds the description for this test
 * type : should be specified for every signal; The type specifies the VHDL logic type for this signal
 * vector_size : for vectors (like tdata in the example below) the vector size should also be specified. This is the amount of bits that the vector represents
 * data : The data that the vector holds should be specified in this list
