@@ -4,7 +4,7 @@ The goal of this project is to create a VHDL verification tool where user input 
 
 The testbenches being created are based on VUnit. They hold unit tests that can are automatically run using an external simulator.
 
-For a detailed analysis of this project, please read the [report](https://github.ugent.be/wseldesl/Thesis/blob/master/Report/Thesis.pdf)
+For a detailed analysis of this project, please read the [report](https://github.ugent.be/wseldesl/Thesis/blob/master/Report/Thesis.pdf).
 
 # Dependencies
 The final product of this project is a software tool written in Python that can run on any computer that complies to these conditions:
