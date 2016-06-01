@@ -10,7 +10,7 @@ In light of improving hardware design verification this report has tried to answ
 	\item Does this system provide any benefits over existing verification frameworks?	
 \end{itemize}
 The sections below will recapitulate the solution provided in this report and answer these questions.
-\section{Self checking testbenches and documentation wave traces}
+\section{Self-checking testbenches and documentation wave traces}
 The basic assumption at the start of the project was that it should be possible to create both documentation wave traces and testbenches from the same file. Finding the correct format for this file was imperative. The solution proposed by the promoters of this project seemed ideal. WaveDrom can draw a timing diagram (or wave traces) from a simple description. This description is provided in a waveJSON format. Using WaveDrom, half of the desired functionality was obtained. The second half, creating self-checking testbenches, was made possible by adding some extra required information to the original WaveDrom file. The adapted WaveDrom file is now considered a complete source file and holds all data needed to create a testbench for a specific design. It is a compact and simple way to hold all of the required information.
 \npar
 As there was no tool that could create test benches from the source file yet, it had to be developed. Based on some increasingly complex design examples, Python based software was developed that can translate the info in the source file into a fully fledged self-checking testbench. This testbench satisfies the conditions set by the VUnit framework.

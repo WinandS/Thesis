@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.10)  28 MAY 2016 10:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.10)  29 MAY 2016 19:59
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -676,22 +676,22 @@ LaTeX Warning: Label `appendix:shifter' multiply defined.
 )
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 72.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -700,9 +700,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
+LaTeX Info: Redefining \ref on input line 72.
+LaTeX Info: Redefining \pageref on input line 72.
+LaTeX Info: Redefining \nameref on input line 72.
 
 (Thesis.out) (Thesis.out)
 \@outlinefile=\write3
@@ -764,37 +764,37 @@ Package caption Info: End \AtBeginDocument code.
 <title_page.pdf, id=251, 597.23125pt x 845.1575pt>
 File: title_page.pdf Graphic file (type pdf)
  <use title_page.pdf>
-Package pdftex.def Info: title_page.pdf used on input line 71.
+Package pdftex.def Info: title_page.pdf used on input line 74.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: title_page.pdf Graphic file (type pdf)
 
 <use title_page.pdf>
-Package pdftex.def Info: title_page.pdf used on input line 71.
+Package pdftex.def Info: title_page.pdf used on input line 74.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
 <title_page.pdf, id=254, page=1, 597.23125pt x 845.1575pt>
 File: title_page.pdf Graphic file (type pdf)
 
 <use title_page.pdf, page 1>
-Package pdftex.def Info: title_page.pdf, page1 used on input line 71.
+Package pdftex.def Info: title_page.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: title_page.pdf Graphic file (type pdf)
  <use title_page.pdf, page 1>
-Package pdftex.def Info: title_page.pdf, page1 used on input line 71.
+Package pdftex.def Info: title_page.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: title_page.pdf Graphic file (type pdf)
 
 <use title_page.pdf, page 1>
-Package pdftex.def Info: title_page.pdf, page1 used on input line 71.
+Package pdftex.def Info: title_page.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: title_page.pdf Graphic file (type pdf)
  <use title_page.pdf, page 1>
-Package pdftex.def Info: title_page.pdf, page1 used on input line 71.
+Package pdftex.def Info: title_page.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
 File: title_page.pdf Graphic file (type pdf)
 
 <use title_page.pdf, page 1>
-Package pdftex.def Info: title_page.pdf, page1 used on input line 71.
+Package pdftex.def Info: title_page.pdf, page1 used on input line 74.
 (pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
  [1
 
@@ -809,14 +809,14 @@ Package pdftex.def Info: title_page.pdf, page1 used on input line 71.
 File: images/ruglogo.pdf Graphic file (type pdf)
 
 <use images/ruglogo.pdf>
-Package pdftex.def Info: images/ruglogo.pdf used on input line 77.
+Package pdftex.def Info: images/ruglogo.pdf used on input line 80.
 (pdftex.def)             Requested size: 150.50424pt x 131.59967pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 77.
+LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 77.
+LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -824,7 +824,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77 \thispagestyle
+l.80 \thispagestyle
                    {empty} [1{C:/Users/winan/AppData/Local/MiKTeX/2.9/pdftex/co
 nfig/pdftex.map} <./images/ruglogo.pdf>] (chapters/permission.texpdfTeX warning
  (ext4): destination with the same identifier (name{page.1}) has been already u
@@ -845,12 +845,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--1
 [1
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 2--86
+Underfull \hbox (badness 10000) in paragraph at lines 2--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--86
+Underfull \hbox (badness 10000) in paragraph at lines 2--89
 
  []
 
@@ -895,13 +895,13 @@ File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf used on input 
-line 88.
+line 91.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf used on input 
-line 88.
+line 91.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 
 <extended_abstract/extended_abstract.pdf, id=292, page=1, 597.55246pt x 845.197
@@ -909,93 +909,93 @@ line 88.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
  <use extended_abstract/extended_abstract.pdf, page 1>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page1 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 1>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page1 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 1>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page1 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 1>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page1 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 1>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page1 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
  [3
 
  <./extended_abstract/extended_abstract.pdf>]
-<extended_abstract/extended_abstract.pdf, id=329, page=2, 597.55246pt x 845.197
+<extended_abstract/extended_abstract.pdf, id=333, page=2, 597.55246pt x 845.197
 63pt>
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
  <use extended_abstract/extended_abstract.pdf, page 2>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page2 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 2>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page2 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 2>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page2 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
  [4 <./extended_abstract/extended_abstract.pdf>]
-<extended_abstract/extended_abstract.pdf, id=354, page=3, 597.55246pt x 845.197
+<extended_abstract/extended_abstract.pdf, id=358, page=3, 597.55246pt x 845.197
 63pt>
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
  <use extended_abstract/extended_abstract.pdf, page 3>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page3 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 3>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page3 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 3>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page3 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
  [5 <./extended_abstract/extended_abstract.pdf>]
-<extended_abstract/extended_abstract.pdf, id=365, page=4, 597.55246pt x 845.197
+<extended_abstract/extended_abstract.pdf, id=369, page=4, 597.55246pt x 845.197
 63pt>
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
  <use extended_abstract/extended_abstract.pdf, page 4>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page4 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 4>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page4 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf, page 4>
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page4 used on
- input line 88.
+ input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
  [6 <./extended_abstract/extended_abstract.pdf>] (Thesis.toc [7
 
@@ -1015,11 +1015,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
  [9]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 96.
+less on input line 99.
 
 (chapters/Introduction.tex
 Chapter 1.
-<images/overview.png, id=449, 668.4975pt x 343.2825pt>
+<images/overview.png, id=453, 668.4975pt x 343.2825pt>
 File: images/overview.png Graphic file (type png)
 
 <use images/overview.png>
@@ -1066,51 +1066,51 @@ been already used, duplicate ignored
                    \relax 
 l.19 \newpage
              \noindent [2 <./images/overview.png>]
-<images/andgate_example.png, id=459, 662.475pt x 166.6225pt>
+<images/andgate_example.png, id=463, 662.475pt x 166.6225pt>
 File: images/andgate_example.png Graphic file (type png)
 
 <use images/andgate_example.png>
 Package pdftex.def Info: images/andgate_example.png used on input line 21.
 (pdftex.def)             Requested size: 387.00153pt x 97.33519pt.
 
-<images/simulation.png, id=462, 504.08325pt x 180.675pt>
+<images/simulation.png, id=466, 504.08325pt x 180.675pt>
 File: images/simulation.png Graphic file (type png)
 
 <use images/simulation.png>
 Package pdftex.def Info: images/simulation.png used on input line 23.
 (pdftex.def)             Requested size: 387.00153pt x 138.7149pt.
- <images/modelsim.png, id=464, 658.46pt x 80.3pt>
+ <images/modelsim.png, id=468, 658.46pt x 80.3pt>
 File: images/modelsim.png Graphic file (type png)
 
 <use images/modelsim.png>
 Package pdftex.def Info: images/modelsim.png used on input line 25.
 (pdftex.def)             Requested size: 387.00153pt x 47.19646pt.
 
-<images/validation_old.png, id=466, 1023.825pt x 501.875pt>
+<images/validation_old.png, id=470, 1023.825pt x 501.875pt>
 File: images/validation_old.png Graphic file (type png)
 
 <use images/validation_old.png>
 Package pdftex.def Info: images/validation_old.png used on input line 35.
 (pdftex.def)             Requested size: 430.00462pt x 210.78606pt.
 
-<images/validation_new.png, id=469, 1184.425pt x 562.1pt>
+<images/validation_new.png, id=473, 1184.425pt x 562.1pt>
 File: images/validation_new.png Graphic file (type png)
 
 <use images/validation_new.png>
 Package pdftex.def Info: images/validation_new.png used on input line 37.
 (pdftex.def)             Requested size: 430.00462pt x 204.07123pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 19--102
+Underfull \hbox (badness 10000) in paragraph at lines 19--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--102
+Underfull \hbox (badness 10000) in paragraph at lines 19--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--102
+Underfull \hbox (badness 10000) in paragraph at lines 19--105
 
  []
 
@@ -1208,7 +1208,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] <images/andgate_failing.png, id=527, 682.55pt x 216.81pt>
+[10] <images/andgate_failing.png, id=531, 682.55pt x 216.81pt>
 File: images/andgate_failing.png Graphic file (type png)
 
 <use images/andgate_failing.png>
@@ -1233,7 +1233,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11 <./images/andgate_failing.png>]
-<images/gui.png, id=535, 501.875pt x 148.555pt>
+<images/gui.png, id=539, 501.875pt x 148.555pt>
 File: images/gui.png Graphic file (type png)
  <use images/gui.png>
 Package pdftex.def Info: images/gui.png used on input line 37.
@@ -1263,7 +1263,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 Chapter 4.
-<images/overview_color.png, id=549, 668.4975pt x 379.4175pt>
+<images/overview_color.png, id=553, 668.4975pt x 379.4175pt>
 File: images/overview_color.png Graphic file (type png)
 
 <use images/overview_color.png>
@@ -1331,7 +1331,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--84
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 85--108
+Underfull \hbox (badness 10000) in paragraph at lines 85--111
 
  []
 
@@ -1370,7 +1370,7 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 
 [19
 
-] <images/comb_and0.png, id=619, 100.375pt x 90.3375pt>
+] <images/comb_and0.png, id=623, 100.375pt x 90.3375pt>
 File: images/comb_and0.png Graphic file (type png)
 
 <use images/comb_and0.png>
@@ -1430,7 +1430,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24] <images/andgate_full.png, id=712, 662.475pt x 150.5625pt>
+[24] <images/andgate_full.png, id=716, 662.475pt x 150.5625pt>
 File: images/andgate_full.png Graphic file (type png)
 
 <use images/andgate_full.png>
@@ -1485,7 +1485,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26] <images/clocks.png, id=737, 481.8pt x 170.6375pt>
+[26] <images/clocks.png, id=741, 481.8pt x 170.6375pt>
 File: images/clocks.png Graphic file (type png)
  <use images/clocks.png>
 Package pdftex.def Info: images/clocks.png used on input line 180.
@@ -1512,7 +1512,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28] <images/uart_no_wait.png, id=777, 762.85pt x 180.675pt>
+[28] <images/uart_no_wait.png, id=781, 762.85pt x 180.675pt>
 File: images/uart_no_wait.png Graphic file (type png)
 
 <use images/uart_no_wait.png>
@@ -1537,7 +1537,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30 <./images/uart_no_wait.png>]
-<images/uart_wait.png, id=806, 762.85pt x 180.675pt>
+<images/uart_wait.png, id=810, 762.85pt x 180.675pt>
 File: images/uart_wait.png Graphic file (type png)
 
 <use images/uart_wait.png>
@@ -1564,14 +1564,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32] <images/uart_2_bytes.png, id=839, 1405.25pt x 180.675pt>
+[32] <images/uart_2_bytes.png, id=843, 1405.25pt x 180.675pt>
 File: images/uart_2_bytes.png Graphic file (type png)
 
 <use images/uart_2_bytes.png>
 Package pdftex.def Info: images/uart_2_bytes.png used on input line 263.
 (pdftex.def)             Requested size: 387.00153pt x 49.75607pt.
 
-<images/tb_code_overview.png, id=846, 407.42212pt x 485.11238pt>
+<images/tb_code_overview.png, id=850, 407.42212pt x 485.11238pt>
 File: images/tb_code_overview.png Graphic file (type png)
 
 <use images/tb_code_overview.png>
@@ -1624,7 +1624,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
-<images/error_example.png, id=878, 642.4pt x 186.6975pt>
+<images/error_example.png, id=882, 642.4pt x 186.6975pt>
 File: images/error_example.png Graphic file (type png)
 
 <use images/error_example.png>
@@ -1712,7 +1712,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-<images/wave_trace_analysis_overview.png, id=969, 374.90062pt x 388.45125pt>
+<images/wave_trace_analysis_overview.png, id=973, 374.90062pt x 388.45125pt>
 File: images/wave_trace_analysis_overview.png Graphic file (type png)
 
 <use images/wave_trace_analysis_overview.png>
@@ -1758,7 +1758,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45] <images/andgate_failing_part.png, id=1001, 682.55pt x 216.81pt>
+[45] <images/andgate_failing_part.png, id=1005, 682.55pt x 216.81pt>
 File: images/andgate_failing_part.png Graphic file (type png)
 
 <use images/andgate_failing_part.png>
@@ -1789,7 +1789,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [47]) (chapters/Examples.tex
-<images/andgatefull_result.png, id=1053, 662.475pt x 216.81pt>
+<images/andgatefull_result.png, id=1057, 662.475pt x 216.81pt>
 File: images/andgatefull_result.png Graphic file (type png)
 
 <use images/andgatefull_result.png>
@@ -1802,7 +1802,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48] <images/shift_result.png, id=1077, 903.375pt x 216.81pt>
+[48] <images/shift_result.png, id=1081, 903.375pt x 216.81pt>
 File: images/shift_result.png Graphic file (type png)
 
 <use images/shift_result.png>
@@ -1816,14 +1816,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49 <./images/andgatefull_result.png>]
-<images/andgatefull_failing.png, id=1103, 662.475pt x 120.45pt>
+<images/andgatefull_failing.png, id=1107, 662.475pt x 120.45pt>
 File: images/andgatefull_failing.png Graphic file (type png)
 
 <use images/andgatefull_failing.png>
 Package pdftex.def Info: images/andgatefull_failing.png used on input line 55.
 (pdftex.def)             Requested size: 430.00462pt x 78.18312pt.
 
-<images/andgatefull_failing_result.png, id=1106, 682.55pt x 216.81pt>
+<images/andgatefull_failing_result.png, id=1110, 682.55pt x 216.81pt>
 File: images/andgatefull_failing_result.png Graphic file (type png)
 
 <use images/andgatefull_failing_result.png>
@@ -1845,14 +1845,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [51 <./images/andgatefull_failing.png> <./images/andgatefull_failing_result.png
->] <images/shift_failing.png, id=1140, 903.375pt x 150.5625pt>
+>] <images/shift_failing.png, id=1144, 903.375pt x 150.5625pt>
 File: images/shift_failing.png Graphic file (type png)
 
 <use images/shift_failing.png>
 Package pdftex.def Info: images/shift_failing.png used on input line 82.
 (pdftex.def)             Requested size: 430.00462pt x 71.66954pt.
 
-<images/shift_failing_result.png, id=1143, 943.525pt x 246.9225pt>
+<images/shift_failing_result.png, id=1147, 943.525pt x 246.9225pt>
 File: images/shift_failing_result.png Graphic file (type png)
 
 <use images/shift_failing_result.png>
@@ -1915,17 +1915,17 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [55])
-Underfull \hbox (badness 10000) in paragraph at lines 25--112
+Underfull \hbox (badness 10000) in paragraph at lines 25--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--112
+Underfull \hbox (badness 10000) in paragraph at lines 25--115
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--112
+Underfull \hbox (badness 10000) in paragraph at lines 25--115
 
  []
 
@@ -1997,7 +1997,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--37
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 38--114
+Underfull \hbox (badness 10000) in paragraph at lines 38--117
 
  []
 
@@ -2114,7 +2114,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-<images/uart_2_bytes_result.png, id=1329, 1405.25pt x 246.9225pt>
+<images/uart_2_bytes_result.png, id=1333, 1405.25pt x 246.9225pt>
 File: images/uart_2_bytes_result.png Graphic file (type png)
 
 <use images/uart_2_bytes_result.png>
@@ -2136,7 +2136,7 @@ l.23 \clearpage
                    \relax 
 l.23 \clearpage
                 [2 <./images/uart_2_bytes_result.png>]
-<images/SPI_success.png, id=1354, 2549.525pt x 367.3725pt>
+<images/SPI_success.png, id=1358, 2549.525pt x 367.3725pt>
 File: images/SPI_success.png Graphic file (type png)
 
 <use images/SPI_success.png>
@@ -2160,7 +2160,7 @@ l.46 ... \ref{json:spi}}{fig:spi_result}\clearpage
                    \relax 
 l.46 ... \ref{json:spi}}{fig:spi_result}\clearpage
                                                    [4 <./images/SPI_success.png
->] <images/uart_failing.png, id=1386, 1405.25pt x 180.675pt>
+>] <images/uart_failing.png, id=1390, 1405.25pt x 180.675pt>
 File: images/uart_failing.png Graphic file (type png)
 
 <use images/uart_failing.png>
@@ -2171,7 +2171,7 @@ Overfull \hbox (16.5662pt too wide) in paragraph at lines 62--62
  [] 
  []
 
-<images/uart_failing_result.png, id=1389, 1465.475pt x 307.1475pt>
+<images/uart_failing_result.png, id=1393, 1465.475pt x 307.1475pt>
 File: images/uart_failing_result.png Graphic file (type png)
 
 <use images/uart_failing_result.png>
@@ -2195,7 +2195,7 @@ dentifier (name{page.6}) has been already used, duplicate ignored
                    \relax 
 l.73 \end{customenv}\clearpage
                               \noindent [6 <./images/uart_failing_result.png>]
-<images/SPI_failing.png, id=1418, 2549.525pt x 301.125pt>
+<images/SPI_failing.png, id=1422, 2549.525pt x 301.125pt>
 File: images/SPI_failing.png Graphic file (type png)
 
 <use images/SPI_failing.png>
@@ -2206,7 +2206,7 @@ Overfull \hbox (16.5662pt too wide) in paragraph at lines 94--94
  [] 
  []
 
-<images/SPI_failing_result.png, id=1421, 2609.75pt x 457.71pt>
+<images/SPI_failing_result.png, id=1425, 2609.75pt x 457.71pt>
 File: images/SPI_failing_result.png Graphic file (type png)
 
 <use images/SPI_failing_result.png>
@@ -2370,13 +2370,13 @@ l.28 \clearpage
                 [3
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B49EE27B715C0CE173D2E2212A6EC796;4118.
+(rerunfilecheck)             Checksum: CB37DAFAA2BB1DF29A976ED93B1ADDB0;4118.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2384,13 +2384,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 12683 strings out of 493634
- 185569 string characters out of 3141314
- 475211 words of memory out of 3000000
- 14900 multiletter control sequences out of 15000+200000
+ 12684 strings out of 493634
+ 185588 string characters out of 3141314
+ 475287 words of memory out of 3000000
+ 14901 multiletter control sequences out of 15000+200000
  14723 words of font info for 57 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  39i,18n,49p,1527b,1915s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2405,9 +2405,9 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
 (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x
 86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Thesis.pdf (102 pages, 1323789 bytes).
+Output written on Thesis.pdf (102 pages, 1419171 bytes).
 PDF statistics:
- 2018 PDF objects out of 2073 (max. 8388607)
+ 2022 PDF objects out of 2073 (max. 8388607)
  899 named destinations out of 1000 (max. 500000)
  712 words of extra memory for PDF output out of 10000 (max. 10000000)
 
