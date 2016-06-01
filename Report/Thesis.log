@@ -1,13 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.10)  29 MAY 2016 19:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.30)  1 JUN 2016 21:14
 entering extended mode
-**./Thesis.tex
-(Thesis.tex
-LaTeX2e <2015/10/01> patch level 2
-Babel <3.9n> and hyphenation patterns for 69 languages loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Thesis.tex
+(./Thesis.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -22,16 +24,16 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -62,7 +64,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -70,29 +72,29 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen103
 \Hy@linkcounter=\count88
 \Hy@pagecounter=\count89
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count90
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -104,7 +106,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count91
 
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -129,58 +131,52 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count96
 \c@bookmark@seq@number=\count97
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip43
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2016/01/08 3.9n The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2016/01/08 3.9n Babel common definitions
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
 \babel@savecnt=\count98
 \U@D=\dimen107
 )
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2015/03/17 v1.2c Input encoding file
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2015/09/07 v1.1p UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
-   defining Unicode char U+00A0 (decimal 160)
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
-   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00BB (decimal 187)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C0 (decimal 192)
@@ -301,10 +297,6 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+016F (decimal 367)
    defining Unicode char U+0170 (decimal 368)
    defining Unicode char U+0171 (decimal 369)
-   defining Unicode char U+0174 (decimal 372)
-   defining Unicode char U+0175 (decimal 373)
-   defining Unicode char U+0176 (decimal 374)
-   defining Unicode char U+0177 (decimal 375)
    defining Unicode char U+0178 (decimal 376)
    defining Unicode char U+0179 (decimal 377)
    defining Unicode char U+017A (decimal 378)
@@ -312,10 +304,6 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+017C (decimal 380)
    defining Unicode char U+017D (decimal 381)
    defining Unicode char U+017E (decimal 382)
-   defining Unicode char U+0218 (decimal 536)
-   defining Unicode char U+0219 (decimal 537)
-   defining Unicode char U+021A (decimal 538)
-   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+200C (decimal 8204)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
@@ -334,12 +322,10 @@ File: t1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
-   defining Unicode char U+00A0 (decimal 160)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
-   defining Unicode char U+00AD (decimal 173)
    defining Unicode char U+00B8 (decimal 184)
    defining Unicode char U+00BF (decimal 191)
    defining Unicode char U+00C5 (decimal 197)
@@ -357,14 +343,6 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
    defining Unicode char U+0142 (decimal 322)
    defining Unicode char U+0152 (decimal 338)
    defining Unicode char U+0153 (decimal 339)
-   defining Unicode char U+0174 (decimal 372)
-   defining Unicode char U+0175 (decimal 373)
-   defining Unicode char U+0176 (decimal 374)
-   defining Unicode char U+0177 (decimal 375)
-   defining Unicode char U+0218 (decimal 536)
-   defining Unicode char U+0219 (decimal 537)
-   defining Unicode char U+021A (decimal 538)
-   defining Unicode char U+021B (decimal 539)
    defining Unicode char U+2013 (decimal 8211)
    defining Unicode char U+2014 (decimal 8212)
    defining Unicode char U+2018 (decimal 8216)
@@ -375,8 +353,8 @@ File: ot1enc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2015/09/07 v1.1p UTF-8 support for inputenc
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -401,28 +379,28 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \Gread@gobject=\count99
 ))
 \Gin@req@height=\dimen108
 \Gin@req@width=\dimen109
 )
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip44
 \f@ncyO@elh=\skip45
 \f@ncyO@erh=\skip46
@@ -433,10 +411,10 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \f@ncyO@olf=\skip51
 \f@ncyO@orf=\skip52
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\listingsutf8.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/listingsutf8.sty
 Package: listingsutf8 2011/11/10 v1.2 Allow UTF-8 in listings input (HO)
 
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count100
 \lst@gtempboxa=\box26
 \lst@token=\toks17
@@ -450,39 +428,39 @@ Package: listingsutf8 2011/11/10 v1.2 Allow UTF-8 in listings input (HO)
 \lst@lineno=\count105
 \lst@maxwidth=\dimen113
 
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 \c@lstnumber=\count106
 \lst@skipnumbers=\count107
 \lst@framebox=\box27
 )
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
-File: listings.cfg 2015/06/04 1.6 listings configuration
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
-Package: listings 2015/06/04 1.6 (Carsten Heinz)
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\stringenc.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
 Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
 )
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen114
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen115
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count108
@@ -523,129 +501,133 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pdfpages.sty
-Package: pdfpages 2016/04/19 v0.5f Insert pages of external PDF documents (AM)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count120
 \calc@Bcount=\count121
 \calc@Adimen=\dimen123
 \calc@Bdimen=\dimen124
 \calc@Askip=\skip56
 \calc@Bskip=\skip57
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count122
 \calc@Cskip=\skip58
 )
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\eso-pic\eso-pic.sty
-Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 142.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
-\AM@pagewidth=\dimen125
-\AM@pageheight=\dimen126
-
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\pdfpages\pppdftex.def
-File: pppdftex.def 2016/04/19 v0.5f Pdfpages driver for pdfTeX (AM)
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box30
-\AM@global@opts=\toks23
-\AM@toc@title=\toks24
+\AM@toc@title=\toks23
 \c@AM@survey=\count123
 \AM@templatesizebox=\box31
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count124
-\float@exts=\toks25
+\float@exts=\toks24
 \float@box=\box32
-\@float@everytoks=\toks26
+\@float@everytoks=\toks25
 \@floatcapt=\box33
 )
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
-Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen127
-\captionmargin@=\dimen128
-\captionwidth=\dimen129
-\caption@tempdima=\dimen130
-\caption@indent=\dimen131
-\caption@parindent=\dimen132
-\caption@hangindent=\dimen133
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen125
+\captionmargin@=\dimen126
+\captionwidth=\dimen127
+\caption@tempdima=\dimen128
+\caption@indent=\dimen129
+\caption@parindent=\dimen130
+\caption@hangindent=\dimen131
 )
 \c@ContinuedFloat=\count125
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count126
 \Gm@cntv=\count127
 \c@Gm@tempcnt=\count128
-\Gm@bindingoffset=\dimen134
-\Gm@wd@mp=\dimen135
-\Gm@odd@mp=\dimen136
-\Gm@even@mp=\dimen137
-\Gm@layoutwidth=\dimen138
-\Gm@layoutheight=\dimen139
-\Gm@layouthoffset=\dimen140
-\Gm@layoutvoffset=\dimen141
-\Gm@dimlist=\toks27
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\paralist\paralist.sty"
-Package: paralist 2015/12/30 v2.5 Extended list environments
+\Gm@bindingoffset=\dimen132
+\Gm@wd@mp=\dimen133
+\Gm@odd@mp=\dimen134
+\Gm@even@mp=\dimen135
+\Gm@layoutwidth=\dimen136
+\Gm@layoutheight=\dimen137
+\Gm@layouthoffset=\dimen138
+\Gm@layoutvoffset=\dimen139
+\Gm@dimlist=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2013/06/09 v2.4 Extended list environments
 \pltopsep=\skip59
 \plpartopsep=\skip60
 \plitemsep=\skip61
 \plparsep=\skip62
-\pl@lab=\toks28
+\pl@lab=\toks27
 )
 \@input{settings/fig_env.aux}
 \openout2 = `settings/fig_env.aux'.
 
-(settings/fig_env.tex)
+(./settings/fig_env.tex)
 \c@customcnt=\count129
-\@float@every@customenv=\toks29
+\@float@every@customenv=\toks28
 \c@customenv=\count130
 
 \@input{settings/listings_settings.aux}
 \openout2 = `settings/listings_settings.aux'.
 
-(settings/listings_settings.tex) (Thesis.aux
+(./settings/listings_settings.tex) (./Thesis.aux
 
 LaTeX Warning: Label `log:example' multiply defined.
 
@@ -692,10 +674,10 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 \AtBeginShipoutBox=\box34
 Package hyperref Info: Link coloring OFF on input line 72.
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count131
@@ -704,25 +686,39 @@ LaTeX Info: Redefining \ref on input line 72.
 LaTeX Info: Redefining \pageref on input line 72.
 LaTeX Info: Redefining \nameref on input line 72.
 
-(Thesis.out) (Thesis.out)
+(./Thesis.out) (./Thesis.out)
 \@outlinefile=\write3
 \openout3 = `Thesis.out'.
 
 
-(C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count132
-\scratchdimen=\dimen142
+\scratchdimen=\dimen140
 \scratchbox=\box35
 \nofMPsegments=\count133
 \nofMParguments=\count134
-\everyMPshowfont=\toks30
+\everyMPshowfont=\toks29
 \MPscratchCnt=\count135
-\MPscratchDim=\dimen143
+\MPscratchDim=\dimen141
 \MPnumerator=\count136
 \makeMPintoPDFobject=\count137
-\everyMPtoPDFconversion=\toks31
+\everyMPtoPDFconversion=\toks30
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 \c@lstlisting=\count138
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -761,7 +757,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<title_page.pdf, id=251, 597.23125pt x 845.1575pt>
+<title_page.pdf, id=253, 597.23125pt x 845.1575pt>
 File: title_page.pdf Graphic file (type pdf)
  <use title_page.pdf>
 Package pdftex.def Info: title_page.pdf used on input line 74.
@@ -772,7 +768,7 @@ File: title_page.pdf Graphic file (type pdf)
 Package pdftex.def Info: title_page.pdf used on input line 74.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
-<title_page.pdf, id=254, page=1, 597.23125pt x 845.1575pt>
+<title_page.pdf, id=256, page=1, 597.23125pt x 845.1575pt>
 File: title_page.pdf Graphic file (type pdf)
 
 <use title_page.pdf, page 1>
@@ -805,7 +801,7 @@ Package pdftex.def Info: title_page.pdf, page1 used on input line 74.
  <./title_page.pdf>] [2
 
 ]
-<images/ruglogo.pdf, id=267, 191.71625pt x 167.62625pt>
+<images/ruglogo.pdf, id=269, 191.71625pt x 167.62625pt>
 File: images/ruglogo.pdf Graphic file (type pdf)
 
 <use images/ruglogo.pdf>
@@ -813,26 +809,26 @@ Package pdftex.def Info: images/ruglogo.pdf used on input line 80.
 (pdftex.def)             Requested size: 150.50424pt x 131.59967pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 80.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 80.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.80 \thispagestyle
-                   {empty} [1{C:/Users/winan/AppData/Local/MiKTeX/2.9/pdftex/co
-nfig/pdftex.map} <./images/ruglogo.pdf>] (chapters/permission.texpdfTeX warning
- (ext4): destination with the same identifier (name{page.1}) has been already u
-sed, duplicate ignored
+                   {empty} [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+} <./images/ruglogo.pdf>] (./chapters/permission.texpdfTeX warning (ext4): dest
+ination with the same identifier (name{page.1}) has been already used, duplicat
+e ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
-            *{Permission for usage} [1]) (chapters/Foreword.tex
+            *{Permission for usage} [1]) (./chapters/Foreword.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--1
 
  []
@@ -890,7 +886,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--89
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-<extended_abstract/extended_abstract.pdf, id=289, 597.55246pt x 845.19763pt>
+<extended_abstract/extended_abstract.pdf, id=291, 597.55246pt x 845.19763pt>
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 
 <use extended_abstract/extended_abstract.pdf>
@@ -904,7 +900,7 @@ Package pdftex.def Info: extended_abstract/extended_abstract.pdf used on input
 line 91.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 
-<extended_abstract/extended_abstract.pdf, id=292, page=1, 597.55246pt x 845.197
+<extended_abstract/extended_abstract.pdf, id=294, page=1, 597.55246pt x 845.197
 63pt>
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
  <use extended_abstract/extended_abstract.pdf, page 1>
@@ -938,7 +934,7 @@ Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page1 used on
  [3
 
  <./extended_abstract/extended_abstract.pdf>]
-<extended_abstract/extended_abstract.pdf, id=333, page=2, 597.55246pt x 845.197
+<extended_abstract/extended_abstract.pdf, id=335, page=2, 597.55246pt x 845.197
 63pt>
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
  <use extended_abstract/extended_abstract.pdf, page 2>
@@ -958,7 +954,7 @@ Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page2 used on
  input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
  [4 <./extended_abstract/extended_abstract.pdf>]
-<extended_abstract/extended_abstract.pdf, id=358, page=3, 597.55246pt x 845.197
+<extended_abstract/extended_abstract.pdf, id=360, page=3, 597.55246pt x 845.197
 63pt>
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
  <use extended_abstract/extended_abstract.pdf, page 3>
@@ -978,7 +974,7 @@ Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page3 used on
  input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
  [5 <./extended_abstract/extended_abstract.pdf>]
-<extended_abstract/extended_abstract.pdf, id=369, page=4, 597.55246pt x 845.197
+<extended_abstract/extended_abstract.pdf, id=371, page=4, 597.55246pt x 845.197
 63pt>
 File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
  <use extended_abstract/extended_abstract.pdf, page 4>
@@ -997,14 +993,14 @@ File: extended_abstract/extended_abstract.pdf Graphic file (type pdf)
 Package pdftex.def Info: extended_abstract/extended_abstract.pdf, page4 used on
  input line 91.
 (pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
- [6 <./extended_abstract/extended_abstract.pdf>] (Thesis.toc [7
+ [6 <./extended_abstract/extended_abstract.pdf>] (./Thesis.toc [7
 
 
 ]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 68.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 68.
@@ -1017,9 +1013,9 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 99.
 
-(chapters/Introduction.tex
+(./chapters/Introduction.tex
 Chapter 1.
-<images/overview.png, id=453, 668.4975pt x 343.2825pt>
+<images/overview.png, id=456, 668.4975pt x 343.2825pt>
 File: images/overview.png Graphic file (type png)
 
 <use images/overview.png>
@@ -1066,34 +1062,34 @@ been already used, duplicate ignored
                    \relax 
 l.19 \newpage
              \noindent [2 <./images/overview.png>]
-<images/andgate_example.png, id=463, 662.475pt x 166.6225pt>
+<images/andgate_example.png, id=466, 662.475pt x 166.6225pt>
 File: images/andgate_example.png Graphic file (type png)
 
 <use images/andgate_example.png>
 Package pdftex.def Info: images/andgate_example.png used on input line 21.
 (pdftex.def)             Requested size: 387.00153pt x 97.33519pt.
 
-<images/simulation.png, id=466, 504.08325pt x 180.675pt>
+<images/simulation.png, id=469, 504.08325pt x 180.675pt>
 File: images/simulation.png Graphic file (type png)
 
 <use images/simulation.png>
 Package pdftex.def Info: images/simulation.png used on input line 23.
 (pdftex.def)             Requested size: 387.00153pt x 138.7149pt.
- <images/modelsim.png, id=468, 658.46pt x 80.3pt>
+ <images/modelsim.png, id=471, 658.46pt x 80.3pt>
 File: images/modelsim.png Graphic file (type png)
 
 <use images/modelsim.png>
 Package pdftex.def Info: images/modelsim.png used on input line 25.
 (pdftex.def)             Requested size: 387.00153pt x 47.19646pt.
 
-<images/validation_old.png, id=470, 1023.825pt x 501.875pt>
+<images/validation_old.png, id=473, 1023.825pt x 501.875pt>
 File: images/validation_old.png Graphic file (type png)
 
 <use images/validation_old.png>
 Package pdftex.def Info: images/validation_old.png used on input line 35.
 (pdftex.def)             Requested size: 430.00462pt x 210.78606pt.
 
-<images/validation_new.png, id=473, 1184.425pt x 562.1pt>
+<images/validation_new.png, id=476, 1184.425pt x 562.1pt>
 File: images/validation_new.png Graphic file (type png)
 
 <use images/validation_new.png>
@@ -1121,7 +1117,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3 <./images/andgate_example.png> <./images/simulation.png>]
-(chapters/Problem_description.tex
+(./chapters/Problem_description.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1181,7 +1177,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]) (chapters/Functional_analysis.tex
+[7]) (./chapters/Functional_analysis.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1208,7 +1204,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10] <images/andgate_failing.png, id=531, 682.55pt x 216.81pt>
+[10] <images/andgate_failing.png, id=535, 682.55pt x 216.81pt>
 File: images/andgate_failing.png Graphic file (type png)
 
 <use images/andgate_failing.png>
@@ -1233,7 +1229,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [11 <./images/andgate_failing.png>]
-<images/gui.png, id=539, 501.875pt x 148.555pt>
+<images/gui.png, id=543, 501.875pt x 148.555pt>
 File: images/gui.png Graphic file (type png)
  <use images/gui.png>
 Package pdftex.def Info: images/gui.png used on input line 37.
@@ -1254,7 +1250,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--53
 
  []
 
-) (chapters/Technical_analysis.tex
+) (./chapters/Technical_analysis.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1263,7 +1259,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 Chapter 4.
-<images/overview_color.png, id=553, 668.4975pt x 379.4175pt>
+<images/overview_color.png, id=557, 668.4975pt x 379.4175pt>
 File: images/overview_color.png Graphic file (type png)
 
 <use images/overview_color.png>
@@ -1282,8 +1278,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15] (C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
+[15] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 Overfull \hbox (7.34778pt too wide) in paragraph at lines 52--56
 \OT1/cmr/m/n/12 The frame-works with the most ad-vanced fea-tures and sup-port 
@@ -1341,7 +1337,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[17] (chapters/Technical_design.tex
+[17] (./chapters/Technical_design.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1370,7 +1366,7 @@ LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 
 [19
 
-] <images/comb_and0.png, id=623, 100.375pt x 90.3375pt>
+] <images/comb_and0.png, id=628, 100.375pt x 90.3375pt>
 File: images/comb_and0.png Graphic file (type png)
 
 <use images/comb_and0.png>
@@ -1394,8 +1390,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[21] (C:\Users\winan\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
+[21] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
@@ -1430,7 +1426,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[24] <images/andgate_full.png, id=716, 662.475pt x 150.5625pt>
+[24] <images/andgate_full.png, id=721, 662.475pt x 150.5625pt>
 File: images/andgate_full.png Graphic file (type png)
 
 <use images/andgate_full.png>
@@ -1485,7 +1481,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[26] <images/clocks.png, id=741, 481.8pt x 170.6375pt>
+[26] <images/clocks.png, id=747, 481.8pt x 170.6375pt>
 File: images/clocks.png Graphic file (type png)
  <use images/clocks.png>
 Package pdftex.def Info: images/clocks.png used on input line 180.
@@ -1512,7 +1508,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28] <images/uart_no_wait.png, id=781, 762.85pt x 180.675pt>
+[28] <images/uart_no_wait.png, id=787, 762.85pt x 180.675pt>
 File: images/uart_no_wait.png Graphic file (type png)
 
 <use images/uart_no_wait.png>
@@ -1537,7 +1533,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [30 <./images/uart_no_wait.png>]
-<images/uart_wait.png, id=810, 762.85pt x 180.675pt>
+<images/uart_wait.png, id=816, 762.85pt x 180.675pt>
 File: images/uart_wait.png Graphic file (type png)
 
 <use images/uart_wait.png>
@@ -1564,14 +1560,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32] <images/uart_2_bytes.png, id=843, 1405.25pt x 180.675pt>
+[32] <images/uart_2_bytes.png, id=849, 1405.25pt x 180.675pt>
 File: images/uart_2_bytes.png Graphic file (type png)
 
 <use images/uart_2_bytes.png>
 Package pdftex.def Info: images/uart_2_bytes.png used on input line 263.
 (pdftex.def)             Requested size: 387.00153pt x 49.75607pt.
 
-<images/tb_code_overview.png, id=850, 407.42212pt x 485.11238pt>
+<images/tb_code_overview.png, id=856, 407.42212pt x 485.11238pt>
 File: images/tb_code_overview.png Graphic file (type png)
 
 <use images/tb_code_overview.png>
@@ -1624,7 +1620,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
-<images/error_example.png, id=882, 642.4pt x 186.6975pt>
+<images/error_example.png, id=889, 642.4pt x 186.6975pt>
 File: images/error_example.png Graphic file (type png)
 
 <use images/error_example.png>
@@ -1712,7 +1708,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [42]
-<images/wave_trace_analysis_overview.png, id=973, 374.90062pt x 388.45125pt>
+<images/wave_trace_analysis_overview.png, id=981, 374.90062pt x 388.45125pt>
 File: images/wave_trace_analysis_overview.png Graphic file (type png)
 
 <use images/wave_trace_analysis_overview.png>
@@ -1758,7 +1754,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45] <images/andgate_failing_part.png, id=1005, 682.55pt x 216.81pt>
+[45] <images/andgate_failing_part.png, id=1013, 682.55pt x 216.81pt>
 File: images/andgate_failing_part.png Graphic file (type png)
 
 <use images/andgate_failing_part.png>
@@ -1788,8 +1784,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47]) (chapters/Examples.tex
-<images/andgatefull_result.png, id=1057, 662.475pt x 216.81pt>
+[47]) (./chapters/examples.tex
+<images/andgatefull_result.png, id=1065, 662.475pt x 216.81pt>
 File: images/andgatefull_result.png Graphic file (type png)
 
 <use images/andgatefull_result.png>
@@ -1802,7 +1798,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48] <images/shift_result.png, id=1081, 903.375pt x 216.81pt>
+[48] <images/shift_result.png, id=1090, 903.375pt x 216.81pt>
 File: images/shift_result.png Graphic file (type png)
 
 <use images/shift_result.png>
@@ -1816,14 +1812,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [49 <./images/andgatefull_result.png>]
-<images/andgatefull_failing.png, id=1107, 662.475pt x 120.45pt>
+<images/andgatefull_failing.png, id=1116, 662.475pt x 120.45pt>
 File: images/andgatefull_failing.png Graphic file (type png)
 
 <use images/andgatefull_failing.png>
 Package pdftex.def Info: images/andgatefull_failing.png used on input line 55.
 (pdftex.def)             Requested size: 430.00462pt x 78.18312pt.
 
-<images/andgatefull_failing_result.png, id=1110, 682.55pt x 216.81pt>
+<images/andgatefull_failing_result.png, id=1119, 682.55pt x 216.81pt>
 File: images/andgatefull_failing_result.png Graphic file (type png)
 
 <use images/andgatefull_failing_result.png>
@@ -1845,14 +1841,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [51 <./images/andgatefull_failing.png> <./images/andgatefull_failing_result.png
->] <images/shift_failing.png, id=1144, 903.375pt x 150.5625pt>
+>] <images/shift_failing.png, id=1153, 903.375pt x 150.5625pt>
 File: images/shift_failing.png Graphic file (type png)
 
 <use images/shift_failing.png>
 Package pdftex.def Info: images/shift_failing.png used on input line 82.
 (pdftex.def)             Requested size: 430.00462pt x 71.66954pt.
 
-<images/shift_failing_result.png, id=1147, 943.525pt x 246.9225pt>
+<images/shift_failing_result.png, id=1156, 943.525pt x 246.9225pt>
 File: images/shift_failing_result.png Graphic file (type png)
 
 <use images/shift_failing_result.png>
@@ -1868,7 +1864,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [52
 
- <./images/shift_failing.png>]) (chapters/LimitationsAndExpansions.tex
+ <./images/shift_failing.png>]) (./chapters/LimitationsAndExpansions.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1929,7 +1925,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--115
 
  []
 
-(chapters/Conclusion.tex
+(./chapters/Conclusion.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -2007,10 +2003,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60] (Thesis.bbl [61] [62
+[60] (./Thesis.bbl [61] [62
 
-]) (chapters/apendices.tex [63] [64]
-(appendices/user_guide.tex
+]) (./chapters/apendices.tex [63] [64]
+(./appendices/user_guide.tex
 Appendix A.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -2098,7 +2094,7 @@ l.8 \newpage
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (appendices/more_examples.tex
+ (./appendices/more_examples.tex
 Appendix B.
 [1
 
@@ -2114,7 +2110,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-<images/uart_2_bytes_result.png, id=1333, 1405.25pt x 246.9225pt>
+<images/uart_2_bytes_result.png, id=1344, 1405.25pt x 246.9225pt>
 File: images/uart_2_bytes_result.png Graphic file (type png)
 
 <use images/uart_2_bytes_result.png>
@@ -2136,7 +2132,7 @@ l.23 \clearpage
                    \relax 
 l.23 \clearpage
                 [2 <./images/uart_2_bytes_result.png>]
-<images/SPI_success.png, id=1358, 2549.525pt x 367.3725pt>
+<images/SPI_success.png, id=1369, 2549.525pt x 367.3725pt>
 File: images/SPI_success.png Graphic file (type png)
 
 <use images/SPI_success.png>
@@ -2160,7 +2156,7 @@ l.46 ... \ref{json:spi}}{fig:spi_result}\clearpage
                    \relax 
 l.46 ... \ref{json:spi}}{fig:spi_result}\clearpage
                                                    [4 <./images/SPI_success.png
->] <images/uart_failing.png, id=1390, 1405.25pt x 180.675pt>
+>] <images/uart_failing.png, id=1401, 1405.25pt x 180.675pt>
 File: images/uart_failing.png Graphic file (type png)
 
 <use images/uart_failing.png>
@@ -2171,7 +2167,7 @@ Overfull \hbox (16.5662pt too wide) in paragraph at lines 62--62
  [] 
  []
 
-<images/uart_failing_result.png, id=1393, 1465.475pt x 307.1475pt>
+<images/uart_failing_result.png, id=1404, 1465.475pt x 307.1475pt>
 File: images/uart_failing_result.png Graphic file (type png)
 
 <use images/uart_failing_result.png>
@@ -2195,7 +2191,7 @@ dentifier (name{page.6}) has been already used, duplicate ignored
                    \relax 
 l.73 \end{customenv}\clearpage
                               \noindent [6 <./images/uart_failing_result.png>]
-<images/SPI_failing.png, id=1422, 2549.525pt x 301.125pt>
+<images/SPI_failing.png, id=1434, 2549.525pt x 301.125pt>
 File: images/SPI_failing.png Graphic file (type png)
 
 <use images/SPI_failing.png>
@@ -2206,7 +2202,7 @@ Overfull \hbox (16.5662pt too wide) in paragraph at lines 94--94
  [] 
  []
 
-<images/SPI_failing_result.png, id=1425, 2609.75pt x 457.71pt>
+<images/SPI_failing_result.png, id=1437, 2609.75pt x 457.71pt>
 File: images/SPI_failing_result.png Graphic file (type png)
 
 <use images/SPI_failing_result.png>
@@ -2263,13 +2259,13 @@ ling_result.png>])
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (appendices/designs.tex
+ (./appendices/designs.tex
 Appendix C.
-(code/vhdl/andgate.vhd)pdfTeX warning (ext4): destination with the same identif
-ier (name{page.1}) has been already used, duplicate ignored
+(./code/vhdl/AndGate.vhd)pdfTeX warning (ext4): destination with the same ident
+ifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.5 ...natorial}]{./code/vhdl/andgate.vhd}\newpage
+l.5 ...natorial}]{./code/vhdl/AndGate.vhd}\newpage
                                                    [1
 
 
@@ -2277,20 +2273,20 @@ l.5 ...natorial}]{./code/vhdl/andgate.vhd}\newpage
 
 
 ]
-(code/vhdl/andgate_timed.vhd)pdfTeX warning (ext4): destination with the same i
-dentifier (name{page.2}) has been already used, duplicate ignored
+(./code/vhdl/AndGate_timed.vhd)pdfTeX warning (ext4): destination with the same
+ identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.7 ...al}]{./code/vhdl/andgate_timed.vhd}\newpage
-                                                   [2] (code/vhdl/shifter.vhd)p
-dfTeX warning (ext4): destination with the same identifier (name{page.3}) has b
-een already used, duplicate ignored
+l.7 ...al}]{./code/vhdl/AndGate_timed.vhd}\newpage
+                                                   [2] (./code/vhdl/shifter.vhd
+)pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.9 ...:shifter}]{./code/vhdl/shifter.vhd}\newpage
-                                                   [3] (code/vhdl/uart_tx.vhdpd
-fTeX warning (ext4): destination with the same identifier (name{page.4}) has be
-en already used, duplicate ignored
+                                                   [3] (./code/vhdl/uart_tx.vhd
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.41  
@@ -2300,8 +2296,8 @@ e identifier (name{page.5}) has been already used, duplicate ignored
                    \relax 
 l.11 ...shifter}]{./code/vhdl/uart_tx.vhd}\newpage
                                                    [5]
-(code/vhdl/spi_master.vhdpdfTeX warning (ext4): destination with the same ident
-ifier (name{page.6}) has been already used, duplicate ignored
+(./code/vhdl/spi_master.vhdpdfTeX warning (ext4): destination with the same ide
+ntifier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.42  
@@ -2345,10 +2341,10 @@ l.13 ...ndix:shifter}]{./code/vhdl/spi_master.vhd}
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-(appendices/template.tex
+(./appendices/template.tex
 Appendix D.
-(code/vhdl/template.vhdpdfTeX warning (ext4): destination with the same identif
-ier (name{page.1}) has been already used, duplicate ignored
+(./code/vhdl/template.vhdpdfTeX warning (ext4): destination with the same ident
+ifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.31 	
@@ -2372,11 +2368,11 @@ l.28 \clearpage
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
- (Thesis.aux)
+ (./Thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: CB37DAFAA2BB1DF29A976ED93B1ADDB0;4118.
+(rerunfilecheck)             Checksum: AD4BAA167D62EA18B65E390178B2640E;4056.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2387,27 +2383,28 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 12684 strings out of 493634
- 185588 string characters out of 3141314
- 475287 words of memory out of 3000000
- 14901 multiletter control sequences out of 15000+200000
- 14723 words of font info for 57 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 39i,18n,49p,1527b,1915s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Thesis.pdf (102 pages, 1419171 bytes).
+ 13105 strings out of 495028
+ 189878 string characters out of 6181497
+ 480132 words of memory out of 5000000
+ 15142 multiletter control sequences out of 15000+600000
+ 14723 words of font info for 57 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 40i,18n,49p,1525b,1915s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb>
+Output written on Thesis.pdf (102 pages, 1205893 bytes).
 PDF statistics:
- 2022 PDF objects out of 2073 (max. 8388607)
+ 2041 PDF objects out of 2073 (max. 8388607)
+ 1780 compressed objects within 18 object streams
  899 named destinations out of 1000 (max. 500000)
  712 words of extra memory for PDF output out of 10000 (max. 10000000)
 
