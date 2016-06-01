@@ -1,31 +1,28 @@
-# Generates VHDL signal declaration for given signal in json format.
-from operator import is_
-
-
 def generate_signal_declaration(json_signal):
-    # print json_signal
+    # <editor-fold desc="Generate VHDL signal declaration for given signal in json format">
     signal_name = json_signal["name"]
     signal_type = json_signal["type"]
-
-
     try:
         vector_max = str(int(json_signal["vector_size"]) - 1)
         signal_type = signal_type + "(" + vector_max + " downto 0)"
     except KeyError:
         vector_size = 0
     return "    signal sig_" + signal_name + " : " + signal_type + " := sig_" + signal_name + "_values(0);"
+    # </editor-fold>
 
 
-# convert given wavedrom character to correct vhdl character
 def convert(char, previous_char, signal_period, data, data_index, is_vector, vector_size, is_clock):
+    # <editor-fold desc="Convert given wavedrom character to correct vhdl character">
     if is_vector:
-        return convert_std_logic_vector(char, previous_char, signal_period, data, data_index, vector_size)
+        return convert_vector(char, previous_char, signal_period, data, data_index, vector_size)
     else:
-        return convert_std_logic(char, previous_char, signal_period, is_clock), 0
+        return convert_single_bit_signal(char, previous_char, signal_period, is_clock), 0
+    0  # useless operation to allow code folding
+    # </editor-fold>
 
 
-def convert_std_logic_vector(char, previous_char, signal_period, data, data_index, vector_size):
-
+def convert_vector(char, previous_char, signal_period, data, data_index, vector_size):
+    # <editor-fold desc="Convert waveJSON vector character to VHDL">
     chars = []
     if char == "|":
             vector_size = -vector_size
@@ -50,9 +47,11 @@ def convert_std_logic_vector(char, previous_char, signal_period, data, data_inde
         converted_char += ", \"" + dec_to_bin(data[data_index], vector_size) + "\""
 
     return converted_char, data_index
+    # </editor-fold>
 
 
 def dec_to_bin(decimal_number, vector_size):
+    # <editor-fold desc="Convert decimal number to binary number with vector_size bits">
     if vector_size < 0:
         vector_size = -vector_size
         binary_number = "-"
@@ -62,9 +61,11 @@ def dec_to_bin(decimal_number, vector_size):
         format_string = "{0:0" + str(vector_size) + "b}"
         binary_number = format_string.format(int(decimal_number))
     return binary_number
+    # </editor-fold>
 
 
-def convert_std_logic(char, previous_char, signal_period, is_clock):
+def convert_single_bit_signal(char, previous_char, signal_period, is_clock):
+    # <editor-fold desc="Convert waveJSON single bit character to VHDL">
     chars = []
     if char == ".":
         return previous_char
@@ -90,13 +91,13 @@ def convert_std_logic(char, previous_char, signal_period, is_clock):
         for i in range(0, signal_period):
             converted_char += ", '" + str(element) + "'"
     return converted_char
+    # </editor-fold>
 
 
-# convert given json waveform to string of a vhdl array
 def convert_wave_to_array(json_wave, signal_period, data, is_vector, vector_size, is_clock):
-    # TODO: fix this cheating
-    # an extra (unused) wave value is added to a wave trace with length 1
-    # to support combinatorial testing
+    # <editor-fold desc="Convert given json waveform to string of a vhdl array">
+    # TODO: fix this cheating. For combinatorial designs, an extra value is added to the value arrays,
+    # TODO: arrays with only one value are not allowed.
     if len(json_wave) == 1:
         json_wave += "0"
 
@@ -119,11 +120,12 @@ def convert_wave_to_array(json_wave, signal_period, data, is_vector, vector_size
 
             previous_value = value
     return array_string[1:]  # remove first "," from generated array
+    # </editor-fold>
 
 
-# generate a string containing the vhdl declaration of a constant.
-# this constant holds all relevant info of a signal waveform
 def generate_signal_values_constant(json_signal, is_clock):
+    # <editor-fold desc="Generate a string containing the vhdl declaration of a constant">
+    # this constant holds all relevant info of a signal waveform.
     try:
         signal_period = int(json_signal["period"])
     except KeyError:
@@ -152,27 +154,30 @@ def generate_signal_values_constant(json_signal, is_clock):
     signal_value_statement = "constant sig_" + json_signal["name"] + "_values : " \
                              + array_type + " := (" + wave_array + ");"
     return signal_value_statement
+    # </editor-fold>
 
 
-# def generate_port_map(json_signal_set):
-#     port_map = "PORT MAP(\n"
-#     first = True
-#     for signal_type in json_signal_set:     # IN and OUT.
-#         if len(signal_type) > 0:            # JSON allows empty elements
-#             for signal in signal_type:
-#                 if len(signal) > 0:         # JSON allows empty elements
-#                     if first:
-#                         new_map = signal["name"] + " => sig_" + signal["name"]
-#                         first = False
-#                     else:
-#                         new_map = ",\n" + signal["name"] + " => sig_" + signal["name"]
-#                     port_map += new_map
-#     port_map += " );"
-#     return port_map
+def generate_port_map(json_signal_set):
+    # <editor-fold desc="Generate DUT port map">
+    port_map = "PORT MAP(\n"
+    first = True
+    for signal_type in json_signal_set:     # IN and OUT.
+        if len(signal_type) > 0:            # JSON allows empty elements
+            for signal in signal_type:
+                if len(signal) > 0:         # JSON allows empty elements
+                    if first:
+                        new_map = signal["name"] + " => sig_" + signal["name"]
+                        first = False
+                    else:
+                        new_map = ",\n" + signal["name"] + " => sig_" + signal["name"]
+                    port_map += new_map
+    port_map += " );"
+    return port_map
+    # </editor-fold>
 
 
-# Generates signal and PORT declaration and port map for given signal set.
 def generate_vhdl(json_signal_set):
+    # <editor-fold desc="Generate signal and PORT declaration and port map for given signal set">
     i = 0
     signal_types = ["in", "in", "out"]
     port_declaration = "PORT(\n"
@@ -209,5 +214,6 @@ def generate_vhdl(json_signal_set):
     port_declaration += " );"
     port_map += " );"
     return port_declaration, port_map, signal_declarations, signal_values
+    # </editor-fold>
 
 

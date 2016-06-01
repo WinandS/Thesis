@@ -7,8 +7,8 @@ json_resource_path = "json_resources"
 
 
 def create_comparison_files(log_dir, result_dir):
+    # <editor-fold desc="Create result file for wave trace analysis. WaveJSON file to use with WaveDrom.">
     for filename in glob.glob(log_dir + "/*result.csv"):
-
         result_filename, warning_messages, warning_logs, json_data = get_info(filename)
         # print result_filename
         if not len(warning_logs):       # test succeeded
@@ -75,13 +75,16 @@ def create_comparison_files(log_dir, result_dir):
             json_data["edge"] = edges_to_add
 
             read_json.save_json_file(json_data, result_filename, result_dir)
+    0  # useless operation to allow code folding
+    # </editor-fold>
 
 
 # - show actual values in signal
 def fix_error(signals, signal_name, actual_value, n):
+    # <editor-fold desc="show actual values of signal">
     int_n = int(n)
     unicode_actual_value = unicode(actual_value[1])
-    signal = find_signal(signals, signal_name + "_sim")
+    signal = find_signal(signals, signal_name)
     signal_wave = list(signal["wave"])
     if signal_wave[int_n + 1] == u'.':
         x = int_n
@@ -91,24 +94,30 @@ def fix_error(signals, signal_name, actual_value, n):
     signal_wave[int_n] = unicode_actual_value
     signal["wave"] = "".join(signal_wave)
     return signals
+    # </editor-fold>
 
 
 def alphabet(letter, shift):
+    # <editor-fold desc="Return next letter in the alphabet">
+    # TODO: this will provide problems if there are more then 13 errors in one file, because there are only 26 labels
     start = "a"
     diff = ord(letter) + shift - ord(start)
     return chr(ord(start) + diff % 26)
+    # </editor-fold>
 
 
-# returns true if a signal with a specific signal name is already present
 def is_element(output_signals, signal_name):
+    # <editor-fold desc="return true if a signal with a specific signal name is already present">
     names = []
     for signal in output_signals:
         names.append(signal["name"])
     return signal_name in names
+    # </editor-fold>
 
 
 # - add nodes to signal
 def add_nodes(json_data, signal_name, output_signals, n, letter):
+    # <editor-fold desc="Add nodes to signal">
     letter_buff = letter
 
     signal_name = signal_name.strip()
@@ -127,18 +136,22 @@ def add_nodes(json_data, signal_name, output_signals, n, letter):
             signal["node"] += letter_buff
             letter_buff = alphabet(letter_buff, 1)
     return json_data, output_signals
+    # </editor-fold>
 
 
 # - find a signal with signal name in a collection of signals
 def find_signal(signals, signal_name):
+    # <editor-fold desc="Find a signal with signal name in a collection of signals">
     for signal in signals:
         if signal_name.strip() == signal["name"].strip():
             return signal
     return None
+    # </editor-fold>
 
 
 # mark all signals in red
 def mark_signals(output_signals, signal_names):
+    # <editor-fold desc="Mark all necessary signals in red">
     for name in signal_names:
         signal = find_signal(output_signals, name)
         sim_signal = find_signal(output_signals, name + "_sim")
@@ -146,11 +159,11 @@ def mark_signals(output_signals, signal_names):
         sim_signal["name"] = ['tspan', {"class":'error h4'}, name + "_sim"]
 
     return output_signals
+    # </editor-fold>
 
 
-# - get the warning messages from the csv file, the csv file name
-# - and the json data from the corresponding WaveDrom file
 def get_info(filename):
+    # <editor-fold desc="Get the warning messages from the csv file, the csv file name and the json data">
     with open(filename, 'r') as log_file:
         e = filename.find("result.csv")
         log_reader = csv.reader(log_file)
@@ -176,9 +189,11 @@ def get_info(filename):
 
     result_filename = filename[s:e] + "_result.json" # name for newly generated file
     return result_filename, warning_messages, warning_logs, json_data
+    # </editor-fold>
 
 
 def get_logs_and_messages(original_log_list, original_message_list):
+    # <editor-fold desc="Get all logs and messages">
     temporary_log_list = []
     temporary_message_list = []
 
@@ -204,11 +219,14 @@ def get_logs_and_messages(original_log_list, original_message_list):
                 final_message_list.append(message_element)
 
     return final_log_list, final_message_list
+    # </editor-fold>
 
 
 # - check whether list element is in list
 def is_in(list, list_el):
+    # <editor-fold desc="Check whether list element is in list">
     for element in list:
         if list_el[1:] == element[1:]:
             return True
     return False
+    # </editor-fold>

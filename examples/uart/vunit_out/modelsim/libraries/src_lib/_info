@@ -191,11 +191,11 @@ VnSQ[=LXHQzTZG_H]kLKjl0
 !s100 W>9MDmK76>:H6bf`Kn6DP0
 R6
 33
-R7
+Z43 !s110 1464806603
 !i10b 1
-R8
-Z43 !s90 -quiet|-modelsimini|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini|-2008|-work|src_lib|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_rx.vhd|
-Z44 !s107 /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_rx.vhd|
+Z44 !s108 1464806603.000000
+Z45 !s90 -quiet|-modelsimini|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini|-2008|-work|src_lib|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_rx.vhd|
+Z46 !s107 /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_rx.vhd|
 !i113 1
 R11
 R12
@@ -214,23 +214,23 @@ R40
 R24
 R2
 R3
-DEx4 work 7 uart_rx 0 22 nSQ[=LXHQzTZG_H]kLKjl0
+Z47 DEx4 work 7 uart_rx 0 22 nSQ[=LXHQzTZG_H]kLKjl0
 l47
 L45
-VM5]dhD5]H[UYEU?docb`O3
-!s100 g=hU>5H6PjmT7>4c]IbEG3
+Z48 VM5]dhD5]H[UYEU?docb`O3
+Z49 !s100 g=hU>5H6PjmT7>4c]IbEG3
 R6
 33
-R7
-!i10b 1
-R8
 R43
+!i10b 1
 R44
+R45
+R46
 !i113 1
 R11
 R12
 Euart_tx
-Z45 w1458919590
+Z50 w1458919590
 R30
 R31
 R32
@@ -246,19 +246,19 @@ R24
 R2
 R3
 R0
-Z46 8/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_tx.vhd
-Z47 F/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_tx.vhd
+Z51 8/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_tx.vhd
+Z52 F/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_tx.vhd
 l0
 L14
 VgXmj]a5>C]U1BeW32V_P@3
 !s100 jmN;0DcBSOEblOI;S2=T11
 R6
 33
-R7
+R43
 !i10b 1
-R8
-Z48 !s90 -quiet|-modelsimini|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini|-2008|-work|src_lib|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_tx.vhd|
-Z49 !s107 /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_tx.vhd|
+R44
+Z53 !s90 -quiet|-modelsimini|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini|-2008|-work|src_lib|/home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_tx.vhd|
+Z54 !s107 /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/src/uart_tx.vhd|
 !i113 1
 R11
 R12
@@ -284,11 +284,11 @@ V8P61bd_L5jJ;6@]8eD^MU0
 !s100 R<nUZ2oYL[^0;2UK7R;AL2
 R6
 33
-R7
+R43
 !i10b 1
-R8
-R48
-R49
+R44
+R53
+R54
 !i113 1
 R11
 R12

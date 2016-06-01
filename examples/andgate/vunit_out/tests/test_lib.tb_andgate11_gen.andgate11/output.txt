@@ -1,6 +1,6 @@
-# End time: 19:37:05 on May 04,2016, Elapsed time: 0:00:00
+# End time: 20:37:49 on Jun 01,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/andgate/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/andgate/vunit_out/tests/test_lib.tb_andgate11_gen.andgate11/modelsim/vsim.wlf -quiet -t ps -onfinish stop test_lib.tb_andgate11_gen(andgate11_generated_testbench) -L test_lib -L vunit_lib -L osvvm -L src_lib -g/tb_andgate11_gen/runner_cfg="enabled_test_cases : andgate11,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/andgate/vunit_out/tests/test_lib.tb_andgate11_gen.andgate11/,active python runner : true" 
-# Start time: 19:37:05 on May 04,2016
+# Start time: 20:37:49 on Jun 01,2016
 # Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
 # Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
