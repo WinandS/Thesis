@@ -1,6 +1,7 @@
 import json
 import glob
 
+#<editor-fold desc="Open and save JSON files# ">
 
 # get input data from file
 def open_json_file(filename):
@@ -17,10 +18,11 @@ def save_json_file(data, filename, output_directory):
         # strdata = json.dumps(data, indent=4, )
         # parsed = json.loads(strdata)
         json.dump(data, data_file, indent=4, sort_keys=True)
+# </editor-fold>
 
 
-# extract signals from input data
 def extract_signals(data):
+    # <editor-fold desc="extract signals from waveJSON data">
     clk_signal = []
     input_signals = []
     output_signals = []
@@ -40,16 +42,18 @@ def extract_signals(data):
                     output_signals.append(signal[j])
 
     return [[clk_signal], input_signals, output_signals]
+    # </editor-fold>
 
 
-# extract all relevant info from json file
 def extract_info(filename):
+    # <editor-fold desc="extract relevant info from waveJSON data">
     data = open_json_file(filename)
     return data["name"], data["test"], data["description"], extract_signals(data)
+    # </editor-fold>
 
-
-# print extracted wavedrom signals
+# <editor-fold desc="print extracted wavedrom signals (for debugging)">
 def print_signals(signals):
+
     signal_types = ["CLK", "IN", "OUT"]
     i = 0
     for signal_type in signals: # there's three types of signals: CLK, IN and OUT.
@@ -62,3 +66,4 @@ def print_signals(signals):
                 for element in signal:
                     print element, " : ", signal[element]
         i += 1
+# </editor-fold>

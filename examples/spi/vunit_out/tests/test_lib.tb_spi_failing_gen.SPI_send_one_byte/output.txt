@@ -1,5 +1,5 @@
 # vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vunit_out/tests/test_lib.tb_spi_failing_gen.SPI_send_one_byte/modelsim/vsim.wlf -quiet -t ps -onfinish stop test_lib.tb_spi_failing_gen(spi_failing_generated_testbench) -L test_lib -L vunit_lib -L osvvm -L src_lib -g/tb_spi_failing_gen/runner_cfg="enabled_test_cases : SPI_send_one_byte,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/spi/vunit_out/tests/test_lib.tb_spi_failing_gen.SPI_send_one_byte/,active python runner : true" 
-# Start time: 19:40:19 on May 04,2016
+# Start time: 20:42:48 on Jun 01,2016
 # WARNING: 5,TX_Done,'1','0',3
 # WARNING: 5. This check failed. Expected sig_TX_Done =  '1', got sig_TX_Done =  '0' at n = 3.
 # WARNING: 9,SCLK,'1','0',6

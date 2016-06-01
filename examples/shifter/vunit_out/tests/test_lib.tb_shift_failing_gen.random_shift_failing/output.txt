@@ -1,5 +1,5 @@
 # vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/shifter/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/shifter/vunit_out/tests/test_lib.tb_shift_failing_gen.random_shift_failing/modelsim/vsim.wlf -quiet -t ps -onfinish stop test_lib.tb_shift_failing_gen(shift_failing_generated_testbench) -L test_lib -L vunit_lib -L osvvm -L src_lib -g/tb_shift_failing_gen/runner_cfg="enabled_test_cases : random_shift_failing,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/shifter/vunit_out/tests/test_lib.tb_shift_failing_gen.random_shift_failing/,active python runner : true" 
-# Start time: 19:43:53 on May 04,2016
+# Start time: 20:42:12 on Jun 01,2016
 # WARNING: 1,Q,'0','1',3
 # WARNING: 1. This check failed. Expected sig_Q =  '0', got sig_Q =  '1' at n = 3.
 # WARNING: 2,Q,'0','1',4
