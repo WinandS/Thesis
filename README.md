@@ -8,7 +8,7 @@ For a detailed analysis of this project, please read the [report](https://github
 
 # Dependencies
 The final product of this project is a software tool written in Python that can run on any computer that complies to these conditions:
- * It runs a linux distribution (developed on Ubuntu 14.04 LTS)
+ * It runs a linux distribution (developed on Ubuntu 14.04 LTS) or a Windows distribution (tested on Windows 10)
  * It has at least Python 2.7 installed
  * It has [VUnit](http://vunit.github.io/documentation) installed
  * It has [WaveDrom](www.wavedrom.com) intalled
