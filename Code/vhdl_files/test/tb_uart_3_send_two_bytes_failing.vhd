@@ -1,7 +1,7 @@
 -- ---------------------------------------------------
 -- Author: 
--- Test name: uart_send_2_bytes
--- Test description: A test for sending two consecutive bytes with an parallel to serial uart
+-- Test name: uart_send_2_bytes_failing
+-- Test description: A failing test for sending two consecutive bytes with an parallel to serial uart
 -- ---------------------------------------------------
 
 library ieee;
@@ -82,8 +82,8 @@ tx => sig_tx,
 tready => sig_tready );
 
 
-	checker_initiation : checker_init(warning, "", ".warning_log/uart_3_send_two_bytes_failing__uart_send_2_bytes_messages.csv", level, verbose_csv, failure, ',', false);
-	warning_logger_initiation : checker_init(warning_logger, warning, "", ".warning_log/uart_3_send_two_bytes_failing__uart_send_2_bytes_result.csv", level, verbose_csv, failure, ',', false);
+	checker_initiation : checker_init(warning, "", ".warning_log/uart_3_send_two_bytes_failing__uart_send_2_bytes_failing_messages.csv", level, verbose_csv, failure, ',', false);
+	warning_logger_initiation : checker_init(warning_logger, warning, "", ".warning_log/uart_3_send_two_bytes_failing__uart_send_2_bytes_failing_result.csv", level, verbose_csv, failure, ',', false);
 
 	main : process
 		variable n : integer := 0;
@@ -99,7 +99,7 @@ tready => sig_tready );
 			reset_checker_stat; 
 			n := 0;
 
-			if run("uart_send_2_bytes") then
+			if run("uart_send_2_bytes_failing") then
 				
 				while (n <= clock_cycles - 1) loop
 

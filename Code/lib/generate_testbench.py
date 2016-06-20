@@ -1,12 +1,15 @@
 import os
 import re
+from os.path import join
 
-testbench_template = 'vhdl_files/.template_TB.vhd'
-output_path = 'vhdl_files/test/tb_'
+import sys
+
+testbench_template = join("vhdl_files", ".template_TB.vhd")
+output_path = join("vhdl_files", "test", "tb_")
 log_dir = ""    # set this in main
 
 
-#<editor-fold desc="Read tesbench template and write result testbench">
+# <editor-fold desc="Read testbench template and write result testbench">
 def read_template():
     with open(testbench_template, 'r') as template_file:
         template = template_file.read()
@@ -19,13 +22,21 @@ def write_output(data, filename):
     with open(complete_filename, 'w') as test_file:
         test_file.write(data)
     test_file.close()
-#</editor-fold>
+# </editor-fold>
 
-#<editor-fold desc="open testbench in sigasi studio (debugging)">
+
+# <editor-fold desc="open testbench in sigasi studio (debugging)">
 def open_output(filename):
-    os.system("/opt/sigasi/sigasi " + output_path + filename + ".vhd")
+    sigasi_path = ""
+    if sys.platform == 'darwin':
+        sigasi_path = join("opt", "sigasi", "sigasi")
+    elif sys.platform == 'linux2':
+        sigasi_path = join("opt", "sigasi", "sigasi")
+    elif sys.platform == 'win32':
+        sigasi_path = join("sigasi")
+    os.system(sigasi_path + output_path + filename + ".vhd")
     # os.system("gedit " + output_path + filename + ".vhd")
-#</editor-fold>
+# </editor-fold>
 
 
 def clean_testbench_template(template):
@@ -38,7 +49,7 @@ def clean_testbench_template(template):
             pattern2 = re.compile('/--')
             for match2 in re.finditer(pattern2, template):
                 e = match2.end()
-                break
+                break       # don't remember why I did this, don't think it is necessary anymore
             template = template.replace(template[s:e + 1], "")
             break
     return template
@@ -55,7 +66,7 @@ def set_up_uut(testbench, entity_name, port_declaration, port_map, filename):
     testbench = testbench.replace("PORT MAP();", port_map + "\n")
 
     return testbench
-    #</editor-fold>
+    # </editor-fold>
 
 
 def set_clock_cycles_constant(testbench, first_in_signal):
@@ -77,7 +88,8 @@ def set_clock_cycles_constant(testbench, first_in_signal):
     replace = find + "\n" + "constant clock_cycles : integer := " + str(length * period) + ";"
 
     return testbench.replace(find, replace)
-    #</editor-fold>
+    # </editor-fold>
+
 
 # set up everything related to timing
 def set_up_waiting_necessities(testbench, json_loop_times, relative_period):
@@ -146,7 +158,7 @@ def set_up_signal_value_constants(testbench, signal_values):
     find = "--# Constants"
     constants_declaration = find + "\n" + constants_declaration
     return testbench.replace(find, constants_declaration)
-    #</editor-fold>
+    # </editor-fold>
 
 
 def set_up_signals(testbench, signal_declarations):
@@ -165,7 +177,7 @@ def set_up_signals(testbench, signal_declarations):
 
 
 def set_up_stimulus_process(testbench, test_name, input_signals):
-    #<editor-fold desc="Create signal driving code">
+    # <editor-fold desc="Create signal driving code">
     testbench = testbench.replace("test_name", test_name)  # set test name
     is_clocked = False
     if len(input_signals[0]) > 0:
@@ -203,11 +215,11 @@ def set_up_stimulus_process(testbench, test_name, input_signals):
     testbench = testbench.replace(loop_find_rising, loop_rising_stimulus)
     testbench = testbench.replace(find_falling, falling_stimulus)
     return testbench.replace(loop_find_falling, loop_falling_stimulus)
-    #</editor-fold>
+    # </editor-fold>
 
 
 def set_up_check_process(testbench, output_signals):
-    #<editor-fold desc="Create signal checking code">
+    # <editor-fold desc="Create signal checking code">
     checking = ""
 
     for signal in output_signals:
@@ -225,8 +237,6 @@ def set_up_check_process(testbench, output_signals):
                 "end if;" + "\n" + \
                 "end if;" + "-- Do some check for a vector \n"
         except KeyError:
-            # checking += "check_signal(sig_" + signal_name + "," + signal_to_check +\
-            #             "_values(n), n, error_number);"
             checking += "\n if " + expected_value + " /= 'X' then" + "\n" + \
                         "check(warning_logger,  " + signal_to_check + " = " + expected_value + \
                         ", integer'image(error_number) & \"," + \
@@ -246,11 +256,11 @@ def set_up_check_process(testbench, output_signals):
 
     find = "--# test checking"
     return testbench.replace(find, checking)
-    #</editor-fold>
+    # </editor-fold>
 
 
 def set_up_timing(testbench, signals):
-    #<editor-fold desc="Add all timing related elements to vhdl file">
+    # <editor-fold desc="Add all timing related elements to vhdl file">
     # - add clock period
     find = "--# Constants"
     replace = ""
@@ -329,11 +339,11 @@ def set_up_timing(testbench, signals):
     testbench = testbench.replace(find_end, replace_end + "\n")
 
     return testbench
-    #</editor-fold>
+    # </editor-fold>
 
 
 def declare_helper_types(testbench, signals):
-    #<editor-fold desc="Generate helper types">
+    # <editor-fold desc="Generate helper types">
     types = [[], []]
     i = 0
     for signal_type in signals:  # here type is clock, input or output
@@ -356,12 +366,12 @@ def declare_helper_types(testbench, signals):
                         + str(logic_type) + ";" + "\n"
 
     return testbench.replace(find, find + "\n" + replace_type)
-    #</editor-fold>
+    # </editor-fold>
 
 
 def generate_testbench(testbench, entity_name, port_declaration, port_map, signal_declarations, signal_values,
                        filename, test_name, signals):
-    #<editor-fold desc="Place all testbench building blocks in testbench template and save result">
+    # <editor-fold desc="Place all testbench building blocks in testbench template and save result">
 
     # set output directory
     find = "output_directory"
@@ -407,4 +417,4 @@ def generate_testbench(testbench, entity_name, port_declaration, port_map, signa
     testbench = set_up_stimulus_process(testbench, test_name, signals[0:2])
     testbench = set_up_check_process(testbench, signals[2])
     return testbench
-    #</editor-fold>
+    # </editor-fold>

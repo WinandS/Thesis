@@ -1,5 +1,5 @@
 {
-    "description": "A test for sending two consecutive bytes with an parallel to serial uart", 
+    "description": "A failing test for sending two consecutive bytes with an parallel to serial uart", 
     "edge": [
         "a-b W1", 
         "c-d W2", 
@@ -107,5 +107,5 @@
             }
         ]
     ], 
-    "test": "uart_send_2_bytes"
+    "test": "uart_send_2_bytes_failing"
 }

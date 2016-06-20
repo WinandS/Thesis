@@ -3,22 +3,26 @@ import lib.generate_testbench as generate_testbench
 import lib.json_to_vhdl as json_to_vhdl
 import lib.compare_wave_traces as compare_wave_traces
 import run_vunit
-import glob
+from glob import glob
+import sys
 import os
 import subprocess
-from Tkinter import *
+from os.path import join
+from Tkinter import Frame, BOTH, Button, Tk
 
 # relative directory for saving simulation logs.
 # Not for users to see.
 log_dir = generate_testbench.log_dir = ".warning_log"
-testbench_dir = "vhdl_files/test"
+testbench_dir = join("vhdl_files", "test")
 
-# relative directory for result files. This is the user output folder.
+# - relative directory for result files. This is the user output folder.
 result_dir = "result"
 
-# print generate_testbench.log_dir
+# - set system architecture dependant subfolder character
+search_char = compare_wave_traces.search_char
 
-#<editor-fold desc="Code fold containing gui related functions">
+
+# <editor-fold desc="Code fold containing gui related functions">
 class Window(Frame):
 
     def __init__(self, master=None):
@@ -60,38 +64,39 @@ def init():
 
 
 def open_input():
-    output = os.path.join(os.path.dirname(__file__), "json_resources")
-    openFolder(output)
+    output = "json_resources"
+    open_folder(output)
 
 
 def open_src():
-    output = os.path.join(os.path.dirname(__file__), "vhdl_files")
-    output = os.path.join(output, "src")
-    openFolder(output)
+    output = "vhdl_files"
+    output = join(output, "src")
+    open_folder(output)
 
 
 def open_output():
-    output = os.path.join(os.path.dirname(__file__), "result")
-    openFolder(output)
+    output = "result"
+    open_folder(output)
 
 if sys.platform == 'darwin':
-    def openFolder(path):
-        subprocess.check_call(['open', '--', path])
+    def open_folder(path):
+        subprocess.call(['open', '--', path])
 elif sys.platform == 'linux2':
-    def openFolder(path):
-        subprocess.check_call(['nautilus', '--', path])
+    def open_folder(path):
+        subprocess.call(['nautilus', '--', path])
 elif sys.platform == 'win32':
-    def openFolder(path):
-        subprocess.check_call(['explorer', path])
-#</editor-fold>
+    def open_folder(path):
+        subprocess.call(['explorer', path])
+# </editor-fold>
 
-#<editor-fold desc="Code fold containing tool related function">
+
+# <editor-fold desc="Code fold containing tool related function">
 def run_all():
     # create_and_simulate_tests()
     try:
         create_and_simulate_tests()
-        what_to_print = "\n" + "Done."  + "\n"
-    except:
+        what_to_print = "\n" + "Done." + "\n"
+    except:     # vunit returns an error when a simulation failed
         what_to_print = "\n" + "Oh shit, some test failed." + "\n" + "That's okay though, I won't tell anyone." + "\n"
     process_simulation_result()
     print what_to_print
@@ -105,12 +110,10 @@ def create_and_simulate_tests():
     if not os.path.exists(testbench_dir):
         os.makedirs(testbench_dir)
     else:
-        for filename in glob.glob(testbench_dir + "/*"):
+        for filename in glob(join(testbench_dir, "*")):
             os.remove(filename)
 
-    for filename in glob.glob("json_resources/*.json"):
-
-
+    for filename in glob(join("json_resources", "*.json")):
         # - import wavedrom input, extract signals from raw data
         entity_name, test_name, test_description, signals = read_json.extract_info(filename)
 
@@ -129,7 +132,7 @@ def create_and_simulate_tests():
                          vhdl_testbench
 
         # - set up uut declaration, port map and signal declaration
-        s = filename.find("/")
+        s = filename.find(search_char)
         e = filename.find(".")
         filename = filename[s + 1:e]
 
@@ -148,10 +151,10 @@ def create_and_simulate_tests():
     if not os.path.exists(generate_testbench.log_dir):
         os.makedirs(generate_testbench.log_dir)
     else:
-        for filename in glob.glob(generate_testbench.log_dir + "/*"):
-            # print filename
+        for filename in glob(join(generate_testbench.log_dir, "*")):
             os.remove(filename)
     # - run vunit on created file(s)
+
     run_vunit.run()
 
 
@@ -161,12 +164,12 @@ def process_simulation_result():
     if not os.path.exists(result_dir):
         os.makedirs(result_dir)
     else:
-        for filename in glob.glob(result_dir + "/*"):
+        for filename in glob(join(result_dir, "*")):
             os.remove(filename)
 
     # - create wave trace comparison files
     compare_wave_traces.create_comparison_files(generate_testbench.log_dir, result_dir)
-#</editor-fold>
+# </editor-fold>
 
 # - run gui
 init()
