@@ -10,7 +10,7 @@ from vunit import VUnit
 
 def run():
     ui = VUnit.from_argv()
-    ui.add_osvvm()
+    # ui.add_osvvm()
 
     src_path = join(dirname(__file__), "vhdl_files")
 
@@ -21,5 +21,6 @@ def run():
     test_lib.add_source_files(join(src_path, "test", "*.vhd"))
 
     ui.main()
+
 
 

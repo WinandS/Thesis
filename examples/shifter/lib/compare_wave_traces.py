@@ -1,18 +1,27 @@
 import csv
-import glob
+from glob import glob
 import read_json
 import copy
+from os.path import join
+from sys import platform
 
 json_resource_path = "json_resources"
+
+# <editor-fold desc="set system architecture dependant subfolder character">
+if platform == 'darwin':
+    search_char = "/"
+elif platform == 'linux2':
+    search_char = "/"
+elif platform == 'win32':
+    search_char = "\\"
+# </editor-fold>
 
 
 def create_comparison_files(log_dir, result_dir):
     # <editor-fold desc="Create result file for wave trace analysis. WaveJSON file to use with WaveDrom.">
-    for filename in glob.glob(log_dir + "/*result.csv"):
+    for filename in glob(join(log_dir, "*result.csv")):
         result_filename, warning_messages, warning_logs, json_data = get_info(filename)
-        # print result_filename
         if not len(warning_logs):       # test succeeded
-            # print result_filename
             json_data["head"] = {"text": ['tspan', {"class":'success h3'}, 'Simulation success '], "tick": 0}
             read_json.save_json_file(json_data, result_filename, result_dir)
         else:
@@ -176,15 +185,15 @@ def get_info(filename):
     warning_logs, warning_messages = get_logs_and_messages(log_list, message_list)
 
     e = filename.find(".")
-    s = filename.find("/")
+
+    s = filename.find(search_char)
     previous_s = e
     while s != previous_s:
         previous_s = s
-        s = filename.rfind('/', s)
+        s = filename.rfind(search_char, s)
 
     e = filename.find("__")
     json_filename = json_resource_path + filename[s:e] + ".json"        # full json filename from original filename
-    # print json_filename
     json_data = read_json.open_json_file(json_filename)
 
     result_filename = filename[s:e] + "_result.json" # name for newly generated file
