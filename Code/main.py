@@ -33,7 +33,7 @@ class Window(Frame):
     def init_window(self):
 
         # changing the title of our master widget
-        self.master.title("What do you want to do?")
+        self.master.title("VHDL Verifier 9000 - By Winand Seldeslachts")
 
         # allowing the widget to take the full space of the root window
         self.pack(fill=BOTH, expand=1)
