@@ -87,6 +87,8 @@ Perhaps one day. For now it is only a proof of concept that has it limitations. 
 ## That's it!
 Thank you for reading! If you want to learn more, you can find the source code, the full thesis report and more [here][thesis].
 
+Finally I would like to thank Lieven, Hendrik and Phillipe at Sigasi one last time for the opportunity to do my masters thesis with them and for the support they have given me.
+
 
 [Sigasi]: https://www.sigasi.com
 [WaveDrom link]: http://wavedrom.com/
