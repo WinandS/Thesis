@@ -1,0 +1,39 @@
+{
+    "description": "input A = '0' & B = '1' should produce a low output", 
+    "head": {
+        "text": [
+            "tspan", 
+            {
+                "class": "success h3"
+            }, 
+            "Simulation success "
+        ], 
+        "tick": 0
+    }, 
+    "name": "andGate", 
+    "signal": [
+        {}, 
+        [
+            "IN", 
+            {
+                "name": "A", 
+                "type": "std_logic", 
+                "wave": "0"
+            }, 
+            {
+                "name": "B", 
+                "type": "std_logic", 
+                "wave": "1"
+            }
+        ], 
+        [
+            "OUT", 
+            {
+                "name": "F", 
+                "type": "std_logic", 
+                "wave": "0"
+            }
+        ]
+    ], 
+    "test": "andgate01"
+}

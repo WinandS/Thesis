@@ -1,0 +1,2 @@
+test_start:uart_send_1_byte_no_wait
+test_suite_done

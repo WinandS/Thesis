@@ -1,0 +1,116 @@
+#VUNIT_RETURN
+quit -sim
+#VUNIT_RETURN
+do /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_1_send_one_byte_no_pause_gen.uart_send_1_byte_no_wait/modelsim/common.do
+#VUNIT_RETURN
+quietly set failed [vunit_load]
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_1_send_one_byte_no_pause_gen.uart_send_1_byte_no_wait/modelsim/vsim.wlf -quiet -t ps -onfinish stop test_lib.tb_uart_1_send_one_byte_no_pause_gen(uart_1_send_one_byte_no_pause_generated_testbench) -L test_lib -L vunit_lib -L osvvm -L src_lib -g/tb_uart_1_send_one_byte_no_pause_gen/runner_cfg="enabled_test_cases : uart_send_1_byte_no_wait,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_1_send_one_byte_no_pause_gen.uart_send_1_byte_no_wait/,active python runner : true" 
+# Start time: 20:43:24 on Jun 01,2016
+#VUNIT_RETURN
+echo $failed #VUNIT_READVAR
+# 0 #VUNIT_READVAR
+#VUNIT_RETURN
+quietly set failed [vunit_run]
+# Sending 249
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+# Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+#VUNIT_RETURN
+echo $failed #VUNIT_READVAR
+# 0 #VUNIT_READVAR
+#VUNIT_RETURN
+quit -sim
+# End time: 20:43:24 on Jun 01,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#VUNIT_RETURN
+do /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_2_send_one_byte_gen.uart_send_1_byte/modelsim/common.do
+#VUNIT_RETURN
+quietly set failed [vunit_load]
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_2_send_one_byte_gen.uart_send_1_byte/modelsim/vsim.wlf -quiet -t ps -onfinish stop test_lib.tb_uart_2_send_one_byte_gen(uart_2_send_one_byte_generated_testbench) -L test_lib -L vunit_lib -L osvvm -L src_lib -g/tb_uart_2_send_one_byte_gen/runner_cfg="enabled_test_cases : uart_send_1_byte,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_2_send_one_byte_gen.uart_send_1_byte/,active python runner : true" 
+# Start time: 20:43:24 on Jun 01,2016
+#VUNIT_RETURN
+echo $failed #VUNIT_READVAR
+# 0 #VUNIT_READVAR
+#VUNIT_RETURN
+quietly set failed [vunit_run]
+# Sending 249
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+# Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+#VUNIT_RETURN
+echo $failed #VUNIT_READVAR
+# 0 #VUNIT_READVAR
+#VUNIT_RETURN
+quit -sim
+# End time: 20:43:24 on Jun 01,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#VUNIT_RETURN
+do /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_3_send_two_bytes_failing_gen.uart_send_2_bytes/modelsim/common.do
+#VUNIT_RETURN
+quietly set failed [vunit_load]
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_3_send_two_bytes_failing_gen.uart_send_2_bytes/modelsim/vsim.wlf -quiet -t ps -onfinish stop test_lib.tb_uart_3_send_two_bytes_failing_gen(uart_3_send_two_bytes_failing_generated_testbench) -L test_lib -L vunit_lib -L osvvm -L src_lib -g/tb_uart_3_send_two_bytes_failing_gen/runner_cfg="enabled_test_cases : uart_send_2_bytes,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_3_send_two_bytes_failing_gen.uart_send_2_bytes/,active python runner : true" 
+# Start time: 20:43:24 on Jun 01,2016
+#VUNIT_RETURN
+echo $failed #VUNIT_READVAR
+# 0 #VUNIT_READVAR
+#VUNIT_RETURN
+quietly set failed [vunit_run]
+# Sending 249
+# WARNING: 1,tready,'1','0',3
+# WARNING: 1. This check failed. Expected sig_tready =  '1', got sig_tready =  '0' at n = 3.
+# WARNING: 2,tready,'1','0',4
+# WARNING: 2. This check failed. Expected sig_tready =  '1', got sig_tready =  '0' at n = 4.
+# WARNING: 3,tx,'1','0',5
+# WARNING: 3. This check failed. Expected sig_tx =  '1', got sig_tx =  '0' at n = 5.
+# Sending 127
+# WARNING: 4,tx,'1','0',21
+# WARNING: 4. This check failed. Expected sig_tx =  '1', got sig_tx =  '0' at n = 21.
+# ** Note: stop
+#    Time: 86942500 ps  Iteration: 5  Instance: /tb_uart_3_send_two_bytes_failing_gen
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+# Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+# 
+# Stack trace result from 'tb' command
+#  /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd 10 [address f653946d] Subprogram vunit_stop
+# called from  /usr/local/lib/python2.7/dist-packages/vunit/vhdl/run/src/run.vhd 147 [address f653b348] Subprogram test_runner_cleanup
+# called from  /usr/local/lib/python2.7/dist-packages/vunit/vhdl/run/src/run.vhd 158 [address f653aef5] Subprogram test_runner_cleanup
+# called from  /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vhdl_files/test/tb_uart_3_send_two_bytes_failing.vhd 194 [address f654011b] Process main
+# 
+# 
+# Surrounding code from 'see' command
+#   5 : -- Copyright (c) 2015-2016, Lars Asplund lars.anders.asplund@gmail.com
+#   6 : 
+#   7 : package body vunit_stop_pkg is
+#   8 :   procedure vunit_stop(status : integer) is
+#   9 :   begin
+# ->10 :     std.env.stop(status);
+#   11 :   end procedure;
+#   12 : end package body;
+# 
+#VUNIT_RETURN
+echo $failed #VUNIT_READVAR
+# 1 #VUNIT_READVAR
+#VUNIT_RETURN
+quit -sim
+# End time: 20:43:25 on Jun 01,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 8
+#VUNIT_RETURN
+do /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_3_send_two_bytes_gen.uart_send_2_bytes/modelsim/common.do
+#VUNIT_RETURN
+quietly set failed [vunit_load]
+# vsim -modelsimini /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/modelsim/modelsim.ini -wlf /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_3_send_two_bytes_gen.uart_send_2_bytes/modelsim/vsim.wlf -quiet -t ps -onfinish stop test_lib.tb_uart_3_send_two_bytes_gen(uart_3_send_two_bytes_generated_testbench) -L test_lib -L vunit_lib -L osvvm -L src_lib -g/tb_uart_3_send_two_bytes_gen/runner_cfg="enabled_test_cases : uart_send_2_bytes,output path : /home/winand/Documents/Schoolwerk/Masterproef/Thesis/examples/uart/vunit_out/tests/test_lib.tb_uart_3_send_two_bytes_gen.uart_send_2_bytes/,active python runner : true" 
+# Start time: 20:43:25 on Jun 01,2016
+#VUNIT_RETURN
+echo $failed #VUNIT_READVAR
+# 0 #VUNIT_READVAR
+#VUNIT_RETURN
+quietly set failed [vunit_run]
+# Sending 249
+# Sending 127
+# Break in Subprogram vunit_stop at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+# Stopped at /usr/local/lib/python2.7/dist-packages/vunit/vhdl/core/src/stop_body_2008.vhd line 10
+#VUNIT_RETURN
+echo $failed #VUNIT_READVAR
+# 0 #VUNIT_READVAR
+#VUNIT_RETURN
+quit -f -code 0
+# End time: 20:43:25 on Jun 01,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

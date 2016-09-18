@@ -1,0 +1,63 @@
+{
+    "description": "A test for sending one byte with an parallel to serial uart", 
+    "head": {
+        "text": [
+            "tspan", 
+            {
+                "class": "success h3"
+            }, 
+            "Simulation success "
+        ], 
+        "tick": 0
+    }, 
+    "name": "uart_tx", 
+    "signal": [
+        {}, 
+        [
+            "CLK", 
+            {
+                "clock_period": "20", 
+                "loop_times": [
+                    "10*434"
+                ], 
+                "name": "clk", 
+                "period": "2", 
+                "type": "std_logic", 
+                "wave": "n......|"
+            }
+        ], 
+        [
+            "IN", 
+            {
+                "name": "tvalid", 
+                "type": "std_logic", 
+                "wave": "0.1..0.........."
+            }, 
+            {
+                "data": [
+                    "0", 
+                    "249", 
+                    "0"
+                ], 
+                "name": "tdata", 
+                "type": "std_logic_vector", 
+                "vector_size": "8", 
+                "wave": "=.=..=........x."
+            }
+        ], 
+        [
+            "OUT", 
+            {
+                "name": "tx", 
+                "type": "std_logic", 
+                "wave": "1....0........x."
+            }, 
+            {
+                "name": "tready", 
+                "type": "std_logic", 
+                "wave": "01.0..........x."
+            }
+        ]
+    ], 
+    "test": "uart_send_1_byte"
+}

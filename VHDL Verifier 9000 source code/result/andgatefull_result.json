@@ -1,0 +1,50 @@
+{
+    "description": "test all possible inputs for an AND-gate",
+    "head": {
+        "text": [
+            "tspan",
+            {
+                "class": "success h3"
+            },
+            "Simulation success "
+        ],
+        "tick": 0
+    },
+    "name": "andGate_timed",
+    "signal": [
+        {},
+        [
+            "CLK",
+            {
+                "clock_period": "20",
+                "name": "CLK",
+                "period": "2",
+                "type": "std_logic",
+                "wave": "p......"
+            }
+        ],
+        [
+            "IN",
+            {
+                "name": "A",
+                "period": "2",
+                "type": "std_logic",
+                "wave": "01010.."
+            },
+            {
+                "name": "B",
+                "type": "std_logic",
+                "wave": "0.....1.0.1.0."
+            }
+        ],
+        [
+            "OUT",
+            {
+                "name": "F",
+                "type": "std_logic",
+                "wave": "0.....1.0....."
+            }
+        ]
+    ],
+    "test": "andgate_full"
+}
