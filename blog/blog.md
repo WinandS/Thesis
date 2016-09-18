@@ -6,7 +6,7 @@ My name is Winand Seldeslachts, student at the university of Ghent. For my maste
 
 Glad you asked.
 
-The VHDL verifier 9000 is a program that runs on both windows and unix based operating systems. It is a tool designed to help VHDL designers in verifying and documenting ther design. let me demonstrate its function using a simple example.
+The VHDL verifier 9000 is a program that runs on both windows and unix based operating systems. It is a tool designed to help VHDL designers in verifying and documenting ther design. let me demonstrate its function using a simple example. If you want to skip this, you can go straight to the [user manual][user manual]
 
 ## Design example
 
@@ -81,7 +81,7 @@ In this case the design meets the specifications, so there are no desprepancies 
 
 ![output example][output file]
 
-That's it! Thank you for reading and if you want to learn more, you can find the source code, the full thesis report and a user guide [here][thesis].
+That's it! Thank you for reading and if you want to learn more, you can find the source code and the full thesis report [here][thesis].
 
 
 [WaveDrom link]: http://wavedrom.com/
@@ -95,3 +95,4 @@ That's it! Thank you for reading and if you want to learn more, you can find the
 [overview]: images/overview_color.png
 [vunit]: www.vunit.com
 [thesis]: https://github.com/WinandS/Thesis
+[user manual]: ./README.md
