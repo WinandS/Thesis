@@ -1,4 +1,0 @@
-W1: Expected sig_F =  '0',  got sig_F =  '1' at n = 2.
-W2: Expected sig_F =  '0',  got sig_F =  '1' at n = 3.
-W3: Expected sig_F =  '1',  got sig_F =  '0' at n = 6.
-W4: Expected sig_F =  '1',  got sig_F =  '0' at n = 7.
