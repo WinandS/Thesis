@@ -1,4 +1,0 @@
-W1: Expected sig_tready =  '1',  got sig_tready =  '0' at n = 3.
-W2: Expected sig_tready =  '1',  got sig_tready =  '0' at n = 4.
-W3: Expected sig_tx =  '1',  got sig_tx =  '0' at n = 5.
-W4: Expected sig_tx =  '1',  got sig_tx =  '0' at n = 21.
