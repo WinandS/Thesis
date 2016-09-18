@@ -96,5 +96,5 @@ That's it! Thank you for reading and if you want to learn more, you can find the
 [output file]: images/result_file.png
 [GUI]: images/gui.png
 [overview]: images/overview_color.png
-[vunit]: vunit.github.io/documentation
+[vunit]: https://www.vunit.github.io/documentation
 [thesis]: https://github.com/WinandS/Thesis
