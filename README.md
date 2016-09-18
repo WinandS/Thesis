@@ -6,7 +6,7 @@ The testbenches being created are based on VUnit. They hold unit tests that can 
 
 For a detailed analysis of this project, please read the [report](https://github.ugent.be/wseldesl/Thesis/blob/master/Report/Thesis.pdf).
 
-For a shorter introduction, see [this][blog/blog.md] blogpost.
+For a shorter introduction, see [this](blog/blog.md) blogpost.
 
 # Dependencies
 The final product of this project is a software tool written in Python that can run on any computer that complies to these conditions:
