@@ -6,7 +6,7 @@ My name is Winand Seldeslachts, student at the university of Ghent. For my maste
 
 Glad you asked.
 
-The VHDL verifier 9000 is a program that runs on both windows and unix based operating systems. It is a tool designed to help VHDL designers in verifying and documenting ther design. let me demonstrate its function using a simple example.
+The VHDL verifier 9000 is a program that runs on both windows and unix based operating systems. It is a tool designed to help VHDL designers in verifying and documenting their design. let me demonstrate its function using a simple example.
 
 ## Design example
 
@@ -35,7 +35,7 @@ begin
 end RTL;
 ```
 
-#### Design => ??? => profit.
+### Design => ??? => profit.
 
 Before I can start selling this design, I need be able to prove to potential customers that my design works and I need to show them how it works. I need to verify and document my design.
 
@@ -46,11 +46,11 @@ To verify, I implement a self checking VHDL testbench and simulate it with Model
 I use [WaveDrom][WaveDrom link] to help generate the documentation for this design. My documentation now holds a visual representation of how signals are processed by the design.
 ![Documentation example][WaveDrom example]
 
-If we compare the signal representations in the two pictures above, we can see that the both representations hold the same information. In other words, I have had to use the same information twice: once to document my design, and once to build a self checking testbench. It makes sense to want to have some kind of tool that could build both documentation and test from one source.
+If we compare the signal representations in the two pictures above, we can see that the both representations look exactly the same, apart from formatting ofcourse. In other words, I have had to use the same information twice: once to document my design, and once to build a self checking testbench. It makes sense to want to have some kind of tool that could build both documentation and test from one source.
 
-#### Enter the VHDL Verifier 9000
+### Enter the VHDL Verifier 9000
 
-This was the starting point for the project. The result was the the VHDL Verifier 9000. It is a simple tool that can help the developer build both the tests and the documentation from one source file. On top of that, it automatically runs the tests and analyses the result and offers an easy way find discrepancies in design and specification.
+This was the starting point for the project. The result was the the VHDL Verifier 9000. It is a simple tool that can help build both the test and the documentation from one source file. On top of that, it automatically runs the test, analyses the result and offers an easy way find discrepancies in simulation output and expected output.
 
 ![GUI screenshot][GUI]
 
@@ -60,8 +60,8 @@ This overview shows how the tool functions internally.
 
 ![overview][overview]
 
-##### Source files
-A source file the only thing the designer has to make, apart from the design itself. Source files are an extension of standard WaveDrom files. WaveDrom files hold the waveJSON formatted descriptions for signals. The WaveDrom engine converts this description to a visual representation. An example WaveDrom file is shown below.
+### Source files
+A source file is the only thing the designer has to make, apart from the design itself. Source files are an extension of standard WaveDrom files. WaveDrom files hold the waveJSON formatted descriptions for signals. The WaveDrom engine converts this description to a visual representation. An example WaveDrom file is shown below.
 
 ![WaveDrom file][Wavedrom file]
 
@@ -71,17 +71,20 @@ A source file has to hold a lot more information than a standard WaveDrom file. 
 
 Note that this file can still be processed with WaveDrom to generate the documenation. The resulting documentation image will be exactly the same with both files.
 
-##### Running the tool
+### Running the tool
 When the tool is run, it combines information from the design file and the source file to generate a testbench. This testbench is then run using the the [vUnit][vunit] framework, which logs important information. The output of this process is then used to build a comparison file that will compare the behavior of the design to the expected behavior. This file is called the result file.
 
-##### Output files
+### Output files
 A result file is very similar to the source file. It is also a waveJSON formatted file that can be processed by WaveDrom. It will show the descrepancies between expected output and simulated output.
 
 In this case the design meets the specifications, so there are no desprepancies between documention and simulation signals.  
 
 ![output example][output file]
 
-That's it! Thank you for reading and if you want to learn more, you can find the source code and the full thesis report [here][thesis].
+## Is this the solution to all life's problems?
+Perhaps one day. For now it is only a proof of concept that has it limitations. It is usefull for relatively simple designs and smaller (unit) tests. For example, for designs the size of an SPI master interface the system will still function, but the result file will become crowded and less readable when there are a lot of errors.
+
+That's it! Thank you for reading and if you want to learn more, you can find the source code, the full thesis report and more examples [here][thesis].
 
 
 [WaveDrom link]: http://wavedrom.com/
@@ -93,5 +96,5 @@ That's it! Thank you for reading and if you want to learn more, you can find the
 [output file]: images/result_file.png
 [GUI]: images/gui.png
 [overview]: images/overview_color.png
-[vunit]: www.vunit.com
+[vunit]: vunit.github.io/documentation
 [thesis]: https://github.com/WinandS/Thesis
