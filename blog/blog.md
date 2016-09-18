@@ -1,6 +1,5 @@
 # VHDL verifier 9000
 
-
 My name is Winand Seldeslachts, student at the university of Ghent. For my masters thesis i have developed a software tool I call "VHDL verifier 9000", as a tribute to the town of Ghent and, mostly, because I can.
 
 ## Okay, cool name, but what does it do?
@@ -13,7 +12,6 @@ The VHDL verifier 9000 is a program that runs on both windows and unix based ope
 
 As a young, genious designer, I have an awesome idea: I'm going to design an positive edge triggered clocked AND gate, sell my design and become rich.
 
-
 ![some kind of and gate][andGate]
 
 So I start implementing my design.
@@ -21,12 +19,10 @@ So I start implementing my design.
 library ieee;
 use ieee.std_logic_1164.all;
 
-
 entity andGate_timed is
 	port(A, B, CLK : in  std_logic;
 		 Q         : out std_logic := '0');
 end andGate_timed;
-
 
 architecture RTL of andGate_timed is
 begin
