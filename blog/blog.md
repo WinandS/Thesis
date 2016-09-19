@@ -10,7 +10,7 @@ The VHDL verifier 9000 is a program that runs on both windows and unix based ope
 
 ## Design example
 
-As a young, genious designer, I have an awesome idea: I'm going to design an positive edge triggered clocked AND gate, sell my design and become rich.
+As a young, genious designer, I have an awesome idea: I'm going to design an positive edge triggered AND gate, sell my design and become rich.
 
 ![edge triggered andgate][andGate]
 
